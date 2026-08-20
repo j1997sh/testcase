@@ -1,1 +1,24 @@
-document.addEventListener('DOMContentLoaded',()=>{const toast=document.getElementById('toast');const show=m=>{if(!toast)return;toast.textContent=m;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200)};document.querySelectorAll('[data-demo-action]').forEach(x=>x.addEventListener('click',()=>show(x.dataset.demoAction||'Demo action')));document.querySelectorAll('[data-postcode-route]').forEach(btn=>btn.addEventListener('click',()=>{const v=(document.getElementById('area-postcode')?.value||'').toUpperCase();if(v.startsWith('CW1'))location.href='journeys/crewe-transport.html';else show('Demo: try CW1 2AB')}));const m=document.querySelector('.menu-toggle'),n=document.querySelector('.navlinks');if(m&&n)m.addEventListener('click',()=>{const open=n.dataset.open==='1';n.dataset.open=open?'0':'1';n.style.display=open?'none':'flex';if(!open){n.style.position='absolute';n.style.top='76px';n.style.left='15px';n.style.right='15px';n.style.background='#071a34';n.style.padding='15px';n.style.flexDirection='column';n.style.alignItems='flex-start'}});});
+
+document.addEventListener("DOMContentLoaded", function(){
+  const menu = document.querySelector(".menu-btn");
+  const nav = document.querySelector(".navlinks");
+  if(menu && nav){
+    menu.addEventListener("click", function(){
+      const open = nav.classList.toggle("mobile-open");
+      if(open){
+        nav.style.display="flex";
+        nav.style.position="absolute";
+        nav.style.top="72px";
+        nav.style.left="14px";
+        nav.style.right="14px";
+        nav.style.padding="18px";
+        nav.style.background="#071a34";
+        nav.style.flexDirection="column";
+        nav.style.alignItems="flex-start";
+        nav.style.zIndex="50";
+      } else {
+        nav.removeAttribute("style");
+      }
+    });
+  }
+});

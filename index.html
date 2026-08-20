@@ -1,19 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#071a34">
-<title>Back Ben for Mayor</title>
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Back Ben for Mayor</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="home-reference">
-<a class="skip-link" href="#main">Skip to content</a>
+<body>
+<div class="site-shell">
 
-<header class="site-header">
+<header>
   <div class="container nav">
-    <a class="brand" href="index.html"><span class="brand-back">BACK</span><span class="brand-name">BEN</span></a>
-    <button class="menu-toggle" type="button">Menu</button>
+    <a class="logo" href="index.html">
+      <span class="logo-back">BACK</span>
+      <span class="logo-ben">BEN</span>
+    </a>
     <nav class="navlinks">
       <a href="index.html">Home</a>
       <a href="about.html">About Ben</a>
@@ -22,6 +23,7 @@
       <a href="events.html">Events</a>
       <a href="volunteer.html">Get Involved</a>
     </nav>
+    <button class="menu-btn" type="button">Menu</button>
     <div class="nav-actions">
       <a class="btn btn-outline" href="volunteer.html">Volunteer</a>
       <a class="btn btn-red" href="donate.html">Donate</a>
@@ -29,105 +31,71 @@
   </div>
 </header>
 
-<main id="main">
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="back-label">BACK</div>
+        <div class="hero-logo">BEN</div>
+        <div class="hero-sub">FOR MAYOR</div>
+        <div class="region-strip">OF CHESHIRE AND WARRINGTON</div>
+        <p>A fresh start for Cheshire and Warrington.<br>Strong leadership. Better transport. Safer communities.<br>A thriving economy for everyone.</p>
 
-<section class="hero responsive-hero">
-  <div class="hero-inner">
-    <div class="hero-message">
-      <div class="campaign-lockup">
-        <div class="campaign-back">BACK</div>
-        <div class="campaign-ben">BEN</div>
-        <div class="campaign-mayor">FOR MAYOR</div>
-        <div class="campaign-region">OF CHESHIRE AND WARRINGTON</div>
+        <div class="signup">
+          <input type="text" placeholder="First name">
+          <input type="text" placeholder="Last name">
+          <input type="email" placeholder="Email address">
+          <input type="text" placeholder="Postcode">
+          <a class="btn btn-red" href="#">Join the campaign</a>
+        </div>
       </div>
-
-      <p class="hero-intro">
-        A fresh start for Cheshire and Warrington.<br>
-        Strong leadership. Better transport. Safer communities.<br>
-        A thriving economy for everyone.
-      </p>
+      <div class="hero-visual"><div class="portrait"></div></div>
     </div>
+  </section>
 
-    <aside class="hero-form-card">
-      <h2>Get involved</h2>
-      <p>Join the campaign, get local updates and hear about ways to help.</p>
-
-      <div class="hero-form-grid">
-        <input type="text" placeholder="First name">
-        <input type="text" placeholder="Last name">
-        <input type="email" placeholder="Email address">
-        <input type="text" placeholder="Postcode">
+  <section class="priorities">
+    <div class="container priority-wrap">
+      <div class="intro-box">
+        <h2>A mayor who<br><span>puts you first.</span></h2>
+        <p>Cheshire and Warrington deserve leadership that delivers for local people. Ben will focus on the issues that matter most.</p>
+        <a class="btn btn-white" href="about.html" style="border:1px solid #0b1f3a">About Ben</a>
       </div>
-
-      <button class="btn btn-red hero-submit" data-demo-action="Thanks — demo signup only.">Join the campaign</button>
-      <small>By providing your details you agree to receive updates from Back Ben for Mayor.</small>
-    </aside>
-  </div>
-</section>
-
-
-<section class="home-hub">
-  <div class="container home-hub-grid">
-    <a class="hub-card" href="plan.html">
-      <span class="hub-number">01</span>
-      <div>
-        <h2>Campaign priorities</h2>
-        <p>Transport, safer communities, growth, homes and opportunity.</p>
-        <span class="hub-link">See Ben's plan →</span>
-      </div>
-    </a>
-
-    <a class="hub-card" href="area.html">
-      <span class="hub-number">02</span>
-      <div>
-        <h2>Find my area</h2>
-        <p>See local priorities, visits, events and campaigning near you.</p>
-        <span class="hub-link">Enter your postcode →</span>
-      </div>
-    </a>
-
-    <a class="hub-card" href="news.html">
-      <span class="hub-number">03</span>
-      <div>
-        <h2>Latest news</h2>
-        <p>Campaign updates, policy announcements and stories from the trail.</p>
-        <span class="hub-link">Read the latest →</span>
-      </div>
-    </a>
-
-    <a class="hub-card" href="events.html">
-      <span class="hub-number">04</span>
-      <div>
-        <h2>Meet Ben</h2>
-        <p>Public meetings, local visits, business events and campaign sessions.</p>
-        <span class="hub-link">See upcoming events →</span>
-      </div>
-    </a>
-  </div>
-</section>
-
-<section class="home-close">
-  <div class="container home-close-inner">
-    <div>
-      <h2>Help build the campaign.</h2>
-      <p>Volunteer locally, bring your network, or support the campaign in the way that works for you.</p>
+      <article class="priority"><div class="icon">01</div><h3>Better transport</h3><p>Fix our roads and buses, cut congestion and connect our communities.</p><a href="plan.html">Learn more →</a></article>
+      <article class="priority"><div class="icon">02</div><h3>Safer communities</h3><p>More police, stronger neighbourhoods and safer streets.</p><a href="plan.html">Learn more →</a></article>
+      <article class="priority"><div class="icon">03</div><h3>A stronger economy</h3><p>Back local business, create jobs and support skills and training.</p><a href="business.html">Learn more →</a></article>
+      <article class="priority"><div class="icon">04</div><h3>Homes and opportunity</h3><p>Build the right homes, in the right places, with local infrastructure.</p><a href="plan.html">Learn more →</a></article>
     </div>
-    <a class="btn btn-red" href="volunteer.html">Get involved</a>
-  </div>
-</section>
+  </section>
+
+  <section class="below">
+    <div class="container below-grid">
+      <div class="local-panel">
+        <h2>Ben in your area</h2>
+        <p>Enter your postcode to see local events, campaign visits and the issues Ben is hearing about near you.</p>
+        <div class="postcode"><input placeholder="Enter your postcode"><a class="btn btn-red" href="area.html">Find my area</a></div>
+      </div>
+      <div class="update-panel">
+        <h2>Follow the campaign</h2>
+        <p>The main routes are always one click away.</p>
+        <div class="quick-links">
+          <a class="quick-link" href="news.html">Latest news<span>Read updates →</span></a>
+          <a class="quick-link" href="events.html">Meet Ben<span>See events →</span></a>
+          <a class="quick-link" href="hear-from-ben.html">Hear from Ben<span>Watch videos →</span></a>
+          <a class="quick-link" href="volunteer.html">Get involved<span>Join the campaign →</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer>
-  <div class="container">
-    <div class="footer-main">
-      <div><div class="footer-logo">(LOGO)</div><p class="footer-tag">Back Ben for Mayor — prototype campaign website.</p></div>
-      <div><h4>Campaign</h4><a href="about.html">About Ben</a><a href="plan.html">Ben's Plan</a><a href="news.html">News</a><a href="events.html">Events</a></div>
-      <div><h4>Take part</h4><a href="volunteer.html">Volunteer</a><a href="donate.html">Donate</a><a href="business.html">Business</a><a href="area.html">Ben in your area</a></div>
-      <div><h4>Information</h4><a href="#">Privacy</a><a href="#">Contact</a><a href="#">Accessibility</a><a href="#">Cookies</a></div>
-    </div>
-    <div class="footer-legal"><span>Promoted by [placeholder] on behalf of Back Ben for Mayor.</span><span>Prototype site — demo content only.</span></div>
+  <div class="container foot">
+    <div>BACK BEN</div>
+    <div>Privacy &nbsp;&nbsp; Contact &nbsp;&nbsp; Promoted by</div>
   </div>
 </footer>
-<div class="toast" id="toast"></div>
 <script src="assets/js/site.js"></script>
+
+</div>
 </body>
 </html>
