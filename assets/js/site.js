@@ -1,18 +1,1 @@
-
-document.addEventListener('DOMContentLoaded',()=>{
-  const toast=document.getElementById('toast');
-  function showToast(msg){if(!toast)return;toast.textContent=msg;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2400)}
-  document.querySelectorAll('[data-demo-action]').forEach(el=>el.addEventListener('click',()=>showToast(el.dataset.demoAction||'Demo action')));
-  document.querySelectorAll('[data-postcode-route]').forEach(btn=>btn.addEventListener('click',()=>{
-    const input=document.getElementById('area-postcode');
-    const v=(input?.value||'').trim().toUpperCase();
-    if(v.startsWith('CW1')) window.location.href='journeys/crewe-transport.html';
-    else showToast('Demo: try postcode CW1 2AB');
-  }));
-  const menu=document.querySelector('.menu-toggle');
-  const nav=document.querySelector('.navlinks');
-  if(menu&&nav){menu.addEventListener('click',()=>{
-    nav.style.display=nav.style.display==='flex'?'none':'flex';
-    if(nav.style.display==='flex'){nav.style.position='absolute';nav.style.top='78px';nav.style.left='16px';nav.style.right='16px';nav.style.background='#0a1d38';nav.style.padding='16px';nav.style.flexDirection='column';nav.style.alignItems='flex-start';nav.style.zIndex='200'}
-  })}
-});
+document.addEventListener('DOMContentLoaded',()=>{const toast=document.getElementById('toast');const show=m=>{if(!toast)return;toast.textContent=m;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200)};document.querySelectorAll('[data-demo-action]').forEach(x=>x.addEventListener('click',()=>show(x.dataset.demoAction||'Demo action')));document.querySelectorAll('[data-postcode-route]').forEach(btn=>btn.addEventListener('click',()=>{const v=(document.getElementById('area-postcode')?.value||'').toUpperCase();if(v.startsWith('CW1'))location.href='journeys/crewe-transport.html';else show('Demo: try CW1 2AB')}));const m=document.querySelector('.menu-toggle'),n=document.querySelector('.navlinks');if(m&&n)m.addEventListener('click',()=>{const open=n.dataset.open==='1';n.dataset.open=open?'0':'1';n.style.display=open?'none':'flex';if(!open){n.style.position='absolute';n.style.top='76px';n.style.left='15px';n.style.right='15px';n.style.background='#071a34';n.style.padding='15px';n.style.flexDirection='column';n.style.alignItems='flex-start'}});});

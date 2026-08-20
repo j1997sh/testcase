@@ -46,3 +46,7 @@ Homepage rebuilt to follow the agreed Back Ben composition closely: atmospheric 
 
 ## Consistency pass
 All public pages now use the same Back Ben red/blue/navy/cream campaign palette and shared navigation as the homepage. Inner pages use a clean Prosper-style editorial system: image-led cards, strong navy content blocks, white/cream sections, consistent typography, filters and spacing.
+
+
+## Bespoke reset
+All inner pages have been redesigned from scratch. Prosper-style cards, filter bars and portal layouts have been removed. Each page now has its own Back Ben-specific composition while sharing the homepage palette, navigation, typography and campaign energy.
