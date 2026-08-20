@@ -66,3 +66,7 @@ Removed the repeated uppercase orange/red micro-label treatment across the site.
 
 ## Clean revert
 Reverted the centred light-blue header. Restored the stronger integrated dark header/hero while retaining the natural-design changes: quieter metadata, fewer uppercase labels, softer spacing, fewer decorative rules and less repetitive card styling.
+
+
+## Simplified homepage
+Homepage reduced to hero + one cream navigation/action band + final get-involved CTA. This keeps the front page focused and makes priorities, local pages, news and events one click away.
