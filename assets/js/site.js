@@ -1,28 +1,18 @@
-const demoForms=document.querySelectorAll('[data-demo-form]');
-demoForms.forEach(form=>form.addEventListener('submit',e=>{
-  e.preventDefault();
+
+document.addEventListener('DOMContentLoaded',()=>{
   const toast=document.getElementById('toast');
-  if(toast){
-    toast.textContent=form.dataset.message||'Demo only — form captured locally for prototype purposes.';
-    toast.style.display='block';
-    clearTimeout(window.__toastTimer);
-    window.__toastTimer=setTimeout(()=>toast.style.display='none',3200);
-  }
-}));
-
-const areaForms=document.querySelectorAll('[data-area-form]');
-areaForms.forEach(areaForm=>areaForm.addEventListener('submit',e=>{
-  e.preventDefault();
-  const v=(areaForm.querySelector('input')?.value||'').toLowerCase().trim();
-  if(v.includes('cw1')||v.includes('cw2')||v.includes('crewe')) location.href='journeys/crewe-transport.html';
-  else location.href='area.html';
-}));
-
-const menuToggle=document.querySelector('.menu-toggle');
-const nav=document.querySelector('#primary-nav');
-if(menuToggle&&nav){
-  menuToggle.addEventListener('click',()=>{
-    const open=nav.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded',String(open));
-  });
-}
+  function showToast(msg){if(!toast)return;toast.textContent=msg;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2400)}
+  document.querySelectorAll('[data-demo-action]').forEach(el=>el.addEventListener('click',()=>showToast(el.dataset.demoAction||'Demo action')));
+  document.querySelectorAll('[data-postcode-route]').forEach(btn=>btn.addEventListener('click',()=>{
+    const input=document.getElementById('area-postcode');
+    const v=(input?.value||'').trim().toUpperCase();
+    if(v.startsWith('CW1')) window.location.href='journeys/crewe-transport.html';
+    else showToast('Demo: try postcode CW1 2AB');
+  }));
+  const menu=document.querySelector('.menu-toggle');
+  const nav=document.querySelector('.navlinks');
+  if(menu&&nav){menu.addEventListener('click',()=>{
+    nav.style.display=nav.style.display==='flex'?'none':'flex';
+    if(nav.style.display==='flex'){nav.style.position='absolute';nav.style.top='78px';nav.style.left='16px';nav.style.right='16px';nav.style.background='#0a1d38';nav.style.padding='16px';nav.style.flexDirection='column';nav.style.alignItems='flex-start';nav.style.zIndex='200'}
+  })}
+});

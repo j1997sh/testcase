@@ -30,3 +30,11 @@ Open `index.html` in a browser.
 
 ## Next step for NationBuilder
 The shared HTML/CSS can later be converted into NationBuilder Liquid templates and action pages. Tally, GA4, Meta Pixel and CRM integrations can then replace the demo forms and fake interactions.
+
+
+## Pass 2
+Public-site templates have been expanded and polished, including richer News and Events pages with a wider range of demo content.
+
+
+## Vibe rebuild
+This pass intentionally borrows the design language of the supplied references: strong navy editorial blocks, cream backgrounds, high-contrast campaign typography, clean grids, image-first news cards and restrained red accents. All imagery remains clearly labelled as placeholders for pitch use.
