@@ -1,0 +1,18 @@
+Homepage image filenames
+
+Required:
+ben-across-region.jpg
+ben-across-region-mobile.jpg
+
+Existing homepage assets still supported if used elsewhere:
+ben-hero.jpg
+ben-area.jpg
+ben-video.jpg
+ben-business.jpg
+news-transport.jpg
+news-business.jpg
+news-campaign-trail.jpg
+
+Recommended dimensions:
+ben-across-region.jpg: landscape, approx 1600x900 or wider
+ben-across-region-mobile.jpg: portrait/vertical crop, approx 900x1200
