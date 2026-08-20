@@ -70,3 +70,7 @@ Reverted the centred light-blue header. Restored the stronger integrated dark he
 
 ## Simplified homepage
 Homepage reduced to hero + one cream navigation/action band + final get-involved CTA. This keeps the front page focused and makes priorities, local pages, news and events one click away.
+
+
+## Reference vibe pass
+All pages restyled to match the agreed Back Ben visual reference: deep navy, red haze into electric blue, cream content bands, white campaign typography and restrained red accents.
