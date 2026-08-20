@@ -70,7 +70,3 @@ Reverted the centred light-blue header. Restored the stronger integrated dark he
 
 ## Simplified homepage
 Homepage reduced to hero + one cream navigation/action band + final get-involved CTA. This keeps the front page focused and makes priorities, local pages, news and events one click away.
-
-
-## Mobile and hero fix
-Homepage hero rebuilt. Desktop now uses a controlled right-hand image panel with a fade rather than a full-background photograph. Mobile stacks message, image and signup vertically so nothing overflows or sits off-screen.
