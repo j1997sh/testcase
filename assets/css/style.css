@@ -222,3 +222,475 @@ footer{background:var(--navy);color:#fff;padding:58px 0 26px}
  .event{grid-template-columns:65px 1fr}.event .btn{grid-column:1/-1}
  .footer-main{grid-template-columns:1fr 1fr}.footer-legal{flex-direction:column;gap:10px}
 }
+
+
+/* DEFINITIVE BACK BEN HOMEPAGE REFERENCE */
+.home-reference{
+  background:#071a34;
+  color:#fff;
+}
+.home-reference .site-header{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  background:transparent;
+  border-bottom:1px solid rgba(255,255,255,.09);
+  z-index:50;
+}
+.home-reference .nav{
+  height:88px;
+}
+.home-reference .brand{
+  min-width:185px;
+}
+.home-reference .brand-name{
+  font-size:31px;
+}
+.home-reference .hero{
+  position:relative;
+  min-height:690px;
+  display:block;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 31% 47%, rgba(236,58,51,.48) 0 12%, rgba(236,58,51,.18) 31%, transparent 50%),
+    radial-gradient(circle at 77% 28%, rgba(21,119,220,.62) 0 14%, rgba(21,119,220,.28) 34%, transparent 58%),
+    linear-gradient(114deg,#07152a 0%,#0a2850 42%,#0b4f90 72%,#0d72c1 100%);
+}
+.home-reference .hero:before{
+  content:"";
+  position:absolute;
+  inset:-14% -8%;
+  background:
+    linear-gradient(18deg,transparent 31%,rgba(255,255,255,.12) 36%,transparent 42%),
+    linear-gradient(-13deg,transparent 48%,rgba(255,255,255,.09) 52%,transparent 57%);
+  filter:blur(7px);
+  opacity:.7;
+}
+.home-reference .hero-wrap{
+  width:min(var(--max),calc(100% - 72px));
+  margin:0 auto;
+  min-height:690px;
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  position:relative;
+  z-index:2;
+}
+.home-reference .hero-copy{
+  padding:145px 34px 54px 0;
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+}
+.home-reference .campaign-lockup{
+  max-width:570px;
+  margin-bottom:14px;
+}
+.home-reference .campaign-back{
+  display:inline-block;
+  background:#fff;
+  color:#10244a;
+  font-size:17px;
+  font-weight:950;
+  padding:4px 8px;
+  transform:rotate(-4deg);
+  margin-left:46px;
+}
+.home-reference .campaign-ben{
+  font-size:126px;
+  font-weight:950;
+  letter-spacing:-.075em;
+  line-height:.78;
+  margin-top:3px;
+}
+.home-reference .campaign-mayor{
+  font-size:53px;
+  font-weight:300;
+  line-height:1;
+  margin:12px 0 7px;
+  letter-spacing:-.045em;
+}
+.home-reference .campaign-region{
+  display:inline-block;
+  background:var(--red);
+  padding:5px 8px 6px;
+  width:max-content;
+  font-size:18px;
+  font-weight:950;
+  line-height:1;
+}
+.home-reference .hero-copy .intro{
+  margin:20px 0 17px;
+  max-width:520px;
+  font-size:15px;
+  color:#f0f4f9;
+}
+.home-reference .join-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:7px;
+  max-width:520px;
+}
+.home-reference .join-grid input{
+  height:47px;
+  border:0;
+  padding:0 14px;
+}
+.home-reference .join-cta{
+  margin-top:8px;
+  display:inline-flex;
+  width:max-content;
+  padding:15px 24px;
+  background:var(--red);
+  color:#fff;
+  font-size:12px;
+  font-weight:950;
+  text-transform:uppercase;
+}
+.home-reference .privacy-note{
+  font-size:9px;
+  color:rgba(255,255,255,.62);
+  margin-top:10px;
+}
+.home-reference .hero-candidate{
+  position:relative;
+  min-height:690px;
+}
+.home-reference .candidate-placeholder{
+  position:absolute;
+  inset:88px 0 0 0;
+  background:
+    linear-gradient(90deg,rgba(7,26,52,1) 0%,rgba(7,26,52,.28) 10%,transparent 20%),
+    linear-gradient(180deg,transparent 76%,rgba(7,26,52,.15) 100%),
+    url('images/ben-hero.jpg') center 18%/cover no-repeat;
+}
+.home-reference .candidate-placeholder:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(7,26,52,.7) 0%,transparent 18%,transparent 100%);
+  pointer-events:none;
+}
+.home-reference .priority-strip{
+  position:relative;
+  z-index:5;
+  grid-template-columns:1.14fr repeat(4,1fr);
+  background:#f5efe5;
+}
+.home-reference .priority-intro,
+.home-reference .priority-item{
+  padding:34px 28px;
+}
+.home-reference .priority-intro h2{
+  font-size:34px;
+}
+.home-reference .priority-item h3{
+  font-size:18px;
+}
+.home-reference .priority-item p{
+  max-width:180px;
+  margin:0 auto 16px;
+}
+.home-reference .section{
+  background:#fff;
+}
+.home-reference .section.alt{
+  background:#eef1f5;
+}
+.home-reference .section.navy{
+  background:var(--navy);
+}
+@media(max-width:1050px){
+  .home-reference .site-header{position:relative;background:linear-gradient(90deg,#27395f,#243557)}
+  .home-reference .hero-wrap{grid-template-columns:1fr}
+  .home-reference .hero-copy{padding:60px 0 32px}
+  .home-reference .hero-candidate{min-height:420px}
+  .home-reference .candidate-placeholder{inset:0}
+}
+@media(max-width:680px){
+  .home-reference .hero-wrap{width:min(100% - 32px,var(--max))}
+  .home-reference .campaign-ben{font-size:82px}
+  .home-reference .campaign-mayor{font-size:38px}
+  .home-reference .campaign-region{font-size:14px}
+  .home-reference .join-grid{grid-template-columns:1fr}
+}
+
+
+/* CONSISTENT INNER PAGE SYSTEM — Back Ben palette + Prosper-style structure */
+.inner-page{
+  background:#eef1f5;
+  color:var(--ink);
+}
+.inner-page .site-header{
+  position:relative;
+  background:linear-gradient(90deg,#16284a,#26395f);
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.inner-page .nav{height:92px}
+.inner-page .brand-name{font-size:30px}
+.inner-page .brand-sub{opacity:.9}
+.inner-page .page-hero{
+  background:
+    radial-gradient(circle at 84% 18%,rgba(19,122,222,.42),transparent 34%),
+    radial-gradient(circle at 17% 72%,rgba(239,75,47,.25),transparent 31%),
+    linear-gradient(115deg,#07172d 0%,#0c315e 64%,#0d67ad 100%);
+  padding:74px 0 68px;
+  position:relative;
+  overflow:hidden;
+}
+.inner-page .page-hero:after{
+  content:"";
+  position:absolute;
+  inset:-20% -10%;
+  background:
+    linear-gradient(16deg,transparent 36%,rgba(255,255,255,.06) 41%,transparent 47%),
+    linear-gradient(-12deg,transparent 49%,rgba(255,255,255,.05) 52%,transparent 57%);
+  filter:blur(7px);
+  pointer-events:none;
+}
+.inner-page .page-hero .container{position:relative;z-index:2}
+.inner-page .page-hero h1{
+  font-size:62px;
+  line-height:.96;
+  letter-spacing:-.055em;
+  max-width:900px;
+  margin:12px 0 18px;
+}
+.inner-page .page-hero p{
+  max-width:760px;
+  font-size:18px;
+  color:rgba(255,255,255,.78);
+}
+.inner-page .section{
+  background:#f3f5f8;
+}
+.inner-page .section.page-shell{
+  background:#f3f5f8;
+}
+.inner-page .section.alt{
+  background:#e8edf3;
+}
+.inner-page .section.cream{
+  background:#f5efe5;
+}
+.inner-page .section.navy{
+  background:#0a1d38;
+}
+.inner-page .prose-card,
+.inner-page .policy-card,
+.inner-page .action-card,
+.inner-page .video-tile,
+.inner-page .donation-box,
+.inner-page .sidebar-card.light,
+.inner-page .event{
+  box-shadow:0 12px 30px rgba(15,31,56,.05);
+}
+.inner-page .policy-card{
+  border-top:4px solid var(--red);
+}
+.inner-page .policy-card h3{
+  color:var(--navy);
+}
+.inner-page .quote-panel{
+  background:#26395f;
+}
+.inner-page .news-card{
+  background:#26395f;
+}
+.inner-page .news-card .news-body{
+  min-height:250px;
+}
+.inner-page .news-thumb{
+  height:220px;
+  background:linear-gradient(135deg,#9cadbd,#d8e1e8);
+}
+.inner-page .news-body h3{
+  color:#fff;
+}
+.inner-page .event-date strong{
+  color:var(--navy);
+}
+.inner-page .filter-chip.active{
+  background:#26395f;
+}
+.inner-page .feature-story{
+  background:#26395f;
+}
+.inner-page .feature-story-visual{
+  background:linear-gradient(135deg,#93a8ba,#dce3e9);
+}
+.inner-page footer{
+  background:#0a1d38;
+}
+.inner-page .feature-cards .feature-card{
+  background:#26395f;
+}
+.inner-page .feature-card .copy h3{
+  color:#fff;
+}
+.inner-page .feature-card .media{
+  background:linear-gradient(135deg,#9eb0c0,#d8e0e7);
+}
+.inner-page .sidebar-card{
+  background:#26395f;
+}
+.inner-page .btn-red{
+  background:var(--red);
+}
+.inner-page .text-link{
+  color:var(--red);
+}
+
+/* Prosper-like section headers */
+.content-heading{
+  display:flex;
+  justify-content:space-between;
+  gap:28px;
+  align-items:end;
+  margin-bottom:28px;
+}
+.content-heading h2{
+  margin:0;
+  font-size:42px;
+  line-height:1;
+  letter-spacing:-.045em;
+}
+.content-heading p{
+  max-width:520px;
+  margin:0;
+  color:var(--muted);
+}
+
+/* Large portal cards */
+.portal-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+}
+.portal-card{
+  background:#26395f;
+  color:#fff;
+  box-shadow:0 12px 30px rgba(15,31,56,.08);
+}
+.portal-media{
+  height:240px;
+  background:linear-gradient(135deg,#a1b1c0,#d8e1e8);
+  position:relative;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-size:12px;
+  font-weight:950;
+  letter-spacing:.08em;
+}
+.portal-media:after{
+  content:"⌟";
+  transform:rotate(180deg);
+  position:absolute;
+  top:5px;
+  right:18px;
+  font-size:55px;
+  font-weight:100;
+}
+.portal-copy{
+  padding:30px;
+}
+.portal-copy h3{
+  font-size:33px;
+  line-height:1;
+  margin:0 0 14px;
+  letter-spacing:-.04em;
+}
+.portal-copy p{
+  color:#dce3ed;
+  min-height:62px;
+}
+.portal-copy .btn-white{
+  margin-top:10px;
+}
+
+/* About page split editorial */
+.about-lead{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  background:#fff;
+  box-shadow:0 12px 30px rgba(15,31,56,.05);
+}
+.about-photo{
+  min-height:480px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,#9aaebe,#d8e1e8);
+  color:#fff;
+  font-weight:950;
+}
+.about-copy{
+  padding:48px;
+}
+.about-copy h2{
+  font-size:42px;
+  line-height:1;
+  letter-spacing:-.045em;
+  margin:0 0 18px;
+}
+.about-copy p{
+  color:var(--muted);
+}
+
+/* Events feature band */
+.event-feature{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  background:#26395f;
+  color:#fff;
+  margin-bottom:28px;
+}
+.event-feature-media{
+  min-height:350px;
+  background:linear-gradient(135deg,#98aebf,#d9e1e7);
+  display:grid;
+  place-items:center;
+  font-weight:950;
+}
+.event-feature-copy{
+  padding:40px;
+}
+.event-feature-copy h2{
+  font-size:39px;
+  line-height:1;
+  letter-spacing:-.045em;
+  margin:10px 0 16px;
+}
+.event-feature-copy p{color:#d8e0eb}
+
+/* Local area feature */
+.local-feature-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.local-card{
+  background:#fff;
+  border-top:4px solid var(--red);
+  padding:28px;
+  min-height:220px;
+  box-shadow:0 12px 28px rgba(15,31,56,.05);
+}
+.local-card h3{
+  font-size:25px;
+  margin:18px 0 10px;
+}
+.local-card p{
+  color:var(--muted);
+}
+
+/* Better mobile */
+@media(max-width:900px){
+  .portal-grid,.local-feature-grid{grid-template-columns:1fr 1fr}
+  .about-lead,.event-feature{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .inner-page .page-hero h1{font-size:44px}
+  .content-heading{align-items:start;flex-direction:column}
+  .portal-grid,.local-feature-grid{grid-template-columns:1fr}
+}

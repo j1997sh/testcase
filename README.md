@@ -38,3 +38,11 @@ Public-site templates have been expanded and polished, including richer News and
 
 ## Vibe rebuild
 This pass intentionally borrows the design language of the supplied references: strong navy editorial blocks, cream backgrounds, high-contrast campaign typography, clean grids, image-first news cards and restrained red accents. All imagery remains clearly labelled as placeholders for pitch use.
+
+
+## Reference homepage pass
+Homepage rebuilt to follow the agreed Back Ben composition closely: atmospheric full-width hero, stacked campaign lock-up, candidate image on the right, signup in the hero and cream priorities strip. Inner pages retain the distinct Back Ben campaign system rather than cloning Prosper layouts.
+
+
+## Consistency pass
+All public pages now use the same Back Ben red/blue/navy/cream campaign palette and shared navigation as the homepage. Inner pages use a clean Prosper-style editorial system: image-led cards, strong navy content blocks, white/cream sections, consistent typography, filters and spacing.
