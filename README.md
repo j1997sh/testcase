@@ -50,3 +50,15 @@ All public pages now use the same Back Ben red/blue/navy/cream campaign palette 
 
 ## Bespoke reset
 All inner pages have been redesigned from scratch. Prosper-style cards, filter bars and portal layouts have been removed. Each page now has its own Back Ben-specific composition while sharing the homepage palette, navigation, typography and campaign energy.
+
+
+## Targeted journey rebuild
+All hidden journey pages now use the full Back Ben design system and are presentation-ready: atmospheric campaign heroes, local stats, issue blocks, realistic fake surveys, local visits and different next-step logic for donors.
+
+
+## Homepage refinement
+The mid-page homepage sections have been rebuilt to remove repetitive equal cards and excessive whitespace. They now use wider asymmetric editorial layouts with stronger visual hierarchy and tighter vertical rhythm.
+
+
+## Natural design pass
+Removed the repeated uppercase orange/red micro-label treatment across the site. Categories now use quieter editorial metadata. The homepage hero has been rebuilt around a full-bleed campaign image with a dark left overlay and a white signup card on the right, inspired by the supplied campaign reference.

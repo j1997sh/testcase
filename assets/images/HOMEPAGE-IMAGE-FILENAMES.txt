@@ -1,0 +1,11 @@
+Homepage image filenames
+
+Place these files in assets/images/ exactly as named:
+
+ben-hero.jpg
+ben-area.jpg
+ben-video.jpg
+ben-business.jpg
+news-transport.jpg
+news-business.jpg
+news-campaign-trail.jpg

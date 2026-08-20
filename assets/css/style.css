@@ -165,3 +165,580 @@ footer{background:#071a34;color:#fff;padding:55px 0 22px}.footer-main{display:gr
  .display-title{font-size:48px}.inner-hero{padding:65px 0}
  .footer-main{grid-template-columns:1fr 1fr}.footer-legal{flex-direction:column;gap:8px}
 }
+
+
+/* BESPOKE TARGETED JOURNEYS */
+.journey-page{background:#f6f1e8;color:var(--ink)}
+.journey-topbar{
+  background:linear-gradient(90deg,#071a34,#0c315c 60%,#0e6bb7);
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.journey-nav{
+  width:min(var(--max),calc(100% - 72px));
+  margin:0 auto;
+  height:82px;
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+.journey-brand{display:flex;align-items:center;gap:7px;font-weight:950}
+.journey-brand .mini-back{background:#fff;color:var(--navy);font-size:10px;padding:2px 4px;transform:rotate(-4deg)}
+.journey-brand strong{font-size:24px;letter-spacing:-.05em}
+.journey-nav .journey-label{margin-left:auto;font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:950;color:#b9c8d8}
+
+.journey-hero{
+  position:relative;
+  overflow:hidden;
+  background:
+   radial-gradient(circle at 79% 22%,rgba(25,151,240,.55),transparent 29%),
+   radial-gradient(circle at 19% 72%,rgba(239,73,53,.46),transparent 28%),
+   linear-gradient(120deg,#06162d,#0b3464 61%,#0d70bb);
+  color:#fff;
+  padding:86px 0 74px;
+}
+.journey-hero:after{
+  content:"";
+  position:absolute;
+  inset:-20%;
+  background:
+   linear-gradient(18deg,transparent 34%,rgba(255,255,255,.08) 40%,transparent 47%),
+   linear-gradient(-13deg,transparent 50%,rgba(255,255,255,.06) 54%,transparent 60%);
+  filter:blur(8px);
+}
+.journey-hero .container{position:relative;z-index:2}
+.journey-tag{display:inline-flex;background:var(--red);padding:6px 9px;font-size:10px;font-weight:950;text-transform:uppercase;letter-spacing:.08em}
+.journey-hero h1{font-size:clamp(50px,7vw,94px);line-height:.88;letter-spacing:-.065em;margin:18px 0}
+.journey-hero h1 em{font-weight:300}
+.journey-hero p{font-size:18px;color:rgba(255,255,255,.80);max-width:720px}
+.journey-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+
+.journey-proof{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  background:#fff;
+  border-bottom:1px solid var(--line);
+}
+.journey-proof div{padding:26px 30px;border-right:1px solid var(--line)}
+.journey-proof div:last-child{border-right:0}
+.journey-proof strong{display:block;font-size:36px;line-height:1;color:var(--red)}
+.journey-proof span{display:block;font-size:11px;font-weight:950;text-transform:uppercase;letter-spacing:.05em;margin-top:8px}
+.journey-proof p{font-size:12px;color:var(--muted);margin:7px 0 0}
+
+.journey-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px;align-items:start}
+.journey-sidebar{display:flex;flex-direction:column;gap:14px}
+.issue-block{background:#fff;padding:26px;border-left:5px solid var(--red)}
+.issue-block .no{font-size:10px;font-weight:950;color:var(--red)}
+.issue-block h3{font-size:24px;line-height:1.05;margin:10px 0 7px}
+.issue-block p{font-size:13px;color:var(--muted);margin:0}
+
+.survey-shell{
+  background:#fff;
+  padding:32px;
+  box-shadow:0 16px 36px rgba(15,31,56,.08);
+}
+.survey-head{display:flex;justify-content:space-between;gap:20px;align-items:start;margin-bottom:24px}
+.survey-head h2{font-size:36px;line-height:1;margin:5px 0 0;letter-spacing:-.045em}
+.survey-time{background:#f0ece4;padding:7px 10px;font-size:10px;font-weight:900}
+.question{padding:20px 0;border-top:1px solid var(--line)}
+.question:first-of-type{border-top:0}
+.question h3{font-size:16px;margin:0 0 12px}
+.option-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.option{border:1px solid var(--line);padding:11px 12px;font-size:12px;display:flex;align-items:center;gap:8px}
+.option input{accent-color:var(--red)}
+.survey-shell textarea,.survey-shell input[type="text"],.survey-shell input[type="email"]{
+  width:100%;border:1px solid var(--line);padding:12px;min-height:48px;
+}
+.survey-note{font-size:10px;color:var(--muted);margin-top:10px}
+
+.local-band{
+  background:#071a34;
+  color:#fff;
+  padding:58px 0;
+}
+.local-band h2{font-size:40px;margin:0 0 8px;letter-spacing:-.045em}
+.visit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+.visit-card{border:1px solid rgba(255,255,255,.2);padding:20px;min-height:180px}
+.visit-card .date{font-size:9px;color:#ff8e7e;text-transform:uppercase;font-weight:950}
+.visit-card h3{font-size:20px;line-height:1.05;margin:10px 0 7px}
+.visit-card p{font-size:12px;color:#b9c8d7}
+
+.journey-final{background:var(--cream);padding:58px 0}
+.final-box{display:grid;grid-template-columns:1.2fr .8fr;background:#fff}
+.final-copy{padding:38px}.final-copy h2{font-size:39px;line-height:1;margin:8px 0 13px}
+.final-actions{background:var(--red);color:#fff;padding:38px;display:flex;flex-direction:column;justify-content:center}
+.final-actions h3{font-size:29px;line-height:1;margin:0 0 14px}
+
+.donor-hero{
+  background:
+   radial-gradient(circle at 78% 25%,rgba(25,151,240,.46),transparent 30%),
+   linear-gradient(120deg,#071a34,#0d4f8a);
+}
+.donor-thankyou{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:18px;
+}
+.donor-panel{background:#fff;padding:34px}
+.donor-panel.highlight{background:#071a34;color:#fff}
+.donor-panel h2{font-size:36px;line-height:1;margin:0 0 14px}
+.donor-panel p{color:var(--muted)}
+.donor-panel.highlight p{color:#b9c6d4}
+.donor-path{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.donor-step{background:#fff;padding:25px;border-top:4px solid var(--red)}
+.donor-step h3{font-size:22px;margin:8px 0}.donor-step p{font-size:12px;color:var(--muted)}
+
+@media(max-width:900px){
+ .journey-grid,.final-box,.donor-thankyou{grid-template-columns:1fr}
+ .visit-grid,.donor-path{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+ .journey-nav{width:min(100% - 30px,var(--max));height:72px}
+ .journey-label{display:none}
+ .journey-hero{padding:60px 0}
+ .journey-proof{grid-template-columns:1fr}
+ .journey-proof div{border-right:0;border-bottom:1px solid var(--line)}
+ .option-grid,.visit-grid,.donor-path{grid-template-columns:1fr}
+}
+
+
+/* HOMEPAGE LOWER-SECTION REFINEMENT */
+.home-reference .section{
+  padding:58px 0;
+}
+.home-reference .section.alt{
+  padding:62px 0 68px;
+}
+.home-reference .section .container{
+  width:min(1460px,calc(100% - 40px));
+}
+.home-reference .section-title{
+  font-size:39px;
+  margin-bottom:18px;
+}
+.home-reference .section-eyebrow{
+  margin-bottom:4px;
+}
+
+/* Replace three identical cards with a stronger editorial composition */
+.home-feature-layout{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:14px;
+  align-items:stretch;
+}
+.home-feature-main{
+  min-height:440px;
+  position:relative;
+  background:
+    linear-gradient(135deg,rgba(7,26,52,.10),rgba(7,26,52,.55)),
+    linear-gradient(135deg,#7f9bad,#cbd7df);
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+  padding:34px;
+  color:#fff;
+}
+.home-feature-main:before{
+  content:"IMAGE PLACEHOLDER";
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  font-size:12px;
+  font-weight:950;
+  letter-spacing:.08em;
+  color:rgba(255,255,255,.88);
+}
+.home-feature-main:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,transparent 35%,rgba(7,26,52,.82) 100%);
+}
+.home-feature-main .content{
+  position:relative;
+  z-index:2;
+  max-width:560px;
+}
+.home-feature-main h3{
+  font-size:42px;
+  line-height:.96;
+  letter-spacing:-.045em;
+  margin:0 0 10px;
+}
+.home-feature-main p{
+  font-size:14px;
+  color:rgba(255,255,255,.82);
+  max-width:500px;
+}
+.home-feature-side{
+  display:grid;
+  grid-template-rows:1fr 1fr;
+  gap:14px;
+}
+.home-feature-small{
+  display:grid;
+  grid-template-columns:42% 58%;
+  min-height:213px;
+  background:#071a34;
+  color:#fff;
+}
+.home-feature-small .media{
+  background:linear-gradient(135deg,#94aabd,#d6dfe6);
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-size:10px;
+  font-weight:950;
+}
+.home-feature-small .copy{
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.home-feature-small h3{
+  font-size:26px;
+  line-height:1;
+  margin:0 0 9px;
+  letter-spacing:-.035em;
+}
+.home-feature-small p{
+  font-size:12px;
+  color:#c6d2de;
+  margin:0 0 14px;
+}
+
+/* News becomes one horizontal feature + two compact stories */
+.home-news-layout{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:14px;
+}
+.home-news-lead{
+  min-height:390px;
+  background:#fff;
+  display:grid;
+  grid-template-columns:48% 52%;
+  border-top:4px solid var(--red);
+}
+.home-news-lead .media{
+  background:linear-gradient(135deg,#91a9bc,#d6e0e7);
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-weight:950;
+  font-size:11px;
+}
+.home-news-lead .copy{
+  padding:34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.home-news-lead h3{
+  font-size:32px;
+  line-height:1.02;
+  letter-spacing:-.04em;
+  margin:8px 0 12px;
+}
+.home-news-lead p{
+  font-size:13px;
+  color:var(--muted);
+}
+.home-news-side{
+  display:grid;
+  grid-template-rows:1fr 1fr;
+  gap:14px;
+}
+.home-news-compact{
+  background:#fff;
+  padding:24px;
+  border-left:5px solid var(--red);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.home-news-compact h3{
+  font-size:23px;
+  line-height:1.02;
+  letter-spacing:-.03em;
+  margin:8px 0 8px;
+}
+.home-news-compact p{
+  font-size:12px;
+  color:var(--muted);
+  margin:0 0 10px;
+}
+
+/* Get involved section feels tighter and more deliberate */
+.home-reference .section.navy{
+  padding:50px 0;
+}
+.home-reference .section.navy .two-col{
+  grid-template-columns:1.15fr .85fr;
+  gap:18px;
+  align-items:center;
+}
+.home-reference .cta-block{
+  padding:28px;
+}
+.home-reference .cta-block h2{
+  font-size:30px;
+  margin:0 0 8px;
+}
+
+/* remove old generic cards on homepage */
+.home-reference .feature-cards,
+.home-reference .news-grid{
+  display:none;
+}
+
+@media(max-width:900px){
+  .home-feature-layout,
+  .home-news-layout,
+  .home-news-lead{
+    grid-template-columns:1fr;
+  }
+  .home-feature-main{min-height:360px}
+  .home-feature-small{grid-template-columns:36% 64%}
+  .home-news-lead .media{min-height:220px}
+}
+@media(max-width:620px){
+  .home-reference .section .container{
+    width:min(100% - 24px,1460px);
+  }
+  .home-feature-small{grid-template-columns:1fr}
+  .home-feature-small .media{min-height:150px}
+}
+
+/* NATURAL EDITORIAL LABELS — remove AI-ish uppercase orange microcopy */
+.eyebrow,
+.section-eyebrow,
+.kicker,
+.news-body .date,
+.event-type,
+.journey-tag,
+.journey-label,
+.policy-no,
+.plan-no,
+.survey-time,
+.visit-card .date{
+  text-transform:none !important;
+  letter-spacing:0 !important;
+}
+.eyebrow,
+.section-eyebrow,
+.kicker{
+  color:inherit !important;
+  font-size:13px !important;
+  font-weight:700 !important;
+  opacity:.72;
+}
+.home-reference .section-eyebrow{
+  color:var(--muted) !important;
+  opacity:1;
+}
+.inner-hero .eyebrow,
+.journey-hero .eyebrow,
+.local-band .eyebrow,
+.video-feature-copy .eyebrow,
+.business-copy .eyebrow,
+.donate-story .eyebrow{
+  color:rgba(255,255,255,.72) !important;
+}
+.news-body .date,
+.event-type,
+.visit-card .date{
+  color:var(--muted) !important;
+  font-size:12px !important;
+}
+.journey-tag{
+  background:transparent !important;
+  padding:0 !important;
+  color:rgba(255,255,255,.72) !important;
+  font-size:14px !important;
+}
+.policy-no{
+  color:var(--muted) !important;
+}
+.plan-no{
+  color:inherit !important;
+}
+
+/* WARREN-INSPIRED HOMEPAGE HERO — full-image campaign moment with white signup panel */
+.home-reference .site-header{
+  background:rgba(5,18,38,.42) !important;
+  backdrop-filter:blur(2px);
+}
+.home-reference .hero{
+  min-height:720px;
+  background:
+    linear-gradient(90deg,rgba(4,16,34,.92) 0%,rgba(4,16,34,.78) 35%,rgba(4,16,34,.20) 67%,rgba(4,16,34,.10) 100%),
+    linear-gradient(0deg,rgba(7,26,52,.18),rgba(7,26,52,.18)),
+    url('images/ben-hero.jpg') center 24%/cover no-repeat !important;
+}
+.home-reference .hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 22% 52%,rgba(239,73,53,.25),transparent 31%),
+    linear-gradient(115deg,rgba(11,95,164,.10),transparent 62%);
+  filter:none;
+  opacity:1;
+}
+.home-reference .hero-wrap{
+  grid-template-columns:1fr .78fr !important;
+  align-items:center;
+  min-height:720px !important;
+}
+.home-reference .hero-copy{
+  padding:142px 36px 70px 0 !important;
+}
+.home-reference .campaign-lockup{
+  max-width:620px;
+}
+.home-reference .campaign-ben{
+  font-size:116px !important;
+}
+.home-reference .campaign-mayor{
+  font-size:50px !important;
+}
+.home-reference .campaign-region{
+  font-size:17px !important;
+}
+.home-reference .hero-copy .intro{
+  font-size:17px !important;
+  line-height:1.55;
+  max-width:560px;
+}
+.home-reference .hero-candidate{
+  min-height:auto !important;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  padding-top:78px;
+}
+.home-reference .candidate-placeholder{
+  position:relative !important;
+  inset:auto !important;
+  width:100%;
+  max-width:500px;
+  min-height:420px;
+  background:#fff !important;
+  box-shadow:0 24px 60px rgba(0,0,0,.28);
+  padding:34px !important;
+  color:var(--ink);
+}
+.home-reference .candidate-placeholder:before{
+  content:"Stay in touch";
+  display:block;
+  font-size:32px;
+  line-height:1;
+  letter-spacing:-.035em;
+  font-weight:900;
+  color:var(--navy);
+  margin-bottom:10px;
+}
+.home-reference .candidate-placeholder:after{
+  content:"Get updates from Ben and the campaign straight to your inbox.";
+  position:static !important;
+  display:block;
+  background:none !important;
+  color:var(--muted);
+  font-size:15px;
+  margin-bottom:22px;
+}
+.home-reference .hero-copy .join-grid,
+.home-reference .hero-copy .join-cta,
+.home-reference .hero-copy .privacy-note{
+  display:none !important;
+}
+.hero-signup-card{
+  margin-top:18px;
+}
+.hero-signup-card input{
+  width:100%;
+  height:52px;
+  border:2px solid #26364f;
+  padding:0 14px;
+  margin-bottom:11px;
+}
+.hero-signup-card .two{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.hero-signup-card .btn{
+  margin-top:4px;
+  min-width:170px;
+}
+.hero-signup-card .note{
+  font-size:10px;
+  color:var(--muted);
+  margin-top:12px;
+}
+
+/* Remove orange/red top rules that repeat too often */
+.home-news-lead,
+.news-card{
+  border-top-color:transparent !important;
+}
+.home-news-compact,
+.news-mini,
+.issue-block{
+  border-left-color:#cfd7df !important;
+}
+.policy-card{
+  border-top-color:#cfd7df !important;
+}
+
+/* Natural category styling */
+.story-meta{
+  font-size:13px;
+  color:var(--muted);
+  font-weight:700;
+}
+.story-meta.light{
+  color:rgba(255,255,255,.72);
+}
+
+/* HOMEPAGE ASSET WIRING */
+.home-feature-main{
+  background:
+    linear-gradient(180deg,rgba(7,26,52,.08) 0%,rgba(7,26,52,.76) 100%),
+    url('images/ben-area.jpg') center/cover no-repeat !important;
+}
+.home-feature-main:before{display:none !important}
+
+.home-feature-small.video .media{
+  background:url('images/ben-video.jpg') center/cover no-repeat !important;
+  color:transparent !important;
+}
+.home-feature-small.business .media{
+  background:url('images/ben-business.jpg') center/cover no-repeat !important;
+  color:transparent !important;
+}
+
+.home-news-lead .media{
+  background:url('images/news-transport.jpg') center/cover no-repeat !important;
+  color:transparent !important;
+}
+.home-news-compact.business{
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.96)),
+    url('images/news-business.jpg') center/cover no-repeat !important;
+}
+.home-news-compact.campaign{
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.96)),
+    url('images/news-campaign-trail.jpg') center/cover no-repeat !important;
+}
+
+/* Preserve hero filename */
+.home-reference .hero{
+  background:
+    linear-gradient(90deg,rgba(4,16,34,.92) 0%,rgba(4,16,34,.78) 35%,rgba(4,16,34,.20) 67%,rgba(4,16,34,.10) 100%),
+    linear-gradient(0deg,rgba(7,26,52,.18),rgba(7,26,52,.18)),
+    url('images/ben-hero.jpg') center 24%/cover no-repeat !important;
+}
