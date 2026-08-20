@@ -64,5 +64,5 @@ The mid-page homepage sections have been rebuilt to remove repetitive equal card
 Removed the repeated uppercase orange/red micro-label treatment across the site. Categories now use quieter editorial metadata. The homepage hero has been rebuilt around a full-bleed campaign image with a dark left overlay and a white signup card on the right, inspired by the supplied campaign reference.
 
 
-## Header update
-Header changed to a lighter blue gradient inspired by the supplied Warren reference. BACK BEN is now centred in the header and the 'FOR MAYOR' text has been removed from the header brand.
+## Clean revert
+Reverted the centred light-blue header. Restored the stronger integrated dark header/hero while retaining the natural-design changes: quieter metadata, fewer uppercase labels, softer spacing, fewer decorative rules and less repetitive card styling.
