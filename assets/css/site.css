@@ -5481,3 +5481,533 @@ header.site-header{
     font-size:21px !important;
   }
 }
+
+
+/* =========================================================
+   ABOUT BEN — FULL CAMPAIGN STORY HERO TEST
+   ========================================================= */
+
+body.about-hero-page{
+  background:var(--cream);
+}
+
+body.about-hero-page .site-header{
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  background:linear-gradient(to bottom,rgba(4,15,31,.78),rgba(4,15,31,.20),transparent) !important;
+  z-index:5000 !important;
+}
+
+.about-story-hero{
+  min-height:690px;
+  display:grid;
+  grid-template-columns:52% 48%;
+  background:#103f76;
+  color:#fff;
+  overflow:hidden;
+}
+
+.about-story-hero-left{
+  position:relative;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(circle at 20% 45%,rgba(240,68,54,.18),transparent 34%),
+    linear-gradient(110deg,#173f73 0%,#24568e 62%,#326aa5 100%);
+}
+
+.about-story-hero-left::after{
+  content:"";
+  position:absolute;
+  top:0;
+  right:-120px;
+  bottom:0;
+  width:220px;
+  background:linear-gradient(to right,#326aa5 0%,rgba(50,106,165,.62) 38%,transparent 100%);
+  z-index:2;
+  pointer-events:none;
+}
+
+.about-story-hero-copy{
+  position:relative;
+  z-index:3;
+  width:min(660px,calc(100% - 90px));
+  margin-left:max(46px,7vw);
+  padding-top:62px;
+}
+
+.about-story-eyebrow{
+  margin-bottom:22px;
+  color:#f2d7d2;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.18em;
+}
+
+.about-story-hero h1{
+  max-width:650px;
+  margin:0 0 26px;
+  color:#fff;
+  font-size:64px;
+  line-height:.98;
+  letter-spacing:-.045em;
+}
+
+.about-story-hero p{
+  max-width:610px;
+  margin:0 0 18px;
+  color:#f2f5f8;
+  font-size:20px;
+  line-height:1.5;
+  font-weight:600;
+}
+
+.about-story-hero .about-story-highlight{
+  color:#ff6a5d;
+  font-weight:900;
+}
+
+.about-story-hero-right{
+  min-width:0;
+  position:relative;
+  background:#132c4d;
+}
+
+.about-story-hero-image{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  background:
+    linear-gradient(90deg,rgba(33,83,139,.22),transparent 24%),
+    linear-gradient(135deg,#8ea5b8,#d8e1e7);
+  color:#fff;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+
+.about-story-hero-right::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(31,83,141,.30),transparent 28%);
+}
+
+/* biography flows straight out of hero */
+body.about-hero-page .about-editorial-story{
+  padding-top:66px !important;
+}
+
+@media(max-width:900px){
+  body.about-hero-page .site-header{
+    position:absolute !important;
+  }
+
+  .about-story-hero{
+    min-height:0;
+    grid-template-columns:1fr;
+  }
+
+  .about-story-hero-left{
+    order:2;
+    min-height:420px;
+  }
+
+  .about-story-hero-left::after{
+    display:none;
+  }
+
+  .about-story-hero-right{
+    order:1;
+    min-height:500px;
+  }
+
+  .about-story-hero-copy{
+    width:100%;
+    margin:0;
+    padding:54px 34px 58px;
+  }
+
+  .about-story-hero h1{
+    font-size:49px;
+  }
+}
+
+@media(max-width:700px){
+  .about-story-hero-right{
+    min-height:420px;
+  }
+
+  .about-story-hero-copy{
+    padding:44px 22px 48px;
+  }
+
+  .about-story-eyebrow{
+    font-size:11px;
+    margin-bottom:15px;
+  }
+
+  .about-story-hero h1{
+    font-size:40px;
+    line-height:1;
+    margin-bottom:20px;
+  }
+
+  .about-story-hero p{
+    font-size:17px;
+  }
+
+  body.about-hero-page .about-editorial-story{
+    padding-top:42px !important;
+  }
+}
+
+
+/* =========================================================
+   ABOUT BEN — FULL WIDTH PHOTO HERO
+   ========================================================= */
+
+body.about-hero-page .site-header{
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  transform:none !important;
+  background:linear-gradient(to bottom,rgba(4,15,31,.84),rgba(4,15,31,.25),transparent) !important;
+  z-index:5000 !important;
+}
+
+.about-story-hero{
+  display:none !important;
+}
+
+.about-photo-hero{
+  position:relative;
+  min-height:720px;
+  overflow:hidden;
+  color:#fff;
+  background:#071a34;
+}
+
+.about-photo-hero-image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+  display:block;
+}
+
+.about-photo-hero-shade{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,18,37,.94) 0%,
+      rgba(7,31,61,.82) 30%,
+      rgba(8,37,71,.50) 50%,
+      rgba(4,15,31,.10) 72%,
+      rgba(4,15,31,.06) 100%
+    ),
+    linear-gradient(to top,rgba(5,18,37,.45),transparent 42%);
+}
+
+.about-photo-hero-content{
+  position:relative;
+  z-index:2;
+  min-height:720px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  align-items:flex-start;
+  padding-top:140px;
+  padding-bottom:92px;
+}
+
+.about-photo-hero-content h1{
+  max-width:720px;
+  margin:0 0 24px;
+  color:#fff;
+  font-size:66px;
+  line-height:.98;
+  letter-spacing:-.045em;
+}
+
+.about-photo-hero-content p{
+  max-width:650px;
+  margin:0;
+  color:#eef3f7;
+  font-size:20px;
+  line-height:1.5;
+  font-weight:600;
+}
+
+/* Remove old facts strip */
+.about-editorial-facts{
+  display:none !important;
+}
+
+/* =========================================================
+   ABOUT — MEDIA / VIDEO SECTION
+   ========================================================= */
+
+.about-editorial-video{
+  display:none !important;
+}
+
+.about-media-editorial{
+  background:var(--cream);
+  padding:78px 0;
+  border-top:1px solid #ded8ce;
+}
+
+.about-media-editorial-grid{
+  display:grid;
+  grid-template-columns:1.18fr .82fr;
+  gap:0;
+  max-width:1120px;
+  margin:0 auto;
+  align-items:stretch;
+}
+
+.about-media-frame{
+  background:#fff;
+  padding:10px;
+  box-shadow:0 10px 22px rgba(14,32,54,.14);
+}
+
+.about-media-placeholder{
+  min-height:430px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  background:
+    radial-gradient(circle at 30% 45%,rgba(240,68,54,.18),transparent 34%),
+    linear-gradient(135deg,#123e73,#187ac5);
+  color:#fff;
+  font-weight:900;
+}
+
+.about-media-copy{
+  background:#fff;
+  padding:52px 46px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  border-top:1px solid #dfd8ce;
+  border-right:1px solid #dfd8ce;
+  border-bottom:1px solid #dfd8ce;
+}
+
+.about-media-copy h2{
+  margin:0 0 18px;
+  color:var(--navy);
+  font-size:43px;
+  line-height:1;
+  letter-spacing:-.04em;
+}
+
+.about-media-copy p{
+  margin:0 0 24px;
+  color:#43566c;
+  font-size:17px;
+  line-height:1.55;
+}
+
+/* =========================================================
+   ABOUT — ASK BEN, EDITORIAL NOT GRADIENT MODULE
+   ========================================================= */
+
+.about-editorial-ask{
+  display:none !important;
+}
+
+.about-question-editorial{
+  background:#fff;
+  padding:72px 0;
+  border-top:1px solid #ded8ce;
+}
+
+.about-question-grid{
+  max-width:1120px;
+  display:grid;
+  grid-template-columns:.72fr 1.28fr;
+  gap:64px;
+  align-items:start;
+}
+
+.about-question-copy{
+  padding-top:4px;
+}
+
+.about-question-copy h2{
+  margin:0 0 14px;
+  color:var(--navy);
+  font-size:46px;
+  line-height:1;
+  letter-spacing:-.04em;
+}
+
+.about-question-copy > p{
+  margin:0 0 12px;
+  color:#43566c;
+  font-size:18px;
+  line-height:1.5;
+}
+
+.about-question-note{
+  color:#7a8897 !important;
+  font-size:13px !important;
+}
+
+.about-question-form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+}
+
+.about-question-form input{
+  width:100%;
+  min-width:0;
+  height:54px;
+  border:1px solid #9eaab6;
+  background:var(--cream);
+  padding:0 14px;
+  color:var(--text);
+  font-size:14px;
+}
+
+.about-question-form .about-question-full{
+  grid-column:1 / -1;
+}
+
+.about-question-form .btn{
+  grid-column:1 / -1;
+  width:max-content;
+  min-width:150px;
+}
+
+/* Biography follows photo hero */
+body.about-hero-page .about-editorial-story{
+  padding-top:68px !important;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+@media(max-width:900px){
+  .about-photo-hero{
+    min-height:650px;
+  }
+
+  .about-photo-hero-content{
+    min-height:650px;
+    padding:130px 32px 64px;
+  }
+
+  .about-photo-hero-content h1{
+    font-size:52px;
+  }
+
+  .about-media-editorial-grid,
+  .about-question-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-media-copy{
+    border-left:1px solid #dfd8ce;
+  }
+}
+
+@media(max-width:700px){
+  .about-photo-hero{
+    min-height:620px;
+  }
+
+  .about-photo-hero-image{
+    object-position:60% center;
+  }
+
+  .about-photo-hero-shade{
+    background:
+      linear-gradient(
+        to top,
+        rgba(5,18,37,.98) 0%,
+        rgba(5,18,37,.88) 35%,
+        rgba(5,18,37,.34) 67%,
+        rgba(5,18,37,.10) 100%
+      );
+  }
+
+  .about-photo-hero-content{
+    width:100%;
+    min-height:620px;
+    padding:120px 22px 46px;
+    justify-content:flex-end;
+  }
+
+  .about-photo-hero-content h1{
+    font-size:41px;
+  }
+
+  .about-photo-hero-content p{
+    font-size:17px;
+  }
+
+  .about-media-editorial{
+    padding:44px 18px;
+  }
+
+  .about-media-editorial .container{
+    width:100%;
+  }
+
+  .about-media-placeholder{
+    min-height:270px;
+  }
+
+  .about-media-copy{
+    padding:30px 22px;
+  }
+
+  .about-media-copy h2{
+    font-size:35px;
+  }
+
+  .about-question-editorial{
+    padding:46px 22px;
+  }
+
+  .about-question-editorial .container{
+    width:100%;
+  }
+
+  .about-question-grid{
+    gap:24px;
+  }
+
+  .about-question-copy h2{
+    font-size:36px;
+  }
+
+  .about-question-form{
+    grid-template-columns:1fr;
+  }
+
+  .about-question-form .about-question-full,
+  .about-question-form .btn{
+    grid-column:auto;
+  }
+
+  .about-question-form .btn{
+    width:100%;
+  }
+}

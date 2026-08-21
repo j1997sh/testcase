@@ -213,3 +213,21 @@ The rest of the site has been pulled toward the same visual language as Home and
 - Campaign signup copy and data capture sit on a clean navy block below.
 - Rebuilt the mobile menu script from scratch.
 - Mobile dropdown now includes Volunteer and Donate actions.
+
+
+## About Ben hero experiment
+About Ben now opens with a full-width campaign story hero:
+- blue editorial text panel
+- large image area on the right
+- transparent header over the hero
+- campaign headline, intro and emphasis line
+- cream biography treatment continues below
+
+
+## About Ben full-width hero update
+- Supplied industrial site photograph hard-coded as `assets/images/ben-about-hero.jpg`
+- Full-width photographic hero replaces split layout
+- Removed MEET BEN eyebrow
+- Removed "A mayor who listens locally — and gets things done."
+- Removed four-box quick facts strip
+- Reworked Hear it from Ben and Ask Ben into cream/white editorial campaign sections

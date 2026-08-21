@@ -191,7 +191,7 @@ body:not(.home-page) .site-header{
 </style>
 
 </head>
-<body class="inner-page">
+<body class="inner-page about-hero-page">
 <div class="site-shell">
 
 <header class="site-header">
@@ -217,10 +217,14 @@ body:not(.home-page) .site-header{
 
 <main>
 
-<section class="about-editorial-intro">
-  <div class="container">
-<h1>Ben Fletcher is standing for Mayor of Cheshire & Warrington to bring practical leadership, local focus and a record of delivery.</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ben is standing because Cheshire & Warrington deserves leadership that understands the region, works with people and gets things done.</p>
+<section class="about-photo-hero">
+  <img class="about-photo-hero-image" src="assets/images/ben-about-hero.jpg" alt="Ben visiting a major local industrial site">
+
+  <div class="about-photo-hero-shade"></div>
+
+  <div class="container about-photo-hero-content">
+    <h1>Leadership rooted in Cheshire & Warrington.</h1>
+    <p>Ben Fletcher is standing for Mayor to bring practical leadership, local focus and a record of delivery to the region.</p>
   </div>
 </section>
 
@@ -265,24 +269,6 @@ body:not(.home-page) .site-header{
       </div>
     </div>
 
-    <div class="about-editorial-facts">
-      <div>
-        <span>Home</span>
-        <strong>Lorem ipsum</strong>
-      </div>
-      <div>
-        <span>Background</span>
-        <strong>Lorem ipsum</strong>
-      </div>
-      <div>
-        <span>Experience</span>
-        <strong>Lorem ipsum</strong>
-      </div>
-      <div>
-        <span>First priority</span>
-        <strong>Better transport</strong>
-      </div>
-    </div>
 
     <div class="about-editorial-row about-editorial-row-three">
       <div class="about-editorial-copy about-editorial-copy-wide">
@@ -306,15 +292,17 @@ body:not(.home-page) .site-header{
   </div>
 </section>
 
-<section class="about-editorial-video">
+<section class="about-media-editorial">
   <div class="container">
-    <div class="about-editorial-video-box">
-      <div class="about-editorial-video-placeholder">
-        <button class="about-play" type="button">▶</button>
-        <span>VIDEO PLACEHOLDER</span>
+    <div class="about-media-editorial-grid">
+      <div class="about-media-frame">
+        <div class="about-media-placeholder">
+          <button class="about-play" type="button">▶</button>
+          <span>VIDEO PLACEHOLDER</span>
+        </div>
       </div>
 
-      <div class="about-editorial-video-copy">
+      <div class="about-media-copy">
         <h2>Hear it from Ben</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A short film about why he is standing and what he wants to change.</p>
         <a class="btn btn-red" href="hear-from-ben.html">Watch more</a>
@@ -323,15 +311,16 @@ body:not(.home-page) .site-header{
   </div>
 </section>
 
-<section class="about-editorial-ask">
-  <div class="container">
-    <div>
+<section class="about-question-editorial">
+  <div class="container about-question-grid">
+    <div class="about-question-copy">
       <h2>Ask Ben a question</h2>
       <p>What would you ask the next Mayor of Cheshire & Warrington?</p>
+      <p class="about-question-note">This is where questions can be collected, tagged and fed into future campaign content and supporter journeys.</p>
     </div>
 
-    <form class="about-editorial-ask-form">
-      <input type="text" placeholder="Your question">
+    <form class="about-question-form">
+      <input class="about-question-full" type="text" placeholder="Your question">
       <input type="text" placeholder="First name">
       <input type="email" placeholder="Email address">
       <input type="text" placeholder="Postcode">
