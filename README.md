@@ -182,3 +182,10 @@ This forces GitHub Pages / Safari to load the latest current styling rather than
 - Added Chester, Crewe and Warrington example routes.
 - Added a separate postcode finder beneath the photography.
 - Mobile uses a horizontally swipeable local-image row.
+
+
+## Header + local area redesign
+- Homepage header is transparent over the hero.
+- All other pages use the solid blue/navy campaign header.
+- Desktop header spacing and content offset reset.
+- Ben in your area now uses alternating editorial text/image blocks rather than equal cards.
