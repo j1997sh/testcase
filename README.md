@@ -205,3 +205,11 @@ The rest of the site has been pulled toward the same visual language as Home and
 ## Showcase images added
 - `assets/images/ben-home-intro.jpg` — homepage intro photography
 - `assets/images/ben-area.jpg` — Ben in your area photography
+
+
+## Mobile hero/menu fix
+- Hero photo occupies the top mobile zone.
+- BACK BEN overlaps the lower edge of the photo.
+- Campaign signup copy and data capture sit on a clean navy block below.
+- Rebuilt the mobile menu script from scratch.
+- Mobile dropdown now includes Volunteer and Donate actions.
