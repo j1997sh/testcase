@@ -7246,3 +7246,41 @@ body.home-page .home-hero-photo{
     object-position:54% center !important;
   }
 }
+
+
+/* =========================================================
+   DEFINITIVE HERO FACE FIX
+   The source portrait is top-anchored so the browser cannot
+   crop Ben's head/face from the top of the image.
+   ========================================================= */
+
+@media(min-width:801px){
+  body.home-page .home-hero-bg{
+    overflow:hidden !important;
+  }
+
+  body.home-page .home-hero-photo{
+    position:absolute !important;
+    inset:0 !important;
+    top:0 !important;
+    left:0 !important;
+    right:0 !important;
+    bottom:auto !important;
+
+    width:100% !important;
+    height:100% !important;
+
+    object-fit:cover !important;
+    object-position:50% 0% !important;
+
+    transform:none !important;
+    margin:0 !important;
+  }
+}
+
+/* Mobile keeps its separate intentional portrait crop. */
+@media(max-width:800px){
+  body.home-page .home-hero-photo{
+    object-position:54% center !important;
+  }
+}
