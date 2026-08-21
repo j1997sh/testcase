@@ -32,3 +32,30 @@ The rest of the site currently uses image placeholders so real campaign assets c
 - journeys/crewe-transport.html
 - journeys/warrington-business.html
 - journeys/chester-housing.html
+
+
+## Campaign logo
+The supplied Back Ben for Mayor logo has been recreated at high resolution with a transparent background and wired into the full theme.
+
+File:
+- `assets/images/back-ben-logo.png`
+
+It is used in the header across all pages and as the main homepage campaign lock-up.
+
+
+## About Ben interactive prototype
+The About Ben page now includes:
+- Meet Ben image / biography layout
+- Expandable Why I'm standing panel
+- Interactive Q&A accordion
+- Ben in 60 seconds facts
+- Video placeholder
+- Campaign mission section
+- Interactive story timeline
+- Ask Ben data-capture form
+- Ben near you postcode section
+- Final Get Involved CTA
+
+All copy is placeholder / lorem ipsum until final biography and campaign content are supplied.
+
+Homepage candidate image has been removed for now.
