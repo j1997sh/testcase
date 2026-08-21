@@ -3037,3 +3037,11 @@ footer .foot > div:first-child{
     padding:30px 22px !important;
   }
 }
+
+
+/* HEADER DUPLICATE ACTION SAFEGUARD */
+.navlinks > a[href$="volunteer.html"]:not(:last-child)[data-header-action],
+.navlinks > a[href$="donate.html"],
+.navlinks .duplicate-action{
+  display:none !important;
+}
