@@ -141,3 +141,17 @@ The supplied Ben photograph is now used as the real homepage hero background:
 - `assets/images/ben-home-hero.jpg`
 - desktop crop keeps Ben to the right with a dark readability gradient on the left
 - mobile uses a higher crop with the signup content below the portrait
+
+
+## About Ben editorial redesign
+The About page has been rebuilt as a long-form editorial biography:
+- large opening campaign statement
+- flowing biography copy rather than card grids
+- tilted photo / polaroid placeholders
+- pull quote
+- quick facts band
+- Why I'm standing section
+- video block
+- Ask Ben form
+
+The treatment is inspired by traditional political biography pages but uses Back Ben's navy/red/cream visual identity.
