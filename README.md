@@ -59,3 +59,17 @@ The About Ben page now includes:
 All copy is placeholder / lorem ipsum until final biography and campaign content are supplied.
 
 Homepage candidate image has been removed for now.
+
+
+## My Plan interactive prototype
+The My Plan page now includes:
+- Four full-width campaign priority sections
+- Image placeholders
+- Expandable policy detail accordions
+- Links into targeted transport / housing / business journeys
+- Interactive postcode localisation demo
+- Ben explains the plan video placeholder
+- Help shape the plan survey
+- First name, last name, email and postcode capture
+
+All detailed policy copy remains placeholder until final campaign policy is supplied.

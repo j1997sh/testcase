@@ -1,3 +1,5 @@
 Homepage:
 ben-hero.jpg
 ben-area.jpg
+
+back-ben-logo.png — campaign logo, transparent high-resolution PNG
