@@ -1486,3 +1486,140 @@ footer{background:var(--navy);color:#fff;padding:28px 0;font-size:12px}
     height:230px;
   }
 }
+
+
+/* =========================================================
+   MOBILE HEADER / MENU REBUILD
+   ========================================================= */
+@media(max-width:900px){
+
+  header{
+    position:relative;
+    z-index:100;
+  }
+
+  .nav{
+    min-height:76px;
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    align-items:center;
+    gap:14px;
+  }
+
+  .nav .logo{
+    justify-self:start;
+  }
+
+  .nav .logo img{
+    width:112px;
+    height:auto;
+    max-height:62px;
+    object-fit:contain;
+  }
+
+  .menu-btn{
+    display:block;
+    justify-self:end;
+    min-width:96px;
+    height:52px;
+    padding:0 22px;
+    border:1px solid rgba(255,255,255,.6);
+    background:transparent;
+    color:#fff;
+    font-size:16px;
+    font-weight:800;
+    cursor:pointer;
+  }
+
+  .nav-actions{
+    display:none !important;
+  }
+
+  .navlinks{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    width:100%;
+    background:#061a31;
+    padding:8px 18px 18px;
+    box-shadow:0 18px 35px rgba(0,0,0,.22);
+    border-top:1px solid rgba(255,255,255,.10);
+  }
+
+  .navlinks.open{
+    display:block;
+  }
+
+  .navlinks a{
+    display:block;
+    width:100%;
+    padding:16px 8px;
+    margin:0;
+    border-bottom:1px solid rgba(255,255,255,.10);
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
+    line-height:1.15;
+  }
+
+  .navlinks a:last-of-type{
+    border-bottom:0;
+  }
+
+  .mobile-menu-actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:14px;
+  }
+
+  .mobile-menu-actions a{
+    text-align:center;
+    border:0 !important;
+    padding:14px 10px !important;
+  }
+
+  .mobile-menu-actions .mobile-volunteer{
+    border:1px solid rgba(255,255,255,.55) !important;
+  }
+
+  .mobile-menu-actions .mobile-donate{
+    background:var(--red);
+  }
+}
+
+/* =========================================================
+   MOBILE HOMEPAGE LOCK-UP
+   Just campaign logo + regional tagline
+   ========================================================= */
+@media(max-width:650px){
+  .hero-copy{
+    padding-right:0 !important;
+    text-align:center;
+  }
+
+  .hero-campaign-logo{
+    display:block !important;
+    width:min(285px,80vw) !important;
+    max-width:100%;
+    margin:0 auto 14px !important;
+  }
+
+  .hero-copy .region-strip{
+    display:inline-block;
+    width:auto;
+    max-width:92%;
+    margin:0 auto 24px !important;
+    font-size:12px;
+    line-height:1.1;
+    padding:8px 10px;
+  }
+
+  .back-label,
+  .hero-logo,
+  .hero-sub{
+    display:none !important;
+  }
+}

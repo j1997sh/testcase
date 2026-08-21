@@ -84,3 +84,9 @@ The News page now has:
 - responsive filtering on desktop and mobile
 
 The prototype filters entirely in-browser with JavaScript. In a production NationBuilder build, the same interface can be connected to real blog/news content and tags.
+
+
+## Mobile navigation update
+- Replaced the oversized full-screen mobile menu with a compact dropdown.
+- Added Volunteer and Donate actions inside the mobile menu.
+- Mobile homepage campaign lock-up is now simplified to the campaign logo plus the regional tagline only.

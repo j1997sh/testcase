@@ -22,3 +22,52 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   }
 });
+
+
+// Compact mobile campaign menu
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("header").forEach(function(header){
+    const btn = header.querySelector(".menu-btn");
+    const navlinks = header.querySelector(".navlinks");
+
+    if (!btn || !navlinks) return;
+
+    // Add mobile-only action buttons once.
+    if (!navlinks.querySelector(".mobile-menu-actions")) {
+      const actions = document.createElement("div");
+      actions.className = "mobile-menu-actions";
+      const inJourney = window.location.pathname.includes("/journeys/");
+      const prefix = inJourney ? "../" : "";
+      actions.innerHTML =
+        '<a class="mobile-volunteer" href="' + prefix + 'volunteer.html">Volunteer</a>' +
+        '<a class="mobile-donate" href="' + prefix + 'donate.html">Donate</a>';
+      navlinks.appendChild(actions);
+    }
+
+    btn.setAttribute("aria-expanded", "false");
+
+    btn.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const isOpen = navlinks.classList.toggle("open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      btn.textContent = isOpen ? "Close" : "Menu";
+    });
+
+    navlinks.querySelectorAll("a").forEach(function(link){
+      link.addEventListener("click", function(){
+        navlinks.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
+        btn.textContent = "Menu";
+      });
+    });
+
+    document.addEventListener("click", function(event){
+      if (!header.contains(event.target) && navlinks.classList.contains("open")) {
+        navlinks.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
+        btn.textContent = "Menu";
+      }
+    });
+  });
+});
