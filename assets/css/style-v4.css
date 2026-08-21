@@ -4291,3 +4291,203 @@ footer{
     justify-content:center;
   }
 }
+
+
+/* =========================================================
+   DEFINITIVE HOME HEADER RESTORE
+   ========================================================= */
+body.home-page header{
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:1000 !important;
+  background:linear-gradient(to bottom,rgba(5,18,37,.84),rgba(5,18,37,.36),transparent) !important;
+}
+
+@media(min-width:901px){
+  body.home-page header .container.nav{
+    width:min(1180px,calc(100% - 48px)) !important;
+    max-width:1180px !important;
+    min-height:86px !important;
+    margin:0 auto !important;
+    padding:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:28px !important;
+  }
+
+  body.home-page header .navlinks{
+    display:flex !important;
+    position:static !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    width:auto !important;
+    height:auto !important;
+    gap:28px !important;
+    align-items:center !important;
+    margin:0 !important;
+    padding:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+
+  body.home-page header .navlinks a{
+    display:inline-block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    width:auto !important;
+    min-width:0 !important;
+    padding:0 !important;
+    margin:0 !important;
+    border:0 !important;
+    color:#fff !important;
+    font-size:14px !important;
+    line-height:1 !important;
+    font-weight:800 !important;
+    white-space:nowrap !important;
+  }
+
+  body.home-page header .nav-actions{
+    display:flex !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    align-items:center !important;
+    gap:12px !important;
+    margin-left:auto !important;
+  }
+
+  body.home-page header .menu-btn,
+  body.home-page header .mobile-menu-actions{
+    display:none !important;
+  }
+}
+
+/* =========================================================
+   HOMEPAGE — SIMPLE BEN IN YOUR AREA
+   ========================================================= */
+.home-area-editorial{
+  display:none !important;
+}
+
+.home-area-simple{
+  background:var(--cream);
+  color:var(--navy);
+  padding:82px 0;
+}
+
+.home-area-simple-grid{
+  max-width:1120px;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:64px;
+  align-items:center;
+}
+
+.home-area-simple-copy h2{
+  margin:0 0 18px;
+  font-size:54px;
+  line-height:1;
+  letter-spacing:-.045em;
+}
+
+.home-area-simple-copy > p{
+  margin:0 0 26px;
+  max-width:560px;
+  color:#43566c;
+  font-size:18px;
+  line-height:1.5;
+}
+
+.home-area-simple-search{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:10px;
+  max-width:620px;
+}
+
+.home-area-simple-search input{
+  width:100%;
+  min-width:0;
+  height:58px;
+  border:1px solid #9eaab6;
+  background:#fff;
+  padding:0 16px;
+  font-size:15px;
+  color:var(--text);
+}
+
+.home-area-simple-search .btn{
+  min-height:58px;
+  display:flex;
+  align-items:center;
+}
+
+.home-area-simple-note{
+  margin-top:12px !important;
+  margin-bottom:0 !important;
+  color:#718094 !important;
+  font-size:13px !important;
+}
+
+.home-area-simple-photo{
+  background:#fff;
+  padding:10px;
+  box-shadow:0 10px 22px rgba(14,32,54,.17);
+  transform:rotate(1.2deg);
+}
+
+.home-area-simple-photo > div{
+  min-height:410px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,#a7bac8,#e4e9ed);
+  color:#fff;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.06em;
+}
+
+@media(max-width:900px){
+  .home-area-simple-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+}
+
+@media(max-width:700px){
+  .home-area-simple{
+    padding:48px 22px;
+  }
+
+  .home-area-simple .container{
+    width:100%;
+  }
+
+  .home-area-simple-copy h2{
+    font-size:40px;
+  }
+
+  .home-area-simple-copy > p{
+    font-size:16px;
+  }
+
+  .home-area-simple-search{
+    grid-template-columns:1fr;
+  }
+
+  .home-area-simple-search .btn{
+    width:100%;
+    justify-content:center;
+  }
+
+  .home-area-simple-photo{
+    width:94%;
+    margin:0 auto;
+  }
+
+  .home-area-simple-photo > div{
+    min-height:280px;
+  }
+}
