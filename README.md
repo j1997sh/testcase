@@ -90,3 +90,15 @@ The prototype filters entirely in-browser with JavaScript. In a production Natio
 - Replaced the oversized full-screen mobile menu with a compact dropdown.
 - Added Volunteer and Donate actions inside the mobile menu.
 - Mobile homepage campaign lock-up is now simplified to the campaign logo plus the regional tagline only.
+
+
+## Homepage landing hero
+Homepage hero rebuilt around a campaign-signup landing structure:
+- BACK BEN kicker
+- "Join Ben's campaign for Mayor of Cheshire & Warrington"
+- First name / last name / email / postcode
+- Join the campaign CTA
+- Facebook / Instagram / X / TikTok social buttons
+- Large candidate hero image placeholder
+- Watch Ben video CTA
+- Existing Back Ben red / navy / blue campaign styling retained
