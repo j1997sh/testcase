@@ -7732,3 +7732,259 @@ body.about-fade-page .site-shell.about-fade-shell > .about-photo-hero .about-pho
     padding:90px 22px 28px !important;
   }
 }
+
+
+/* =========================================================
+   ABOUT BEN — BOTTOM SECTION REDESIGN
+   Editorial video + full-width campaign question band
+   ========================================================= */
+
+/* Retire old boxed treatments completely */
+.about-media-editorial,
+.about-question-editorial{
+  display:none !important;
+}
+
+/* ---------------------------
+   Hear it from Ben
+   --------------------------- */
+
+.about-video-story{
+  background:var(--cream);
+  padding:58px 0 72px;
+  border-top:1px solid rgba(7,31,61,.10);
+}
+
+.about-video-story-grid{
+  max-width:1080px;
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  gap:72px;
+  align-items:center;
+}
+
+.about-video-story-copy h2{
+  margin:0 0 18px;
+  color:var(--navy);
+  font-size:48px;
+  line-height:.96;
+  letter-spacing:-.045em;
+}
+
+.about-video-story-copy p{
+  max-width:430px;
+  margin:0 0 24px;
+  color:#42556c;
+  font-size:18px;
+  line-height:1.55;
+}
+
+.about-editorial-link{
+  display:inline-block;
+  color:#f04436;
+  font-size:17px;
+  font-weight:900;
+  text-decoration:none;
+}
+
+.about-editorial-link:hover{
+  text-decoration:underline;
+}
+
+.about-video-story-frame{
+  background:#fff;
+  padding:10px 10px 16px;
+  box-shadow:0 12px 28px rgba(17,35,55,.14);
+  transform:rotate(-1deg);
+}
+
+.about-video-story-media{
+  min-height:380px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  background:
+    radial-gradient(circle at 32% 46%,rgba(240,68,54,.18),transparent 32%),
+    linear-gradient(135deg,#123f74,#1878bd);
+  color:#fff;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.07em;
+}
+
+.about-video-story-play{
+  width:72px;
+  height:72px;
+  border:1px solid rgba(255,255,255,.76);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(5,18,37,.08);
+  color:#fff;
+  font-size:23px;
+  cursor:pointer;
+}
+
+.about-video-story-caption{
+  padding:11px 8px 0;
+  color:#5a6b7e;
+  text-align:center;
+  font-size:14px;
+}
+
+/* ---------------------------
+   Ask Ben — campaign band
+   --------------------------- */
+
+.about-question-band{
+  position:relative;
+  overflow:hidden;
+  background:#06182f;
+  color:#fff;
+  padding:66px 0 70px;
+  border-top:1px solid rgba(255,255,255,.09);
+}
+
+.about-question-band::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 14% 46%,rgba(240,68,54,.16),transparent 30%);
+}
+
+.about-question-band-grid{
+  position:relative;
+  z-index:2;
+  max-width:1120px;
+  display:grid;
+  grid-template-columns:.72fr 1.28fr;
+  gap:64px;
+  align-items:start;
+}
+
+.about-question-band-copy h2{
+  margin:0 0 14px;
+  color:#fff;
+  font-size:48px;
+  line-height:.95;
+  letter-spacing:-.045em;
+}
+
+.about-question-band-copy > p{
+  max-width:360px;
+  margin:0 0 12px;
+  color:#d7e0e8;
+  font-size:18px;
+  line-height:1.48;
+}
+
+.about-question-band-note{
+  color:#91a4b8 !important;
+  font-size:14px !important;
+}
+
+.about-question-band-form{
+  display:grid;
+  gap:10px;
+}
+
+.about-question-band-form input{
+  width:100%;
+  min-width:0;
+  height:56px;
+  border:0;
+  border-radius:0;
+  background:#f7f2e8;
+  color:#0b2444;
+  padding:0 16px;
+  font-size:15px;
+}
+
+.about-question-band-question{
+  height:64px !important;
+}
+
+.about-question-band-details{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:10px;
+}
+
+.about-question-band-submit{
+  width:100%;
+  min-height:58px;
+  border:0;
+  background:#f04436;
+  color:#fff;
+  font-size:18px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+/* ---------------------------
+   Responsive
+   --------------------------- */
+
+@media(max-width:900px){
+  .about-video-story-grid,
+  .about-question-band-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-video-story-grid{
+    gap:34px;
+  }
+
+  .about-video-story-copy{
+    max-width:620px;
+  }
+
+  .about-question-band-grid{
+    gap:30px;
+  }
+}
+
+@media(max-width:700px){
+  .about-video-story{
+    padding:40px 22px 50px;
+  }
+
+  .about-video-story .container,
+  .about-question-band .container{
+    width:100%;
+  }
+
+  .about-video-story-copy h2,
+  .about-question-band-copy h2{
+    font-size:38px;
+  }
+
+  .about-video-story-copy p,
+  .about-question-band-copy > p{
+    font-size:16px;
+  }
+
+  .about-video-story-frame{
+    transform:none;
+  }
+
+  .about-video-story-media{
+    min-height:260px;
+  }
+
+  .about-question-band{
+    padding:44px 22px 48px;
+  }
+
+  .about-question-band-details{
+    grid-template-columns:1fr;
+  }
+
+  .about-question-band-submit{
+    min-height:58px;
+  }
+}
