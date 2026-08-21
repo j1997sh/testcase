@@ -169,3 +169,9 @@ All pages now reference:
 - `assets/js/site-v4.js`
 
 This forces GitHub Pages / Safari to load the latest current styling rather than a cached earlier `style-v3.css`.
+
+
+## About page style update
+- Removed the large blue gradient hero from About Ben.
+- Replaced it with a cream editorial intro.
+- About now flows directly into the long-form biography treatment.

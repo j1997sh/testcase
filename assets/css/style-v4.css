@@ -3628,3 +3628,73 @@ footer .foot > div:first-child{
 .about-editorial-ask{
   display:block;
 }
+
+
+/* =========================================================
+   ABOUT BEN — CLEAN EDITORIAL INTRO
+   Replaces the old blue hero
+   ========================================================= */
+
+.about-editorial-hero{
+  display:none !important;
+}
+
+.about-editorial-intro{
+  background:var(--cream);
+  color:var(--navy);
+  padding:72px 0 34px;
+  border-bottom:1px solid #ddd7cc;
+}
+
+.about-editorial-intro .container{
+  max-width:1080px;
+}
+
+.about-editorial-intro .about-editorial-kicker{
+  color:var(--red);
+  margin-bottom:18px;
+}
+
+.about-editorial-intro h1{
+  max-width:1040px;
+  margin:0 0 24px;
+  color:var(--navy);
+  font-size:54px;
+  line-height:1.03;
+  letter-spacing:-.04em;
+}
+
+.about-editorial-intro p{
+  max-width:860px;
+  margin:0;
+  color:#43566c;
+  font-size:18px;
+  line-height:1.55;
+}
+
+.about-editorial-story{
+  padding-top:44px !important;
+}
+
+@media(max-width:700px){
+  .about-editorial-intro{
+    padding:42px 22px 24px;
+  }
+
+  .about-editorial-intro .container{
+    width:100%;
+  }
+
+  .about-editorial-intro h1{
+    font-size:38px;
+    line-height:1.05;
+  }
+
+  .about-editorial-intro p{
+    font-size:16px;
+  }
+
+  .about-editorial-story{
+    padding-top:30px !important;
+  }
+}
