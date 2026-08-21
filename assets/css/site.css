@@ -19,7 +19,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);backgroun
 a{text-decoration:none;color:inherit}
 button,input,textarea,select{font:inherit}
 .container{width:min(var(--max),calc(100% - 56px));margin:0 auto}
-.site-shell{background:#fff;max-width:1480px;margin:12px auto 0;box-shadow:0 0 0 1px rgba(255,255,255,.04);overflow:hidden}
+.site-shell{background:#fff;max-width:1480px;margin:0 auto;box-shadow:none;overflow:hidden}
 
 /* header */
 header{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:min(1480px,100%);z-index:20;color:#fff}
@@ -6760,4 +6760,18 @@ body.home-page .site-header{
   .home-hero-photo{
     object-position:53% center !important;
   }
+}
+
+
+/* DEFINITIVE OUTER-SHELL TOP STRIP REMOVAL */
+.site-shell{
+  margin-top:0 !important;
+  border-top:0 !important;
+  box-shadow:none !important;
+}
+
+html,
+body{
+  margin-top:0 !important;
+  padding-top:0 !important;
 }
