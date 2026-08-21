@@ -155,3 +155,9 @@ The About page has been rebuilt as a long-form editorial biography:
 - Ask Ben form
 
 The treatment is inspired by traditional political biography pages but uses Back Ben's navy/red/cream visual identity.
+
+
+## Definitive hero/header fix
+- Hero image is now rendered as a real `<img>` element rather than relying on CSS background loading.
+- Desktop navigation can no longer show the mobile Volunteer / Donate duplicates.
+- Mobile-only Volunteer / Donate actions are only created below 900px.
