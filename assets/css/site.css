@@ -5149,3 +5149,19 @@ body:not(.home-page) .site-header{
     display:grid !important;
   }
 }
+
+
+/* =========================================================
+   CRITICAL HEADER TRANSFORM FIX
+   Neutralises the legacy global:
+   header { left:50%; transform:translateX(-50%); }
+   ========================================================= */
+header.site-header{
+  left:0 !important;
+  right:0 !important;
+  top:0 !important;
+  transform:none !important;
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+}
