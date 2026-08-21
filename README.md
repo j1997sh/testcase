@@ -200,7 +200,3 @@ The rest of the site has been pulled toward the same visual language as Home and
 - framed photography rather than dashboard-style cards
 - fewer equal grids and UI-looking boxes
 - interactive elements retained but visually subordinated to the campaign/editorial presentation
-
-
-## Zoom-safe header
-Desktop header now uses a fluid grid/flex layout with clamped gaps, font sizes and action-button widths. This prevents navigation clipping at browser zoom levels and intermediate desktop widths.

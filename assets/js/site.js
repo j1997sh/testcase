@@ -135,3 +135,20 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   });
 });
+
+
+/* FINAL ISOLATED HEADER MENU */
+document.addEventListener("DOMContentLoaded", function(){
+  document.querySelectorAll(".site-header").forEach(function(header){
+    const btn = header.querySelector(".site-menu-button");
+    const nav = header.querySelector(".site-primary-nav");
+    if(!btn || !nav) return;
+
+    btn.onclick = function(e){
+      e.preventDefault();
+      const open = nav.classList.toggle("open");
+      btn.textContent = open ? "Close" : "Menu";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+  });
+});
