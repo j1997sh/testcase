@@ -134,3 +134,10 @@ Homepage reworked to:
 - make Ben in your area full width
 - remove Follow the campaign
 - add a stronger footer
+
+
+## Homepage hero image
+The supplied Ben photograph is now used as the real homepage hero background:
+- `assets/images/ben-home-hero.jpg`
+- desktop crop keeps Ben to the right with a dark readability gradient on the left
+- mobile uses a higher crop with the signup content below the portrait

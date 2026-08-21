@@ -3045,3 +3045,108 @@ footer .foot > div:first-child{
 .navlinks .duplicate-action{
   display:none !important;
 }
+
+
+/* =========================================================
+   REAL HOMEPAGE HERO IMAGE
+   ========================================================= */
+
+.home-hero-bg{
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(5,18,37,.97) 0%,
+      rgba(6,24,48,.91) 26%,
+      rgba(7,31,61,.75) 43%,
+      rgba(5,18,37,.28) 62%,
+      rgba(2,8,16,.08) 100%
+    ),
+    url("../images/ben-home-hero.jpg") !important;
+  background-size:cover !important;
+  background-position:center center !important;
+  background-repeat:no-repeat !important;
+}
+
+.home-hero-bg::after{
+  background:
+    linear-gradient(to top,rgba(7,22,44,.72),transparent 38%),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255,255,255,.035) 0,
+      rgba(255,255,255,.035) 1px,
+      transparent 1px,
+      transparent 5px
+    ) !important;
+}
+
+.home-hero-bg-label{
+  display:none !important;
+}
+
+/* Slightly lighten the text/form panel now that there is a real photograph */
+.home-hero-panel{
+  background:rgba(4,16,32,.28) !important;
+}
+
+/* Keep Watch Ben readable against the photo */
+.home-watch{
+  text-shadow:0 2px 12px rgba(0,0,0,.45);
+}
+
+@media screen and (max-width:900px){
+  .home-hero-bg{
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(5,18,37,.42) 0%,
+        rgba(5,18,37,.56) 35%,
+        rgba(5,18,37,.84) 72%,
+        rgba(5,18,37,.96) 100%
+      ),
+      url("../images/ben-home-hero.jpg") !important;
+    background-size:cover !important;
+    background-position:62% center !important;
+  }
+}
+
+@media screen and (max-width:700px){
+  .home-hero-refined{
+    min-height:760px !important;
+  }
+
+  .home-hero-content.container{
+    min-height:760px !important;
+  }
+
+  .home-hero-bg{
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(5,18,37,.30) 0%,
+        rgba(5,18,37,.52) 27%,
+        rgba(5,18,37,.87) 57%,
+        rgba(5,18,37,.98) 100%
+      ),
+      url("../images/ben-home-hero.jpg") !important;
+    background-size:auto 54%, cover !important;
+    background-repeat:no-repeat !important;
+    background-position:68% 0%, center center !important;
+  }
+
+  .home-hero-content.container{
+    padding-top:290px !important;
+    padding-bottom:115px !important;
+  }
+
+  .home-hero-panel{
+    background:transparent !important;
+  }
+
+  .home-back-ben{
+    text-shadow:0 3px 18px rgba(0,0,0,.45);
+  }
+
+  .home-hero-panel h1{
+    text-shadow:0 2px 12px rgba(0,0,0,.38);
+  }
+}
