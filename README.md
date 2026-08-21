@@ -243,3 +243,10 @@ About Ben now opens with a full-width campaign story hero:
 - High-resolution transparent campaign logo hard-coded as `assets/images/back-ben-for-mayor-logo.png`.
 - New high-resolution homepage hero hard-coded as `assets/images/ben-home-hero.jpg`.
 - Desktop and mobile crops retuned for the new portrait.
+
+
+## Hero overlay cleanup
+- Removed the faint line/box above the homepage header.
+- Removed translucent panel behind the campaign logo and form.
+- Mobile now keeps the logo and all data capture fields directly over one continuous hero image.
+- Mobile menu remains over the hero and opens as an overlay.

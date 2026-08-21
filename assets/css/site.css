@@ -6386,3 +6386,270 @@ body.about-hero-page .about-editorial-story{
     margin-top:-106px !important;
   }
 }
+
+
+/* =========================================================
+   CLEAN HERO OVERLAY — AUTHORITATIVE FINAL PASS
+   ========================================================= */
+
+/* Kill any legacy line/box above the header */
+html,
+body{
+  margin:0 !important;
+  padding:0 !important;
+  border:0 !important;
+}
+
+body.home-page{
+  background:#071a34 !important;
+}
+
+body.home-page::before,
+body.home-page::after{
+  display:none !important;
+}
+
+body.home-page .site-header,
+body.home-page header{
+  top:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-top:0 !important;
+  box-shadow:none !important;
+  outline:0 !important;
+  background:
+    linear-gradient(to bottom,rgba(5,18,37,.72),rgba(5,18,37,.14),transparent) !important;
+}
+
+body.home-page .site-header::before,
+body.home-page .site-header::after,
+body.home-page header::before,
+body.home-page header::after{
+  display:none !important;
+}
+
+/* Remove the old translucent "panel" behind logo/form */
+.home-hero-panel{
+  background:transparent !important;
+  box-shadow:none !important;
+  border:0 !important;
+  outline:0 !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+}
+
+/* Ensure the hero itself has no accidental internal box/border */
+.home-hero-refined,
+.home-hero-bg,
+.home-hero-content{
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+}
+
+.home-hero-refined{
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+/* Desktop: logo/form float directly over image */
+.home-hero-content.container{
+  position:relative !important;
+  z-index:3 !important;
+}
+
+.home-campaign-logo{
+  display:block !important;
+  width:min(520px,88%) !important;
+  height:auto !important;
+  margin:0 0 26px !important;
+}
+
+.home-signup-form,
+.home-signup-grid{
+  position:relative !important;
+  z-index:4 !important;
+}
+
+.home-signup-grid input{
+  box-shadow:none !important;
+  border-radius:0 !important;
+}
+
+/* Slight gradient only — no rectangular collision box */
+.home-hero-bg::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:1 !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,18,37,.94) 0%,
+      rgba(5,18,37,.84) 27%,
+      rgba(5,18,37,.60) 44%,
+      rgba(5,18,37,.18) 64%,
+      rgba(5,18,37,.03) 100%
+    ) !important;
+}
+
+/* =========================================================
+   MOBILE — EVERYTHING OVER THE HERO IMAGE
+   ========================================================= */
+@media(max-width:800px){
+
+  body.home-page .site-header{
+    position:absolute !important;
+    top:0 !important;
+    left:0 !important;
+    right:0 !important;
+    background:linear-gradient(to bottom,rgba(4,15,31,.58),transparent) !important;
+  }
+
+  .home-hero-refined{
+    position:relative !important;
+    min-height:980px !important;
+    height:auto !important;
+    background:#071a34 !important;
+    overflow:hidden !important;
+  }
+
+  /* Hero image remains behind the entire mobile signup */
+  .home-hero-bg{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    background:#071a34 !important;
+  }
+
+  .home-hero-photo{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:57% center !important;
+  }
+
+  /* Darken progressively lower down so fields remain readable,
+     but keep it one continuous photograph */
+  .home-hero-bg::before{
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(5,18,37,.12) 0%,
+        rgba(5,18,37,.18) 24%,
+        rgba(5,18,37,.48) 48%,
+        rgba(5,18,37,.82) 72%,
+        rgba(5,18,37,.95) 100%
+      ) !important;
+  }
+
+  .home-hero-bg::after{
+    display:none !important;
+  }
+
+  .home-hero-content.container{
+    position:relative !important;
+    z-index:3 !important;
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+    min-height:980px !important;
+    margin:0 !important;
+    padding:0 22px 34px !important;
+    background:transparent !important;
+  }
+
+  .home-hero-panel{
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    padding-top:390px !important;
+    background:transparent !important;
+  }
+
+  .home-campaign-logo{
+    width:min(390px,88vw) !important;
+    max-width:100% !important;
+    margin:0 0 22px !important;
+    filter:drop-shadow(0 3px 15px rgba(0,0,0,.40)) !important;
+  }
+
+  .home-signup-form{
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    background:transparent !important;
+  }
+
+  .home-signup-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:9px !important;
+    width:100% !important;
+  }
+
+  .home-signup-grid input{
+    width:100% !important;
+    height:54px !important;
+    margin:0 !important;
+    border:0 !important;
+    background:rgba(247,242,232,.96) !important;
+    color:#0b2444 !important;
+    padding:0 15px !important;
+    font-size:15px !important;
+  }
+
+  .home-signup-submit{
+    width:100% !important;
+    min-height:54px !important;
+    margin:9px 0 0 !important;
+  }
+
+  .ben-social-row{
+    margin:18px 0 0 !important;
+  }
+
+  .home-watch{
+    position:absolute !important;
+    right:22px !important;
+    bottom:25px !important;
+    z-index:5 !important;
+  }
+
+  /* Menu stays over hero */
+  .site-header-inner{
+    background:transparent !important;
+  }
+
+  .site-menu-button{
+    background:rgba(5,18,37,.22) !important;
+    backdrop-filter:blur(2px) !important;
+    -webkit-backdrop-filter:blur(2px) !important;
+  }
+
+  .site-primary-nav.open{
+    background:rgba(6,26,49,.98) !important;
+  }
+}
+
+@media(max-width:520px){
+  .home-hero-refined,
+  .home-hero-content.container{
+    min-height:930px !important;
+  }
+
+  .home-hero-panel{
+    padding-top:350px !important;
+  }
+
+  .home-hero-photo{
+    object-position:56% center !important;
+  }
+
+  .home-campaign-logo{
+    width:min(340px,88vw) !important;
+  }
+}
