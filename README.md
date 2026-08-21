@@ -250,3 +250,9 @@ About Ben now opens with a full-width campaign story hero:
 - Removed translucent panel behind the campaign logo and form.
 - Mobile now keeps the logo and all data capture fields directly over one continuous hero image.
 - Mobile menu remains over the hero and opens as an overlay.
+
+
+## Campaign logo in header/footer
+- Added a small campaign logo to the left side of the site header.
+- Replaced footer BACK BEN text and supporting campaign line with the real campaign logo.
+- Desktop and mobile sizes are set independently.
