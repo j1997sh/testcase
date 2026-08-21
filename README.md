@@ -189,3 +189,14 @@ This forces GitHub Pages / Safari to load the latest current styling rather than
 - All other pages use the solid blue/navy campaign header.
 - Desktop header spacing and content offset reset.
 - Ben in your area now uses alternating editorial text/image blocks rather than equal cards.
+
+
+## Unified editorial campaign system
+The rest of the site has been pulled toward the same visual language as Home and About:
+- cream editorial inner-page heroes
+- solid blue/navy header on inner pages
+- oversized navy typography
+- red used for emphasis and calls to action
+- framed photography rather than dashboard-style cards
+- fewer equal grids and UI-looking boxes
+- interactive elements retained but visually subordinated to the campaign/editorial presentation
