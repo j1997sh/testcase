@@ -119,3 +119,19 @@ document.addEventListener("DOMContentLoaded", function(){
     window.addEventListener("resize", ensureMobileActions);
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function(){
+  document.querySelectorAll(".site-header").forEach(function(header){
+    const btn = header.querySelector(".site-menu-button");
+    const nav = header.querySelector(".site-primary-nav");
+    if(!btn || !nav) return;
+
+    btn.addEventListener("click", function(e){
+      e.preventDefault();
+      const open = nav.classList.toggle("open");
+      btn.textContent = open ? "Close" : "Menu";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+});
