@@ -6324,3 +6324,65 @@ body.about-hero-page .about-editorial-story{
       ) !important;
   }
 }
+
+
+/* =========================================================
+   HQ CAMPAIGN ASSETS — FINAL HOMEPAGE OVERRIDES
+   ========================================================= */
+
+.home-campaign-logo{
+  width:min(520px,88%) !important;
+  height:auto !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+  margin:0 0 26px !important;
+  filter:none !important;
+}
+
+.home-hero-photo{
+  object-fit:cover !important;
+  object-position:center 46% !important;
+}
+
+/* Keep the left side dark enough for the white logo/form,
+   while leaving Ben crisp on the right. */
+.home-hero-bg::before{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,18,37,.97) 0%,
+      rgba(6,24,48,.91) 25%,
+      rgba(7,31,61,.70) 43%,
+      rgba(5,18,37,.22) 62%,
+      rgba(2,8,16,.04) 100%
+    ) !important;
+}
+
+@media(max-width:900px){
+  .home-hero-photo{
+    object-position:58% top !important;
+  }
+
+  .home-campaign-logo{
+    width:min(430px,90vw) !important;
+  }
+}
+
+@media(max-width:800px){
+  .home-campaign-logo{
+    width:min(400px,90vw) !important;
+    margin:-122px 0 22px !important;
+    filter:drop-shadow(0 3px 14px rgba(0,0,0,.35)) !important;
+  }
+}
+
+@media(max-width:520px){
+  .home-hero-photo{
+    object-position:56% top !important;
+  }
+
+  .home-campaign-logo{
+    width:min(350px,90vw) !important;
+    margin-top:-106px !important;
+  }
+}

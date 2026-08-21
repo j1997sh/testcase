@@ -237,3 +237,9 @@ About Ben now opens with a full-width campaign story hero:
 - User-supplied Back Ben for Mayor logo converted to transparent PNG.
 - Saved as `assets/images/back-ben-for-mayor-logo.png`.
 - Replaces the separate BACK BEN and campaign-line text in the homepage hero.
+
+
+## HQ campaign assets
+- High-resolution transparent campaign logo hard-coded as `assets/images/back-ben-for-mayor-logo.png`.
+- New high-resolution homepage hero hard-coded as `assets/images/ben-home-hero.jpg`.
+- Desktop and mobile crops retuned for the new portrait.
