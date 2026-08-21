@@ -231,3 +231,9 @@ About Ben now opens with a full-width campaign story hero:
 - Removed "A mayor who listens locally — and gets things done."
 - Removed four-box quick facts strip
 - Reworked Hear it from Ben and Ask Ben into cream/white editorial campaign sections
+
+
+## Homepage campaign logo
+- User-supplied Back Ben for Mayor logo converted to transparent PNG.
+- Saved as `assets/images/back-ben-for-mayor-logo.png`.
+- Replaces the separate BACK BEN and campaign-line text in the homepage hero.
