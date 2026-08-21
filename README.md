@@ -200,3 +200,8 @@ The rest of the site has been pulled toward the same visual language as Home and
 - framed photography rather than dashboard-style cards
 - fewer equal grids and UI-looking boxes
 - interactive elements retained but visually subordinated to the campaign/editorial presentation
+
+
+## Showcase images added
+- `assets/images/ben-home-intro.jpg` — homepage intro photography
+- `assets/images/ben-area.jpg` — Ben in your area photography

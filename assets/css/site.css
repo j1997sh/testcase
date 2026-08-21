@@ -5165,3 +5165,62 @@ header.site-header{
   max-width:none !important;
   margin:0 !important;
 }
+
+
+/* =========================================================
+   SHOWCASE PHOTOGRAPHY — HOME
+   ========================================================= */
+
+.home-intro-image{
+  overflow:hidden !important;
+}
+
+.home-intro-image img{
+  width:100% !important;
+  height:100% !important;
+  min-height:410px !important;
+  display:block !important;
+  object-fit:cover !important;
+  object-position:center 42% !important;
+}
+
+.home-area-simple-photo{
+  overflow:hidden !important;
+}
+
+.home-area-simple-photo > img{
+  width:100% !important;
+  height:410px !important;
+  display:block !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+}
+
+@media(max-width:900px){
+  .home-intro-image img{
+    min-height:350px !important;
+    object-position:center 40% !important;
+  }
+
+  .home-area-simple-photo > img{
+    height:360px !important;
+    object-position:center center !important;
+  }
+}
+
+@media(max-width:700px){
+  .home-intro-image{
+    min-height:0 !important;
+  }
+
+  .home-intro-image img{
+    min-height:0 !important;
+    height:260px !important;
+    object-position:center 45% !important;
+  }
+
+  .home-area-simple-photo > img{
+    height:290px !important;
+    object-position:center center !important;
+  }
+}
