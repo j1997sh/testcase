@@ -7102,3 +7102,120 @@ button.home-signup-submit{
     font-size:19px !important;
   }
 }
+
+
+/* =========================================================
+   FINAL HEADER SYSTEM — SOLID NAVY ACROSS ENTIRE SITE
+   ========================================================= */
+
+.site-header,
+body.home-page .site-header,
+body:not(.home-page) .site-header{
+  position:relative !important;
+  top:auto !important;
+  left:auto !important;
+  right:auto !important;
+  transform:none !important;
+  width:100% !important;
+  margin:0 !important;
+  border:0 !important;
+  box-shadow:none !important;
+  background:#06182f !important;
+  z-index:5000 !important;
+}
+
+.site-header-inner{
+  min-height:86px !important;
+  background:#06182f !important;
+}
+
+/* Home hero begins below header — never underneath it */
+body.home-page .home-hero-refined{
+  margin-top:0 !important;
+  padding-top:0 !important;
+}
+
+body.home-page .home-hero-bg{
+  top:0 !important;
+}
+
+body.home-page .home-hero-photo{
+  top:0 !important;
+  height:100% !important;
+  object-position:center center !important;
+}
+
+/* Remove all old header fade layers */
+body.home-page .site-header::before,
+body.home-page .site-header::after,
+.site-header::before,
+.site-header::after{
+  display:none !important;
+}
+
+/* Keep desktop logo/nav/buttons vertically balanced */
+@media(min-width:801px){
+  .site-header-inner{
+    min-height:86px !important;
+    height:86px !important;
+    padding:0 32px !important;
+  }
+
+  .site-header-logo img{
+    width:62px !important;
+    max-width:62px !important;
+    max-height:46px !important;
+  }
+}
+
+/* Mobile: solid navy row, image starts immediately below */
+@media(max-width:800px){
+  .site-header,
+  body.home-page .site-header{
+    position:relative !important;
+    background:#06182f !important;
+  }
+
+  .site-header-inner{
+    height:72px !important;
+    min-height:72px !important;
+    background:#06182f !important;
+  }
+
+  .site-primary-nav{
+    top:72px !important;
+    background:#06182f !important;
+  }
+
+  .site-menu-button{
+    background:transparent !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+  }
+
+  .home-hero-refined{
+    margin-top:0 !important;
+  }
+
+  .home-hero-photo{
+    top:0 !important;
+    height:100% !important;
+    object-position:54% center !important;
+  }
+}
+
+/* CTA remains deliberately strong */
+button.home-signup-submit{
+  min-height:70px !important;
+  height:70px !important;
+  font-size:20px !important;
+  font-weight:900 !important;
+}
+
+@media(max-width:800px){
+  button.home-signup-submit{
+    min-height:60px !important;
+    height:60px !important;
+    font-size:18px !important;
+  }
+}
