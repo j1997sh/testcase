@@ -7219,3 +7219,30 @@ button.home-signup-submit{
     font-size:18px !important;
   }
 }
+
+
+/* =========================================================
+   HOMEPAGE HERO — LOWER BEN'S FACE BELOW SOLID HEADER
+   ========================================================= */
+
+/* Keep the hero frame fixed, but crop lower within the source image */
+body.home-page .home-hero-photo{
+  top:0 !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center 42% !important;
+}
+
+/* Slightly lower again on narrower desktop where the crop gets tighter */
+@media(max-width:1200px) and (min-width:801px){
+  body.home-page .home-hero-photo{
+    object-position:center 38% !important;
+  }
+}
+
+/* Mobile keeps its existing framing */
+@media(max-width:800px){
+  body.home-page .home-hero-photo{
+    object-position:54% center !important;
+  }
+}
