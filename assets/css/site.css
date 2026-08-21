@@ -7284,3 +7284,63 @@ body.home-page .home-hero-photo{
     object-position:54% center !important;
   }
 }
+
+
+/* =========================================================
+   HOME HEADER — DARK FADE OVER HERO
+   Keeps the face-safe crop, but removes the hard solid bar.
+   ========================================================= */
+
+body.home-page .site-header{
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  width:100% !important;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(4,15,31,.94) 0%,
+      rgba(4,15,31,.86) 42%,
+      rgba(4,15,31,.62) 72%,
+      rgba(4,15,31,.22) 90%,
+      transparent 100%
+    ) !important;
+  box-shadow:none !important;
+  border:0 !important;
+  z-index:5000 !important;
+}
+
+body.home-page .site-header-inner{
+  background:transparent !important;
+}
+
+body.home-page .home-hero-refined{
+  margin-top:0 !important;
+  padding-top:0 !important;
+}
+
+/* Inner pages remain solid navy */
+body:not(.home-page) .site-header{
+  position:relative !important;
+  background:#06182f !important;
+}
+
+/* Mobile uses the same logic, just slightly tighter */
+@media(max-width:800px){
+  body.home-page .site-header{
+    position:absolute !important;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(4,15,31,.92) 0%,
+        rgba(4,15,31,.76) 52%,
+        rgba(4,15,31,.30) 84%,
+        transparent 100%
+      ) !important;
+  }
+
+  body.home-page .site-header-inner{
+    background:transparent !important;
+  }
+}
