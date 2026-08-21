@@ -7344,3 +7344,391 @@ body:not(.home-page) .site-header{
     background:transparent !important;
   }
 }
+
+
+/* =========================================================
+   HOMEPAGE MIDDLE — TIGHTER EDITORIAL RHYTHM
+   ========================================================= */
+
+.home-intro-feature{
+  padding:58px 0 46px !important;
+}
+
+.home-intro-image{
+  margin-bottom:26px !important;
+}
+
+.home-intro-copy p{
+  margin-bottom:18px !important;
+}
+
+.home-intro-copy .btn{
+  min-height:48px !important;
+  padding:0 20px !important;
+}
+
+.home-area-simple{
+  padding:54px 0 62px !important;
+}
+
+.home-area-simple-grid{
+  gap:46px !important;
+}
+
+.home-area-simple-copy h2{
+  margin-bottom:14px !important;
+}
+
+.home-area-simple-copy > p{
+  margin-bottom:20px !important;
+}
+
+.home-area-simple-note{
+  margin-top:9px !important;
+}
+
+/* Bring the two homepage sections visually closer together */
+.home-intro-feature + .home-area-simple{
+  border-top:1px solid rgba(7,31,61,.07) !important;
+}
+
+@media(max-width:900px){
+  .home-intro-feature{
+    padding:48px 0 38px !important;
+  }
+
+  .home-intro-image{
+    margin-bottom:22px !important;
+  }
+
+  .home-area-simple{
+    padding:44px 0 50px !important;
+  }
+
+  .home-area-simple-grid{
+    gap:34px !important;
+  }
+}
+
+@media(max-width:700px){
+  .home-intro-feature{
+    padding:34px 0 30px !important;
+  }
+
+  .home-intro-image{
+    margin-bottom:18px !important;
+  }
+
+  .home-intro-copy p{
+    margin-bottom:16px !important;
+  }
+
+  .home-area-simple{
+    padding:34px 0 40px !important;
+  }
+
+  .home-area-simple-grid{
+    gap:26px !important;
+  }
+}
+
+
+/* =========================================================
+   ABOUT BEN — HOMEPAGE-STYLE FADE HEADER
+   ========================================================= */
+
+body.about-fade-page .site-header{
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  width:100% !important;
+  margin:0 !important;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(4,15,31,.95) 0%,
+      rgba(4,15,31,.84) 40%,
+      rgba(4,15,31,.58) 70%,
+      rgba(4,15,31,.20) 90%,
+      transparent 100%
+    ) !important;
+  border:0 !important;
+  box-shadow:none !important;
+  z-index:5000 !important;
+}
+
+body.about-fade-page .site-header-inner{
+  background:transparent !important;
+}
+
+body.about-fade-page .site-header::before,
+body.about-fade-page .site-header::after{
+  display:none !important;
+}
+
+body.about-fade-page .about-photo-hero{
+  position:relative !important;
+  margin-top:0 !important;
+  padding-top:0 !important;
+  height:520px !important;
+  min-height:520px !important;
+  overflow:hidden !important;
+}
+
+body.about-fade-page .about-photo-hero-image{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center 50% !important;
+}
+
+body.about-fade-page .about-photo-hero-shade{
+  position:absolute !important;
+  inset:0 !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,18,37,.92) 0%,
+      rgba(5,18,37,.76) 26%,
+      rgba(5,18,37,.42) 48%,
+      rgba(5,18,37,.10) 72%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(5,18,37,.26) 0%,
+      rgba(5,18,37,.08) 28%,
+      transparent 55%,
+      rgba(5,18,37,.46) 100%
+    ) !important;
+}
+
+body.about-fade-page .about-photo-hero-content{
+  position:relative !important;
+  z-index:3 !important;
+  height:520px !important;
+  min-height:520px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:flex-end !important;
+  align-items:flex-start !important;
+  padding-top:120px !important;
+  padding-bottom:46px !important;
+}
+
+body.about-fade-page .about-photo-hero-content h1{
+  max-width:760px !important;
+  margin:0 !important;
+  color:#fff !important;
+  font-size:58px !important;
+  line-height:.98 !important;
+  letter-spacing:-.045em !important;
+  text-shadow:0 3px 18px rgba(0,0,0,.28) !important;
+}
+
+body.about-fade-page .about-photo-hero-content > p{
+  display:none !important;
+}
+
+body.about-fade-page .about-editorial-story{
+  padding-top:62px !important;
+}
+
+@media(max-width:800px){
+  body.about-fade-page .site-header{
+    position:absolute !important;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(4,15,31,.93) 0%,
+        rgba(4,15,31,.72) 52%,
+        rgba(4,15,31,.28) 82%,
+        transparent 100%
+      ) !important;
+  }
+
+  body.about-fade-page .site-header-inner{
+    background:transparent !important;
+  }
+
+  body.about-fade-page .about-photo-hero{
+    height:470px !important;
+    min-height:470px !important;
+  }
+
+  body.about-fade-page .about-photo-hero-image{
+    object-position:60% center !important;
+  }
+
+  body.about-fade-page .about-photo-hero-shade{
+    background:
+      linear-gradient(
+        to top,
+        rgba(5,18,37,.92) 0%,
+        rgba(5,18,37,.58) 38%,
+        rgba(5,18,37,.18) 68%,
+        transparent 100%
+      ) !important;
+  }
+
+  body.about-fade-page .about-photo-hero-content{
+    width:100% !important;
+    height:470px !important;
+    min-height:470px !important;
+    padding:100px 22px 30px !important;
+    justify-content:flex-end !important;
+  }
+
+  body.about-fade-page .about-photo-hero-content h1{
+    max-width:340px !important;
+    font-size:39px !important;
+    line-height:1 !important;
+  }
+
+  body.about-fade-page .about-editorial-story{
+    padding-top:42px !important;
+  }
+}
+
+
+/* =========================================================
+   ABOUT BEN — STRUCTURAL OVERLAY FIX
+   Header is removed from layout flow; hero starts underneath it.
+   ========================================================= */
+
+html,
+body.about-fade-page{
+  margin:0 !important;
+  padding:0 !important;
+}
+
+body.about-fade-page .site-shell.about-fade-shell{
+  position:relative !important;
+  margin:0 auto !important;
+  padding:0 !important;
+  overflow:hidden !important;
+}
+
+/* REMOVE HEADER FROM DOCUMENT FLOW */
+body.about-fade-page .site-shell.about-fade-shell > header.site-header{
+  position:absolute !important;
+  inset:0 0 auto 0 !important;
+  width:100% !important;
+  height:92px !important;
+  min-height:92px !important;
+  margin:0 !important;
+  padding:0 !important;
+  transform:none !important;
+  z-index:10000 !important;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(4,15,31,.94) 0%,
+      rgba(4,15,31,.82) 42%,
+      rgba(4,15,31,.48) 72%,
+      rgba(4,15,31,.12) 90%,
+      transparent 100%
+    ) !important;
+
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+}
+
+body.about-fade-page .site-shell.about-fade-shell > header.site-header .site-header-inner{
+  height:92px !important;
+  min-height:92px !important;
+  margin:0 !important;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+  background:transparent !important;
+}
+
+/* HERO IS THE FIRST VISUAL LAYER — NO RESERVED HEADER SPACE */
+body.about-fade-page .site-shell.about-fade-shell > .about-photo-hero{
+  position:relative !important;
+  display:block !important;
+  margin:0 !important;
+  padding:0 !important;
+  top:0 !important;
+  height:540px !important;
+  min-height:540px !important;
+  z-index:1 !important;
+}
+
+body.about-fade-page .site-shell.about-fade-shell > .about-photo-hero .about-photo-hero-image{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center 50% !important;
+  margin:0 !important;
+}
+
+/* blend the top of the actual image into the nav */
+body.about-fade-page .site-shell.about-fade-shell > .about-photo-hero .about-photo-hero-shade{
+  position:absolute !important;
+  inset:0 !important;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(4,15,31,.44) 0%,
+      rgba(4,15,31,.18) 22%,
+      transparent 47%,
+      rgba(5,18,37,.34) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(5,18,37,.90) 0%,
+      rgba(5,18,37,.70) 27%,
+      rgba(5,18,37,.34) 50%,
+      rgba(5,18,37,.04) 76%,
+      transparent 100%
+    ) !important;
+}
+
+body.about-fade-page .site-shell.about-fade-shell > .about-photo-hero .about-photo-hero-content{
+  position:relative !important;
+  z-index:5 !important;
+  height:540px !important;
+  min-height:540px !important;
+  padding-top:110px !important;
+  padding-bottom:42px !important;
+  justify-content:flex-end !important;
+}
+
+@media(max-width:800px){
+  body.about-fade-page .site-shell.about-fade-shell > header.site-header{
+    height:72px !important;
+    min-height:72px !important;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(4,15,31,.94) 0%,
+        rgba(4,15,31,.72) 55%,
+        rgba(4,15,31,.20) 86%,
+        transparent 100%
+      ) !important;
+  }
+
+  body.about-fade-page .site-shell.about-fade-shell > header.site-header .site-header-inner{
+    height:72px !important;
+    min-height:72px !important;
+  }
+
+  body.about-fade-page .site-shell.about-fade-shell > .about-photo-hero{
+    height:470px !important;
+    min-height:470px !important;
+  }
+
+  body.about-fade-page .site-shell.about-fade-shell > .about-photo-hero .about-photo-hero-content{
+    height:470px !important;
+    min-height:470px !important;
+    padding:90px 22px 28px !important;
+  }
+}
