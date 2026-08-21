@@ -6222,3 +6222,105 @@ body.about-hero-page .about-editorial-story{
     margin-top:-108px;
   }
 }
+
+
+/* =========================================================
+   ABOUT BEN — SHORTER EDITORIAL PHOTO HERO
+   ========================================================= */
+
+.about-photo-hero{
+  min-height:500px !important;
+  height:500px !important;
+}
+
+.about-photo-hero-image{
+  object-fit:cover !important;
+  object-position:center 58% !important;
+}
+
+.about-photo-hero-content{
+  min-height:500px !important;
+  height:500px !important;
+  justify-content:flex-end !important;
+  padding-top:120px !important;
+  padding-bottom:44px !important;
+}
+
+.about-photo-hero-content h1{
+  max-width:760px !important;
+  margin-bottom:0 !important;
+  font-size:56px !important;
+  line-height:.98 !important;
+}
+
+/* Keep only the headline in this shorter hero */
+.about-photo-hero-content > p{
+  display:none !important;
+}
+
+.about-photo-hero-shade{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,18,37,.94) 0%,
+      rgba(7,31,61,.80) 27%,
+      rgba(8,37,71,.44) 48%,
+      rgba(4,15,31,.08) 72%,
+      rgba(4,15,31,.03) 100%
+    ),
+    linear-gradient(to top,rgba(5,18,37,.52),transparent 44%) !important;
+}
+
+@media(max-width:900px){
+  .about-photo-hero{
+    min-height:470px !important;
+    height:470px !important;
+  }
+
+  .about-photo-hero-content{
+    min-height:470px !important;
+    height:470px !important;
+    padding:110px 30px 38px !important;
+  }
+
+  .about-photo-hero-content h1{
+    font-size:48px !important;
+  }
+
+  .about-photo-hero-image{
+    object-position:58% 58% !important;
+  }
+}
+
+@media(max-width:700px){
+  .about-photo-hero{
+    min-height:430px !important;
+    height:430px !important;
+  }
+
+  .about-photo-hero-content{
+    min-height:430px !important;
+    height:430px !important;
+    padding:96px 22px 30px !important;
+  }
+
+  .about-photo-hero-content h1{
+    max-width:340px !important;
+    font-size:37px !important;
+  }
+
+  .about-photo-hero-image{
+    object-position:61% 55% !important;
+  }
+
+  .about-photo-hero-shade{
+    background:
+      linear-gradient(
+        to top,
+        rgba(5,18,37,.96) 0%,
+        rgba(5,18,37,.72) 37%,
+        rgba(5,18,37,.22) 72%,
+        rgba(5,18,37,.05) 100%
+      ) !important;
+  }
+}
