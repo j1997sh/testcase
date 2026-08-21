@@ -73,3 +73,14 @@ The My Plan page now includes:
 - First name, last name, email and postcode capture
 
 All detailed policy copy remains placeholder until final campaign policy is supplied.
+
+
+## News search and category filtering
+The News page now has:
+- live keyword search
+- clickable category tabs
+- live results count
+- clear filters control
+- responsive filtering on desktop and mobile
+
+The prototype filters entirely in-browser with JavaScript. In a production NationBuilder build, the same interface can be connected to real blog/news content and tags.
