@@ -7988,3 +7988,695 @@ body.about-fade-page .site-shell.about-fade-shell > .about-photo-hero .about-pho
     min-height:58px;
   }
 }
+
+
+/* =========================================================
+   ABOUT BEN — QUOTE BLOCK REMOVED
+   ========================================================= */
+
+.about-quote,
+.about-quote-box,
+.quote-box,
+blockquote.about-quote{
+  display:none !important;
+}
+
+.about-editorial-story{
+  padding-bottom:48px !important;
+}
+
+.about-editorial-row + .about-editorial-row{
+  margin-top:42px !important;
+}
+
+@media(max-width:700px){
+  .about-editorial-story{
+    padding-bottom:36px !important;
+  }
+
+  .about-editorial-row + .about-editorial-row{
+    margin-top:30px !important;
+  }
+}
+
+
+/* =========================================================
+   VOLUNTEER — SINGLE SURVEY PAGE
+   ========================================================= */
+
+body.volunteer-survey-page .site-header{
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(4,15,31,.95) 0%,
+      rgba(4,15,31,.80) 46%,
+      rgba(4,15,31,.42) 74%,
+      rgba(4,15,31,.10) 91%,
+      transparent 100%
+    ) !important;
+  z-index:5000 !important;
+  box-shadow:none !important;
+  border:0 !important;
+}
+
+body.volunteer-survey-page .site-header-inner{
+  background:transparent !important;
+}
+
+/* Hero */
+.volunteer-hero{
+  position:relative;
+  min-height:560px;
+  overflow:hidden;
+  background:#06182f;
+}
+
+.volunteer-hero-image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 45%;
+}
+
+.volunteer-hero-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,18,37,.90) 0%,
+      rgba(5,18,37,.65) 30%,
+      rgba(5,18,37,.24) 56%,
+      rgba(5,18,37,.04) 100%
+    ),
+    linear-gradient(to top,rgba(5,18,37,.56),transparent 52%);
+}
+
+.volunteer-hero-content{
+  position:relative;
+  z-index:3;
+  min-height:560px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  align-items:flex-start;
+  padding-bottom:52px;
+}
+
+.volunteer-hero-content h1{
+  margin:0 0 12px;
+  color:#fff;
+  font-size:68px;
+  line-height:.95;
+  letter-spacing:-.05em;
+}
+
+.volunteer-hero-content p{
+  margin:0;
+  max-width:620px;
+  color:#fff;
+  font-size:24px;
+  line-height:1.25;
+  font-weight:700;
+}
+
+/* Editorial intro */
+.volunteer-intro{
+  background:var(--cream);
+  padding:64px 0;
+}
+
+.volunteer-intro-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:74px;
+  align-items:start;
+  max-width:1120px;
+}
+
+.volunteer-intro h2{
+  margin:0;
+  color:var(--navy);
+  font-size:48px;
+  line-height:.98;
+  letter-spacing:-.045em;
+}
+
+.volunteer-intro p{
+  margin:0 0 18px;
+  color:#42556c;
+  font-size:18px;
+  line-height:1.58;
+}
+
+/* Full-width form band */
+.volunteer-form-band{
+  position:relative;
+  overflow:hidden;
+  background:#06182f;
+  padding:70px 0 78px;
+  color:#fff;
+}
+
+.volunteer-form-band::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 10% 18%,rgba(240,68,54,.17),transparent 27%);
+  pointer-events:none;
+}
+
+.volunteer-form-grid{
+  position:relative;
+  z-index:2;
+  max-width:1160px;
+  display:grid;
+  grid-template-columns:.68fr 1.32fr;
+  gap:70px;
+  align-items:start;
+}
+
+.volunteer-form-copy h2{
+  margin:0 0 18px;
+  color:#fff;
+  font-size:50px;
+  line-height:.96;
+  letter-spacing:-.045em;
+}
+
+.volunteer-form-copy p{
+  max-width:360px;
+  margin:0;
+  color:#cbd8e5;
+  font-size:18px;
+  line-height:1.5;
+}
+
+.volunteer-form{
+  display:grid;
+  gap:12px;
+}
+
+.volunteer-form-two{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.volunteer-form input[type="text"],
+.volunteer-form input[type="email"],
+.volunteer-form input[type="tel"],
+.volunteer-form textarea{
+  width:100%;
+  border:0;
+  border-radius:0;
+  background:#f7f2e8;
+  color:#0b2444;
+  padding:0 17px;
+  font:inherit;
+}
+
+.volunteer-form input[type="text"],
+.volunteer-form input[type="email"],
+.volunteer-form input[type="tel"]{
+  height:58px;
+}
+
+.volunteer-form textarea{
+  padding-top:16px;
+  resize:vertical;
+}
+
+.volunteer-options{
+  border:0;
+  margin:8px 0 0;
+  padding:0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px 12px;
+}
+
+.volunteer-options legend{
+  grid-column:1 / -1;
+  width:100%;
+  margin:0 0 10px;
+  color:#fff;
+  font-size:18px;
+  font-weight:900;
+}
+
+.volunteer-options label{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  min-height:48px;
+  padding:13px 14px;
+  border:1px solid rgba(255,255,255,.18);
+  color:#fff;
+  background:rgba(255,255,255,.035);
+  cursor:pointer;
+}
+
+.volunteer-options input{
+  margin-top:2px;
+  accent-color:#f04436;
+}
+
+.volunteer-time{
+  grid-template-columns:repeat(4,1fr);
+}
+
+.volunteer-submit{
+  width:100%;
+  min-height:66px;
+  margin-top:8px;
+  border:0;
+  background:#f04436;
+  color:#fff;
+  font-size:20px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .volunteer-intro-grid,
+  .volunteer-form-grid{
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+
+  .volunteer-options{
+    grid-template-columns:1fr;
+  }
+
+  .volunteer-time{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:700px){
+  body.volunteer-survey-page .site-header{
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(4,15,31,.94) 0%,
+        rgba(4,15,31,.70) 55%,
+        rgba(4,15,31,.22) 86%,
+        transparent 100%
+      ) !important;
+  }
+
+  .volunteer-hero{
+    min-height:500px;
+  }
+
+  .volunteer-hero-image{
+    object-position:52% center;
+  }
+
+  .volunteer-hero-content{
+    min-height:500px;
+    padding:0 22px 34px;
+  }
+
+  .volunteer-hero-content h1{
+    font-size:46px;
+  }
+
+  .volunteer-hero-content p{
+    font-size:19px;
+  }
+
+  .volunteer-intro{
+    padding:42px 22px;
+  }
+
+  .volunteer-intro .container,
+  .volunteer-form-band .container{
+    width:100%;
+  }
+
+  .volunteer-intro h2,
+  .volunteer-form-copy h2{
+    font-size:38px;
+  }
+
+  .volunteer-form-band{
+    padding:46px 22px 52px;
+  }
+
+  .volunteer-form-two,
+  .volunteer-time{
+    grid-template-columns:1fr;
+  }
+
+  .volunteer-submit{
+    min-height:60px;
+    font-size:18px;
+  }
+}
+
+
+/* =========================================================
+   VOLUNTEER — FADED HEADER + POLISHED FORM
+   ========================================================= */
+
+/* Proper fade-through header, matching Home/About */
+body.volunteer-survey-page .site-header{
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  width:100% !important;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(4,15,31,.95) 0%,
+      rgba(4,15,31,.82) 40%,
+      rgba(4,15,31,.54) 68%,
+      rgba(4,15,31,.18) 88%,
+      transparent 100%
+    ) !important;
+  box-shadow:none !important;
+  border:0 !important;
+  z-index:5000 !important;
+}
+
+body.volunteer-survey-page .site-header-inner{
+  background:transparent !important;
+}
+
+/* Make hero run behind header from top */
+body.volunteer-survey-page .volunteer-hero{
+  margin-top:0 !important;
+  padding-top:0 !important;
+}
+
+/* Softer hero darkening */
+body.volunteer-survey-page .volunteer-hero-overlay{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,18,37,.82) 0%,
+      rgba(5,18,37,.56) 28%,
+      rgba(5,18,37,.18) 58%,
+      rgba(5,18,37,.02) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(5,18,37,.22) 0%,
+      transparent 42%,
+      rgba(5,18,37,.46) 100%
+    ) !important;
+}
+
+/* New polished form band */
+.volunteer-form-band-polished{
+  background:#06182f !important;
+  padding:78px 0 86px !important;
+}
+
+.volunteer-form-polished{
+  max-width:1080px !important;
+}
+
+.volunteer-form-heading{
+  max-width:760px;
+  margin:0 0 44px;
+}
+
+.volunteer-kicker{
+  display:block;
+  margin-bottom:12px;
+  color:#f04436;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.14em;
+}
+
+.volunteer-form-heading h2{
+  margin:0 0 14px;
+  color:#fff;
+  font-size:54px;
+  line-height:.96;
+  letter-spacing:-.045em;
+}
+
+.volunteer-form-heading p{
+  max-width:650px;
+  margin:0;
+  color:#cbd8e5;
+  font-size:18px;
+  line-height:1.5;
+}
+
+.volunteer-form-clean{
+  display:grid;
+  gap:32px;
+}
+
+.volunteer-form-section{
+  display:grid;
+  gap:12px;
+}
+
+.volunteer-form-section h3{
+  margin:0 0 4px;
+  color:#fff;
+  font-size:22px;
+  line-height:1.1;
+}
+
+.volunteer-form-clean input[type="text"],
+.volunteer-form-clean input[type="email"],
+.volunteer-form-clean input[type="tel"],
+.volunteer-form-clean textarea{
+  border:0 !important;
+  background:#f7f2e8 !important;
+  color:#0b2444 !important;
+  box-shadow:none !important;
+}
+
+.volunteer-form-clean input[type="text"],
+.volunteer-form-clean input[type="email"],
+.volunteer-form-clean input[type="tel"]{
+  height:58px !important;
+  padding:0 17px !important;
+}
+
+.volunteer-form-clean textarea{
+  min-height:110px;
+  padding:16px 17px !important;
+}
+
+.volunteer-choice-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.volunteer-choice,
+.volunteer-time-choice{
+  position:relative;
+  display:flex;
+  align-items:center;
+  min-height:58px;
+  padding:0 16px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.035);
+  color:#fff;
+  cursor:pointer;
+  transition:.15s ease;
+}
+
+.volunteer-choice:hover,
+.volunteer-time-choice:hover{
+  background:rgba(255,255,255,.08);
+  border-color:rgba(255,255,255,.34);
+}
+
+.volunteer-choice input,
+.volunteer-time-choice input{
+  margin:0 12px 0 0;
+  accent-color:#f04436;
+}
+
+.volunteer-choice span,
+.volunteer-time-choice span{
+  font-size:16px;
+  font-weight:700;
+}
+
+.volunteer-time-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+.volunteer-submit-polished{
+  min-height:68px !important;
+  margin-top:4px !important;
+  font-size:21px !important;
+  font-weight:900 !important;
+  background:#f04436 !important;
+}
+
+/* Mobile */
+@media(max-width:800px){
+  body.volunteer-survey-page .site-header{
+    position:absolute !important;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(4,15,31,.94) 0%,
+        rgba(4,15,31,.72) 52%,
+        rgba(4,15,31,.26) 84%,
+        transparent 100%
+      ) !important;
+  }
+
+  body.volunteer-survey-page .site-header-inner{
+    background:transparent !important;
+  }
+
+  .volunteer-form-band-polished{
+    padding:50px 22px 56px !important;
+  }
+
+  .volunteer-form-heading{
+    margin-bottom:30px;
+  }
+
+  .volunteer-form-heading h2{
+    font-size:40px;
+  }
+
+  .volunteer-choice-grid,
+  .volunteer-time-grid,
+  .volunteer-form-two{
+    grid-template-columns:1fr !important;
+  }
+
+  .volunteer-form-clean{
+    gap:26px;
+  }
+}
+
+
+/* =========================================================
+   VOLUNTEER — DEFINITIVE FADE-THROUGH HEADER FIX
+   ========================================================= */
+
+body.volunteer-survey-page{
+  margin:0 !important;
+  padding:0 !important;
+}
+
+body.volunteer-survey-page .site-shell{
+  position:relative !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+/* Header must not occupy its own blue strip */
+body.volunteer-survey-page .site-header{
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  width:100% !important;
+  height:92px !important;
+  min-height:92px !important;
+  margin:0 !important;
+  padding:0 !important;
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  z-index:10000 !important;
+}
+
+body.volunteer-survey-page .site-header-inner{
+  height:92px !important;
+  min-height:92px !important;
+  margin:0 !important;
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+
+/* Put the fade on the hero, not on a separate header bar */
+body.volunteer-survey-page .volunteer-hero::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 0 auto 0 !important;
+  height:150px !important;
+  z-index:4 !important;
+  pointer-events:none !important;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(4,15,31,.96) 0%,
+      rgba(4,15,31,.84) 36%,
+      rgba(4,15,31,.58) 66%,
+      rgba(4,15,31,.22) 86%,
+      transparent 100%
+    ) !important;
+}
+
+body.volunteer-survey-page .volunteer-hero{
+  position:relative !important;
+  margin:0 !important;
+  padding:0 !important;
+  top:0 !important;
+}
+
+/* Remove any remaining blue header pseudo-layers */
+body.volunteer-survey-page .site-header::before,
+body.volunteer-survey-page .site-header::after,
+body.volunteer-survey-page .site-header-inner::before,
+body.volunteer-survey-page .site-header-inner::after{
+  display:none !important;
+}
+
+/* No kicker */
+body.volunteer-survey-page .volunteer-kicker{
+  display:none !important;
+}
+
+body.volunteer-survey-page .volunteer-form-heading h2{
+  margin-top:0 !important;
+}
+
+@media(max-width:800px){
+  body.volunteer-survey-page .site-header{
+    height:72px !important;
+    min-height:72px !important;
+    background:transparent !important;
+  }
+
+  body.volunteer-survey-page .site-header-inner{
+    height:72px !important;
+    min-height:72px !important;
+    background:transparent !important;
+  }
+
+  body.volunteer-survey-page .volunteer-hero::before{
+    height:125px !important;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(4,15,31,.96) 0%,
+        rgba(4,15,31,.78) 48%,
+        rgba(4,15,31,.30) 80%,
+        transparent 100%
+      ) !important;
+  }
+}

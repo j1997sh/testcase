@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Get Involved | Back Ben for Mayor</title>
-<link rel="stylesheet" href="assets/css/site.css?v=20260821-1803-aboutbottom">
+<link rel="stylesheet" href="assets/css/site.css?v=20260821-1824-volunteer-header-fixed">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -190,8 +190,46 @@ body:not(.home-page) .site-header{
 }
 </style>
 
+
+<style id="volunteer-header-final-fix">
+/* Volunteer header must sit over the hero, never in a blue strip */
+body.volunteer-survey-page .site-shell > .site-header{
+  position:absolute!important;
+  top:0!important; left:0!important; right:0!important;
+  width:100%!important;
+  height:92px!important; min-height:92px!important;
+  margin:0!important; padding:0!important;
+  background:transparent!important;
+  border:0!important; box-shadow:none!important;
+  z-index:10000!important;
+}
+body.volunteer-survey-page .site-shell > .site-header > .site-header-inner{
+  height:92px!important; min-height:92px!important;
+  background:transparent!important;
+}
+body.volunteer-survey-page main{margin:0!important;padding:0!important;}
+body.volunteer-survey-page .volunteer-hero{
+  margin:0!important;
+  position:relative!important;
+}
+body.volunteer-survey-page .volunteer-hero:before{
+  content:""!important;
+  position:absolute!important;
+  z-index:4!important;
+  top:0!important;left:0!important;right:0!important;
+  height:160px!important;
+  pointer-events:none!important;
+  background:linear-gradient(to bottom,rgba(4,15,31,.97) 0%,rgba(4,15,31,.86) 34%,rgba(4,15,31,.58) 66%,rgba(4,15,31,.18) 88%,transparent 100%)!important;
+}
+@media(max-width:800px){
+ body.volunteer-survey-page .site-shell > .site-header{height:72px!important;min-height:72px!important;}
+ body.volunteer-survey-page .site-shell > .site-header > .site-header-inner{height:72px!important;min-height:72px!important;}
+ body.volunteer-survey-page .volunteer-hero:before{height:130px!important;}
+}
+</style>
+
 </head>
-<body class="inner-page">
+<body class="inner-page volunteer-survey-page">
 <div class="site-shell">
 
 <header class="site-header">
@@ -217,8 +255,83 @@ body:not(.home-page) .site-header{
 </header>
 
 <main>
-<section class="inner-hero"><div class="container"><h1>There is a way for everyone to help.</h1><p>Give an hour, join a local team, help online or bring your professional skills.</p></div></section>
-<section class="section"><div class="container action-grid"><article class="action"><h3>Knock on doors</h3><p>Join a friendly local canvassing session.</p><a href="#">Get involved →</a></article><article class="action"><h3>Deliver leaflets</h3><p>Help reach homes in your neighbourhood.</p><a href="#">Get involved →</a></article><article class="action"><h3>Help at events</h3><p>Support public meetings and campaign activity.</p><a href="#">Get involved →</a></article><article class="action"><h3>Make calls</h3><p>Help from home by speaking to supporters.</p><a href="#">Get involved →</a></article><article class="action"><h3>Bring your network</h3><p>Introduce local organisations and people.</p><a href="#">Get involved →</a></article><article class="action"><h3>Use your skills</h3><p>Photography, design, research, data and more.</p><a href="#">Get involved →</a></article></div></section>
+  <section class="volunteer-hero">
+    <img class="volunteer-hero-image" src="assets/images/ben-volunteer-hero.jpg" alt="Ben with campaign volunteers">
+    <div class="volunteer-hero-overlay"></div>
+    <div class="container volunteer-hero-content">
+      <h1>Join Team Ben.</h1>
+      <p>However much time you can give, there’s a way to help.</p>
+    </div>
+  </section>
+
+  <section class="volunteer-intro">
+    <div class="container volunteer-intro-grid">
+      <div>
+        <h2>Help us build a campaign across Cheshire &amp; Warrington.</h2>
+      </div>
+      <div>
+        <p>You don’t need to be a seasoned campaigner. Give an hour, join us at an event, deliver leaflets, make calls, help online or bring your professional skills.</p>
+        <p>Tell us what works for you and we’ll make sure you hear about the right opportunities.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="volunteer-form-band volunteer-form-band-polished">
+  <div class="container volunteer-form-polished">
+
+    <div class="volunteer-form-heading">
+<h2>Tell Ben how you’d like to help.</h2>
+      <p>Give us a few details and we’ll match you with the right opportunities near you.</p>
+    </div>
+
+    <form class="volunteer-form volunteer-form-clean">
+
+      <div class="volunteer-form-section">
+        <h3>Your details</h3>
+        <div class="volunteer-form-two">
+          <input type="text" placeholder="First name">
+          <input type="text" placeholder="Last name">
+        </div>
+        <div class="volunteer-form-two">
+          <input type="email" placeholder="Email address">
+          <input type="text" placeholder="Postcode">
+        </div>
+        <input type="tel" placeholder="Phone number (optional)">
+      </div>
+
+      <div class="volunteer-form-section">
+        <h3>What would you like to do?</h3>
+        <div class="volunteer-choice-grid">
+          <label class="volunteer-choice"><input type="checkbox"><span>Knock on doors</span></label>
+          <label class="volunteer-choice"><input type="checkbox"><span>Deliver leaflets</span></label>
+          <label class="volunteer-choice"><input type="checkbox"><span>Help at events</span></label>
+          <label class="volunteer-choice"><input type="checkbox"><span>Make phone calls</span></label>
+          <label class="volunteer-choice"><input type="checkbox"><span>Help online / social media</span></label>
+          <label class="volunteer-choice"><input type="checkbox"><span>Photography / design / content</span></label>
+          <label class="volunteer-choice"><input type="checkbox"><span>Professional or specialist skills</span></label>
+          <label class="volunteer-choice"><input type="checkbox"><span>Wherever I’m most useful</span></label>
+        </div>
+      </div>
+
+      <div class="volunteer-form-section">
+        <h3>How much time could you give?</h3>
+        <div class="volunteer-time-grid">
+          <label class="volunteer-time-choice"><input type="radio" name="time"><span>One-off</span></label>
+          <label class="volunteer-time-choice"><input type="radio" name="time"><span>Occasionally</span></label>
+          <label class="volunteer-time-choice"><input type="radio" name="time"><span>Monthly</span></label>
+          <label class="volunteer-time-choice"><input type="radio" name="time"><span>Weekly</span></label>
+        </div>
+      </div>
+
+      <div class="volunteer-form-section">
+        <h3>Anything else?</h3>
+        <textarea rows="4" placeholder="Tell us anything else that might be useful (optional)"></textarea>
+      </div>
+
+      <button type="button" class="volunteer-submit volunteer-submit-polished">Join Team Ben</button>
+    </form>
+  </div>
+</section>
 </main>
 
 
