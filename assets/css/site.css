@@ -6653,3 +6653,111 @@ body.home-page header::after{
     width:min(340px,88vw) !important;
   }
 }
+
+
+/* =========================================================
+   MOBILE HERO — CENTRED + MOVED UP
+   ========================================================= */
+
+/* Remove any final visible strip above the homepage header */
+html,
+body,
+.site-shell,
+body.home-page,
+body.home-page .site-header{
+  border-top:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+}
+
+body.home-page{
+  margin-top:0 !important;
+  padding-top:0 !important;
+}
+
+body.home-page .site-header{
+  top:0 !important;
+}
+
+@media(max-width:800px){
+
+  .home-hero-refined{
+    min-height:900px !important;
+  }
+
+  .home-hero-content.container{
+    min-height:900px !important;
+    padding-left:22px !important;
+    padding-right:22px !important;
+    text-align:center !important;
+  }
+
+  /* Bring the whole campaign block much further up the image */
+  .home-hero-panel{
+    padding-top:245px !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+  }
+
+  .home-campaign-logo{
+    width:min(365px,88vw) !important;
+    max-width:100% !important;
+    margin:0 auto 20px !important;
+    object-position:center center !important;
+  }
+
+  .home-signup-form{
+    width:100% !important;
+    max-width:500px !important;
+    margin:0 auto !important;
+  }
+
+  .home-signup-grid{
+    width:100% !important;
+    margin:0 auto !important;
+  }
+
+  .home-signup-grid input{
+    text-align:left !important;
+  }
+
+  .home-signup-submit{
+    width:100% !important;
+  }
+
+  .ben-social-row{
+    justify-content:center !important;
+    width:100% !important;
+  }
+
+  .home-watch{
+    right:18px !important;
+    bottom:18px !important;
+  }
+
+  .home-hero-photo{
+    object-position:54% center !important;
+  }
+}
+
+@media(max-width:520px){
+
+  .home-hero-refined,
+  .home-hero-content.container{
+    min-height:860px !important;
+  }
+
+  .home-hero-panel{
+    padding-top:205px !important;
+  }
+
+  .home-campaign-logo{
+    width:min(325px,88vw) !important;
+    margin-bottom:18px !important;
+  }
+
+  .home-hero-photo{
+    object-position:53% center !important;
+  }
+}
