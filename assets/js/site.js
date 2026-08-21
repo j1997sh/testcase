@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 
-// Compact mobile campaign menu
+
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("header").forEach(function(header){
     const btn = header.querySelector(".menu-btn");
@@ -68,6 +68,70 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.setAttribute("aria-expanded", "false");
         btn.textContent = "Menu";
       }
+    });
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function(){
+  const header = document.querySelector("header");
+  if(!header) return;
+  const btn = header.querySelector(".menu-btn");
+  const menu = header.querySelector(".navlinks");
+  if(!btn || !menu) return;
+
+  btn.onclick = function(e){
+    e.preventDefault();
+    const open = menu.classList.toggle("open");
+    btn.textContent = open ? "Close" : "Menu";
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+});
+
+
+// Definitive mobile menu actions
+document.addEventListener("DOMContentLoaded", function(){
+  document.querySelectorAll("header").forEach(function(header){
+    const btn = header.querySelector(".menu-btn");
+    const navlinks = header.querySelector(".navlinks");
+    if(!btn || !navlinks) return;
+
+    function ensureMobileActions(){
+      let actions = navlinks.querySelector(".mobile-menu-actions");
+
+      if(window.innerWidth <= 900){
+        if(!actions){
+          const inJourney = window.location.pathname.includes("/journeys/");
+          const prefix = inJourney ? "../" : "";
+          actions = document.createElement("div");
+          actions.className = "mobile-menu-actions";
+          actions.innerHTML =
+            '<a class="mobile-volunteer" href="' + prefix + 'volunteer.html">Volunteer</a>' +
+            '<a class="mobile-donate" href="' + prefix + 'donate.html">Donate</a>';
+          navlinks.appendChild(actions);
+        }
+      } else if(actions){
+        actions.remove();
+      }
+    }
+
+    ensureMobileActions();
+    window.addEventListener("resize", ensureMobileActions);
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function(){
+  document.querySelectorAll(".site-header").forEach(function(header){
+    const btn = header.querySelector(".site-menu-button");
+    const nav = header.querySelector(".site-primary-nav");
+    if(!btn || !nav) return;
+
+    btn.addEventListener("click", function(e){
+      e.preventDefault();
+      const open = nav.classList.toggle("open");
+      btn.textContent = open ? "Close" : "Menu";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
     });
   });
 });
