@@ -161,3 +161,11 @@ The treatment is inspired by traditional political biography pages but uses Back
 - Hero image is now rendered as a real `<img>` element rather than relying on CSS background loading.
 - Desktop navigation can no longer show the mobile Volunteer / Donate duplicates.
 - Mobile-only Volunteer / Donate actions are only created below 900px.
+
+
+## V4 cache-bust fix
+All pages now reference:
+- `assets/css/style-v4.css`
+- `assets/js/site-v4.js`
+
+This forces GitHub Pages / Safari to load the latest current styling rather than a cached earlier `style-v3.css`.
