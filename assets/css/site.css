@@ -7048,3 +7048,57 @@ body.home-page .site-header{
     font-size:17px !important;
   }
 }
+
+
+/* =========================================================
+   HERO FACE / HEADER / CTA — HARD OVERRIDE
+   ========================================================= */
+
+body.home-page .site-header{
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(4,15,31,.42) 0%,
+      rgba(4,15,31,.16) 58%,
+      transparent 100%
+    ) !important;
+}
+
+/* Physically shift the photograph down rather than relying on crop maths */
+.home-hero-bg{
+  overflow:hidden !important;
+}
+
+.home-hero-photo{
+  top:34px !important;
+  bottom:auto !important;
+  height:calc(100% - 34px) !important;
+  transform:none !important;
+  object-fit:cover !important;
+  object-position:center 50% !important;
+}
+
+/* Make the primary form CTA clearly stronger */
+button.home-signup-submit{
+  min-height:72px !important;
+  height:72px !important;
+  padding:0 28px !important;
+  font-size:21px !important;
+  line-height:1 !important;
+  font-weight:900 !important;
+  letter-spacing:-.015em !important;
+}
+
+@media(max-width:800px){
+  .home-hero-photo{
+    top:0 !important;
+    height:100% !important;
+    object-position:54% center !important;
+  }
+
+  button.home-signup-submit{
+    min-height:62px !important;
+    height:62px !important;
+    font-size:19px !important;
+  }
+}
