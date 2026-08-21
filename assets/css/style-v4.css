@@ -3726,3 +3726,236 @@ header .navlinks a{
     padding-top:38px !important;
   }
 }
+
+
+/* =========================================================
+   HOMEPAGE — BEN IN YOUR AREA GALLERY
+   ========================================================= */
+
+.home-area-full{
+  display:none !important;
+}
+
+.home-area-gallery{
+  background:var(--navy);
+  color:#fff;
+  padding:72px 0 0;
+}
+
+.home-area-gallery-head{
+  max-width:820px;
+  margin-bottom:34px;
+}
+
+.home-area-gallery-head h2{
+  margin:0 0 14px;
+  font-size:52px;
+  line-height:1;
+  letter-spacing:-.045em;
+}
+
+.home-area-gallery-head p{
+  margin:0;
+  max-width:780px;
+  color:#c6d2dd;
+  font-size:18px;
+  line-height:1.5;
+}
+
+.home-area-cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.home-area-card{
+  position:relative;
+  min-height:380px;
+  overflow:hidden;
+  background:#173452;
+  color:#fff;
+}
+
+.home-area-card-image{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(circle at 30% 30%,rgba(240,68,54,.20),transparent 30%),
+    linear-gradient(135deg,#34597b,#8aa2b6);
+  transition:transform .35s ease;
+}
+
+.home-area-card-image span{
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.06em;
+  color:rgba(255,255,255,.78);
+}
+
+.home-area-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(5,18,37,.92) 0%,rgba(5,18,37,.28) 48%,transparent 72%);
+}
+
+.home-area-card:hover .home-area-card-image{
+  transform:scale(1.025);
+}
+
+.home-area-card-overlay{
+  position:absolute;
+  z-index:2;
+  left:26px;
+  right:26px;
+  bottom:24px;
+}
+
+.home-area-card-overlay strong{
+  display:block;
+  font-size:30px;
+  line-height:1;
+  margin-bottom:8px;
+}
+
+.home-area-card-overlay span{
+  color:#fff;
+  font-size:13px;
+  font-weight:800;
+}
+
+.home-area-finder{
+  margin-top:38px;
+  padding:34px 0 46px;
+  border-top:1px solid rgba(255,255,255,.16);
+  display:grid;
+  grid-template-columns:.65fr 1.35fr;
+  gap:42px;
+  align-items:end;
+}
+
+.home-area-finder h3{
+  margin:0 0 8px;
+  font-size:30px;
+  line-height:1;
+}
+
+.home-area-finder p{
+  margin:0;
+  color:#c6d2dd;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.home-area-finder-form{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:10px;
+}
+
+.home-area-finder-form input{
+  width:100%;
+  min-width:0;
+  height:56px;
+  border:0;
+  padding:0 16px;
+  background:#fff;
+  color:var(--text);
+  font-size:15px;
+}
+
+.home-area-finder-form .btn{
+  min-height:56px;
+  display:flex;
+  align-items:center;
+}
+
+@media(max-width:900px){
+  .home-area-cards{
+    grid-template-columns:1fr 1fr 1fr;
+  }
+
+  .home-area-card{
+    min-height:320px;
+  }
+
+  .home-area-finder{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+}
+
+@media(max-width:700px){
+  .home-area-gallery{
+    padding:44px 0 0;
+  }
+
+  .home-area-gallery .container{
+    width:100%;
+    max-width:none;
+  }
+
+  .home-area-gallery-head{
+    padding:0 22px;
+    margin-bottom:26px;
+  }
+
+  .home-area-gallery-head h2{
+    font-size:39px;
+  }
+
+  .home-area-gallery-head p{
+    font-size:16px;
+  }
+
+  .home-area-cards{
+    display:flex;
+    gap:12px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    padding:0 22px 8px;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .home-area-cards::-webkit-scrollbar{
+    display:none;
+  }
+
+  .home-area-card{
+    flex:0 0 82%;
+    min-height:330px;
+    scroll-snap-align:start;
+  }
+
+  .home-area-card-overlay{
+    left:20px;
+    right:20px;
+    bottom:20px;
+  }
+
+  .home-area-card-overlay strong{
+    font-size:28px;
+  }
+
+  .home-area-finder{
+    margin-top:30px;
+    padding:28px 22px 38px;
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .home-area-finder h3{
+    font-size:28px;
+  }
+
+  .home-area-finder-form{
+    grid-template-columns:1fr;
+  }
+
+  .home-area-finder-form .btn{
+    width:100%;
+    justify-content:center;
+  }
+}

@@ -175,3 +175,10 @@ This forces GitHub Pages / Safari to load the latest current styling rather than
 - Removed the large blue gradient hero from About Ben.
 - Replaced it with a cream editorial intro.
 - About now flows directly into the long-form biography treatment.
+
+
+## Homepage Ben in your area redesign
+- Replaced the flat postcode-only block with three large local image panels.
+- Added Chester, Crewe and Warrington example routes.
+- Added a separate postcode finder beneath the photography.
+- Mobile uses a horizontally swipeable local-image row.
