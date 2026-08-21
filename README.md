@@ -102,3 +102,35 @@ Homepage hero rebuilt around a campaign-signup landing structure:
 - Large candidate hero image placeholder
 - Watch Ben video CTA
 - Existing Back Ben red / navy / blue campaign styling retained
+
+
+## Experience page
+A new main-navigation Experience section has been added.
+
+The page includes:
+- large editorial introduction
+- image placeholders
+- filterable categories: Delivery / Business / Communities / Leadership
+- expandable evidence/detail blocks
+- proof-in-numbers section with placeholder figures
+- leadership video placeholder
+- route into My Plan
+
+All substantive achievements and figures are deliberately placeholder content until verified campaign material is supplied.
+
+
+## Header update
+- Removed the campaign logo from the site header across all pages.
+
+
+## Homepage refinement
+Homepage reworked to:
+- keep Volunteer / Donate only as boxed header actions
+- make BACK BEN the dominant hero line
+- reduce the campaign signup headline size
+- stretch the hero image/video placeholder across the full hero background
+- overlay the signup form over the hero
+- replace the four-priority strip with a large image + short introduction + Learn More block
+- make Ben in your area full width
+- remove Follow the campaign
+- add a stronger footer
