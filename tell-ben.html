@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Tell Ben | Back Ben for Mayor</title>
+  <meta name="description" content="Tell Ben what matters where you live and help shape the campaign for Mayor of Cheshire & Warrington.">
+  <meta name="theme-color" content="#071a34">
+  <meta property="og:title" content="About Ben | Back Ben for Mayor">
+  <meta property="og:description" content="Meet Ben and learn about the leadership, experience and local approach he would bring to the Cheshire &amp; Warrington mayoralty.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/ben-home-hero.jpg">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-header-left-tell-ben-v1">
+
+<style id="final-header-system">
+*{box-sizing:border-box}
+
+.site-header{
+  width:100%!important;
+  max-width:none!important;
+  z-index:9999!important;
+  overflow:visible!important;
+  border:0!important;
+
+  /* Explicitly neutralise the original legacy `header` rule */
+  left:0!important;
+  right:0!important;
+  top:0!important;
+  transform:none!important;
+  margin:0!important;
+}
+
+body.home-page .site-header{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  background:linear-gradient(to bottom,rgba(4,15,31,.88),rgba(4,15,31,.34),transparent)!important;
+}
+
+body:not(.home-page) .site-header{
+  position:relative!important;
+  left:0!important;
+  right:0!important;
+  top:0!important;
+  transform:none!important;
+  background:linear-gradient(100deg,#071a34 0%,#0a315e 55%,#0b72bd 100%)!important;
+}
+
+.site-header-inner{
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+  min-height:86px!important;
+  margin:0!important;
+  padding:0 32px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:24px!important;
+}
+
+.site-primary-nav{
+  display:flex!important;
+  position:static!important;
+  flex:0 1 auto!important;
+  min-width:0!important;
+  width:auto!important;
+  height:auto!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:clamp(14px,1.45vw,28px)!important;
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  visibility:visible!important;
+  opacity:1!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+}
+
+.site-primary-nav a{
+  display:inline-block!important;
+  flex:0 0 auto!important;
+  width:auto!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  color:#fff!important;
+  font-size:clamp(12px,.95vw,15px)!important;
+  line-height:1!important;
+  font-weight:800!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+
+.site-header-actions{
+  display:flex!important;
+  flex:0 0 auto!important;
+  align-items:center!important;
+  gap:12px!important;
+  margin:0!important;
+  padding:0!important;
+}
+
+.site-volunteer-button,
+.site-donate-button{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:52px!important;
+  padding:0 clamp(16px,1.55vw,25px)!important;
+  color:#fff!important;
+  font-size:clamp(12px,.95vw,15px)!important;
+  line-height:1!important;
+  font-weight:900!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+}
+
+.site-volunteer-button{
+  border:1px solid rgba(255,255,255,.72)!important;
+  background:rgba(255,255,255,.03)!important;
+}
+
+.site-donate-button{
+  border:1px solid #f04436!important;
+  background:#f04436!important;
+}
+
+.site-menu-button{display:none!important}
+.mobile-menu-actions{display:none!important}
+
+/* Tight desktop: compress rather than shove content offscreen */
+@media (max-width:1100px) and (min-width:801px){
+  .site-header-inner{padding:0 20px!important;gap:14px!important}
+  .site-primary-nav{gap:11px!important}
+  .site-primary-nav a{font-size:11.5px!important}
+  .site-header-actions{gap:8px!important}
+  .site-volunteer-button,.site-donate-button{
+    min-height:46px!important;
+    padding:0 13px!important;
+    font-size:11.5px!important;
+  }
+}
+
+/* One clean mobile breakpoint. */
+@media (max-width:800px){
+  .site-header-inner{
+    min-height:72px!important;
+    padding:10px 16px!important;
+    justify-content:flex-end!important;
+    position:relative!important;
+  }
+
+  .site-menu-button{
+    display:block!important;
+    width:auto!important;
+    min-width:106px!important;
+    height:52px!important;
+    border:1px solid rgba(255,255,255,.68)!important;
+    background:transparent!important;
+    color:#fff!important;
+    font-size:16px!important;
+    font-weight:900!important;
+  }
+
+  .site-header-actions{display:none!important}
+
+  .site-primary-nav{
+    display:none!important;
+    position:absolute!important;
+    top:100%!important;
+    left:0!important;
+    right:0!important;
+    width:100%!important;
+    padding:8px 18px 18px!important;
+    background:#061a31!important;
+    box-shadow:0 18px 35px rgba(0,0,0,.25)!important;
+    white-space:normal!important;
+  }
+
+  .site-primary-nav.open{display:block!important}
+
+  .site-primary-nav a{
+    display:block!important;
+    width:100%!important;
+    padding:15px 6px!important;
+    border-bottom:1px solid rgba(255,255,255,.11)!important;
+    font-size:16px!important;
+  }
+}
+</style>
+
+
+<style id="tell-ben-interactive-v1">
+body:has(.tell-ben-hero) .site-header{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  z-index:1000!important;
+  background:linear-gradient(to bottom,rgba(4,20,39,.96) 0%,rgba(4,20,39,.78) 58%,rgba(4,20,39,.30) 82%,rgba(4,20,39,0) 100%)!important;
+  box-shadow:none!important;
+  border:0!important;
+}
+body:has(.tell-ben-hero) .site-header-inner{background:transparent!important}
+
+.tell-ben-page{background:#f7f2e8;color:#071f3d}
+
+.tell-ben-hero{
+  position:relative;
+  min-height:520px;
+  overflow:hidden;
+  color:#fff;
+}
+.tell-ben-hero-bg{
+  position:absolute;
+  inset:0;
+  background:url("assets/images/ben-area.jpg") center 48%/cover no-repeat;
+}
+.tell-ben-hero-fade{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(to bottom,rgba(3,18,36,.58) 0%,rgba(3,18,36,.10) 45%,rgba(3,18,36,.80) 100%),
+    linear-gradient(90deg,rgba(3,18,36,.78) 0%,rgba(3,18,36,.30) 44%,transparent 78%);
+}
+.tell-ben-hero-inner{
+  position:relative;
+  z-index:2;
+  min-height:520px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding-bottom:48px;
+}
+.tell-ben-hero h1{
+  margin:0 0 10px;
+  color:#fff;
+  font-size:clamp(72px,8vw,112px);
+  line-height:.88;
+  letter-spacing:-.06em;
+}
+.tell-ben-hero p{
+  margin:0;
+  color:#e4ebf1;
+  font-size:24px;
+  font-weight:700;
+}
+
+.tell-ben-conversation{padding:66px 0 82px}
+.tell-ben-shell{max-width:1220px}
+
+.tell-ben-progress{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  margin-bottom:38px;
+}
+.tell-ben-progress span{
+  height:5px;
+  background:#d8d0c4;
+}
+.tell-ben-progress span.is-on{background:#f54436}
+
+.tell-ben-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 330px;
+  gap:76px;
+  align-items:start;
+}
+
+.tell-ben-stage{min-height:560px}
+.tell-step{display:none}
+.tell-step.is-active{display:block}
+
+.tell-step h2{
+  margin:0 0 12px;
+  max-width:800px;
+  font-size:58px;
+  line-height:.94;
+  letter-spacing:-.045em;
+}
+.tell-step>p{
+  margin:0 0 30px;
+  max-width:720px;
+  color:#596b7d;
+  font-size:18px;
+  line-height:1.55;
+}
+
+.tell-location-entry{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:10px;
+  max-width:760px;
+}
+.tell-location-entry input,
+.tell-contact-grid input{
+  min-height:58px;
+  border:1px solid #bbb2a5;
+  background:#fff;
+  padding:0 16px;
+  font:inherit;
+  font-size:17px;
+}
+.tell-location-shortcuts{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:16px;
+}
+.tell-location-shortcuts button{
+  border:1px solid #aeb5bc;
+  background:transparent;
+  color:#071f3d;
+  padding:10px 14px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.tell-choice-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  max-width:900px;
+}
+.tell-choice-grid button{
+  min-height:86px;
+  border:1px solid #c6beb2;
+  background:#fff;
+  color:#071f3d;
+  padding:18px 20px;
+  text-align:left;
+  font-size:20px;
+  font-weight:900!important;
+  cursor:pointer;
+}
+.tell-choice-grid button:hover,
+.tell-choice-grid button.is-selected,
+.tell-location-shortcuts button.is-selected{
+  background:#071f3d;
+  border-color:#071f3d;
+  color:#fff;
+}
+
+.tell-step-actions{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  margin-top:30px;
+}
+.tell-back{
+  border:0;
+  background:transparent;
+  color:#596b7d;
+  font-weight:900!important;
+  cursor:pointer;
+  padding:14px 0;
+}
+
+#tell-message{
+  width:100%;
+  min-height:190px;
+  border:1px solid #bcb4a9;
+  background:#fff;
+  padding:18px;
+  font:inherit;
+  font-size:18px;
+  line-height:1.5;
+}
+.tell-contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:10px;
+}
+.tell-updates{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  margin-top:18px;
+  color:#56697b;
+  line-height:1.4;
+}
+
+.tell-ben-summary{
+  position:sticky;
+  top:115px;
+  background:#071f3d;
+  color:#fff;
+  padding:28px;
+}
+.tell-summary-title{
+  margin:0 0 24px;
+  font-size:22px;
+  font-weight:900;
+}
+.tell-summary-item{
+  margin-bottom:22px;
+}
+.tell-summary-item span{
+  display:block;
+  margin-bottom:4px;
+  color:#aebdcb;
+  font-size:13px;
+}
+.tell-summary-item strong{
+  display:block;
+  color:#fff;
+  font-size:18px;
+  line-height:1.25;
+}
+.tell-summary-note{
+  margin:34px 0 0;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.15);
+  color:#aebdcb;
+  font-size:12.5px;
+  line-height:1.5;
+}
+
+.tell-review-card{
+  background:#fff;
+  padding:34px;
+  max-width:820px;
+}
+.tell-review-location{
+  margin:0 0 8px;
+  color:#f54436;
+  font-weight:900;
+}
+.tell-review-card h3{
+  margin:0 0 14px;
+  font-size:34px;
+}
+.tell-review-card>p:not(.tell-review-location){
+  color:#56697b;
+}
+.tell-review-card blockquote{
+  margin:24px 0 0;
+  color:#071f3d;
+  font-size:25px;
+  line-height:1.35;
+  font-weight:800;
+}
+
+.tell-thanks-actions{
+  display:flex;
+  gap:22px;
+  align-items:center;
+  margin-top:26px;
+}
+.tell-thanks-actions>a:not(.btn){
+  color:#071f3d;
+  font-weight:900;
+}
+
+.tell-ben-local-link{
+  background:#fff;
+  padding:64px 0;
+}
+.tell-ben-local-grid{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:48px;
+  align-items:center;
+}
+.tell-ben-local-grid h2{
+  margin:0 0 10px;
+  font-size:44px;
+  line-height:.96;
+}
+.tell-ben-local-grid p{
+  margin:0;
+  color:#5b6d7e;
+  font-size:17px;
+}
+
+@media(max-width:900px){
+  .tell-ben-layout{grid-template-columns:1fr;gap:36px}
+  .tell-ben-summary{position:static;order:-1;padding:22px}
+  .tell-summary-note{display:none}
+  .tell-ben-stage{min-height:0}
+}
+@media(max-width:700px){
+  .tell-ben-hero,.tell-ben-hero-inner{min-height:470px}
+  .tell-ben-hero h1{font-size:64px}
+  .tell-ben-hero p{font-size:20px}
+  .tell-step h2{font-size:44px}
+  .tell-location-entry,.tell-choice-grid,.tell-contact-grid,.tell-ben-local-grid{grid-template-columns:1fr}
+  .tell-choice-grid button{min-height:72px}
+  .tell-step-actions{justify-content:space-between}
+  .tell-thanks-actions{align-items:flex-start;flex-direction:column}
+}
+</style>
+
+</head>
+<body class="inner-page about-hero-page about-fade-page">
+<div class="site-shell about-fade-shell">
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-header-logo" href="index.html" aria-label="Back Ben home"><img src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor"></a>
+    <nav class="site-primary-nav">
+      <a href="about.html">About Ben</a>
+      <a href="plan.html">My Plan</a>
+      <a href="news.html">News</a>
+      <a href="events.html">Events</a>
+      <a href="tell-ben.html" aria-current="page">Tell Ben</a>
+    </nav>
+
+    <button class="site-menu-button" type="button" aria-expanded="false">Menu</button>
+
+    <div class="site-header-actions">
+      <a class="site-volunteer-button" href="volunteer.html">Volunteer</a>
+      <a class="site-donate-button" href="donate.html">Donate</a>
+    </div>
+  </div>
+</header>
+
+
+<main class="tell-ben-page">
+
+  <section class="tell-ben-hero">
+    <div class="tell-ben-hero-bg"></div>
+    <div class="tell-ben-hero-fade"></div>
+    <div class="container tell-ben-hero-inner">
+      <h1>Tell Ben.</h1>
+      <p>What would you change about where you live?</p>
+    </div>
+  </section>
+
+  <section class="tell-ben-conversation">
+    <div class="container tell-ben-shell">
+
+      <div class="tell-ben-progress" aria-hidden="true">
+        <span class="is-on"></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="tell-ben-layout">
+
+        <div class="tell-ben-stage">
+
+          <div class="tell-step is-active" data-step="1">
+            <h2>First, where are you?</h2>
+            <p>Tell us your town or postcode so Ben can understand what people are raising in different parts of the region.</p>
+
+            <div class="tell-location-entry">
+              <input id="tell-location" type="text" placeholder="Town or postcode" autocomplete="postal-code" aria-label="Town or postcode">
+              <button type="button" class="btn btn-red tell-next" data-next="2">Continue</button>
+            </div>
+
+            <div class="tell-location-shortcuts">
+              <button type="button" data-location="Crewe">Crewe</button>
+              <button type="button" data-location="Chester">Chester</button>
+              <button type="button" data-location="Warrington">Warrington</button>
+              <button type="button" data-location="Northwich">Northwich</button>
+              <button type="button" data-location="Congleton">Congleton</button>
+            </div>
+          </div>
+
+          <div class="tell-step" data-step="2">
+            <h2>What matters most to you?</h2>
+            <p>Pick one to start with. You can add more afterwards.</p>
+
+            <div class="tell-choice-grid" id="tell-issues">
+              <button type="button" data-issue="Transport">Transport</button>
+              <button type="button" data-issue="Crime and antisocial behaviour">Crime &amp; antisocial behaviour</button>
+              <button type="button" data-issue="Housing and development">Housing &amp; development</button>
+              <button type="button" data-issue="Jobs and local business">Jobs &amp; local business</button>
+              <button type="button" data-issue="Town centres">Town centres</button>
+              <button type="button" data-issue="Local services">Local services</button>
+            </div>
+
+            <div class="tell-step-actions">
+              <button type="button" class="tell-back" data-back="1">Back</button>
+              <button type="button" class="btn btn-red tell-next" data-next="3">Continue</button>
+            </div>
+          </div>
+
+          <div class="tell-step" data-step="3">
+            <h2 id="tell-follow-heading">What would you change?</h2>
+            <p id="tell-follow-copy">Choose the thing that would make the biggest difference.</p>
+
+            <div class="tell-choice-grid tell-followup-grid" id="tell-followups"></div>
+
+            <div class="tell-step-actions">
+              <button type="button" class="tell-back" data-back="2">Back</button>
+              <button type="button" class="btn btn-red tell-next" data-next="4">Continue</button>
+            </div>
+          </div>
+
+          <div class="tell-step" data-step="4">
+            <h2>Now say it in your own words.</h2>
+            <p>If Ben could take one thing away from this, what should it be?</p>
+
+            <textarea id="tell-message" placeholder="Tell Ben what you would change..." aria-label="Tell Ben what you would change"></textarea>
+
+            <div class="tell-contact-grid">
+              <input id="tell-first-name" type="text" placeholder="First name" autocomplete="given-name" aria-label="First name">
+              <input id="tell-email" type="email" placeholder="Email address" autocomplete="email" aria-label="Email address">
+            </div>
+
+            <label class="tell-updates">
+              <input id="tell-updates" type="checkbox">
+              <span>Keep me updated about Ben’s campaign in my area.</span>
+            </label>
+
+            <div class="tell-step-actions">
+              <button type="button" class="tell-back" data-back="3">Back</button>
+              <button type="button" class="btn btn-red" id="tell-review">Review what I’ve said</button>
+            </div>
+          </div>
+
+          <div class="tell-step tell-review-step" data-step="5">
+            <h2>This is what you’ve told Ben.</h2>
+            <p>You can go back and change anything before sending it.</p>
+
+            <div class="tell-review-card">
+              <p class="tell-review-location" id="review-location">Your area</p>
+              <h3 id="review-issue">Your priority</h3>
+              <p id="review-followup"></p>
+              <blockquote id="review-message"></blockquote>
+            </div>
+
+            <div class="tell-step-actions">
+              <button type="button" class="tell-back" data-back="4">Edit my response</button>
+              <button type="button" class="btn btn-red" id="tell-submit">Send it to Ben</button>
+            </div>
+          </div>
+
+          <div class="tell-step tell-thanks-step" data-step="6">
+            <h2>Thanks. Ben’s listening.</h2>
+            <p>Your response has been added to the picture the campaign is building of what matters across Cheshire &amp; Warrington.</p>
+            <div class="tell-thanks-actions">
+              <a class="btn btn-red" href="area.html">See Ben in your area</a>
+              <a href="events.html">Meet Ben at an event</a>
+            </div>
+          </div>
+
+        </div>
+
+        <aside class="tell-ben-summary">
+          <p class="tell-summary-title">Your conversation</p>
+          <div class="tell-summary-item">
+            <span>Where</span>
+            <strong id="summary-location">Not chosen yet</strong>
+          </div>
+          <div class="tell-summary-item">
+            <span>Priority</span>
+            <strong id="summary-issue">Not chosen yet</strong>
+          </div>
+          <div class="tell-summary-item">
+            <span>What would help</span>
+            <strong id="summary-followup">Not chosen yet</strong>
+          </div>
+          <p class="tell-summary-note">This is a pitch-stage demo. On the live campaign site, responses can feed directly into NationBuilder tags, local supporter journeys and campaign reporting.</p>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="tell-ben-local-link">
+    <div class="container tell-ben-local-grid">
+      <div>
+        <h2>Different places need different answers.</h2>
+        <p>That’s why the campaign is building local conversations, not just one national-style survey.</p>
+      </div>
+      <a class="btn btn-red" href="area.html">Explore your area</a>
+    </div>
+  </section>
+
+</main>
+
+
+
+<footer class="campaign-footer">
+  <div class="campaign-footer-top">
+    <div class="campaign-footer-brand">
+      <img class="campaign-footer-logo-image" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
+      <div class="campaign-footer-socials" aria-label="Campaign social channels">
+        <span aria-label="Facebook" title="Facebook">f</span>
+        <span aria-label="Instagram" title="Instagram">◎</span>
+        <span aria-label="X" title="X">𝕏</span>
+        <span aria-label="TikTok" title="TikTok">♪</span>
+      </div>
+    </div>
+
+    <div class="campaign-footer-links">
+      <div>
+        <h3>Campaign</h3>
+        <a href="about.html">About Ben</a>
+        <a href="plan.html">My Plan</a>
+        <a href="news.html">News</a>
+      </div>
+
+      <div>
+        <h3>Take part</h3>
+        <a href="events.html">Events</a>
+        <a href="tell-ben.html">Tell Ben</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="donate.html">Donate</a>
+        <a href="area.html">Ben in your area</a>
+      </div>
+    </div>
+
+    <div class="campaign-footer-cta">
+      <h3>Back Ben</h3>
+      <p>Help build a campaign that reaches every part of Cheshire & Warrington.</p>
+      <a class="campaign-footer-button" href="volunteer.html">Join the campaign</a>
+    </div>
+  </div>
+
+  <div class="campaign-footer-bottom">
+    <div class="campaign-footer-legal">
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+      <a href="#promoted-by">Promoted by</a>
+    </div>
+
+    <div class="campaign-footer-imprint" id="promoted-by">
+      <span>Promoted by [name] on behalf of Ben Fletcher, both at [campaign address].</span>
+    </div>
+  </div>
+</footer>
+
+
+</div>
+<script src="assets/js/site.js?v=20260821-1212"></script>
+
+<script id="tell-ben-interactive-js">
+document.addEventListener("DOMContentLoaded", function(){
+  const state = { location:"", issue:"", followup:"" };
+  const steps = Array.from(document.querySelectorAll(".tell-step"));
+  const progress = Array.from(document.querySelectorAll(".tell-ben-progress span"));
+
+  const followups = {
+    "Transport":[
+      "More reliable buses",
+      "Less congestion",
+      "Better rail connections",
+      "Safer walking and cycling"
+    ],
+    "Crime and antisocial behaviour":[
+      "More visible neighbourhood policing",
+      "Tackle repeat antisocial behaviour",
+      "Safer town centres",
+      "Better coordination with councils"
+    ],
+    "Housing and development":[
+      "More homes people can afford",
+      "Infrastructure before development",
+      "Use brownfield land first",
+      "Protect the character of local places"
+    ],
+    "Jobs and local business":[
+      "Back local high streets",
+      "Better skills and training",
+      "Bring in new investment",
+      "Make it easier for businesses to grow"
+    ],
+    "Town centres":[
+      "Bring empty shops back into use",
+      "Improve public spaces",
+      "Support independent businesses",
+      "Make town centres easier to reach"
+    ],
+    "Local services":[
+      "Better GP access",
+      "More school capacity",
+      "Improve local transport to services",
+      "Protect services close to home"
+    ]
+  };
+
+  function showStep(n){
+    steps.forEach(s => s.classList.toggle("is-active", Number(s.dataset.step)===n));
+    progress.forEach((p,i) => p.classList.toggle("is-on", i < Math.min(n,4)));
+    document.querySelector(".tell-ben-conversation").scrollIntoView({behavior:"smooth",block:"start"});
+  }
+
+  function updateSummary(){
+    document.getElementById("summary-location").textContent = state.location || "Not chosen yet";
+    document.getElementById("summary-issue").textContent = state.issue || "Not chosen yet";
+    document.getElementById("summary-followup").textContent = state.followup || "Not chosen yet";
+  }
+
+  document.querySelectorAll("[data-location]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      document.querySelectorAll("[data-location]").forEach(b=>b.classList.remove("is-selected"));
+      btn.classList.add("is-selected");
+      state.location = btn.dataset.location;
+      document.getElementById("tell-location").value = state.location;
+      updateSummary();
+    });
+  });
+
+  document.getElementById("tell-location").addEventListener("input", e=>{
+    state.location = e.target.value.trim();
+    updateSummary();
+  });
+
+  document.querySelectorAll("[data-issue]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      document.querySelectorAll("[data-issue]").forEach(b=>b.classList.remove("is-selected"));
+      btn.classList.add("is-selected");
+      state.issue = btn.dataset.issue;
+      state.followup = "";
+      updateSummary();
+    });
+  });
+
+  function buildFollowups(){
+    const holder = document.getElementById("tell-followups");
+    holder.innerHTML = "";
+    (followups[state.issue] || ["Tell Ben in your own words"]).forEach(text=>{
+      const b = document.createElement("button");
+      b.type="button";
+      b.textContent=text;
+      b.addEventListener("click",()=>{
+        holder.querySelectorAll("button").forEach(x=>x.classList.remove("is-selected"));
+        b.classList.add("is-selected");
+        state.followup=text;
+        updateSummary();
+      });
+      holder.appendChild(b);
+    });
+    document.getElementById("tell-follow-heading").textContent =
+      state.issue ? "What would make the biggest difference?" : "What would you change?";
+  }
+
+  document.querySelectorAll(".tell-next").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const next=Number(btn.dataset.next);
+      if(next===3) buildFollowups();
+      showStep(next);
+    });
+  });
+
+  document.querySelectorAll(".tell-back").forEach(btn=>{
+    btn.addEventListener("click",()=>showStep(Number(btn.dataset.back)));
+  });
+
+  document.getElementById("tell-review").addEventListener("click",()=>{
+    state.location = document.getElementById("tell-location").value.trim() || state.location || "Your area";
+    updateSummary();
+    document.getElementById("review-location").textContent = state.location;
+    document.getElementById("review-issue").textContent = state.issue || "What matters to you";
+    document.getElementById("review-followup").textContent = state.followup || "";
+    const msg = document.getElementById("tell-message").value.trim();
+    document.getElementById("review-message").textContent =
+      msg ? "“" + msg + "”" : "You haven’t added anything in your own words yet.";
+    showStep(5);
+  });
+
+  document.getElementById("tell-submit").addEventListener("click",()=>showStep(6));
+});
+</script>
+
+</body>
+</html>

@@ -10239,3 +10239,44 @@ a.btn,
 button.btn{
   text-decoration:none!important;
 }
+
+
+/* Desktop masthead: genuinely left aligned */
+@media(min-width:801px){
+  .site-header-inner{
+    width:calc(100% - 64px)!important;
+    max-width:none!important;
+    margin:0 32px!important;
+    gap:22px!important;
+  }
+
+  .site-header-logo{
+    margin:0 14px 0 0!important;
+  }
+
+  .site-header-logo img{
+    width:92px!important;
+    height:auto!important;
+  }
+
+  .site-primary-nav{
+    justify-content:flex-start!important;
+    flex:0 1 auto!important;
+    gap:26px!important;
+  }
+
+  .site-header-actions{
+    margin-left:auto!important;
+  }
+}
+
+/* Preserve the centred mobile logo while keeping Menu on the right */
+@media(max-width:800px){
+  .site-header-logo{
+    position:absolute!important;
+    left:50%!important;
+    top:50%!important;
+    transform:translate(-50%,-50%)!important;
+    margin:0!important;
+  }
+}
