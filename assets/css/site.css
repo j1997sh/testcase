@@ -10200,3 +10200,42 @@ textarea{
     transform:none!important;
   }
 }
+
+
+/* Global CTA/button polish — remove arrow-era styling + stronger labels */
+.btn,
+button,
+.site-volunteer-button,
+.site-donate-button,
+.campaign-footer-button,
+.news-card-link,
+.event-card-link,
+.crewe-journey-link,
+.event-after-copy a,
+.local-next-step a,
+.donation-existing-actions a{
+  font-weight:900!important;
+}
+
+.btn,
+.site-volunteer-button,
+.site-donate-button,
+.campaign-footer-button{
+  letter-spacing:-0.01em!important;
+}
+
+.btn,
+button{
+  font-size:inherit;
+}
+
+.btn-red,
+.site-donate-button,
+.campaign-footer-button{
+  font-weight:900!important;
+}
+
+a.btn,
+button.btn{
+  text-decoration:none!important;
+}
