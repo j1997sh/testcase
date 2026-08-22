@@ -10693,3 +10693,86 @@ button.btn{
   .local-lite-listen form{grid-template-columns:1fr}
   .local-lite-listen button{grid-column:auto}
 }
+
+
+/* ============================================================
+   GLOBAL CAMPAIGN CTA BUTTONS
+   Convert orange action-text links into proper campaign buttons
+   ============================================================ */
+.area-card-copy > a:last-child,
+.crewe-journey-link,
+.news-card-link,
+.about-editorial-link,
+.local-lite-actions article > a,
+.video-question-card > a,
+.campaign-404-link,
+.follow-social-section .follow-social-link,
+.follow-editorial-section .follow-editorial-link,
+.tell-thanks-actions > a:not(.btn),
+.home-area-simple-copy > a,
+.home-intro-copy > a,
+.news-lead-copy > a,
+.news-card-copy > a,
+.crewe-journey-copy > a:last-child,
+.crewe-feature-copy > a,
+.local-story-copy > a,
+.local-event-copy > a,
+.local-issue-copy > a{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:auto!important;
+  min-height:46px!important;
+  margin-top:12px!important;
+  padding:0 18px!important;
+  background:#f04436!important;
+  border:2px solid #f04436!important;
+  color:#fff!important;
+  text-decoration:none!important;
+  font-weight:900!important;
+  line-height:1!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  transition:background .16s ease,border-color .16s ease,transform .16s ease!important;
+}
+
+.area-card-copy > a:last-child:hover,
+.crewe-journey-link:hover,
+.news-card-link:hover,
+.about-editorial-link:hover,
+.local-lite-actions article > a:hover,
+.video-question-card > a:hover,
+.campaign-404-link:hover,
+.follow-social-section .follow-social-link:hover,
+.follow-editorial-section .follow-editorial-link:hover,
+.tell-thanks-actions > a:not(.btn):hover,
+.home-area-simple-copy > a:hover,
+.home-intro-copy > a:hover,
+.news-lead-copy > a:hover,
+.news-card-copy > a:hover,
+.crewe-journey-copy > a:last-child:hover,
+.crewe-feature-copy > a:hover,
+.local-story-copy > a:hover,
+.local-event-copy > a:hover,
+.local-issue-copy > a:hover{
+  background:#d9362b!important;
+  border-color:#d9362b!important;
+  color:#fff!important;
+  transform:translateY(-1px)!important;
+}
+
+@media(max-width:700px){
+  .area-card-copy > a:last-child,
+  .crewe-journey-link,
+  .news-card-link,
+  .about-editorial-link,
+  .local-lite-actions article > a,
+  .video-question-card > a,
+  .campaign-404-link,
+  .tell-thanks-actions > a:not(.btn),
+  .news-lead-copy > a,
+  .news-card-copy > a{
+    min-height:44px!important;
+    padding:0 16px!important;
+  }
+}
