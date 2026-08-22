@@ -10150,3 +10150,53 @@ textarea{
     gap:12px 18px;
   }
 }
+
+
+/* Mobile logo centring fix — 2026-08-22 */
+@media(max-width:800px){
+  /* Small logo in the mobile header */
+  .site-header-inner{
+    position:relative;
+  }
+
+  .site-brand{
+    position:absolute!important;
+    left:50%!important;
+    top:50%!important;
+    transform:translate(-50%,-50%)!important;
+    margin:0!important;
+  }
+
+  /* Large campaign mark in the homepage hero */
+  .home-hero-logo,
+  .home-hero-mark,
+  .hero-campaign-logo{
+    display:block!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    left:auto!important;
+    right:auto!important;
+    transform:none!important;
+  }
+}
+
+@media(max-width:800px){
+  .hero-logo,
+  .home-hero .campaign-logo,
+  .home-hero-content img{
+    display:block!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+}
+
+@media(max-width:800px){
+  .home-campaign-logo{
+    display:block!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    left:auto!important;
+    right:auto!important;
+    transform:none!important;
+  }
+}
