@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>On the campaign trail | Back Ben for Mayor</title>
-<link rel="stylesheet" href="assets/css/site.css?v=20260822-unframed-v1">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-events-grid-map-v4">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -191,13 +191,286 @@ body:not(.home-page) .site-header{
 </style>
 
 
-<style id="events-redesign">
-.events-page-redesign{background:#f7f2e8;color:#071f3d}
-.events-intro{padding:74px 0 54px}.events-kicker{text-transform:uppercase;letter-spacing:.14em;color:#f54436;font-size:12px;font-weight:900;margin-bottom:14px}.events-intro h1{font-size:clamp(64px,7vw,104px);line-height:.9;letter-spacing:-.06em;margin:0 0 18px}.events-intro p{font-size:20px;color:#53667a;max-width:760px;line-height:1.5}
-.featured-event-wrap{padding:0 0 64px}.featured-event{display:grid;grid-template-columns:1.4fr .8fr;background:#071f3d;color:#fff;min-height:470px}.featured-event-photo{background:linear-gradient(90deg,rgba(7,31,61,.1),rgba(7,31,61,0)),url("assets/images/crewe-hero.jpg") center/cover}.featured-event-copy{padding:52px 46px;display:flex;flex-direction:column;justify-content:center}.featured-date{font-weight:900;color:#c8d3dd;margin-bottom:13px}.featured-event-copy h2{font-size:48px;line-height:.98;letter-spacing:-.04em;margin:0 0 16px}.featured-event-copy p{font-size:17px;line-height:1.5;color:#d1dbe4}.featured-event-actions{display:flex;align-items:center;gap:18px;margin-top:18px}.featured-event-actions span{color:#b8c6d2;font-weight:800}
-.events-agenda{padding:60px 0 76px;background:#fff}.agenda-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}.agenda-heading h2{font-size:50px;line-height:.95;margin:0}.agenda-heading p{margin:0;color:#667789}.agenda-list{border-top:1px solid #d8d0c3}.agenda-list article{display:grid;grid-template-columns:110px 1fr auto;gap:28px;align-items:center;padding:27px 0;border-bottom:1px solid #d8d0c3}.agenda-list time{display:flex;align-items:baseline;gap:7px;color:#f54436}.agenda-list time b{font-size:42px;line-height:1}.agenda-list time span{font-size:14px;font-weight:900}.agenda-list h3{font-size:26px;margin:0 0 6px}.agenda-list p{margin:0;color:#6b7b8c}.agenda-list a{font-weight:900;color:#071f3d;text-decoration:none}
-.events-cta{background:#071f3d;color:#fff;padding:64px 0}.events-cta .container{display:grid;grid-template-columns:1fr 1fr auto;align-items:center;gap:30px}.events-cta h2{font-size:44px;line-height:.95;margin:0}.events-cta p{color:#cbd6df;line-height:1.5;margin:0}
-@media(max-width:800px){.featured-event{grid-template-columns:1fr}.featured-event-photo{min-height:300px}.featured-event-copy{padding:34px 26px}.featured-event-copy h2{font-size:40px}.agenda-heading{display:block}.agenda-list article{grid-template-columns:74px 1fr}.agenda-list article>a{grid-column:2}.events-cta .container{grid-template-columns:1fr}.events-intro h1{font-size:58px}}
+
+
+
+<style id="events-editorial-redesign-v2">
+body:has(.events-photo-hero) .site-header{
+  position:absolute!important;top:0!important;left:0!important;right:0!important;z-index:1000!important;
+  background:linear-gradient(to bottom,rgba(4,20,39,.96) 0%,rgba(4,20,39,.80) 58%,rgba(4,20,39,.36) 82%,rgba(4,20,39,0) 100%)!important;
+  border:0!important;box-shadow:none!important;
+}
+body:has(.events-photo-hero) .site-header-inner{background:transparent!important;border:0!important;box-shadow:none!important}
+.events-editorial-page{background:#f7f2e8;color:#071f3d}
+
+.events-photo-hero{position:relative;min-height:540px;overflow:hidden;color:#fff}
+.events-photo-hero-bg{position:absolute;inset:0;background:url("assets/images/ben-events-hero.jpg") center 48%/cover no-repeat}
+.events-photo-hero-fade{position:absolute;inset:0;background:
+  linear-gradient(to bottom,rgba(3,18,36,.62) 0%,rgba(3,18,36,.14) 46%,rgba(3,18,36,.76) 100%),
+  linear-gradient(90deg,rgba(3,18,36,.76) 0%,rgba(3,18,36,.34) 38%,rgba(3,18,36,.04) 76%,transparent 100%)}
+.events-photo-hero-inner{position:relative;z-index:2;min-height:540px;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:48px}
+.events-photo-hero h1{margin:0 0 11px;font-size:clamp(64px,7vw,98px);line-height:.9;letter-spacing:-.055em;color:#fff}
+.events-photo-hero p{margin:0;max-width:760px;color:#e3e9ef;font-size:20px;line-height:1.45}
+
+.events-next{padding:72px 0 76px}
+.events-next-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:68px;align-items:center}
+.events-next-copy{max-width:560px}
+.events-date{margin:0 0 12px;color:#f54436;font-weight:800}
+.events-next-copy h2{margin:0 0 16px;font-size:50px;line-height:.97;letter-spacing:-.04em}
+.events-next-copy>p:not(.events-date){margin:0 0 22px;color:#53667a;font-size:18px;line-height:1.6}
+.events-next-actions{display:flex;align-items:center;gap:18px}
+.events-next-actions span{color:#667789;font-weight:700}
+.events-next-photo{min-height:460px;background:url("assets/images/crewe-hero.jpg") center/cover no-repeat}
+
+.events-list-section{background:#fff;padding:68px 0 78px}
+.events-list-heading{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:28px}
+.events-list-heading h2{margin:0;font-size:50px;line-height:.97;letter-spacing:-.04em}
+.events-list-heading p{margin:0;color:#667789}
+.events-simple-list article{display:grid;grid-template-columns:100px 1fr auto;gap:26px;align-items:center;padding:24px 0}
+.events-simple-list time{display:flex;align-items:baseline;gap:7px;color:#f54436}
+.events-simple-list time strong{font-size:40px;line-height:1}
+.events-simple-list time span{font-size:14px;font-weight:900}
+.events-simple-list h3{margin:0 0 5px;font-size:26px;line-height:1.05}
+.events-simple-list p{margin:0;color:#6a7a8b}
+.events-simple-list a{color:#071f3d;font-weight:900;text-decoration:none}
+
+.events-bring-ben{background:#071f3d;color:#fff;padding:60px 0}
+.events-bring-ben-grid{display:grid;grid-template-columns:1fr .9fr;gap:60px;align-items:center}
+.events-bring-ben h2{margin:0 0 10px;font-size:44px;line-height:.96}
+.events-bring-ben p{margin:0;color:#cbd6df;line-height:1.5}
+.events-bring-ben form{display:grid;grid-template-columns:1fr auto;gap:10px}
+.events-bring-ben input{height:54px;border:0;padding:0 14px;font:inherit}
+
+@media(max-width:800px){
+  body:has(.events-photo-hero) .site-header{background:linear-gradient(to bottom,rgba(4,20,39,.94) 0%,rgba(4,20,39,.76) 70%,rgba(4,20,39,0) 100%)!important}
+  .events-photo-hero,.events-photo-hero-inner{min-height:500px}
+  .events-photo-hero h1{font-size:54px}
+  .events-photo-hero p{font-size:17px}
+  .events-next-grid,.events-bring-ben-grid{grid-template-columns:1fr;gap:30px}
+  .events-next{padding:48px 0}
+  .events-next-copy h2{font-size:40px}
+  .events-next-photo{min-height:310px}
+  .events-list-heading{display:block}
+  .events-list-heading p{margin-top:8px}
+  .events-simple-list article{grid-template-columns:72px 1fr;gap:18px}
+  .events-simple-list article>a{grid-column:2}
+  .events-bring-ben form{grid-template-columns:1fr}
+}
+</style>
+
+
+<style id="events-hero-crop-v3">
+.events-photo-hero-bg{
+  background-position:center 38% !important;
+}
+@media(max-width:800px){
+  .events-photo-hero-bg{
+    background-position:center 32% !important;
+  }
+}
+</style>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+
+<style id="events-grid-map-v4">
+.events-grid-page{background:#f7f2e8;color:#071f3d}
+
+.events-grid-section{padding:68px 0 84px}
+.events-grid-heading{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:40px;
+  margin-bottom:34px;
+}
+.events-grid-heading h2{
+  margin:0;
+  font-size:52px;
+  line-height:.96;
+  letter-spacing:-.04em;
+}
+.events-grid-heading p{
+  margin:0;
+  max-width:500px;
+  color:#667789;
+  font-size:17px;
+  line-height:1.5;
+}
+
+.events-card-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:48px 34px;
+}
+
+.event-card{min-width:0}
+.event-card-image{
+  display:block;
+  width:100%;
+  aspect-ratio:16/10;
+  background-size:cover;
+  background-position:center;
+  text-decoration:none;
+}
+.event-crewe{background-image:url("assets/images/crewe-hero.jpg")}
+.event-business{background-image:url("assets/images/ben-plan-hero.jpg")}
+.event-chester{background-image:url("assets/images/ben-about-hero.jpg")}
+.event-online{background-image:url("assets/images/ben-news-hero.jpg")}
+.event-northwich{background-image:url("assets/images/ben-volunteer-hero.jpg")}
+
+.event-card-copy{padding-top:18px}
+.event-card-date{
+  margin:0 0 8px;
+  color:#f54436;
+  font-size:13px;
+  font-weight:800;
+}
+.event-card-copy h3{
+  margin:0 0 10px;
+  font-size:29px;
+  line-height:1.03;
+  letter-spacing:-.03em;
+}
+.event-card-copy h3 a{
+  color:#071f3d;
+  text-decoration:none;
+}
+.event-card-copy>p:not(.event-card-date){
+  margin:0 0 14px;
+  color:#53667a;
+  font-size:15.5px;
+  line-height:1.52;
+}
+.event-card-link{
+  color:#f54436;
+  text-decoration:none;
+  font-weight:900;
+}
+
+.event-card-placeholder{
+  aspect-ratio:16/14;
+  background:#eee7db;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.event-card-placeholder-inner{
+  padding:36px;
+  max-width:240px;
+}
+.event-card-placeholder p{
+  margin:0;
+  color:#83909d;
+  font-size:18px;
+  line-height:1.4;
+  font-weight:700;
+}
+
+.campaign-map-section{
+  background:#fff;
+  padding:72px 0 78px;
+}
+.campaign-map-heading{
+  margin-bottom:28px;
+}
+.campaign-map-heading h2{
+  margin:0 0 10px;
+  font-size:52px;
+  line-height:.96;
+  letter-spacing:-.04em;
+}
+.campaign-map-heading p{
+  margin:0;
+  color:#667789;
+  font-size:17px;
+}
+.campaign-events-map{
+  width:100%;
+  height:560px;
+  background:#e8e4dc;
+}
+.campaign-map-note{
+  margin:10px 0 0;
+  color:#81909e;
+  font-size:13px;
+}
+.campaign-events-map .leaflet-popup-content-wrapper{
+  border-radius:0;
+  box-shadow:0 14px 34px rgba(5,24,45,.18);
+}
+.campaign-events-map .leaflet-popup-content{
+  margin:18px 20px;
+  min-width:220px;
+}
+.campaign-events-map .leaflet-popup-content h3{
+  margin:0 0 7px;
+  color:#071f3d;
+  font-size:20px;
+  line-height:1.05;
+}
+.campaign-events-map .leaflet-popup-content p{
+  margin:0;
+  color:#5c6c7c;
+  line-height:1.45;
+}
+.campaign-events-map .leaflet-popup-content b{
+  display:block;
+  margin-bottom:6px;
+  color:#f54436;
+  font-size:12px;
+}
+
+.events-bring-ben{
+  background:#071f3d;
+  color:#fff;
+  padding:60px 0;
+}
+.events-bring-ben-grid{
+  display:grid;
+  grid-template-columns:1fr .9fr;
+  gap:60px;
+  align-items:center;
+}
+.events-bring-ben h2{
+  margin:0 0 10px;
+  font-size:44px;
+  line-height:.96;
+}
+.events-bring-ben p{
+  margin:0;
+  color:#cbd6df;
+  line-height:1.5;
+}
+.events-bring-ben form{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:10px;
+}
+.events-bring-ben input{
+  height:54px;
+  border:0;
+  padding:0 14px;
+  font:inherit;
+}
+
+@media(max-width:1000px){
+  .events-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:800px){
+  .events-grid-heading{display:block}
+  .events-grid-heading p{margin-top:10px}
+  .campaign-events-map{height:450px}
+  .events-bring-ben-grid{grid-template-columns:1fr;gap:28px}
+  .events-bring-ben form{grid-template-columns:1fr}
+}
+
+@media(max-width:650px){
+  .events-card-grid{grid-template-columns:1fr;gap:42px}
+  .event-card-copy h3{font-size:30px}
+  .event-card-placeholder{aspect-ratio:auto;min-height:180px}
+  .campaign-events-map{height:390px}
+}
 </style>
 
 </head>
@@ -214,7 +487,6 @@ body:not(.home-page) .site-header{
       <a href="experience.html">Experience</a>
       <a href="news.html">News</a>
       <a href="events.html">Events</a>
-      <a href="volunteer.html">Get Involved</a>
     </nav>
 
     <button class="site-menu-button" type="button" aria-expanded="false">Menu</button>
@@ -227,53 +499,119 @@ body:not(.home-page) .site-header{
 </header>
 
 
-<main class="events-page-redesign">
-  <section class="events-intro">
-    <div class="container">
-      <div class="events-kicker">On the campaign trail</div>
-      <h1>Come and meet Ben.</h1>
-      <p>Public meetings, local visits, business events and campaign action across Cheshire & Warrington.</p>
+
+
+<main class="events-grid-page">
+
+  <section class="events-photo-hero">
+    <div class="events-photo-hero-bg"></div>
+    <div class="events-photo-hero-fade"></div>
+    <div class="container events-photo-hero-inner">
+      <h1>Meet Ben.<br>Join the campaign.</h1>
+      <p>Public meetings, local visits and campaign events across Cheshire & Warrington.</p>
     </div>
   </section>
 
-  <section class="featured-event-wrap">
+  <section class="events-grid-section">
     <div class="container">
-      <article class="featured-event">
-        <div class="featured-event-photo"></div>
-        <div class="featured-event-copy">
-          <div class="events-kicker">Next event</div>
-          <div class="featured-date">25 September · 10:30am</div>
-          <h2>Crewe Town Centre Walkabout</h2>
-          <p>Join Ben in Crewe as he meets local businesses and residents and hears what the town needs from its new mayor.</p>
-          <div class="featured-event-actions">
-            <a class="btn btn-red" href="journeys/crewe.html">Event details</a>
-            <span>Crewe town centre</span>
+
+      <div class="events-grid-heading">
+        <h2>What’s coming up.</h2>
+        <p>Meet Ben, hear from the campaign and get involved locally.</p>
+      </div>
+
+      <div class="events-card-grid">
+
+        <article class="event-card">
+          <a class="event-card-image event-crewe" href="journeys/crewe.html" aria-label="Crewe Town Centre Walkabout"></a>
+          <div class="event-card-copy">
+            <p class="event-card-date">25 September · 10:30am</p>
+            <h3><a href="journeys/crewe.html">Crewe Town Centre Walkabout</a></h3>
+            <p>Meet Ben in Crewe as he speaks to local businesses and residents about the town’s future.</p>
+            <a class="event-card-link" href="journeys/crewe.html">Event details →</a>
           </div>
-        </div>
-      </article>
-    </div>
-  </section>
+        </article>
 
-  <section class="events-agenda">
-    <div class="container">
-      <div class="agenda-heading"><h2>Coming up</h2><p>More opportunities to meet Ben and get involved.</p></div>
-      <div class="agenda-list">
-        <article><time><b>28</b><span>SEP</span></time><div><h3>Warrington Business Breakfast</h3><p>8:00am · Warrington</p></div><a href="#">Details →</a></article>
-        <article><time><b>02</b><span>OCT</span></time><div><h3>Chester: Homes, Towns & Opportunity</h3><p>7:00pm · Chester</p></div><a href="#">Details →</a></article>
-        <article><time><b>04</b><span>OCT</span></time><div><h3>Ask Ben: Live Online Q&A</h3><p>6:30pm · Online</p></div><a href="hear-from-ben.html">Details →</a></article>
-        <article><time><b>12</b><span>OCT</span></time><div><h3>Campaign Action Day: Winsford</h3><p>10:00am · Winsford</p></div><a href="volunteer.html">Get involved →</a></article>
+        <article class="event-card">
+          <a class="event-card-image event-business" href="#" aria-label="Warrington Business Breakfast"></a>
+          <div class="event-card-copy">
+            <p class="event-card-date">28 September · 8:00am</p>
+            <h3><a href="#">Warrington Business Breakfast</a></h3>
+            <p>A conversation with local employers about jobs, investment and what the new mayor can do for growth.</p>
+            <a class="event-card-link" href="#">Event details →</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <a class="event-card-image event-chester" href="#" aria-label="Chester Homes Towns and Opportunity"></a>
+          <div class="event-card-copy">
+            <p class="event-card-date">2 October · 7:00pm</p>
+            <h3><a href="#">Chester: Homes, Towns & Opportunity</a></h3>
+            <p>A public meeting on housing, infrastructure and how the region can grow without losing what makes its places special.</p>
+            <a class="event-card-link" href="#">Event details →</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <a class="event-card-image event-online" href="#" aria-label="Ask Ben Live Online Q and A"></a>
+          <div class="event-card-copy">
+            <p class="event-card-date">4 October · 6:30pm</p>
+            <h3><a href="#">Ask Ben: Live Online Q&amp;A</a></h3>
+            <p>Put your questions directly to Ben and hear more about his priorities for Cheshire & Warrington.</p>
+            <a class="event-card-link" href="#">Event details →</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <a class="event-card-image event-northwich" href="#" aria-label="Northwich Campaign Morning"></a>
+          <div class="event-card-copy">
+            <p class="event-card-date">11 October · 10:00am</p>
+            <h3><a href="#">Northwich Campaign Morning</a></h3>
+            <p>Join Team Ben for a morning of local campaigning and conversations with residents.</p>
+            <a class="event-card-link" href="#">Event details →</a>
+          </div>
+        </article>
+
+        <article class="event-card event-card-placeholder">
+          <div class="event-card-placeholder-inner">
+            <p>More campaign events will appear here.</p>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <section class="events-cta">
+  <section class="campaign-map-section">
     <div class="container">
-      <h2>Want Ben to visit your area?</h2>
-      <p>Tell the campaign where Ben should go next and what he should hear about when he gets there.</p>
-      <a class="btn btn-red" href="area.html">Tell us where →</a>
+      <div class="campaign-map-heading">
+        <div>
+          <h2>Ben on the campaign trail.</h2>
+          <p>See where Ben has been meeting people across Cheshire & Warrington.</p>
+        </div>
+      </div>
+
+      <div id="campaign-events-map" class="campaign-events-map" aria-label="Map of Ben's campaign visits"></div>
+      <p class="campaign-map-note">Demo locations for the pitch — live campaign visits and events can replace these examples.</p>
     </div>
   </section>
+
+  <section class="events-bring-ben">
+    <div class="container events-bring-ben-grid">
+      <div>
+        <h2>Where should Ben go next?</h2>
+        <p>Tell the campaign what is happening locally and where you think Ben should visit.</p>
+      </div>
+      <form>
+        <input type="text" placeholder="Your town or postcode">
+        <button type="button" class="btn btn-red">Tell us where</button>
+      </form>
+    </div>
+  </section>
+
 </main>
+
+
 
 
 
@@ -330,5 +668,72 @@ body:not(.home-page) .site-header{
 
 </div>
 <script src="assets/js/site.js?v=20260821-1212"></script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script id="campaign-events-map-js">
+document.addEventListener("DOMContentLoaded", function () {
+  var el = document.getElementById("campaign-events-map");
+  if (!el || typeof L === "undefined") return;
+
+  var map = L.map(el, { scrollWheelZoom: false }).setView([53.16, -2.55], 9);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18,
+    attribution: "&copy; OpenStreetMap contributors"
+  }).addTo(map);
+
+  var points = [
+    {
+      lat: 53.0998, lng: -2.4416,
+      title: "Crewe",
+      type: "Campaign visit",
+      text: "Ben met residents and local businesses in Crewe town centre."
+    },
+    {
+      lat: 53.3900, lng: -2.5969,
+      title: "Warrington",
+      type: "Business meeting",
+      text: "A discussion with employers about jobs, investment and growth."
+    },
+    {
+      lat: 53.1934, lng: -2.8931,
+      title: "Chester",
+      type: "Public meeting",
+      text: "Talking housing, infrastructure and opportunity with local residents."
+    },
+    {
+      lat: 53.2613, lng: -2.5132,
+      title: "Northwich",
+      type: "Campaign day",
+      text: "Team Ben out speaking to residents and building the local campaign."
+    },
+    {
+      lat: 53.1631, lng: -2.2120,
+      title: "Congleton",
+      type: "Community visit",
+      text: "Meeting local people and hearing what they want from the new mayor."
+    }
+  ];
+
+  var redIcon = L.divIcon({
+    className: "campaign-map-marker",
+    html: '<span style="display:block;width:18px;height:18px;background:#f54436;border:3px solid white;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,.25)"></span>',
+    iconSize: [24,24],
+    iconAnchor: [12,12],
+    popupAnchor: [0,-10]
+  });
+
+  points.forEach(function (p) {
+    L.marker([p.lat, p.lng], { icon: redIcon })
+      .addTo(map)
+      .bindPopup(
+        "<b>" + p.type + "</b>" +
+        "<h3>" + p.title + "</h3>" +
+        "<p>" + p.text + "</p>"
+      );
+  });
+});
+</script>
+
 </body>
 </html>

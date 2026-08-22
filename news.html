@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>News | Back Ben for Mayor</title>
-<link rel="stylesheet" href="assets/css/site.css?v=20260822-unframed-v1">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-news-grid-v4">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -191,19 +191,199 @@ body:not(.home-page) .site-header{
 </style>
 
 
-<style id="newsroom-redesign">
-.newsroom-page{background:#f7f2e8;color:#071f3d}
-.newsroom-intro{padding:76px 0 56px;background:#f7f2e8}.newsroom-kicker{text-transform:uppercase;letter-spacing:.14em;color:#f54436;font-size:12px;font-weight:900;margin-bottom:16px}
-.newsroom-intro h1{font-size:clamp(62px,7vw,104px);line-height:.88;letter-spacing:-.065em;margin:0;max-width:1100px}
-.newsroom-feature{padding:0 0 58px}.lead-story{display:grid;grid-template-columns:1.45fr .85fr;background:#071f3d;color:white}
-.lead-story-image{min-height:470px;background:linear-gradient(90deg,rgba(7,31,61,.15),rgba(7,31,61,0)),url("assets/images/ben-about-hero.jpg") center/cover}
-.lead-story-copy{padding:56px 48px;display:flex;flex-direction:column;justify-content:center}.newsroom-meta{font-size:12px;text-transform:uppercase;letter-spacing:.11em;color:#f54436;font-weight:900;margin-bottom:12px}
-.lead-story h2{font-size:48px;line-height:.98;letter-spacing:-.04em;margin:0 0 18px}.lead-story p{font-size:18px;line-height:1.5;color:#d1dbe4}.lead-story a,.editorial-body a{color:#f54436;font-weight:900;text-decoration:none}
-.newsroom-tools{padding:22px 0;border-top:1px solid #d8d0c3;border-bottom:1px solid #d8d0c3}.newsroom-search-row{display:flex;gap:28px;align-items:center}.newsroom-search-row input{flex:1;height:54px;border:1px solid #b7afa4;background:white;padding:0 16px;font:inherit}
-.newsroom-tabs{display:flex;gap:18px}.newsroom-tabs button{border:0;background:transparent;padding:8px 0;color:#657589;font-weight:900;cursor:pointer}.newsroom-tabs button.active{color:#071f3d;border-bottom:2px solid #f54436}
-.newsroom-grid-section{padding:54px 0 80px}.editorial-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}.editorial-card{grid-column:span 4;background:#fff;box-shadow:0 10px 24px rgba(20,36,54,.08)}.editorial-card-large{grid-column:span 8}.editorial-image{aspect-ratio:16/10;background-size:cover;background-position:center}.image-crewe{background-image:url("assets/images/crewe-hero.jpg")}.image-home{background-image:url("assets/images/ben-home-hero.jpg")}.image-volunteer{background-image:url("assets/images/ben-volunteer-hero.jpg")}
-.editorial-body{padding:24px}.editorial-body h2{font-size:28px;line-height:1.03;margin:0 0 11px}.editorial-card-large .editorial-body h2{font-size:38px}.editorial-body p{color:#53667a;line-height:1.5}.text-card{min-height:320px;display:flex;align-items:flex-end}.red-card{background:#f54436;color:white}.navy-card{background:#071f3d;color:white}.red-card .newsroom-meta,.red-card a{color:#071f3d}.navy-card .editorial-body p,.red-card .editorial-body p{color:rgba(255,255,255,.8)}
-@media(max-width:800px){.lead-story{grid-template-columns:1fr}.lead-story-image{min-height:320px}.lead-story-copy{padding:34px 26px}.newsroom-search-row{display:block}.newsroom-tabs{margin-top:16px;overflow:auto}.editorial-card,.editorial-card-large{grid-column:1/-1}.newsroom-intro h1{font-size:58px}}
+
+
+
+<style id="news-editorial-redesign-v2">
+body:has(.news-photo-hero) .site-header{
+  position:absolute!important;top:0!important;left:0!important;right:0!important;z-index:1000!important;
+  background:linear-gradient(to bottom,rgba(4,20,39,.96) 0%,rgba(4,20,39,.80) 58%,rgba(4,20,39,.36) 82%,rgba(4,20,39,0) 100%)!important;
+  border:0!important;box-shadow:none!important;
+}
+body:has(.news-photo-hero) .site-header-inner{background:transparent!important;border:0!important;box-shadow:none!important}
+
+.news-editorial-page{background:#f7f2e8;color:#071f3d}
+.news-photo-hero{position:relative;min-height:520px;overflow:hidden;color:#fff}
+.news-photo-hero-bg{position:absolute;inset:0;background:url("assets/images/ben-news-hero.jpg") center 48%/cover no-repeat}
+.news-photo-hero-fade{position:absolute;inset:0;background:
+  linear-gradient(to bottom,rgba(3,18,36,.62) 0%,rgba(3,18,36,.16) 48%,rgba(3,18,36,.75) 100%),
+  linear-gradient(90deg,rgba(3,18,36,.76) 0%,rgba(3,18,36,.36) 38%,rgba(3,18,36,.03) 76%,transparent 100%)}
+.news-photo-hero-inner{position:relative;z-index:2;min-height:520px;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:46px}
+.news-photo-hero h1{margin:0 0 10px;font-size:clamp(64px,7vw,98px);line-height:.9;letter-spacing:-.055em;color:#fff}
+.news-photo-hero p{margin:0;max-width:700px;color:#e3e9ef;font-size:20px;line-height:1.45}
+
+.news-lead-section{padding:72px 0 64px}
+.news-lead-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:68px;align-items:center}
+.news-lead-image{min-height:470px;background:url("assets/images/ben-plan-hero.jpg") center/cover no-repeat}
+.news-lead-copy{max-width:560px}
+.news-lead-copy h2{margin:0 0 18px;font-size:50px;line-height:.97;letter-spacing:-.04em}
+.news-lead-copy p{margin:0 0 22px;color:#53667a;font-size:18px;line-height:1.6}
+.news-lead-copy a,.news-story-copy a{color:#f54436;font-weight:900;text-decoration:none}
+
+.news-filter-strip{background:#fff;padding:18px 0}
+.news-filter-inner{display:flex;align-items:center;gap:28px}
+.news-filter-inner>a{color:#607184;font-weight:800;text-decoration:none}
+.news-filter-inner>a.active{color:#071f3d}
+.news-search{margin-left:auto}
+.news-search input{height:44px;width:260px;border:1px solid #c8c0b4;background:#f7f2e8;padding:0 14px;font:inherit}
+
+.news-stream{padding:66px 0 84px}
+.news-story-row{display:grid;grid-template-columns:1.02fr .98fr;gap:70px;align-items:center;margin-bottom:82px}
+.news-story-row.reverse .news-story-photo{grid-column:2;grid-row:1}
+.news-story-row.reverse .news-story-copy{grid-column:1;grid-row:1}
+.news-story-photo{min-height:390px;background-size:cover;background-position:center}
+.story-crewe{background-image:url("assets/images/crewe-hero.jpg")}
+.story-volunteer{background-image:url("assets/images/ben-volunteer-hero.jpg")}
+.story-experience{background-image:url("assets/images/ben-experience-hero.jpg")}
+.news-story-copy{max-width:560px}
+.news-story-date{margin:0 0 10px;color:#7a8795;font-size:14px}
+.news-story-copy h2{margin:0 0 14px;font-size:42px;line-height:1;letter-spacing:-.035em}
+.news-story-copy p{margin:0 0 18px;color:#53667a;font-size:17px;line-height:1.58}
+
+.news-text-feature{background:#071f3d;color:#fff;padding:48px 52px;display:grid;grid-template-columns:1fr 1.2fr;gap:50px;align-items:center}
+.news-text-feature h2{margin:0 0 10px;font-size:40px;line-height:.98}
+.news-text-feature p{margin:0;color:#cbd6df;line-height:1.5}
+.news-text-feature form{display:grid;grid-template-columns:1fr 1fr auto;gap:10px}
+.news-text-feature input{height:52px;border:0;padding:0 14px;font:inherit}
+
+@media(max-width:800px){
+  body:has(.news-photo-hero) .site-header{background:linear-gradient(to bottom,rgba(4,20,39,.94) 0%,rgba(4,20,39,.76) 70%,rgba(4,20,39,0) 100%)!important}
+  .news-photo-hero,.news-photo-hero-inner{min-height:480px}
+  .news-photo-hero h1{font-size:54px}
+  .news-photo-hero p{font-size:17px}
+  .news-lead-grid,.news-story-row,.news-text-feature{grid-template-columns:1fr;gap:28px}
+  .news-lead-section{padding:48px 0}
+  .news-lead-image,.news-story-photo{min-height:300px}
+  .news-lead-copy h2{font-size:40px}
+  .news-filter-inner{overflow-x:auto;gap:20px}
+  .news-search{display:none}
+  .news-story-row{margin-bottom:54px}
+  .news-story-row.reverse .news-story-photo,.news-story-row.reverse .news-story-copy{grid-column:auto;grid-row:auto}
+  .news-story-copy h2{font-size:34px}
+  .news-text-feature{padding:34px 26px}
+  .news-text-feature form{grid-template-columns:1fr}
+}
+</style>
+
+
+<style id="news-grid-redesign-v4">
+/* News below the lead story becomes an infinitely extensible 3-column grid */
+.news-grid-section{
+  padding:58px 0 84px !important;
+}
+
+.news-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:48px 34px;
+  align-items:start;
+  margin-bottom:72px;
+}
+
+.news-card{
+  min-width:0;
+}
+
+.news-card-image{
+  display:block;
+  width:100%;
+  aspect-ratio:16/10;
+  min-height:0 !important;
+  background-size:cover;
+  background-position:center;
+  text-decoration:none;
+}
+
+.news-card-copy{
+  padding-top:18px;
+}
+
+.news-card-copy .news-story-date{
+  margin:0 0 8px;
+  color:#748393;
+  font-size:13px;
+}
+
+.news-card-copy h2{
+  margin:0 0 10px;
+  font-size:29px;
+  line-height:1.02;
+  letter-spacing:-.03em;
+}
+
+.news-card-copy h2 a{
+  color:#071f3d;
+  text-decoration:none;
+}
+
+.news-card-copy > p:not(.news-story-date){
+  margin:0 0 14px;
+  color:#53667a;
+  font-size:15.5px;
+  line-height:1.52;
+}
+
+.news-card-link{
+  color:#f54436;
+  font-weight:900;
+  text-decoration:none;
+}
+
+.story-plan{
+  background-image:url("assets/images/ben-plan-hero.jpg");
+}
+
+.story-about{
+  background-image:url("assets/images/ben-about-hero.jpg");
+}
+
+.news-card-placeholder{
+  aspect-ratio:16/14;
+  background:#eee7db;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.news-card-placeholder-inner{
+  padding:36px;
+  max-width:240px;
+}
+
+.news-card-placeholder p{
+  margin:0;
+  color:#83909d;
+  font-size:18px;
+  line-height:1.4;
+  font-weight:700;
+}
+
+/* Remove old alternating-news-row rules from influencing the new grid */
+.news-story-row{
+  display:none !important;
+}
+
+@media(max-width:1000px){
+  .news-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:650px){
+  .news-grid{
+    grid-template-columns:1fr;
+    gap:42px;
+  }
+
+  .news-card-copy h2{
+    font-size:30px;
+  }
+
+  .news-card-placeholder{
+    aspect-ratio:auto;
+    min-height:180px;
+  }
+}
 </style>
 
 </head>
@@ -220,7 +400,6 @@ body:not(.home-page) .site-header{
       <a href="experience.html">Experience</a>
       <a href="news.html">News</a>
       <a href="events.html">Events</a>
-      <a href="volunteer.html">Get Involved</a>
     </nav>
 
     <button class="site-menu-button" type="button" aria-expanded="false">Menu</button>
@@ -233,68 +412,121 @@ body:not(.home-page) .site-header{
 </header>
 
 
-<main class="newsroom-page">
-  <section class="newsroom-intro">
-    <div class="container">
-      <div class="newsroom-kicker">From the campaign</div>
-      <h1>News, ideas and<br>the campaign trail.</h1>
+
+<main class="news-editorial-page">
+
+  <section class="news-photo-hero">
+    <div class="news-photo-hero-bg"></div>
+    <div class="news-photo-hero-fade"></div>
+    <div class="container news-photo-hero-inner">
+      <h1>From the campaign.</h1>
+      <p>News, ideas and updates from Ben across Cheshire & Warrington.</p>
     </div>
   </section>
 
-  <section class="newsroom-feature">
-    <div class="container">
-      <article class="lead-story">
-        <div class="lead-story-image" role="img" aria-label="Ben campaigning locally"></div>
-        <div class="lead-story-copy">
-          <div class="newsroom-meta">Featured · Campaign</div>
-          <h2>Ben sets out a practical plan for Cheshire & Warrington</h2>
-          <p>A campaign focused on transport, safer communities, a stronger economy and growth that works for local people.</p>
-          <a href="plan.html">Read the plan →</a>
+  <section class="news-lead-section">
+    <div class="container news-lead-grid">
+      <div class="news-lead-image"></div>
+      <div class="news-lead-copy">
+        <h2>Ben sets out a practical plan for Cheshire & Warrington</h2>
+        <p>A campaign focused on better transport, safer communities, stronger local growth and homes with the infrastructure people need.</p>
+        <a href="plan.html">Read Ben’s plan →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="news-filter-strip">
+    <div class="container news-filter-inner">
+      <a href="#" class="active">All</a>
+      <a href="#">Campaign</a>
+      <a href="#">Policy</a>
+      <a href="#">Local</a>
+      <a href="#">Media</a>
+      <div class="news-search">
+        <input type="search" placeholder="Search updates">
+      </div>
+    </div>
+  </section>
+
+  
+<section class="news-stream news-grid-section">
+  <div class="container">
+    <div class="news-grid">
+
+      <article class="news-card">
+        <a class="news-card-image story-crewe" href="journeys/crewe.html" aria-label="What Crewe needs from its new mayor"></a>
+        <div class="news-card-copy">
+          <p class="news-story-date">22 August 2026</p>
+          <h2><a href="journeys/crewe.html">What Crewe needs from its new mayor</a></h2>
+          <p>Ben has been meeting residents, campaigners and local businesses to hear what would make the biggest difference to the town.</p>
+          <a class="news-card-link" href="journeys/crewe.html">See Ben in Crewe →</a>
         </div>
       </article>
-    </div>
-  </section>
 
-  <section class="newsroom-tools">
-    <div class="container">
-      <div class="newsroom-search-row">
-        <input id="news-search-input" type="search" placeholder="Search the campaign">
-        <div class="newsroom-tabs" id="news-category-tabs">
-          <button class="active" data-category="all">All</button>
-          <button data-category="campaign">Campaign</button>
-          <button data-category="policy">Policy</button>
-          <button data-category="local">Local</button>
-          <button data-category="media">Media</button>
+      <article class="news-card">
+        <a class="news-card-image story-volunteer" href="volunteer.html" aria-label="Building Team Ben across the region"></a>
+        <div class="news-card-copy">
+          <p class="news-story-date">18 August 2026</p>
+          <h2><a href="volunteer.html">Building Team Ben across the region</a></h2>
+          <p>From local events to leaflet teams and online campaigning, supporters are getting organised across Cheshire & Warrington.</p>
+          <a class="news-card-link" href="volunteer.html">Join the campaign →</a>
         </div>
-      </div>
-    </div>
-  </section>
+      </article>
 
-  <section class="newsroom-grid-section">
-    <div class="container">
-      <div class="editorial-grid" id="news-grid">
-        <article class="editorial-card editorial-card-large" data-category="local campaign" data-title="On the ground in Crewe">
-          <div class="editorial-image image-crewe"></div>
-          <div class="editorial-body"><div class="newsroom-meta">Crewe · 22 August</div><h2>On the ground in Crewe</h2><p>Listening to local residents about transport, town-centre renewal and growth.</p><a href="journeys/crewe.html">Explore Crewe →</a></div>
-        </article>
-        <article class="editorial-card" data-category="policy transport" data-title="A better connected region">
-          <div class="editorial-image image-home"></div>
-          <div class="editorial-body"><div class="newsroom-meta">Policy · Transport</div><h2>A better-connected region</h2><p>Why transport is at the heart of Ben’s plan for the mayoralty.</p><a href="plan.html">Read more →</a></div>
-        </article>
-        <article class="editorial-card text-card red-card" data-category="media campaign" data-title="Ben on why he is standing">
-          <div class="editorial-body"><div class="newsroom-meta">Video</div><h2>Why I’m standing.</h2><p>Ben on practical leadership, local ambition and what the new mayor can deliver.</p><a href="hear-from-ben.html">Watch →</a></div>
-        </article>
-        <article class="editorial-card" data-category="campaign local" data-title="Join Team Ben">
-          <div class="editorial-image image-volunteer"></div>
-          <div class="editorial-body"><div class="newsroom-meta">Campaign</div><h2>Join Team Ben</h2><p>There’s a role for everyone — from an hour at an event to bringing your professional skills.</p><a href="volunteer.html">Get involved →</a></div>
-        </article>
-        <article class="editorial-card text-card navy-card" data-category="policy business" data-title="Backing local business">
-          <div class="editorial-body"><div class="newsroom-meta">Economy</div><h2>Backing local business.</h2><p>Putting growth, skills and local employers at the centre of the mayoralty.</p><a href="business.html">Read more →</a></div>
-        </article>
-      </div>
+      <article class="news-card">
+        <a class="news-card-image story-experience" href="experience.html" aria-label="Why experience matters in a new mayoralty"></a>
+        <div class="news-card-copy">
+          <p class="news-story-date">12 August 2026</p>
+          <h2><a href="experience.html">Why experience matters in a new mayoralty</a></h2>
+          <p>The first mayor will need to build relationships quickly, make decisions and turn a new office into something that delivers.</p>
+          <a class="news-card-link" href="experience.html">Read more →</a>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <a class="news-card-image story-plan" href="plan.html" aria-label="A practical plan for Cheshire and Warrington"></a>
+        <div class="news-card-copy">
+          <p class="news-story-date">8 August 2026</p>
+          <h2><a href="plan.html">A practical plan for Cheshire & Warrington</a></h2>
+          <p>Better transport, safer communities, stronger growth and homes backed by the infrastructure local people need.</p>
+          <a class="news-card-link" href="plan.html">Read Ben’s plan →</a>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <a class="news-card-image story-about" href="about.html" aria-label="Leadership rooted in Cheshire and Warrington"></a>
+        <div class="news-card-copy">
+          <p class="news-story-date">2 August 2026</p>
+          <h2><a href="about.html">Leadership rooted in Cheshire & Warrington</a></h2>
+          <p>Why Ben is standing and the kind of mayoralty he wants to build across the region.</p>
+          <a class="news-card-link" href="about.html">Meet Ben →</a>
+        </div>
+      </article>
+
+      <article class="news-card news-card-placeholder">
+        <div class="news-card-placeholder-inner">
+          <p>More campaign news will appear here.</p>
+        </div>
+      </article>
+
     </div>
-  </section>
+
+    <article class="news-text-feature">
+      <div>
+        <h2>Want campaign updates directly?</h2>
+        <p>Get the latest from Ben, including local visits, events and campaign announcements.</p>
+      </div>
+      <form>
+        <input type="email" placeholder="Email address">
+        <input type="text" placeholder="Postcode">
+        <button type="button" class="btn btn-red">Keep me updated</button>
+      </form>
+    </article>
+  </div>
+</section>
+
 </main>
+
 
 
 

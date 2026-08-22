@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Experience | Back Ben for Mayor</title>
-<link rel="stylesheet" href="assets/css/site.css?v=20260822-unframed-v1">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-experience-story-fixed-v3">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -190,6 +190,404 @@ body:not(.home-page) .site-header{
 }
 </style>
 
+
+
+
+
+<style id="experience-story-redesign-v2">
+body:has(.experience-story-hero) .site-header{
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:1000 !important;
+  background:linear-gradient(to bottom,rgba(4,20,39,.96) 0%,rgba(4,20,39,.80) 58%,rgba(4,20,39,.38) 82%,rgba(4,20,39,0) 100%) !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+body:has(.experience-story-hero) .site-header-inner{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+
+.experience-story-page{
+  background:#f7f2e8;
+  color:#071f3d;
+}
+
+.experience-story-hero{
+  position:relative;
+  min-height:610px;
+  overflow:hidden;
+  color:#fff;
+}
+
+.experience-story-hero-bg{
+  position:absolute;
+  inset:0;
+  background:url("assets/images/ben-experience-hero.jpg") center 42%/cover no-repeat;
+}
+
+.experience-story-hero-fade{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(to bottom,rgba(3,18,36,.65) 0%,rgba(3,18,36,.18) 42%,rgba(3,18,36,.12) 62%,rgba(3,18,36,.76) 100%),
+    linear-gradient(90deg,rgba(3,18,36,.80) 0%,rgba(3,18,36,.42) 38%,rgba(3,18,36,.05) 74%,transparent 100%);
+}
+
+.experience-story-hero-inner{
+  position:relative;
+  z-index:2;
+  min-height:610px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding-bottom:54px;
+}
+
+.experience-story-hero h1{
+  margin:0 0 13px;
+  max-width:880px;
+  color:#fff;
+  font-size:clamp(64px,7vw,100px);
+  line-height:.9;
+  letter-spacing:-.055em;
+}
+
+.experience-story-hero p{
+  margin:0;
+  max-width:660px;
+  color:#e3e9ef;
+  font-size:21px;
+  line-height:1.45;
+}
+
+.experience-opening{
+  padding:78px 0 74px;
+}
+
+.experience-opening-grid{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:86px;
+  align-items:start;
+}
+
+.experience-opening-title h2{
+  margin:0;
+  font-size:58px;
+  line-height:.96;
+  letter-spacing:-.045em;
+  max-width:560px;
+}
+
+.experience-opening-copy{
+  max-width:650px;
+  padding-top:6px;
+}
+
+.experience-opening-copy p{
+  margin:0 0 18px;
+  font-size:19px;
+  line-height:1.6;
+  color:#53667a;
+}
+
+.experience-opening-copy p:first-child{
+  color:#071f3d;
+  font-weight:700;
+}
+
+.experience-story-block{
+  padding:74px 0 80px;
+}
+
+.experience-story-block-one{
+  background:#fff;
+}
+
+.experience-story-block-two{
+  background:#f7f2e8;
+}
+
+.experience-story-block-three{
+  background:#fff;
+}
+
+.experience-story-grid{
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  gap:100px;
+  align-items:center;
+}
+
+.experience-story-grid.reverse{
+  grid-template-columns:.65fr 1.35fr;
+}
+
+.experience-story-grid.reverse .experience-story-copy{
+  grid-column:2;
+  grid-row:1;
+}
+
+.experience-story-grid.reverse .experience-story-side{
+  grid-column:1;
+  grid-row:1;
+}
+
+.experience-story-copy{
+  max-width:760px;
+}
+
+.experience-story-copy h2{
+  margin:0 0 22px;
+  font-size:50px;
+  line-height:.97;
+  letter-spacing:-.04em;
+  max-width:690px;
+}
+
+.experience-story-copy p{
+  margin:0 0 16px;
+  max-width:700px;
+  color:#53667a;
+  font-size:18px;
+  line-height:1.6;
+}
+
+.experience-story-copy .experience-story-emphasis{
+  color:#071f3d;
+  font-weight:800;
+  font-size:20px;
+  line-height:1.5;
+  margin-top:26px;
+}
+
+.experience-story-side{
+  min-height:220px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+.experience-story-side span{
+  font-size:26px;
+  color:#f54436;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+.experience-story-side strong{
+  display:block;
+  font-size:34px;
+  line-height:1.05;
+  max-width:310px;
+}
+
+.experience-photo-break{
+  position:relative;
+  min-height:500px;
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  overflow:hidden;
+}
+
+.experience-photo-break-about{
+  background-image:url("assets/images/ben-about-hero.jpg");
+}
+
+.experience-photo-break-shade{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(3,18,36,.78) 0%,rgba(3,18,36,.20) 60%,rgba(3,18,36,.10) 100%);
+}
+
+.experience-photo-break-copy{
+  position:relative;
+  z-index:2;
+  min-height:500px;
+  display:flex;
+  align-items:flex-end;
+  padding-bottom:48px;
+}
+
+.experience-photo-break-copy p{
+  margin:0;
+  max-width:760px;
+  font-size:42px;
+  line-height:1.08;
+  letter-spacing:-.03em;
+  font-weight:900;
+}
+
+.experience-photo-panel{
+  padding:78px 0;
+  background:#f7f2e8;
+}
+
+.experience-photo-panel-grid{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:72px;
+  align-items:center;
+}
+
+.experience-photo-panel-image{
+  min-height:480px;
+  background:url("assets/images/ben-home-intro.jpg") center/cover no-repeat;
+}
+
+.experience-photo-panel-copy{
+  max-width:520px;
+}
+
+.experience-photo-panel-copy h2{
+  margin:0 0 18px;
+  font-size:50px;
+  line-height:.97;
+  letter-spacing:-.04em;
+}
+
+.experience-photo-panel-copy p{
+  margin:0 0 16px;
+  font-size:18px;
+  line-height:1.6;
+  color:#53667a;
+}
+
+.large-words{
+  gap:4px;
+}
+
+.large-words strong{
+  font-size:52px;
+  line-height:.94;
+  letter-spacing:-.04em;
+}
+
+.large-words strong:nth-child(2){
+  color:#f54436;
+}
+
+.experience-end{
+  background:#071f3d;
+  color:#fff;
+  padding:60px 0;
+}
+
+.experience-end-grid{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+
+.experience-end h2{
+  margin:0;
+  max-width:650px;
+  font-size:46px;
+  line-height:.96;
+  letter-spacing:-.04em;
+}
+
+@media(max-width:800px){
+  body:has(.experience-story-hero) .site-header{
+    background:linear-gradient(to bottom,rgba(4,20,39,.94) 0%,rgba(4,20,39,.76) 70%,rgba(4,20,39,0) 100%) !important;
+  }
+
+  .experience-story-hero,
+  .experience-story-hero-inner{
+    min-height:540px;
+  }
+
+  .experience-story-hero-bg{
+    background-position:center 38%;
+  }
+
+  .experience-story-hero-inner{
+    padding-bottom:34px;
+  }
+
+  .experience-story-hero h1{
+    font-size:54px;
+  }
+
+  .experience-story-hero p{
+    font-size:17px;
+  }
+
+  .experience-opening{
+    padding:50px 0;
+  }
+
+  .experience-opening-grid,
+  .experience-story-grid,
+  .experience-story-grid.reverse,
+  .experience-photo-panel-grid{
+    grid-template-columns:1fr !important;
+    gap:32px !important;
+  }
+
+  .experience-story-grid.reverse .experience-story-copy,
+  .experience-story-grid.reverse .experience-story-side{
+    grid-column:auto !important;
+    grid-row:auto !important;
+  }
+
+  .experience-opening-title h2{
+    font-size:44px;
+  }
+
+  .experience-story-block{
+    padding:52px 0 58px;
+  }
+
+  .experience-story-copy h2,
+  .experience-photo-panel-copy h2{
+    font-size:40px;
+  }
+
+  .experience-story-side{
+    min-height:0;
+    padding-top:8px;
+  }
+
+  .experience-story-side strong{
+    font-size:30px;
+  }
+
+  .experience-photo-break,
+  .experience-photo-break-copy{
+    min-height:340px;
+  }
+
+  .experience-photo-break-copy p{
+    font-size:31px;
+  }
+
+  .experience-photo-panel{
+    padding:52px 0;
+  }
+
+  .experience-photo-panel-image{
+    min-height:320px;
+  }
+
+  .experience-end-grid{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .experience-end h2{
+    font-size:38px;
+  }
+}
+</style>
+
 </head>
 <body class="inner-page">
 <div class="site-shell">
@@ -204,7 +602,6 @@ body:not(.home-page) .site-header{
       <a href="experience.html">Experience</a>
       <a href="news.html">News</a>
       <a href="events.html">Events</a>
-      <a href="volunteer.html">Get Involved</a>
     </nav>
 
     <button class="site-menu-button" type="button" aria-expanded="false">Menu</button>
@@ -216,174 +613,100 @@ body:not(.home-page) .site-header{
   </div>
 </header>
 
-<main>
 
-<section class="inner-hero experience-hero">
-  <div class="container">
-    <h1>A record of leadership and delivery.</h1>
-    <p>Experience matters when it shows you can bring people together, make decisions and turn ideas into results.</p>
-  </div>
-</section>
 
-<!-- INTRO -->
-<section class="experience-intro">
-  <div class="container experience-intro-grid">
-    <div class="experience-intro-copy">
-      <h2>A record of delivery.</h2>
-      <p class="experience-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
+<main class="experience-story-page">
+
+  <section class="experience-story-hero">
+    <div class="experience-story-hero-bg"></div>
+    <div class="experience-story-hero-fade"></div>
+    <div class="container experience-story-hero-inner">
+      <h1>Experience that<br>gets things done.</h1>
+      <p>Leadership, delivery and a career spent working with people.</p>
     </div>
-    <div class="experience-intro-image">IMAGE PLACEHOLDER</div>
-  </div>
-</section>
+  </section>
 
-<!-- FILTERS -->
-<section class="experience-browser">
-  <div class="container">
-    <div class="experience-browser-head">
-      <div>
-        <h2>What Ben has worked on</h2>
-        <p>Select an area to explore his experience.</p>
+  <section class="experience-opening">
+    <div class="container experience-opening-grid">
+      <div class="experience-opening-title">
+        <h2>A career built around people, places and delivery.</h2>
       </div>
-
-      <div class="experience-tabs" id="experience-tabs">
-        <button class="active" type="button" data-experience="all">All</button>
-        <button type="button" data-experience="delivery">Delivery</button>
-        <button type="button" data-experience="business">Business</button>
-        <button type="button" data-experience="community">Communities</button>
-        <button type="button" data-experience="leadership">Leadership</button>
+      <div class="experience-opening-copy">
+        <p>Ben’s experience is a record of taking responsibility, bringing people together and making things happen.</p>
+        <p>The final campaign site would use Ben’s verified career history here. For the pitch, this shows how that story can be presented without turning the page into a corporate CV.</p>
       </div>
     </div>
+  </section>
 
-    <div class="experience-grid" id="experience-grid">
-
-      <article class="experience-item experience-feature" data-category="delivery leadership">
-        <div class="experience-item-image">IMAGE PLACEHOLDER</div>
-        <div class="experience-item-copy">
-          <span>Delivery</span>
-          <h3>Lorem ipsum major delivery example</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-          <button class="experience-more" type="button">See the detail <b>+</b></button>
-          <div class="experience-detail">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="experience-item" data-category="business delivery">
-        <div class="experience-item-image">IMAGE PLACEHOLDER</div>
-        <div class="experience-item-copy">
-          <span>Business</span>
-          <h3>Backing growth and local enterprise</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum.</p>
-          <button class="experience-more" type="button">See the detail <b>+</b></button>
-          <div class="experience-detail">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="experience-item" data-category="community">
-        <div class="experience-item-image">IMAGE PLACEHOLDER</div>
-        <div class="experience-item-copy">
-          <span>Communities</span>
-          <h3>Working with local people</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui.</p>
-          <button class="experience-more" type="button">See the detail <b>+</b></button>
-          <div class="experience-detail">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="experience-item" data-category="leadership">
-        <div class="experience-item-image">IMAGE PLACEHOLDER</div>
-        <div class="experience-item-copy">
-          <span>Leadership</span>
-          <h3>Bringing people together</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-          <button class="experience-more" type="button">See the detail <b>+</b></button>
-          <div class="experience-detail">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="experience-item" data-category="delivery community">
-        <div class="experience-item-image">IMAGE PLACEHOLDER</div>
-        <div class="experience-item-copy">
-          <span>Delivery</span>
-          <h3>Turning ideas into outcomes</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.</p>
-          <button class="experience-more" type="button">See the detail <b>+</b></button>
-          <div class="experience-detail">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="experience-item" data-category="business leadership">
-        <div class="experience-item-image">IMAGE PLACEHOLDER</div>
-        <div class="experience-item-copy">
-          <span>Business</span>
-          <h3>Championing investment and opportunity</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna.</p>
-          <button class="experience-more" type="button">See the detail <b>+</b></button>
-          <div class="experience-detail">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </div>
-      </article>
-
+  <section class="experience-story-block experience-story-block-one">
+    <div class="container experience-story-grid">
+      <div class="experience-story-copy">
+        <h2>Leading when the answer is not obvious.</h2>
+        <p>Placeholder copy for senior leadership roles, major responsibilities and moments where Ben had to make decisions, manage competing priorities and deliver under pressure.</p>
+        <p class="experience-story-emphasis">That matters in a mayoralty because the job is not just about having ideas. It is about turning them into decisions, partnerships and results.</p>
+      </div>
+      <div class="experience-story-side">
+        <strong>Responsibility.<br>Judgement.<br>Delivery.</strong>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- NUMBERS / PROOF -->
-<section class="experience-proof">
-  <div class="container">
-    <div class="experience-proof-head">
-      <h2>The record in numbers</h2>
-      <p>Placeholder figures for the pitch — replace with verified campaign facts later.</p>
+  <section class="experience-photo-break experience-photo-break-about">
+    <div class="experience-photo-break-shade"></div>
+    <div class="container experience-photo-break-copy">
+      <p>Experience only matters if you can put it to work.</p>
     </div>
+  </section>
 
-    <div class="experience-stats">
-      <div><strong>XX</strong><span>Projects delivered</span></div>
-      <div><strong>£XXm</strong><span>Investment supported</span></div>
-      <div><strong>XX</strong><span>Communities worked with</span></div>
-      <div><strong>XX yrs</strong><span>Leadership experience</span></div>
+  <section class="experience-story-block experience-story-block-two">
+    <div class="container experience-story-grid reverse">
+      <div class="experience-story-copy">
+        <h2>Understanding how growth actually happens.</h2>
+        <p>Placeholder copy for Ben’s business, economic or professional background and experience working with employers, investment and the practical barriers that stop places from growing.</p>
+        <p class="experience-story-emphasis">For Cheshire & Warrington, that means a mayor who understands that growth is about jobs, transport, skills, sites and confidence — not slogans.</p>
+      </div>
+      <div class="experience-story-side">
+        <strong>Business.<br>Jobs.<br>Investment.</strong>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- VIDEO -->
-<section class="experience-video">
-  <div class="container experience-video-grid">
-    <div class="experience-video-placeholder">
-      <button class="about-play" type="button">▶</button>
-      <span>VIDEO PLACEHOLDER</span>
+  <section class="experience-photo-panel">
+    <div class="container experience-photo-panel-grid">
+      <div class="experience-photo-panel-image"></div>
+      <div class="experience-photo-panel-copy">
+        <h2>Close enough to listen.</h2>
+        <p>Ben’s local work would sit here: community involvement, public service, campaigning and the relationships built across Cheshire & Warrington.</p>
+        <p>A mayor for a large region still needs to understand the difference between its towns, villages, businesses and communities.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="experience-video-copy">
-      <h2>Leadership in action</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A short film could show Ben talking about one or two concrete examples of delivery.</p>
-      <a class="btn btn-red" href="hear-from-ben.html">Hear from Ben</a>
+  <section class="experience-story-block experience-story-block-three">
+    <div class="container experience-story-grid">
+      <div class="experience-story-copy">
+        <h2>A record that leads somewhere.</h2>
+        <p>The strongest version of this page would finish by connecting Ben’s past experience directly to the job he is asking voters to trust him with now.</p>
+        <p class="experience-story-emphasis">Not experience for its own sake — experience that helps Cheshire & Warrington move faster, work better and get more done.</p>
+      </div>
+      <div class="experience-story-side large-words">
+        <strong>Listen.</strong>
+        <strong>Decide.</strong>
+        <strong>Deliver.</strong>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- LINK EXPERIENCE TO PLAN -->
-<section class="experience-to-plan">
-  <div class="container experience-to-plan-grid">
-    <div>
-      <h2>Experience matters. What comes next matters more.</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. See how Ben wants to apply that experience as Mayor.</p>
+  <section class="experience-end">
+    <div class="container experience-end-grid">
+      <h2>See what Ben wants to do next.</h2>
+      <a class="btn btn-red" href="plan.html">Read Ben’s plan →</a>
     </div>
-    <a class="btn btn-red" href="plan.html">See Ben's plan</a>
-  </div>
-</section>
+  </section>
 
 </main>
+
+
 
 
 <footer class="campaign-footer">
