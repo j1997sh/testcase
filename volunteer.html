@@ -3,8 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Get Involved | Back Ben for Mayor</title>
-<link rel="stylesheet" href="assets/css/site.css?v=20260822-unframed-v1">
+<title>Volunteer | Back Ben for Mayor</title>
+  <meta name="description" content="Join Team Ben and volunteer for the campaign across Cheshire &amp; Warrington — locally, online or at campaign events.">
+  <meta name="theme-color" content="#071a34">
+  <meta property="og:title" content="Volunteer | Back Ben for Mayor">
+  <meta property="og:description" content="Join Team Ben and volunteer for the campaign across Cheshire &amp; Warrington — locally, online or at campaign events.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/ben-home-hero.jpg">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-final-polish-v1">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -288,14 +294,14 @@ body.volunteer-survey-page .volunteer-hero:before{
       <div class="volunteer-form-section">
         <h3>Your details</h3>
         <div class="volunteer-form-two">
-          <input type="text" placeholder="First name">
-          <input type="text" placeholder="Last name">
+          <input type="text" placeholder="First name" aria-label="First name" autocomplete="given-name">
+          <input type="text" placeholder="Last name" aria-label="Last name" autocomplete="family-name">
         </div>
         <div class="volunteer-form-two">
-          <input type="email" placeholder="Email address">
-          <input type="text" placeholder="Postcode">
+          <input type="email" placeholder="Email address" aria-label="Email address" autocomplete="email">
+          <input type="text" placeholder="Postcode" aria-label="Postcode" autocomplete="postal-code">
         </div>
-        <input type="tel" placeholder="Phone number (optional)">
+        <input type="tel" placeholder="Phone number (optional)" aria-label="Phone number (optional)">
       </div>
 
       <div class="volunteer-form-section">
@@ -324,7 +330,7 @@ body.volunteer-survey-page .volunteer-hero:before{
 
       <div class="volunteer-form-section">
         <h3>Anything else?</h3>
-        <textarea rows="4" placeholder="Tell us anything else that might be useful (optional)"></textarea>
+        <textarea rows="4" placeholder="Tell us anything else that might be useful (optional)" aria-label="Tell us anything else that might be useful (optional)"></textarea>
       </div>
 
       <button type="button" class="volunteer-submit volunteer-submit-polished">Join Team Ben</button>
@@ -338,12 +344,11 @@ body.volunteer-survey-page .volunteer-hero:before{
   <div class="campaign-footer-top">
     <div class="campaign-footer-brand">
       <img class="campaign-footer-logo-image" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
-
-      <div class="campaign-footer-socials" aria-label="Social media">
-        <a href="#" aria-label="Facebook">f</a>
-        <a href="#" aria-label="Instagram">◎</a>
-        <a href="#" aria-label="X">𝕏</a>
-        <a href="#" aria-label="TikTok">♪</a>
+      <div class="campaign-footer-socials" aria-label="Campaign social channels">
+        <span aria-label="Facebook" title="Facebook">f</span>
+        <span aria-label="Instagram" title="Instagram">◎</span>
+        <span aria-label="X" title="X">𝕏</span>
+        <span aria-label="TikTok" title="TikTok">♪</span>
       </div>
     </div>
 
@@ -357,7 +362,7 @@ body.volunteer-survey-page .volunteer-hero:before{
       </div>
 
       <div>
-        <h3>Get involved</h3>
+        <h3>Take part</h3>
         <a href="events.html">Events</a>
         <a href="volunteer.html">Volunteer</a>
         <a href="donate.html">Donate</a>
@@ -374,12 +379,12 @@ body.volunteer-survey-page .volunteer-hero:before{
 
   <div class="campaign-footer-bottom">
     <div class="campaign-footer-legal">
-      <a href="#">Privacy</a>
-      <a href="#">Contact</a>
-      <a href="#">Promoted by</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+      <a href="#promoted-by">Promoted by</a>
     </div>
 
-    <div class="campaign-footer-imprint">
+    <div class="campaign-footer-imprint" id="promoted-by">
       <span>Promoted by [name] on behalf of Ben Fletcher, both at [campaign address].</span>
     </div>
   </div>

@@ -3,8 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>On the campaign trail | Back Ben for Mayor</title>
-<link rel="stylesheet" href="assets/css/site.css?v=20260822-events-grid-map-v4">
+<title>Events | Back Ben for Mayor</title>
+  <meta name="description" content="Find upcoming Back Ben campaign events and see where Ben has been meeting people across Cheshire &amp; Warrington.">
+  <meta name="theme-color" content="#071a34">
+  <meta property="og:title" content="Events | Back Ben for Mayor">
+  <meta property="og:description" content="Find upcoming Back Ben campaign events and see where Ben has been meeting people across Cheshire &amp; Warrington.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/ben-home-hero.jpg">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-final-polish-v1">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -532,43 +538,43 @@ body:has(.events-photo-hero) .site-header-inner{background:transparent!important
           </div>
         </article>
 
-        <article class="event-card">
-          <a class="event-card-image event-business" href="#" aria-label="Warrington Business Breakfast"></a>
+        <article class="event-card" id="event-warrington">
+          <a class="event-card-image event-business" href="#event-warrington" aria-label="Warrington Business Breakfast"></a>
           <div class="event-card-copy">
             <p class="event-card-date">28 September · 8:00am</p>
-            <h3><a href="#">Warrington Business Breakfast</a></h3>
+            <h3><a href="#event-warrington">Warrington Business Breakfast</a></h3>
             <p>A conversation with local employers about jobs, investment and what the new mayor can do for growth.</p>
-            <a class="event-card-link" href="#">Event details →</a>
+            <a class="event-card-link" href="#event-warrington">Event details →</a>
           </div>
         </article>
 
-        <article class="event-card">
-          <a class="event-card-image event-chester" href="#" aria-label="Chester Homes Towns and Opportunity"></a>
+        <article class="event-card" id="event-chester">
+          <a class="event-card-image event-chester" href="#event-chester" aria-label="Chester Homes Towns and Opportunity"></a>
           <div class="event-card-copy">
             <p class="event-card-date">2 October · 7:00pm</p>
-            <h3><a href="#">Chester: Homes, Towns & Opportunity</a></h3>
+            <h3><a href="#campaign-events-map">Chester: Homes, Towns & Opportunity</a></h3>
             <p>A public meeting on housing, infrastructure and how the region can grow without losing what makes its places special.</p>
-            <a class="event-card-link" href="#">Event details →</a>
+            <a class="event-card-link" href="#event-chester">Event details →</a>
           </div>
         </article>
 
-        <article class="event-card">
-          <a class="event-card-image event-online" href="#" aria-label="Ask Ben Live Online Q and A"></a>
+        <article class="event-card" id="event-online">
+          <a class="event-card-image event-online" href="#event-online" aria-label="Ask Ben Live Online Q and A"></a>
           <div class="event-card-copy">
             <p class="event-card-date">4 October · 6:30pm</p>
-            <h3><a href="#">Ask Ben: Live Online Q&amp;A</a></h3>
+            <h3><a href="#event-online">Ask Ben: Live Online Q&amp;A</a></h3>
             <p>Put your questions directly to Ben and hear more about his priorities for Cheshire & Warrington.</p>
-            <a class="event-card-link" href="#">Event details →</a>
+            <a class="event-card-link" href="#event-online">Event details →</a>
           </div>
         </article>
 
-        <article class="event-card">
-          <a class="event-card-image event-northwich" href="#" aria-label="Northwich Campaign Morning"></a>
+        <article class="event-card" id="event-northwich">
+          <a class="event-card-image event-northwich" href="#event-northwich" aria-label="Northwich Campaign Morning"></a>
           <div class="event-card-copy">
             <p class="event-card-date">11 October · 10:00am</p>
-            <h3><a href="#">Northwich Campaign Morning</a></h3>
+            <h3><a href="#event-northwich">Northwich Campaign Morning</a></h3>
             <p>Join Team Ben for a morning of local campaigning and conversations with residents.</p>
-            <a class="event-card-link" href="#">Event details →</a>
+            <a class="event-card-link" href="#event-northwich">Event details →</a>
           </div>
         </article>
 
@@ -603,7 +609,7 @@ body:has(.events-photo-hero) .site-header-inner{background:transparent!important
         <p>Tell the campaign what is happening locally and where you think Ben should visit.</p>
       </div>
       <form>
-        <input type="text" placeholder="Your town or postcode">
+        <input type="text" placeholder="Your town or postcode" aria-label="Your town or postcode">
         <button type="button" class="btn btn-red">Tell us where</button>
       </form>
     </div>
@@ -619,12 +625,11 @@ body:has(.events-photo-hero) .site-header-inner{background:transparent!important
   <div class="campaign-footer-top">
     <div class="campaign-footer-brand">
       <img class="campaign-footer-logo-image" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
-
-      <div class="campaign-footer-socials" aria-label="Social media">
-        <a href="#" aria-label="Facebook">f</a>
-        <a href="#" aria-label="Instagram">◎</a>
-        <a href="#" aria-label="X">𝕏</a>
-        <a href="#" aria-label="TikTok">♪</a>
+      <div class="campaign-footer-socials" aria-label="Campaign social channels">
+        <span aria-label="Facebook" title="Facebook">f</span>
+        <span aria-label="Instagram" title="Instagram">◎</span>
+        <span aria-label="X" title="X">𝕏</span>
+        <span aria-label="TikTok" title="TikTok">♪</span>
       </div>
     </div>
 
@@ -638,7 +643,7 @@ body:has(.events-photo-hero) .site-header-inner{background:transparent!important
       </div>
 
       <div>
-        <h3>Get involved</h3>
+        <h3>Take part</h3>
         <a href="events.html">Events</a>
         <a href="volunteer.html">Volunteer</a>
         <a href="donate.html">Donate</a>
@@ -655,12 +660,12 @@ body:has(.events-photo-hero) .site-header-inner{background:transparent!important
 
   <div class="campaign-footer-bottom">
     <div class="campaign-footer-legal">
-      <a href="#">Privacy</a>
-      <a href="#">Contact</a>
-      <a href="#">Promoted by</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+      <a href="#promoted-by">Promoted by</a>
     </div>
 
-    <div class="campaign-footer-imprint">
+    <div class="campaign-footer-imprint" id="promoted-by">
       <span>Promoted by [name] on behalf of Ben Fletcher, both at [campaign address].</span>
     </div>
   </div>

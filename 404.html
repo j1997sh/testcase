@@ -3,8 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Page not found | Back Ben for Mayor</title>
-<link rel="stylesheet" href="assets/css/site.css?v=20260822-unframed-v1">
+<title>Page Not Found | Back Ben for Mayor</title>
+  <meta name="description" content="The page you were looking for could not be found. Return to the Back Ben campaign.">
+  <meta name="theme-color" content="#071a34">
+  <meta property="og:title" content="Page Not Found | Back Ben for Mayor">
+  <meta property="og:description" content="The page you were looking for could not be found. Return to the Back Ben campaign.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/ben-home-hero.jpg">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-final-polish-v1">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -190,6 +196,53 @@ body:not(.home-page) .site-header{
 }
 </style>
 
+
+<style id="campaign-404-v1">
+.campaign-404{
+  min-height:68vh;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(5,24,46,.91),rgba(5,24,46,.55)),
+    url("assets/images/ben-home-hero.jpg") center 24%/cover no-repeat;
+  color:#fff;
+  padding:150px 0 90px;
+}
+.campaign-404-inner{max-width:760px}
+.campaign-404-code{
+  margin:0 0 8px;
+  color:#f04436;
+  font-size:20px;
+  font-weight:900;
+}
+.campaign-404 h1{
+  margin:0 0 14px;
+  color:#fff;
+  font-size:82px;
+  line-height:.9;
+  letter-spacing:-.05em;
+}
+.campaign-404-inner>p:not(.campaign-404-code){
+  margin:0 0 28px;
+  color:#dce5ed;
+  font-size:20px;
+}
+.campaign-404-actions{
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+.campaign-404-link{
+  color:#fff;
+  font-weight:900;
+}
+@media(max-width:650px){
+  .campaign-404{min-height:62vh;padding:125px 0 70px}
+  .campaign-404 h1{font-size:58px}
+  .campaign-404-actions{align-items:flex-start;flex-direction:column}
+}
+</style>
+
 </head>
 <body class="inner-page">
 <div class="site-shell">
@@ -215,22 +268,30 @@ body:not(.home-page) .site-header{
   </div>
 </header>
 
-<main>
-<section class="inner-hero"><div class="container"><h1>Page not found.</h1><p>The page you're looking for may have moved.</p></div></section>
-<section class="section"><div class="container"><a class="btn btn-red" href="index.html">Back to home</a></div></section>
+
+<main class="campaign-404">
+  <div class="container campaign-404-inner">
+    <p class="campaign-404-code">404</p>
+    <h1>Wrong turning.</h1>
+    <p>That page is not here, but the campaign is.</p>
+    <div class="campaign-404-actions">
+      <a class="btn btn-red" href="index.html">Back to the campaign</a>
+      <a class="campaign-404-link" href="area.html">Find Ben in your area →</a>
+    </div>
+  </div>
 </main>
+
 
 
 <footer class="campaign-footer">
   <div class="campaign-footer-top">
     <div class="campaign-footer-brand">
       <img class="campaign-footer-logo-image" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
-
-      <div class="campaign-footer-socials" aria-label="Social media">
-        <a href="#" aria-label="Facebook">f</a>
-        <a href="#" aria-label="Instagram">◎</a>
-        <a href="#" aria-label="X">𝕏</a>
-        <a href="#" aria-label="TikTok">♪</a>
+      <div class="campaign-footer-socials" aria-label="Campaign social channels">
+        <span aria-label="Facebook" title="Facebook">f</span>
+        <span aria-label="Instagram" title="Instagram">◎</span>
+        <span aria-label="X" title="X">𝕏</span>
+        <span aria-label="TikTok" title="TikTok">♪</span>
       </div>
     </div>
 
@@ -244,7 +305,7 @@ body:not(.home-page) .site-header{
       </div>
 
       <div>
-        <h3>Get involved</h3>
+        <h3>Take part</h3>
         <a href="events.html">Events</a>
         <a href="volunteer.html">Volunteer</a>
         <a href="donate.html">Donate</a>
@@ -261,12 +322,12 @@ body:not(.home-page) .site-header{
 
   <div class="campaign-footer-bottom">
     <div class="campaign-footer-legal">
-      <a href="#">Privacy</a>
-      <a href="#">Contact</a>
-      <a href="#">Promoted by</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+      <a href="#promoted-by">Promoted by</a>
     </div>
 
-    <div class="campaign-footer-imprint">
+    <div class="campaign-footer-imprint" id="promoted-by">
       <span>Promoted by [name] on behalf of Ben Fletcher, both at [campaign address].</span>
     </div>
   </div>

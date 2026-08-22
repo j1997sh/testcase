@@ -4,7 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>News | Back Ben for Mayor</title>
-<link rel="stylesheet" href="assets/css/site.css?v=20260822-news-grid-v4">
+  <meta name="description" content="Campaign news, local stories, policy updates and media from Ben across Cheshire &amp; Warrington.">
+  <meta name="theme-color" content="#071a34">
+  <meta property="og:title" content="News | Back Ben for Mayor">
+  <meta property="og:description" content="Campaign news, local stories, policy updates and media from Ben across Cheshire &amp; Warrington.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/ben-home-hero.jpg">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-final-polish-v1">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -437,13 +443,13 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
 
   <section class="news-filter-strip">
     <div class="container news-filter-inner">
-      <a href="#" class="active">All</a>
-      <a href="#">Campaign</a>
-      <a href="#">Policy</a>
-      <a href="#">Local</a>
-      <a href="#">Media</a>
+      <a href="news.html" class="active" aria-current="page">All</a>
+      <a href="news.html?category=campaign">Campaign</a>
+      <a href="news.html?category=policy">Policy</a>
+      <a href="news.html?category=local">Local</a>
+      <a href="news.html?category=media">Media</a>
       <div class="news-search">
-        <input type="search" placeholder="Search updates">
+        <input type="search" placeholder="Search updates" aria-label="Search updates">
       </div>
     </div>
   </section>
@@ -517,8 +523,8 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
         <p>Get the latest from Ben, including local visits, events and campaign announcements.</p>
       </div>
       <form>
-        <input type="email" placeholder="Email address">
-        <input type="text" placeholder="Postcode">
+        <input type="email" placeholder="Email address" aria-label="Email address" autocomplete="email">
+        <input type="text" placeholder="Postcode" aria-label="Postcode" autocomplete="postal-code">
         <button type="button" class="btn btn-red">Keep me updated</button>
       </form>
     </article>
@@ -534,12 +540,11 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
   <div class="campaign-footer-top">
     <div class="campaign-footer-brand">
       <img class="campaign-footer-logo-image" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
-
-      <div class="campaign-footer-socials" aria-label="Social media">
-        <a href="#" aria-label="Facebook">f</a>
-        <a href="#" aria-label="Instagram">◎</a>
-        <a href="#" aria-label="X">𝕏</a>
-        <a href="#" aria-label="TikTok">♪</a>
+      <div class="campaign-footer-socials" aria-label="Campaign social channels">
+        <span aria-label="Facebook" title="Facebook">f</span>
+        <span aria-label="Instagram" title="Instagram">◎</span>
+        <span aria-label="X" title="X">𝕏</span>
+        <span aria-label="TikTok" title="TikTok">♪</span>
       </div>
     </div>
 
@@ -553,7 +558,7 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
       </div>
 
       <div>
-        <h3>Get involved</h3>
+        <h3>Take part</h3>
         <a href="events.html">Events</a>
         <a href="volunteer.html">Volunteer</a>
         <a href="donate.html">Donate</a>
@@ -570,12 +575,12 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
 
   <div class="campaign-footer-bottom">
     <div class="campaign-footer-legal">
-      <a href="#">Privacy</a>
-      <a href="#">Contact</a>
-      <a href="#">Promoted by</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+      <a href="#promoted-by">Promoted by</a>
     </div>
 
-    <div class="campaign-footer-imprint">
+    <div class="campaign-footer-imprint" id="promoted-by">
       <span>Promoted by [name] on behalf of Ben Fletcher, both at [campaign address].</span>
     </div>
   </div>

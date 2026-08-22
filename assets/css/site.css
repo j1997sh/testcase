@@ -15,7 +15,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#061426;line-height:1.45;overflow-x:hidden}
+body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--text);background:#061426;line-height:1.45;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 button,input,textarea,select{font:inherit}
 .container{width:min(var(--max),calc(100% - 56px));margin:0 auto}
@@ -9839,4 +9839,314 @@ body.volunteer-survey-page .volunteer-form-heading h2{
   display:block;
   width:100%;
   height:auto;
+}
+
+
+/* ============================================================
+   FINAL SITE-WIDE POLISH — 2026-08-22
+   Typography, forms, accessibility, footer, mobile rhythm
+   ============================================================ */
+
+:root{
+  --font-body:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --font-display:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --focus:#8fc7ff;
+}
+
+html{
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  font-family:var(--font-body)!important;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+}
+
+h1,h2,h3,h4,h5,h6,
+.site-primary-nav,
+.site-header-actions,
+.btn,
+.campaign-footer{
+  font-family:var(--font-display)!important;
+}
+
+h1,h2,h3{
+  text-wrap:balance;
+}
+
+p{
+  text-wrap:pretty;
+}
+
+button,
+input,
+textarea,
+select{
+  font-family:var(--font-body)!important;
+}
+
+button,
+.btn,
+a{
+  -webkit-tap-highlight-color:transparent;
+}
+
+a,
+button,
+input,
+textarea,
+select{
+  outline-offset:3px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible{
+  outline:3px solid var(--focus)!important;
+}
+
+.btn,
+.site-volunteer-button,
+.site-donate-button,
+.campaign-footer-button{
+  transition:transform .16s ease,background-color .16s ease,border-color .16s ease,opacity .16s ease!important;
+}
+
+.btn:hover,
+.site-volunteer-button:hover,
+.site-donate-button:hover,
+.campaign-footer-button:hover{
+  transform:translateY(-1px);
+}
+
+input,
+textarea,
+select{
+  border-radius:0!important;
+}
+
+input::placeholder,
+textarea::placeholder{
+  color:#7d8790;
+  opacity:1;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  border-color:#0b5dac!important;
+  box-shadow:0 0 0 2px rgba(11,93,172,.12);
+}
+
+img{
+  max-width:100%;
+}
+
+.campaign-footer{
+  width:100%;
+  background:#071a34!important;
+  color:#fff;
+  padding:0!important;
+}
+
+.campaign-footer-top{
+  width:min(1320px,calc(100% - 64px));
+  margin:0 auto;
+  padding:58px 0 48px;
+  display:grid;
+  grid-template-columns:1.05fr 1.1fr .85fr;
+  gap:64px;
+  align-items:start;
+}
+
+.campaign-footer-logo-image{
+  display:block;
+  width:118px!important;
+  height:auto!important;
+  margin:0 0 22px!important;
+}
+
+.campaign-footer-socials{
+  display:flex;
+  gap:9px;
+  align-items:center;
+}
+
+.campaign-footer-socials span{
+  width:34px;
+  height:34px;
+  border:1px solid rgba(255,255,255,.28);
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-size:13px;
+  font-weight:800;
+  opacity:.72;
+  cursor:default;
+}
+
+.campaign-footer-links{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.campaign-footer h3{
+  margin:0 0 14px!important;
+  color:#fff!important;
+  font-size:17px!important;
+  line-height:1.1!important;
+  letter-spacing:-.015em!important;
+}
+
+.campaign-footer-links a{
+  display:block;
+  margin:0 0 9px;
+  color:#cfdae5!important;
+  font-size:14px;
+  line-height:1.35;
+  text-decoration:none;
+}
+
+.campaign-footer-links a:hover,
+.campaign-footer-legal a:hover{
+  color:#fff!important;
+}
+
+.campaign-footer-cta p{
+  margin:0 0 19px;
+  color:#c9d5df;
+  font-size:14px;
+  line-height:1.52;
+}
+
+.campaign-footer-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:0 18px;
+  background:#f04436;
+  color:#fff!important;
+  font-weight:900;
+  text-decoration:none;
+}
+
+.campaign-footer-bottom{
+  border-top:1px solid rgba(255,255,255,.13);
+  width:min(1320px,calc(100% - 64px));
+  margin:0 auto;
+  padding:21px 0 25px;
+  display:flex;
+  justify-content:space-between;
+  gap:32px;
+  align-items:flex-start;
+}
+
+.campaign-footer-legal{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.campaign-footer-legal a{
+  color:#b9c7d5!important;
+  font-size:12px;
+  text-decoration:none;
+}
+
+.campaign-footer-imprint{
+  max-width:630px;
+  color:#9fb0c1;
+  font-size:11.5px;
+  line-height:1.45;
+  text-align:right;
+}
+
+#promoted-by{
+  scroll-margin-top:30px;
+}
+
+/* More consistent interactive/form rhythm */
+form input,
+form textarea,
+form select{
+  min-width:0;
+}
+
+form button,
+form .btn{
+  min-height:50px;
+}
+
+textarea{
+  resize:vertical;
+}
+
+/* Keep the deliberately editorial photography clean */
+.home-intro-image,
+.home-area-story-photo,
+.home-area-simple-photo,
+.about-editorial-polaroid,
+.about-video-story-frame,
+.plan-priority-image,
+.experience-intro-image,
+.experience-item-image,
+.news-card-image,
+.local-feature-media,
+.event-card-image,
+.crewe-journey-image{
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+
+/* Mobile finishing pass */
+@media(max-width:800px){
+  .container{
+    width:min(100% - 32px,var(--max))!important;
+  }
+
+  .campaign-footer-top{
+    width:calc(100% - 32px);
+    padding:44px 0 38px;
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+
+  .campaign-footer-links{
+    gap:24px;
+  }
+
+  .campaign-footer-bottom{
+    width:calc(100% - 32px);
+    padding:20px 0 26px;
+    display:block;
+  }
+
+  .campaign-footer-imprint{
+    margin-top:16px;
+    text-align:left;
+  }
+
+  .campaign-footer-logo-image{
+    width:105px!important;
+  }
+
+  section{
+    scroll-margin-top:74px;
+  }
+}
+
+@media(max-width:520px){
+  .campaign-footer-links{
+    grid-template-columns:1fr;
+  }
+
+  .campaign-footer-legal{
+    gap:12px 18px;
+  }
 }
