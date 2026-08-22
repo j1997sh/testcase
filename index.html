@@ -10,7 +10,7 @@
   <meta property="og:description" content="Back Ben for Mayor of Cheshire &amp; Warrington. Explore Ben’s plan, local campaign activity, events and ways to get involved.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/ben-home-hero.jpg">
-  <link rel="stylesheet" href="assets/css/site.css?v=20260822-global-fade-v7">
+  <link rel="stylesheet" href="assets/css/site.css?v=20260822-menu-icon-final-v1">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -196,66 +196,6 @@ body:not(.home-page) .site-header{
 }
 </style>
 
-
-<style id="home-alternating-section-fix-v2">
-.home-intro-feature.home-intro-split{
-  background:#ffffff!important;
-}
-.home-intro-feature.home-intro-split .container,
-.home-intro-feature.home-intro-split .home-intro-grid,
-.home-intro-feature.home-intro-split .home-intro-copy,
-.home-intro-feature.home-intro-split .home-intro-image{
-  background:transparent!important;
-}
-
-.home-area-simple{
-  background:#f7f2e8!important;
-}
-.home-area-simple .container,
-.home-area-simple .home-area-simple-grid,
-.home-area-simple .home-area-simple-copy,
-.home-area-simple .home-area-simple-image{
-  background:transparent!important;
-}
-
-/* Remove any border/divider that makes these feel like one panel */
-.home-intro-feature.home-intro-split,
-.home-area-simple{
-  border-top:0!important;
-  border-bottom:0!important;
-}
-</style>
-
-
-<style id="ABSOLUTE-FINAL-GLOBAL-HEADER-FADE">
-html body .site-header,
-html body.home-page .site-header,
-html body.local-journey-page .site-header,
-html body:has(main) .site-header{
-  position:absolute!important;
-  top:0!important;
-  left:0!important;
-  right:0!important;
-  z-index:99999!important;
-  background:linear-gradient(
-    to bottom,
-    rgba(4,20,39,.96) 0%,
-    rgba(4,20,39,.78) 45%,
-    rgba(4,20,39,.36) 72%,
-    rgba(4,20,39,0) 100%
-  )!important;
-  border:0!important;
-  box-shadow:none!important;
-  transform:none!important;
-}
-html body .site-header .site-header-inner,
-html body:has(main) .site-header .site-header-inner{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-}
-</style>
-
 </head>
 <body class="home-page">
 <div class="site-shell">
@@ -272,7 +212,7 @@ html body:has(main) .site-header .site-header-inner{
       <a href="follow-ben.html">Follow Ben</a>
     </nav>
 
-    <button class="site-menu-button" type="button" aria-expanded="false"></button>
+    <button class="site-menu-button" type="button" aria-expanded="false" aria-label="Open navigation menu"></button>
 
     <div class="site-header-actions">
       <a class="site-volunteer-button" href="volunteer.html">Volunteer</a>
@@ -291,14 +231,14 @@ html body:has(main) .site-header .site-header-inner{
     <div class="home-hero-panel">
       <img class="home-campaign-logo" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor">
 
-      <form class="home-signup-form" onsubmit="return false;">
+      <form class="home-signup-form">
         <div class="home-signup-grid">
           <input type="text" placeholder="First name" aria-label="First name" autocomplete="given-name">
           <input type="text" placeholder="Last name" aria-label="Last name" autocomplete="family-name">
           <input type="email" placeholder="Email address" aria-label="Email address" autocomplete="email">
           <input type="text" placeholder="Postcode" aria-label="Postcode" autocomplete="postal-code">
         </div>
-        <button class="btn btn-red home-signup-submit" type="button" data-thanks="signup">Join the campaign</button>
+        <button class="btn btn-red home-signup-submit" type="button">Join the campaign</button>
       </form>
 
       <div class="ben-social-row" aria-label="Social media">
@@ -317,7 +257,7 @@ html body:has(main) .site-header .site-header-inner{
 </section>
 
 
-<section class="home-intro-feature home-intro-split" style="background:#fff;">
+<section class="home-intro-feature home-intro-split">
   <div class="container home-intro-split-grid">
     <div class="home-intro-image">
       <img src="assets/images/ben-home-intro.jpg" alt="Ben with local campaigners">
@@ -332,13 +272,16 @@ html body:has(main) .site-header .site-header-inner{
 </section>
 
 
-<section class="home-area-simple" style="background:#f7f2e8;">
+<section class="home-area-simple">
   <div class="container home-area-simple-grid">
     <div class="home-area-simple-copy">
       <h2>Ben in your area</h2>
       <p>Find out what Ben is doing near you, what local people are raising and what’s happening across Cheshire & Warrington.</p>
 
-      <div class="home-area-simple-search" data-area-search><input type="text" placeholder="Enter your postcode or town" aria-label="Enter your postcode or town"><button class="btn btn-red" type="button">Find my area</button></div>
+      <div class="home-area-simple-search">
+        <input type="text" placeholder="Enter your postcode or town" aria-label="Enter your postcode or town">
+        <a class="btn btn-red" href="area.html">Find my area</a>
+      </div>
 
       <p class="home-area-simple-note">Search by postcode or town to see local campaign visits, events and issues.</p>
     </div>
@@ -355,12 +298,12 @@ html body:has(main) .site-header .site-header-inner{
   <div class="campaign-footer-top">
     <div class="campaign-footer-brand">
       <img class="campaign-footer-logo-image" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
-      <div class="campaign-footer-socials social-icon-row" aria-label="Campaign social channels">
-          <a href="https://www.facebook.com/" aria-label="Facebook" title="Facebook">f</a>
-          <a href="https://www.instagram.com/" aria-label="Instagram" title="Instagram">◎</a>
-          <a href="https://x.com/" aria-label="X" title="X">𝕏</a>
-          <a href="https://www.tiktok.com/" aria-label="TikTok" title="TikTok">♪</a>
-        </div>
+      <div class="campaign-footer-socials" aria-label="Campaign social channels">
+        <span aria-label="Facebook" title="Facebook">f</span>
+        <span aria-label="Instagram" title="Instagram">◎</span>
+        <span aria-label="X" title="X">𝕏</span>
+        <span aria-label="TikTok" title="TikTok">♪</span>
+      </div>
     </div>
 
     <div class="campaign-footer-links">
@@ -402,6 +345,6 @@ html body:has(main) .site-header .site-header-inner{
 </footer>
 
 </div>
-<script src="assets/js/site.js?v=20260822-final-sprint-v1"></script>
+<script src="assets/js/site.js?v=20260822-menu-icon-final-v1"></script>
 </body>
 </html>

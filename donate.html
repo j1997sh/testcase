@@ -10,7 +10,7 @@
   <meta property="og:description" content="Support Ben’s campaign for Mayor of Cheshire &amp; Warrington, or find another way to help if you cannot donate right now.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/ben-home-hero.jpg">
-<link rel="stylesheet" href="assets/css/site.css?v=20260822-global-fade-v7">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-menu-icon-final-v1">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -467,36 +467,6 @@ body:has(.donation-hero) .site-header-inner{
 }
 </style>
 
-
-<style id="ABSOLUTE-FINAL-GLOBAL-HEADER-FADE">
-html body .site-header,
-html body.home-page .site-header,
-html body.local-journey-page .site-header,
-html body:has(main) .site-header{
-  position:absolute!important;
-  top:0!important;
-  left:0!important;
-  right:0!important;
-  z-index:99999!important;
-  background:linear-gradient(
-    to bottom,
-    rgba(4,20,39,.96) 0%,
-    rgba(4,20,39,.78) 45%,
-    rgba(4,20,39,.36) 72%,
-    rgba(4,20,39,0) 100%
-  )!important;
-  border:0!important;
-  box-shadow:none!important;
-  transform:none!important;
-}
-html body .site-header .site-header-inner,
-html body:has(main) .site-header .site-header-inner{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-}
-</style>
-
 </head>
 <body class="inner-page">
 <div class="site-shell">
@@ -513,7 +483,7 @@ html body:has(main) .site-header .site-header-inner{
       <a href="follow-ben.html">Follow Ben</a>
     </nav>
 
-    <button class="site-menu-button" type="button" aria-expanded="false"></button>
+    <button class="site-menu-button" type="button" aria-expanded="false" aria-label="Open navigation menu"></button>
 
     <div class="site-header-actions">
       <a class="site-volunteer-button" href="volunteer.html">Volunteer</a>
@@ -560,7 +530,7 @@ html body:has(main) .site-header .site-header-inner{
           <input type="text" placeholder="Postcode" aria-label="Postcode" autocomplete="postal-code">
         </div>
 
-        <button type="button" class="btn btn-red donation-submit" data-thanks="donate">Donate to the campaign</button>
+        <button type="button" class="btn btn-red donation-submit">Donate to the campaign</button>
       </form>
 
     </div>
@@ -584,9 +554,9 @@ html body:has(main) .site-header .site-header-inner{
       </div>
 
       <div class="donation-existing-actions">
-        <a class="btn btn-red" href="volunteer.html">Volunteer locally</a>
-        <a class="btn btn-red" href="events.html">Find an event</a>
-        <a class="btn btn-red" href="area.html">See Ben in your area</a>
+        <a href="volunteer.html">Volunteer locally</a>
+        <a href="events.html">Find an event</a>
+        <a href="area.html">See Ben in your area</a>
       </div>
     </div>
   </section>
@@ -599,12 +569,12 @@ html body:has(main) .site-header .site-header-inner{
   <div class="campaign-footer-top">
     <div class="campaign-footer-brand">
       <img class="campaign-footer-logo-image" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
-      <div class="campaign-footer-socials social-icon-row" aria-label="Campaign social channels">
-          <a href="https://www.facebook.com/" aria-label="Facebook" title="Facebook">f</a>
-          <a href="https://www.instagram.com/" aria-label="Instagram" title="Instagram">◎</a>
-          <a href="https://x.com/" aria-label="X" title="X">𝕏</a>
-          <a href="https://www.tiktok.com/" aria-label="TikTok" title="TikTok">♪</a>
-        </div>
+      <div class="campaign-footer-socials" aria-label="Campaign social channels">
+        <span aria-label="Facebook" title="Facebook">f</span>
+        <span aria-label="Instagram" title="Instagram">◎</span>
+        <span aria-label="X" title="X">𝕏</span>
+        <span aria-label="TikTok" title="TikTok">♪</span>
+      </div>
     </div>
 
     <div class="campaign-footer-links">
@@ -646,7 +616,7 @@ html body:has(main) .site-header .site-header-inner{
 </footer>
 
 </div>
-<script src="assets/js/site.js?v=20260822-final-sprint-v1"></script>
+<script src="assets/js/site.js?v=20260822-menu-icon-final-v1"></script>
 
 <script id="donation-journey-js">
 document.querySelectorAll('.donation-amounts button').forEach(function(btn){
@@ -660,8 +630,4 @@ document.querySelectorAll('.donation-amounts button').forEach(function(btn){
 </script>
 
 </body>
-</html><style id="snag-donate-actions">
-.donation-existing-actions{display:flex!important;gap:12px!important;flex-wrap:wrap!important;align-items:center!important}
-.donation-existing-actions .btn{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:50px!important;padding:0 22px!important;text-decoration:none!important}
-@media(max-width:700px){.donation-existing-actions{display:grid!important;grid-template-columns:1fr!important}.donation-existing-actions .btn{width:100%!important}}
-</style>
+</html>

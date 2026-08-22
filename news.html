@@ -10,7 +10,7 @@
   <meta property="og:description" content="Campaign news, local stories, policy updates and media from Ben across Cheshire &amp; Warrington.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/ben-home-hero.jpg">
-<link rel="stylesheet" href="assets/css/site.css?v=20260822-global-fade-v7">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-menu-icon-final-v1">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -392,50 +392,6 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
 }
 </style>
 
-
-<style id="news-filter-working-v1">
-.news-filter-inner button.news-filter{
- border:0;background:transparent;color:#607184;padding:10px 0;font:inherit;font-weight:800;cursor:pointer;
-}
-.news-filter-inner button.news-filter.active{color:#071f3d;box-shadow:inset 0 -3px #f54436}
-.news-card.is-hidden{display:none!important}
-.news-grid-empty{display:none;padding:30px 0;color:#607184}
-.news-grid-empty.show{display:block}
-</style>
-
-
-
-
-
-<style id="ABSOLUTE-FINAL-GLOBAL-HEADER-FADE">
-html body .site-header,
-html body.home-page .site-header,
-html body.local-journey-page .site-header,
-html body:has(main) .site-header{
-  position:absolute!important;
-  top:0!important;
-  left:0!important;
-  right:0!important;
-  z-index:99999!important;
-  background:linear-gradient(
-    to bottom,
-    rgba(4,20,39,.96) 0%,
-    rgba(4,20,39,.78) 45%,
-    rgba(4,20,39,.36) 72%,
-    rgba(4,20,39,0) 100%
-  )!important;
-  border:0!important;
-  box-shadow:none!important;
-  transform:none!important;
-}
-html body .site-header .site-header-inner,
-html body:has(main) .site-header .site-header-inner{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-}
-</style>
-
 </head>
 <body class="inner-page">
 <div class="site-shell">
@@ -452,7 +408,7 @@ html body:has(main) .site-header .site-header-inner{
       <a href="follow-ben.html">Follow Ben</a>
     </nav>
 
-    <button class="site-menu-button" type="button" aria-expanded="false"></button>
+    <button class="site-menu-button" type="button" aria-expanded="false" aria-label="Open navigation menu"></button>
 
     <div class="site-header-actions">
       <a class="site-volunteer-button" href="volunteer.html">Volunteer</a>
@@ -486,67 +442,70 @@ html body:has(main) .site-header .site-header-inner{
   </section>
 
   <section class="news-filter-strip">
-      <div class="container news-filter-inner">
-        <button class="news-filter active" type="button" data-filter="all">All</button>
-        <button class="news-filter" type="button" data-filter="campaign">Campaign</button>
-        <button class="news-filter" type="button" data-filter="policy">Policy</button>
-        <button class="news-filter" type="button" data-filter="local">Local</button>
-        <button class="news-filter" type="button" data-filter="media">Media</button>
+    <div class="container news-filter-inner">
+      <a href="news.html" class="active" aria-current="page">All</a>
+      <a href="news.html?category=campaign">Campaign</a>
+      <a href="news.html?category=policy">Policy</a>
+      <a href="news.html?category=local">Local</a>
+      <a href="news.html?category=media">Media</a>
+      <div class="news-search">
+        <input type="search" placeholder="Search updates" aria-label="Search updates">
       </div>
-    </section>
+    </div>
+  </section>
 
   
 <section class="news-stream news-grid-section">
   <div class="container">
     <div class="news-grid">
 
-      <article class="news-card" data-category="local">
+      <article class="news-card">
         <a class="news-card-image story-crewe" href="journeys/crewe.html" aria-label="What Crewe needs from its new mayor"></a>
         <div class="news-card-copy">
           <p class="news-story-date">22 August 2026</p>
           <h2><a href="journeys/crewe.html">What Crewe needs from its new mayor</a></h2>
           <p>Ben has been meeting residents, campaigners and local businesses to hear what would make the biggest difference to the town.</p>
-          <a class="news-card-link btn btn-red" href="journeys/crewe.html">See Ben in Crewe</a>
+          <a class="news-card-link" href="journeys/crewe.html">See Ben in Crewe</a>
         </div>
       </article>
 
-      <article class="news-card" data-category="campaign">
+      <article class="news-card">
         <a class="news-card-image story-volunteer" href="volunteer.html" aria-label="Building Team Ben across the region"></a>
         <div class="news-card-copy">
           <p class="news-story-date">18 August 2026</p>
           <h2><a href="volunteer.html">Building Team Ben across the region</a></h2>
           <p>From local events to leaflet teams and online campaigning, supporters are getting organised across Cheshire & Warrington.</p>
-          <a class="news-card-link btn btn-red" href="volunteer.html">Join the campaign</a>
+          <a class="news-card-link" href="volunteer.html">Join the campaign</a>
         </div>
       </article>
 
-      <article class="news-card" data-category="campaign">
+      <article class="news-card">
         <a class="news-card-image story-experience" href="about.html" aria-label="Why experience matters in a new mayoralty"></a>
         <div class="news-card-copy">
           <p class="news-story-date">12 August 2026</p>
           <h2><a href="about.html">Why experience matters in a new mayoralty</a></h2>
           <p>The first mayor will need to build relationships quickly, make decisions and turn a new office into something that delivers.</p>
-          <a class="news-card-link btn btn-red" href="about.html">Read more</a>
+          <a class="news-card-link" href="about.html">Read more</a>
         </div>
       </article>
 
-      <article class="news-card" data-category="policy">
+      <article class="news-card">
         <a class="news-card-image story-plan" href="plan.html" aria-label="A practical plan for Cheshire and Warrington"></a>
         <div class="news-card-copy">
           <p class="news-story-date">8 August 2026</p>
           <h2><a href="plan.html">A practical plan for Cheshire & Warrington</a></h2>
           <p>Better transport, safer communities, stronger growth and homes backed by the infrastructure local people need.</p>
-          <a class="news-card-link btn btn-red" href="plan.html">Read Ben’s plan</a>
+          <a class="news-card-link" href="plan.html">Read Ben’s plan</a>
         </div>
       </article>
 
-      <article class="news-card" data-category="campaign">
+      <article class="news-card">
         <a class="news-card-image story-about" href="about.html" aria-label="Leadership rooted in Cheshire and Warrington"></a>
         <div class="news-card-copy">
           <p class="news-story-date">2 August 2026</p>
           <h2><a href="about.html">Leadership rooted in Cheshire & Warrington</a></h2>
           <p>Why Ben is standing and the kind of mayoralty he wants to build across the region.</p>
-          <a class="news-card-link btn btn-red" href="about.html">Meet Ben</a>
+          <a class="news-card-link" href="about.html">Meet Ben</a>
         </div>
       </article>
 
@@ -566,7 +525,7 @@ html body:has(main) .site-header .site-header-inner{
       <form>
         <input type="email" placeholder="Email address" aria-label="Email address" autocomplete="email">
         <input type="text" placeholder="Postcode" aria-label="Postcode" autocomplete="postal-code">
-        <button type="button" class="btn btn-red" data-thanks="updates">Keep me updated</button>
+        <button type="button" class="btn btn-red">Keep me updated</button>
       </form>
     </article>
   </div>
@@ -581,12 +540,12 @@ html body:has(main) .site-header .site-header-inner{
   <div class="campaign-footer-top">
     <div class="campaign-footer-brand">
       <img class="campaign-footer-logo-image" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
-      <div class="campaign-footer-socials social-icon-row" aria-label="Campaign social channels">
-          <a href="https://www.facebook.com/" aria-label="Facebook" title="Facebook">f</a>
-          <a href="https://www.instagram.com/" aria-label="Instagram" title="Instagram">◎</a>
-          <a href="https://x.com/" aria-label="X" title="X">𝕏</a>
-          <a href="https://www.tiktok.com/" aria-label="TikTok" title="TikTok">♪</a>
-        </div>
+      <div class="campaign-footer-socials" aria-label="Campaign social channels">
+        <span aria-label="Facebook" title="Facebook">f</span>
+        <span aria-label="Instagram" title="Instagram">◎</span>
+        <span aria-label="X" title="X">𝕏</span>
+        <span aria-label="TikTok" title="TikTok">♪</span>
+      </div>
     </div>
 
     <div class="campaign-footer-links">
@@ -670,7 +629,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   });
 
-  search?.addEventListener("input", filterNews);
+  search.addEventListener("input", filterNews);
 
   clear.addEventListener("click", function(){
     activeCategory = "all";
@@ -685,7 +644,7 @@ document.addEventListener("DOMContentLoaded", function(){
 </script>
 
 </div>
-<script src="assets/js/site.js?v=20260822-final-sprint-v1"></script>
+<script src="assets/js/site.js?v=20260822-menu-icon-final-v1"></script>
 
 <script>
 const newsSearch=document.getElementById('news-search-input');
@@ -705,40 +664,5 @@ document.querySelectorAll('#news-category-tabs button').forEach(btn=>btn.addEven
 }));
 </script>
 
-
-<script id="news-filter-js">
-document.addEventListener("DOMContentLoaded",function(){
- const buttons=[...document.querySelectorAll(".news-filter")];
- const cards=[...document.querySelectorAll(".news-grid .news-card[data-category]")];
- const search=document.getElementById("news-search-input");
- const placeholder=document.querySelector(".news-card-placeholder");
- if(placeholder) placeholder.style.display="none";
- let current="all";
- function apply(){
-   const q=(search?search.value:"").trim().toLowerCase();
-   cards.forEach(function(card){
-     const cat=card.dataset.category||"";
-     const categoryOK=current==="all"||cat===current;
-     const textOK=!q||card.textContent.toLowerCase().includes(q);
-     card.classList.toggle("is-hidden",!(categoryOK&&textOK));
-   });
- }
- buttons.forEach(function(b){b.addEventListener("click",function(){
-   current=b.dataset.filter;
-   buttons.forEach(x=>x.classList.toggle("active",x===b));
-   apply();
- })});
- if(search)search.addEventListener("input",apply);
-});
-</script>
-
 </body>
 </html>
-<style id="snag-news-filters">
-.news-filter-strip{background:#fff!important;padding:26px 0!important}
-.news-filter-inner{display:flex!important;justify-content:center!important;align-items:center!important;gap:12px!important;flex-wrap:wrap!important;overflow:visible!important}
-.news-filter-inner button.news-filter{appearance:none!important;border:2px solid #f04436!important;background:transparent!important;color:#f04436!important;padding:11px 20px!important;font:inherit!important;font-weight:900!important;line-height:1!important;cursor:pointer!important;box-shadow:none!important;border-radius:0!important}
-.news-filter-inner button.news-filter:hover,.news-filter-inner button.news-filter.active{background:#f04436!important;color:#fff!important;box-shadow:none!important}
-.news-search{display:none!important}
-@media(max-width:700px){.news-filter-strip{padding:20px 16px!important}.news-filter-inner{gap:9px!important}.news-filter-inner button.news-filter{padding:10px 14px!important;font-size:14px!important}}
-</style>

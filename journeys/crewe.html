@@ -10,7 +10,7 @@
   <meta property="og:description" content="Explore Ben’s campaign in Crewe — local issues, campaign stories, events and ways to have your say.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="../assets/images/ben-home-hero.jpg">
-  <link rel="stylesheet" href="../assets/css/site.css?v=20260822-global-fade-v7">
+  <link rel="stylesheet" href="../assets/css/site.css?v=20260822-menu-icon-final-v1">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -660,36 +660,6 @@ body.local-journey-page .leaflet-popup-close-button{
 }
 </style>
 
-
-<style id="ABSOLUTE-FINAL-GLOBAL-HEADER-FADE">
-html body .site-header,
-html body.home-page .site-header,
-html body.local-journey-page .site-header,
-html body:has(main) .site-header{
-  position:absolute!important;
-  top:0!important;
-  left:0!important;
-  right:0!important;
-  z-index:99999!important;
-  background:linear-gradient(
-    to bottom,
-    rgba(4,20,39,.96) 0%,
-    rgba(4,20,39,.78) 45%,
-    rgba(4,20,39,.36) 72%,
-    rgba(4,20,39,0) 100%
-  )!important;
-  border:0!important;
-  box-shadow:none!important;
-  transform:none!important;
-}
-html body .site-header .site-header-inner,
-html body:has(main) .site-header .site-header-inner{
-  background:transparent!important;
-  border:0!important;
-  box-shadow:none!important;
-}
-</style>
-
 </head>
 <body class="local-journey-page">
 <div class="site-shell">
@@ -705,7 +675,7 @@ html body:has(main) .site-header .site-header-inner{
       <a href="../follow-ben.html">Follow Ben</a>
     </nav>
 
-    <button class="site-menu-button" type="button" aria-expanded="false"></button>
+    <button class="site-menu-button" type="button" aria-expanded="false" aria-label="Open navigation menu"></button>
 
     <div class="site-header-actions">
       <a class="site-volunteer-button" href="../volunteer.html">Volunteer</a>
@@ -736,7 +706,7 @@ html body:has(main) .site-header .site-header-inner{
           <p class="crewe-journey-type">Local issue</p>
           <h3><a href="crewe-transport.html">Getting Crewe moving</a></h3>
           <p>Better buses, easier journeys and making more of Crewe’s position at the heart of the rail network.</p>
-          <a class="crewe-journey-link btn btn-red" href="crewe-transport.html">Explore the issue</a>
+          <a class="crewe-journey-link" href="crewe-transport.html">Explore the issue</a>
         </div>
       </article>
 
@@ -746,7 +716,7 @@ html body:has(main) .site-header .site-header-inner{
           <p class="crewe-journey-type">From the campaign</p>
           <h3><a href="crewe-story.html">What Ben is hearing in Crewe</a></h3>
           <p>Residents talk about development, infrastructure and what growth should mean for the people already here.</p>
-          <a class="crewe-journey-link btn btn-red" href="crewe-story.html">Read the story</a>
+          <a class="crewe-journey-link" href="crewe-story.html">Read the story</a>
         </div>
       </article>
 
@@ -756,7 +726,7 @@ html body:has(main) .site-header .site-header-inner{
           <p class="crewe-journey-type">Next event</p>
           <h3><a href="crewe-event.html">Crewe town centre walkabout</a></h3>
           <p>Meet Ben in Crewe, speak to the campaign and tell him directly what you want the new mayor to focus on.</p>
-          <a class="crewe-journey-link btn btn-red" href="crewe-event.html">See the event</a>
+          <a class="crewe-journey-link" href="crewe-event.html">See the event</a>
         </div>
       </article>
     </div>
@@ -809,7 +779,7 @@ html body:has(main) .site-header .site-header-inner{
         <input type="text" placeholder="Postcode" aria-label="Postcode" autocomplete="postal-code">
       </div>
 
-      <button type="button" data-thanks="updates">Send my priorities</button>
+      <button type="button">Send my priorities</button>
     </form>
   </div>
 </section>
@@ -863,7 +833,7 @@ html body:has(main) .site-header .site-header-inner{
         <input type="email" placeholder="Email address" aria-label="Email address" autocomplete="email">
         <input type="text" placeholder="Postcode" aria-label="Postcode" autocomplete="postal-code">
       </div>
-      <button type="button" data-thanks="updates">Keep me updated</button>
+      <button type="button">Keep me updated</button>
     </form>
   </div>
 </section>
@@ -872,12 +842,12 @@ html body:has(main) .site-header .site-header-inner{
   <div class="campaign-footer-top">
     <div class="campaign-footer-brand">
       <img class="campaign-footer-logo-image" src="../assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
-      <div class="campaign-footer-socials social-icon-row" aria-label="Campaign social channels">
-          <a href="https://www.facebook.com/" aria-label="Facebook" title="Facebook">f</a>
-          <a href="https://www.instagram.com/" aria-label="Instagram" title="Instagram">◎</a>
-          <a href="https://x.com/" aria-label="X" title="X">𝕏</a>
-          <a href="https://www.tiktok.com/" aria-label="TikTok" title="TikTok">♪</a>
-        </div>
+      <div class="campaign-footer-socials" aria-label="Campaign social channels">
+        <span aria-label="Facebook" title="Facebook">f</span>
+        <span aria-label="Instagram" title="Instagram">◎</span>
+        <span aria-label="X" title="X">𝕏</span>
+        <span aria-label="TikTok" title="TikTok">♪</span>
+      </div>
     </div>
 
     <div class="campaign-footer-links">
@@ -920,7 +890,7 @@ html body:has(main) .site-header .site-header-inner{
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="../assets/js/site.js?v=20260822-final-sprint-v1"></script>
+<script src="../assets/js/site.js?v=20260822-menu-icon-final-v1"></script>
 <script>
 (function(){
   if (!window.L) return;

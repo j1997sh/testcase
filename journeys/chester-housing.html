@@ -1,62 +1,228 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>More homes. Stronger communities. | Back Ben for Mayor</title><meta name="description" content="Help shape Ben’s approach to housing and infrastructure in Chester."><link rel="stylesheet" href="../assets/css/site.css?v=20260822-global-fade-v7">
-<style>
-*{box-sizing:border-box}body{margin:0;background:#f7f2e8;color:#071f3d}
-.site-header{position:absolute!important;inset:0 0 auto 0!important;z-index:20!important;background:linear-gradient(to bottom,rgba(3,14,29,.96),rgba(3,14,29,.58),transparent)!important;border:0!important}.site-header-inner{background:transparent!important}
-.editorial-hero{position:relative;min-height:560px;display:flex;align-items:flex-end;overflow:hidden;background:#071f3d}.editorial-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.editorial-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(3,14,29,.48),rgba(3,14,29,.08) 38%,rgba(3,14,29,.88) 100%),linear-gradient(90deg,rgba(3,14,29,.55),transparent 68%)}
-.editorial-hero-copy{position:relative;z-index:2;width:min(1180px,calc(100% - 64px));margin:auto;padding:170px 0 62px;color:#fff}.editorial-hero-copy .eyebrow{font-weight:900;margin:0 0 12px;font-size:15px}
-.editorial-hero h1{font-size:clamp(48px,6vw,88px);line-height:.95;max-width:900px;margin:0 0 20px;letter-spacing:-.045em}.editorial-hero p{font-size:21px;line-height:1.45;max-width:720px;margin:0}
-.editorial-section{padding:78px 0}.white{background:#fff}.cream{background:#f7f2e8}.editorial-grid{width:min(1180px,calc(100% - 64px));margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}
-.editorial-copy h2{font-size:clamp(38px,4vw,58px);line-height:1;letter-spacing:-.035em;margin:0 0 22px}.editorial-copy p{font-size:19px;line-height:1.65;color:#53677f;margin:0 0 18px}.editorial-photo img{display:block;width:100%;height:420px;object-fit:cover}
-.survey-wrap{width:min(960px,calc(100% - 64px));margin:auto}.survey-intro{max-width:720px;margin:0 0 34px}.survey-intro h2{font-size:clamp(40px,4vw,60px);line-height:1;margin:0 0 16px;letter-spacing:-.035em}.survey-intro p{font-size:19px;line-height:1.6;color:#53677f}
-.editorial-survey{display:grid;grid-template-columns:1fr 1fr;gap:12px}.editorial-survey input,.editorial-survey textarea{width:100%;border:1px solid #aeb9c6;background:#fff;padding:17px;font:inherit;color:#071f3d}.editorial-survey textarea{grid-column:1/-1;min-height:150px;resize:vertical}.editorial-survey button{justify-self:start;border:0}
-@media(max-width:800px){.editorial-hero{min-height:600px}.editorial-hero-copy{width:calc(100% - 40px);padding:145px 0 42px}.editorial-hero h1{font-size:50px}.editorial-hero p{font-size:18px}.editorial-section{padding:54px 0}.editorial-grid{width:calc(100% - 40px);grid-template-columns:1fr;gap:34px}.editorial-photo{order:-1}.editorial-photo img{height:300px}.survey-wrap{width:calc(100% - 40px)}.editorial-survey{grid-template-columns:1fr}.editorial-survey textarea{grid-column:auto}}
-</style>
-<style id="ABSOLUTE-FINAL-GLOBAL-HEADER-FADE">
-html body .site-header,
-html body.home-page .site-header,
-html body.local-journey-page .site-header,
-html body:has(main) .site-header{
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Homes in Chester | Back Ben for Mayor</title>
+  <meta name="description" content="Help shape Ben’s approach to housing, development and infrastructure in Chester.">
+  <meta name="theme-color" content="#071a34">
+  <meta property="og:title" content="Homes in Chester | Back Ben for Mayor">
+  <meta property="og:description" content="Help shape Ben’s approach to housing, development and infrastructure in Chester.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/images/ben-home-hero.jpg"><link rel="stylesheet" href="../assets/css/site.css?v=20260822-menu-icon-final-v1">
+
+<style id="final-header-system">
+*{box-sizing:border-box}
+
+.site-header{
+  width:100%!important;
+  max-width:none!important;
+  z-index:9999!important;
+  overflow:visible!important;
+  border:0!important;
+
+  /* Explicitly neutralise the original legacy `header` rule */
+  left:0!important;
+  right:0!important;
+  top:0!important;
+  transform:none!important;
+  margin:0!important;
+}
+
+body.home-page .site-header{
   position:absolute!important;
   top:0!important;
   left:0!important;
   right:0!important;
-  z-index:99999!important;
-  background:linear-gradient(
-    to bottom,
-    rgba(4,20,39,.96) 0%,
-    rgba(4,20,39,.78) 45%,
-    rgba(4,20,39,.36) 72%,
-    rgba(4,20,39,0) 100%
-  )!important;
-  border:0!important;
-  box-shadow:none!important;
-  transform:none!important;
+  background:linear-gradient(to bottom,rgba(4,15,31,.88),rgba(4,15,31,.34),transparent)!important;
 }
-html body .site-header .site-header-inner,
-html body:has(main) .site-header .site-header-inner{
+
+body:not(.home-page) .site-header{
+  position:relative!important;
+  left:0!important;
+  right:0!important;
+  top:0!important;
+  transform:none!important;
+  background:linear-gradient(100deg,#071a34 0%,#0a315e 55%,#0b72bd 100%)!important;
+}
+
+.site-header-inner{
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+  min-height:86px!important;
+  margin:0!important;
+  padding:0 32px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:24px!important;
+}
+
+.site-primary-nav{
+  display:flex!important;
+  position:static!important;
+  flex:0 1 auto!important;
+  min-width:0!important;
+  width:auto!important;
+  height:auto!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:clamp(14px,1.45vw,28px)!important;
+  margin:0!important;
+  padding:0!important;
   background:transparent!important;
-  border:0!important;
   box-shadow:none!important;
+  visibility:visible!important;
+  opacity:1!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+}
+
+.site-primary-nav a{
+  display:inline-block!important;
+  flex:0 0 auto!important;
+  width:auto!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  color:#fff!important;
+  font-size:clamp(12px,.95vw,15px)!important;
+  line-height:1!important;
+  font-weight:800!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+
+.site-header-actions{
+  display:flex!important;
+  flex:0 0 auto!important;
+  align-items:center!important;
+  gap:12px!important;
+  margin:0!important;
+  padding:0!important;
+}
+
+.site-volunteer-button,
+.site-donate-button{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:52px!important;
+  padding:0 clamp(16px,1.55vw,25px)!important;
+  color:#fff!important;
+  font-size:clamp(12px,.95vw,15px)!important;
+  line-height:1!important;
+  font-weight:900!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+}
+
+.site-volunteer-button{
+  border:1px solid rgba(255,255,255,.72)!important;
+  background:rgba(255,255,255,.03)!important;
+}
+
+.site-donate-button{
+  border:1px solid #f04436!important;
+  background:#f04436!important;
+}
+
+.site-menu-button{display:none!important}
+.mobile-menu-actions{display:none!important}
+
+/* Tight desktop: compress rather than shove content offscreen */
+@media (max-width:1100px) and (min-width:801px){
+  .site-header-inner{padding:0 20px!important;gap:14px!important}
+  .site-primary-nav{gap:11px!important}
+  .site-primary-nav a{font-size:11.5px!important}
+  .site-header-actions{gap:8px!important}
+  .site-volunteer-button,.site-donate-button{
+    min-height:46px!important;
+    padding:0 13px!important;
+    font-size:11.5px!important;
+  }
+}
+
+/* One clean mobile breakpoint. */
+@media (max-width:800px){
+  .site-header-inner{
+    min-height:72px!important;
+    padding:10px 16px!important;
+    justify-content:flex-end!important;
+    position:relative!important;
+  }
+
+  .site-menu-button{
+    display:block!important;
+    width:auto!important;
+    min-width:106px!important;
+    height:52px!important;
+    border:1px solid rgba(255,255,255,.68)!important;
+    background:transparent!important;
+    color:#fff!important;
+    font-size:16px!important;
+    font-weight:900!important;
+  }
+
+  .site-header-actions{display:none!important}
+
+  .site-primary-nav{
+    display:none!important;
+    position:absolute!important;
+    top:100%!important;
+    left:0!important;
+    right:0!important;
+    width:100%!important;
+    padding:8px 18px 18px!important;
+    background:#061a31!important;
+    box-shadow:0 18px 35px rgba(0,0,0,.25)!important;
+    white-space:normal!important;
+  }
+
+  .site-primary-nav.open{display:block!important}
+
+  .site-primary-nav a{
+    display:block!important;
+    width:100%!important;
+    padding:15px 6px!important;
+    border-bottom:1px solid rgba(255,255,255,.11)!important;
+    font-size:16px!important;
+  }
 }
 </style>
 
-</head><body class="local-journey-page">
-<header class="site-header"><div class="site-header-inner"><a class="site-header-logo" href="../index.html" aria-label="Back Ben home"><img src="../assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor"></a><nav class="site-primary-nav"><a href="../about.html">About Ben</a><a href="../plan.html">My Plan</a><a href="../news.html">News</a><a href="../events.html">Events</a><a href="../tell-ben.html">Tell Ben</a><a href="../follow-ben.html">Follow Ben</a></nav><button class="site-menu-button" type="button" aria-expanded="false" aria-label="Open menu"></button><div class="site-header-actions"><a class="site-volunteer-button" href="../volunteer.html">Volunteer</a><a class="site-donate-button" href="../donate.html">Donate</a></div></div></header>
-<main><section class="editorial-hero"><img src="../assets/images/ben-area.jpg" alt=""><div class="editorial-hero-copy"><p class="eyebrow">Chester</p><h1>More homes. Stronger communities.</h1><p>Help shape Ben’s approach to housing and infrastructure in Chester.</p></div></section>
-<section class="editorial-section white"><div class="editorial-grid"><div class="editorial-copy"><h2>Homes need the infrastructure to match.</h2><p>New homes matter, but growth has to work for the people already living in Chester as well as those who want to make it their home.</p><p>That means thinking about roads, public transport, schools, GP access and the character of local communities alongside the number of homes built.</p></div><div class="editorial-photo"><img src="../assets/images/ben-area.jpg" alt="Ben meeting local residents and campaigners"></div></div></section>
-<section class="editorial-section cream"><div class="editorial-grid"><div class="editorial-photo"><img src="../assets/images/ben-home-intro.jpg" alt="Ben with local campaigners"></div><div class="editorial-copy"><h2>A plan shaped by Chester.</h2><p>Ben wants local priorities to be part of the mayoral conversation from the start — what should be protected, where infrastructure is falling behind and what would make new development work better.</p></div></div></section>
-<section class="editorial-section white"><div class="survey-wrap"><div class="survey-intro"><h2>Have your say on housing in Chester.</h2><p>Tell Ben what you think. Your response will help shape the campaign’s local priorities.</p></div><div class="editorial-survey"><input placeholder="First name" aria-label="First name"><input placeholder="Last name" aria-label="Last name"><input placeholder="Email address" aria-label="Email address"><input placeholder="Postcode" aria-label="Postcode"><textarea placeholder="Tell Ben what matters to you..." aria-label="Tell Ben what matters to you"></textarea><button class="btn btn-red" type="button" data-thanks="business">Submit response</button></div></div></section></main><footer class="campaign-footer">
+</head><body class="inner-page"><div class="site-shell">
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-header-logo" href="../index.html" aria-label="Back Ben home"><img src="../assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor"></a>
+    <nav class="site-primary-nav">
+      <a href="../about.html">About Ben</a>
+      <a href="../plan.html">My Plan</a>
+      <a href="../news.html">News</a>
+      <a href="../events.html">Events</a>
+      <a href="../tell-ben.html">Tell Ben</a>
+      <a href="../follow-ben.html">Follow Ben</a>
+    </nav>
+
+    <button class="site-menu-button" type="button" aria-expanded="false" aria-label="Open navigation menu"></button>
+
+    <div class="site-header-actions">
+      <a class="site-volunteer-button" href="../volunteer.html">Volunteer</a>
+      <a class="site-donate-button" href="../donate.html">Donate</a>
+    </div>
+  </div>
+</header>
+<main><section class="inner-hero"><div class="container"><h1>More homes. Stronger communities.</h1><p>Help shape Ben's approach to housing and infrastructure in Chester.</p></div></section><section class="section cream"><div class="container split"><div class="copy-block"><h2>Local campaign journey</h2><p>This page is deliberately focused on the audience that arrived here rather than the whole mayoral campaign.</p></div><div class="form-panel"><h2>Chester housing survey</h2><div class="form-grid"><input placeholder="First name" aria-label="First name" autocomplete="given-name"><input placeholder="Last name" aria-label="Last name" autocomplete="family-name"><input placeholder="Email address" aria-label="Email address" autocomplete="email"><input placeholder="Postcode" aria-label="Postcode" autocomplete="postal-code"><textarea placeholder="Tell Ben what matters to you..." aria-label="Tell Ben what matters to you..."></textarea><button class="btn btn-red" type="button">Submit response</button></div></div></div></section></main>
+
+<footer class="campaign-footer">
   <div class="campaign-footer-top">
     <div class="campaign-footer-brand">
       <img class="campaign-footer-logo-image" src="../assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
-      <div class="campaign-footer-socials social-icon-row" aria-label="Campaign social channels">
-          <a href="https://www.facebook.com/" aria-label="Facebook" title="Facebook">f</a>
-          <a href="https://www.instagram.com/" aria-label="Instagram" title="Instagram">◎</a>
-          <a href="https://x.com/" aria-label="X" title="X">𝕏</a>
-          <a href="https://www.tiktok.com/" aria-label="TikTok" title="TikTok">♪</a>
-        </div>
+      <div class="campaign-footer-socials" aria-label="Campaign social channels">
+        <span aria-label="Facebook" title="Facebook">f</span>
+        <span aria-label="Instagram" title="Instagram">◎</span>
+        <span aria-label="X" title="X">𝕏</span>
+        <span aria-label="TikTok" title="TikTok">♪</span>
+      </div>
     </div>
 
     <div class="campaign-footer-links">
@@ -95,4 +261,7 @@ html body:has(main) .site-header .site-header-inner{
       <span>Promoted by [name] on behalf of Ben Fletcher, both at [campaign address].</span>
     </div>
   </div>
-</footer><script src="../assets/js/site.js?v=20260822-snag-v3"></script></body></html>
+</footer>
+
+</div><script src="../assets/js/site.js?v=20260822-menu-icon-final-v1"></script>
+</body></html>
