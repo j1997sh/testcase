@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Follow Ben | Back Ben for Mayor</title>
+  <meta name="description" content="Follow Ben on the campaign trail, watch the latest videos, get campaign updates and get in touch.">
+  <meta name="theme-color" content="#071a34">
+  <meta property="og:title" content="About Ben | Back Ben for Mayor">
+  <meta property="og:description" content="Meet Ben and learn about the leadership, experience and local approach he would bring to the Cheshire &amp; Warrington mayoralty.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/ben-home-hero.jpg">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-follow-map-actions-v2">
+
+<style id="final-header-system">
+*{box-sizing:border-box}
+
+.site-header{
+  width:100%!important;
+  max-width:none!important;
+  z-index:9999!important;
+  overflow:visible!important;
+  border:0!important;
+
+  /* Explicitly neutralise the original legacy `header` rule */
+  left:0!important;
+  right:0!important;
+  top:0!important;
+  transform:none!important;
+  margin:0!important;
+}
+
+body.home-page .site-header{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  background:linear-gradient(to bottom,rgba(4,15,31,.88),rgba(4,15,31,.34),transparent)!important;
+}
+
+body:not(.home-page) .site-header{
+  position:relative!important;
+  left:0!important;
+  right:0!important;
+  top:0!important;
+  transform:none!important;
+  background:linear-gradient(100deg,#071a34 0%,#0a315e 55%,#0b72bd 100%)!important;
+}
+
+.site-header-inner{
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+  min-height:86px!important;
+  margin:0!important;
+  padding:0 32px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:24px!important;
+}
+
+.site-primary-nav{
+  display:flex!important;
+  position:static!important;
+  flex:0 1 auto!important;
+  min-width:0!important;
+  width:auto!important;
+  height:auto!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:clamp(14px,1.45vw,28px)!important;
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  visibility:visible!important;
+  opacity:1!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+}
+
+.site-primary-nav a{
+  display:inline-block!important;
+  flex:0 0 auto!important;
+  width:auto!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  color:#fff!important;
+  font-size:clamp(12px,.95vw,15px)!important;
+  line-height:1!important;
+  font-weight:800!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+
+.site-header-actions{
+  display:flex!important;
+  flex:0 0 auto!important;
+  align-items:center!important;
+  gap:12px!important;
+  margin:0!important;
+  padding:0!important;
+}
+
+.site-volunteer-button,
+.site-donate-button{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:52px!important;
+  padding:0 clamp(16px,1.55vw,25px)!important;
+  color:#fff!important;
+  font-size:clamp(12px,.95vw,15px)!important;
+  line-height:1!important;
+  font-weight:900!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+}
+
+.site-volunteer-button{
+  border:1px solid rgba(255,255,255,.72)!important;
+  background:rgba(255,255,255,.03)!important;
+}
+
+.site-donate-button{
+  border:1px solid #f04436!important;
+  background:#f04436!important;
+}
+
+.site-menu-button{display:none!important}
+.mobile-menu-actions{display:none!important}
+
+/* Tight desktop: compress rather than shove content offscreen */
+@media (max-width:1100px) and (min-width:801px){
+  .site-header-inner{padding:0 20px!important;gap:14px!important}
+  .site-primary-nav{gap:11px!important}
+  .site-primary-nav a{font-size:11.5px!important}
+  .site-header-actions{gap:8px!important}
+  .site-volunteer-button,.site-donate-button{
+    min-height:46px!important;
+    padding:0 13px!important;
+    font-size:11.5px!important;
+  }
+}
+
+/* One clean mobile breakpoint. */
+@media (max-width:800px){
+  .site-header-inner{
+    min-height:72px!important;
+    padding:10px 16px!important;
+    justify-content:flex-end!important;
+    position:relative!important;
+  }
+
+  .site-menu-button{
+    display:block!important;
+    width:auto!important;
+    min-width:106px!important;
+    height:52px!important;
+    border:1px solid rgba(255,255,255,.68)!important;
+    background:transparent!important;
+    color:#fff!important;
+    font-size:16px!important;
+    font-weight:900!important;
+  }
+
+  .site-header-actions{display:none!important}
+
+  .site-primary-nav{
+    display:none!important;
+    position:absolute!important;
+    top:100%!important;
+    left:0!important;
+    right:0!important;
+    width:100%!important;
+    padding:8px 18px 18px!important;
+    background:#061a31!important;
+    box-shadow:0 18px 35px rgba(0,0,0,.25)!important;
+    white-space:normal!important;
+  }
+
+  .site-primary-nav.open{display:block!important}
+
+  .site-primary-nav a{
+    display:block!important;
+    width:100%!important;
+    padding:15px 6px!important;
+    border-bottom:1px solid rgba(255,255,255,.11)!important;
+    font-size:16px!important;
+  }
+}
+</style>
+
+
+<style id="follow-ben-v1">
+body:has(.follow-hero) .site-header{position:absolute!important;top:0;left:0;right:0;z-index:20;background:linear-gradient(to bottom,rgba(4,20,39,.95),rgba(4,20,39,.45),transparent)!important;border:0!important;box-shadow:none!important}
+.follow-ben-page{background:#f7f2e8;color:#071f3d}
+.follow-hero{height:640px;position:relative;overflow:hidden;color:#fff}
+.follow-hero-image{position:absolute;inset:0;background:url("assets/images/ben-news-hero.jpg") center 43%/cover no-repeat}
+.follow-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,18,36,.84),rgba(3,18,36,.22) 58%,rgba(3,18,36,.05)),linear-gradient(to top,rgba(3,18,36,.72),transparent 55%)}
+.follow-hero-copy{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:54px}
+.follow-hero h1{margin:0;font-size:clamp(76px,9vw,126px);line-height:.84;letter-spacing:-.065em;color:#fff}
+.follow-hero p{margin:18px 0 24px;font-size:23px;font-weight:700;color:#fff}
+.follow-social-links{display:flex;gap:10px;flex-wrap:wrap}
+.follow-social-links a{color:#fff;border:1px solid rgba(255,255,255,.55);padding:10px 15px;font-weight:900;text-decoration:none}
+.follow-social-links a:hover{background:#fff;color:#071f3d}
+
+.campaign-stream{padding:74px 0 88px}
+.stream-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}
+.stream-heading h2,.watch-heading h2,.follow-signup h2,.follow-contact h2{font-size:54px;line-height:.95;margin:0;letter-spacing:-.04em}
+.stream-heading p{max-width:430px;margin:0;color:#5c6d7e;font-size:17px}
+
+.social-wall{display:grid;grid-template-columns:1.1fr .85fr .85fr;grid-auto-rows:230px;gap:14px}
+.social-post{position:relative;overflow:hidden;background:#071f3d}
+.social-post img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.social-post:hover img{transform:scale(1.025)}
+.social-post-wide{grid-column:span 2}
+.social-post-tall{grid-row:span 2}
+.social-post-copy{position:absolute;left:0;right:0;bottom:0;padding:50px 22px 20px;background:linear-gradient(transparent,rgba(3,18,36,.9));color:#fff}
+.social-post-copy span{font-size:12px;font-weight:900}
+.social-post-copy p{margin:5px 0 0;font-size:20px;line-height:1.2;font-weight:900}
+.social-note{background:#f54436;color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:space-between}
+.social-note p{font-size:28px;line-height:1.05;font-weight:900;margin:0}
+.social-note a{color:#fff;font-weight:900}
+
+.follow-signup{background:#071f3d;color:#fff;padding:68px 0}
+.follow-signup-grid{display:grid;grid-template-columns:.85fr 1.3fr;gap:80px;align-items:center}
+.follow-signup h2{color:#fff}
+.follow-signup p{color:#c0ccd6;font-size:17px;line-height:1.5;max-width:480px}
+.follow-signup-form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.follow-signup-form input,.follow-contact-form input,.follow-contact-form textarea{border:1px solid #b9b3aa;background:#fff;padding:0 16px;min-height:58px;font:inherit}
+.follow-signup-form .btn{grid-column:span 2}
+
+.watch-ben{padding:82px 0}
+.watch-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}
+.watch-heading a{color:#071f3d;font-weight:900}
+.watch-grid{display:grid;grid-template-columns:1.45fr .75fr;gap:16px}
+.watch-card{height:340px;position:relative;overflow:hidden;color:#fff;text-decoration:none}
+.watch-card-main{height:500px}
+.watch-card img{width:100%;height:100%;object-fit:cover}
+.watch-card:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 48%,rgba(3,18,36,.88))}
+.watch-card strong{position:absolute;z-index:2;left:24px;bottom:22px;font-size:27px;max-width:70%;color:#fff}
+.watch-play{position:absolute;z-index:3;right:22px;bottom:22px;width:56px;height:56px;border-radius:50%;background:#fff;color:#071f3d;display:grid;place-items:center}
+
+.follow-contact{background:#fff;padding:78px 0}
+.follow-contact-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:90px}
+.follow-contact-intro>p{color:#5d6f80;line-height:1.5;font-size:17px;max-width:460px}
+.contact-routes{margin-top:38px}
+.contact-routes p{margin:0 0 22px}
+.contact-routes a{color:#071f3d}
+.follow-contact-form{display:grid;gap:10px}
+.follow-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.follow-contact-form textarea{min-height:170px;padding-top:16px;resize:vertical}
+.follow-contact-form .btn{justify-self:start}
+
+.follow-next{background:#f7f2e8;padding:50px 0 70px}
+.follow-next-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.follow-next a{background:#fff;padding:28px;text-decoration:none;color:#071f3d;min-height:130px;display:flex;flex-direction:column;justify-content:flex-end}
+.follow-next span{color:#68798a;font-size:13px}
+.follow-next strong{font-size:30px}
+.follow-next a:hover{background:#071f3d;color:#fff}
+.follow-next a:hover span{color:#c3ced7}
+
+@media(max-width:900px){
+ .follow-hero{height:560px}
+ .social-wall{grid-template-columns:1fr 1fr;grid-auto-rows:240px}
+ .social-post-wide{grid-column:span 2}
+ .follow-signup-grid,.follow-contact-grid{grid-template-columns:1fr;gap:34px}
+ .watch-grid{grid-template-columns:1fr}
+ .watch-card,.watch-card-main{height:360px}
+}
+@media(max-width:650px){
+ .follow-hero{height:520px}
+ .follow-hero h1{font-size:68px}
+ .follow-hero p{font-size:19px}
+ .stream-heading,.watch-heading{display:block}
+ .stream-heading h2,.watch-heading h2,.follow-signup h2,.follow-contact h2{font-size:44px}
+ .stream-heading p{margin-top:14px}
+ .social-wall{display:block}
+ .social-wall>*{height:300px;margin-bottom:12px}
+ .social-note{height:220px}
+ .follow-signup-form,.follow-two,.follow-next-grid{grid-template-columns:1fr}
+ .follow-signup-form .btn{grid-column:auto}
+ .watch-heading a{display:inline-block;margin-top:10px}
+}
+</style>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<style id="follow-map-and-actions-v2">
+.follow-map-section{
+  background:#071f3d;
+  color:#fff;
+  padding:76px 0 82px;
+}
+.follow-map-heading{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:40px;
+  margin-bottom:30px;
+}
+.follow-map-heading h2{
+  margin:0 0 10px;
+  color:#fff;
+  font-size:54px;
+  line-height:.95;
+  letter-spacing:-.04em;
+}
+.follow-map-heading p{
+  margin:0;
+  color:#c2ced8;
+  font-size:17px;
+  line-height:1.5;
+}
+.follow-map-heading>a{
+  color:#fff;
+  font-weight:900;
+  white-space:nowrap;
+}
+.follow-campaign-map{
+  width:100%;
+  height:560px;
+  background:#e9e4d9;
+}
+.follow-campaign-map .leaflet-popup-content-wrapper{
+  border-radius:0;
+  box-shadow:0 14px 36px rgba(0,0,0,.18);
+}
+.follow-campaign-map .leaflet-popup-content{
+  margin:18px 20px 18px;
+  min-width:220px;
+}
+.map-popup-type{
+  margin:0 0 6px;
+  color:#f54436;
+  font-size:11px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.map-popup-title{
+  margin:0 0 7px;
+  color:#071f3d;
+  font-size:21px;
+  line-height:1.05;
+  font-weight:900;
+}
+.map-popup-copy{
+  margin:0 0 12px;
+  color:#596b7c;
+  font-size:13px;
+  line-height:1.45;
+}
+.map-popup-link{
+  color:#071f3d;
+  font-size:13px;
+  font-weight:900;
+  text-decoration:none;
+}
+
+.follow-next{
+  background:#f7f2e8;
+  padding:76px 0 86px;
+}
+.follow-next-heading{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:32px;
+  margin-bottom:30px;
+}
+.follow-next-heading h2{
+  margin:0;
+  font-size:50px;
+  line-height:.96;
+  letter-spacing:-.04em;
+}
+.follow-next-heading p{
+  margin:0;
+  color:#617284;
+  font-size:17px;
+}
+.follow-next-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.follow-next-card{
+  display:block!important;
+  min-height:0!important;
+  padding:0!important;
+  background:#fff!important;
+  color:#071f3d!important;
+  text-decoration:none!important;
+}
+.follow-next-card:hover{
+  background:#fff!important;
+  color:#071f3d!important;
+}
+.follow-next-image{
+  height:220px;
+  background-size:cover;
+  background-position:center;
+  overflow:hidden;
+}
+.follow-next-tell .follow-next-image{
+  background-image:
+    linear-gradient(rgba(4,20,39,.12),rgba(4,20,39,.12)),
+    url("assets/images/ben-area.jpg");
+}
+.follow-next-volunteer .follow-next-image{
+  background-image:
+    linear-gradient(rgba(4,20,39,.08),rgba(4,20,39,.08)),
+    url("assets/images/ben-volunteer-hero.jpg");
+}
+.follow-next-events .follow-next-image{
+  background-image:
+    linear-gradient(rgba(4,20,39,.10),rgba(4,20,39,.10)),
+    url("assets/images/ben-events-hero.jpg");
+}
+.follow-next-copy{
+  padding:24px 24px 28px;
+}
+.follow-next-copy span{
+  display:block;
+  margin-bottom:7px;
+  color:#f54436!important;
+  font-size:13px;
+  font-weight:900;
+}
+.follow-next-copy strong{
+  display:block;
+  margin-bottom:10px;
+  color:#071f3d!important;
+  font-size:28px!important;
+  line-height:1.05;
+  letter-spacing:-.03em;
+}
+.follow-next-copy p{
+  margin:0;
+  color:#5d6f80;
+  font-size:15px;
+  line-height:1.5;
+}
+.follow-next-card:hover .follow-next-image{
+  filter:brightness(.92);
+}
+
+@media(max-width:900px){
+  .follow-map-heading,
+  .follow-next-heading{
+    display:block;
+  }
+  .follow-map-heading>a{
+    display:inline-block;
+    margin-top:14px;
+  }
+  .follow-next-heading p{
+    margin-top:12px;
+  }
+  .follow-next-grid{
+    grid-template-columns:1fr;
+  }
+  .follow-next-card{
+    display:grid!important;
+    grid-template-columns:.9fr 1.1fr;
+  }
+  .follow-next-image{
+    height:100%;
+    min-height:230px;
+  }
+}
+@media(max-width:650px){
+  .follow-map-section,
+  .follow-next{
+    padding:58px 0 64px;
+  }
+  .follow-map-heading h2,
+  .follow-next-heading h2{
+    font-size:42px;
+  }
+  .follow-campaign-map{
+    height:460px;
+  }
+  .follow-next-grid{
+    gap:14px;
+  }
+  .follow-next-card{
+    display:block!important;
+  }
+  .follow-next-image{
+    height:220px;
+    min-height:0;
+  }
+}
+</style>
+
+</head>
+<body class="inner-page about-hero-page about-fade-page">
+<div class="site-shell about-fade-shell">
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-header-logo" href="index.html" aria-label="Back Ben home"><img src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor"></a>
+    <nav class="site-primary-nav">
+      <a href="about.html">About Ben</a>
+      <a href="plan.html">My Plan</a>
+      <a href="news.html">News</a>
+      <a href="events.html">Events</a>
+      <a href="tell-ben.html">Tell Ben</a>
+      <a href="follow-ben.html" aria-current="page">Follow Ben</a>
+    </nav>
+
+    <button class="site-menu-button" type="button" aria-expanded="false">Menu</button>
+
+    <div class="site-header-actions">
+      <a class="site-volunteer-button" href="volunteer.html">Volunteer</a>
+      <a class="site-donate-button" href="donate.html">Donate</a>
+    </div>
+  </div>
+</header>
+
+
+<main class="follow-ben-page">
+  <section class="follow-hero">
+    <div class="follow-hero-image"></div>
+    <div class="follow-hero-shade"></div>
+    <div class="container follow-hero-copy">
+      <h1>Follow Ben.</h1>
+      <p>On the road, online and around Cheshire &amp; Warrington.</p>
+      <div class="follow-social-links">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="X">X</a>
+        <a href="#" aria-label="TikTok">TikTok</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="campaign-stream">
+    <div class="container">
+      <div class="stream-heading">
+        <h2>From the campaign.</h2>
+        <p>Latest visits, conversations and moments from the road.</p>
+      </div>
+
+      <div class="social-wall">
+        <article class="social-post social-post-wide">
+          <img src="assets/images/ben-news-hero.jpg" alt="">
+          <div class="social-post-copy">
+            <span>On the air</span>
+            <p>Talking about what Cheshire &amp; Warrington needs from its first mayor.</p>
+          </div>
+        </article>
+
+        <article class="social-post social-post-tall">
+          <img src="assets/images/ben-events-hero.jpg" alt="">
+          <div class="social-post-copy">
+            <span>Out listening</span>
+            <p>Good conversations are where better local decisions start.</p>
+          </div>
+        </article>
+
+        <article class="social-note">
+          <p>“Politics works better when you start by listening.”</p>
+          <a href="tell-ben.html">Tell Ben what matters</a>
+        </article>
+
+        <article class="social-post">
+          <img src="assets/images/ben-home-intro.jpg" alt="">
+          <div class="social-post-copy">
+            <span>Across the region</span>
+            <p>Meeting residents and campaigners and hearing what needs to change.</p>
+          </div>
+        </article>
+
+        <article class="social-post social-post-wide">
+          <img src="assets/images/ben-plan-hero.jpg" alt="">
+          <div class="social-post-copy">
+            <span>Ben's plan</span>
+            <p>A practical plan built around the everyday things that make the biggest difference.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="follow-signup">
+    <div class="container follow-signup-grid">
+      <div>
+        <h2>Get updates from Ben.</h2>
+        <p>Campaign news, local visits and the things Ben is hearing across Cheshire &amp; Warrington.</p>
+      </div>
+      <form class="follow-signup-form" action="#" method="post">
+        <input type="text" placeholder="First name" aria-label="First name">
+        <input type="email" placeholder="Email address" aria-label="Email address">
+        <input type="text" placeholder="Postcode" aria-label="Postcode">
+        <button class="btn btn-red" type="submit">Keep me updated</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="watch-ben">
+    <div class="container">
+      <div class="watch-heading">
+        <h2>Watch Ben.</h2>
+        <a href="hear-from-ben.html">See more videos</a>
+      </div>
+      <div class="watch-grid">
+        <a class="watch-card watch-card-main" href="hear-from-ben.html">
+          <img src="assets/images/ben-experience-hero.jpg" alt="">
+          <span class="watch-play">▶</span>
+          <strong>Why I’m standing for Mayor</strong>
+        </a>
+        <a class="watch-card" href="hear-from-ben.html">
+          <img src="assets/images/ben-area.jpg" alt="">
+          <span class="watch-play">▶</span>
+          <strong>On the road with Ben</strong>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="follow-contact">
+    <div class="container follow-contact-grid">
+      <div class="follow-contact-intro">
+        <h2>Get in touch.</h2>
+        <p>Have a question, want Ben to visit your area, or need to speak to the campaign team?</p>
+        <div class="contact-routes">
+          <p><strong>Campaign enquiries</strong><br><a href="mailto:hello@backben.co.uk">hello@backben.co.uk</a></p>
+          <p><strong>Media enquiries</strong><br><a href="mailto:press@backben.co.uk">press@backben.co.uk</a></p>
+        </div>
+      </div>
+      <form class="follow-contact-form" action="#" method="post">
+        <div class="follow-two">
+          <input type="text" placeholder="Your name" aria-label="Your name">
+          <input type="email" placeholder="Email address" aria-label="Email address">
+        </div>
+        <input type="text" placeholder="Subject" aria-label="Subject">
+        <textarea placeholder="Your message" aria-label="Your message"></textarea>
+        <button class="btn btn-red" type="submit">Send message</button>
+      </form>
+    </div>
+  </section>
+
+  
+  <section class="follow-map-section" id="follow-map">
+    <div class="container">
+      <div class="follow-map-heading">
+        <div>
+          <h2>Ben across Cheshire &amp; Warrington.</h2>
+          <p>See where Ben has been, what people are raising and what’s coming up next.</p>
+        </div>
+        <a href="area.html">Explore all local activity</a>
+      </div>
+
+      <div id="follow-campaign-map" class="follow-campaign-map" aria-label="Map of Ben's campaign activity"></div>
+    </div>
+  </section>
+
+  <section class="follow-next">
+    <div class="container">
+      <div class="follow-next-heading">
+        <h2>Keep the conversation going.</h2>
+        <p>Follow the campaign in the way that suits you.</p>
+      </div>
+
+      <div class="follow-next-grid">
+        <a class="follow-next-card follow-next-tell" href="tell-ben.html">
+          <div class="follow-next-image"></div>
+          <div class="follow-next-copy">
+            <span>Have your say</span>
+            <strong>Tell Ben what matters where you live.</strong>
+            <p>Choose your area, your priority and tell Ben what you would change.</p>
+          </div>
+        </a>
+
+        <a class="follow-next-card follow-next-volunteer" href="volunteer.html">
+          <div class="follow-next-image"></div>
+          <div class="follow-next-copy">
+            <span>Join the team</span>
+            <strong>Give an hour. Make a difference.</strong>
+            <p>Campaign locally, help online, join an event or bring your skills.</p>
+          </div>
+        </a>
+
+        <a class="follow-next-card follow-next-events" href="events.html">
+          <div class="follow-next-image"></div>
+          <div class="follow-next-copy">
+            <span>Meet Ben</span>
+            <strong>See what’s happening near you.</strong>
+            <p>Find campaign visits, public meetings and upcoming local events.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+
+<footer class="campaign-footer">
+  <div class="campaign-footer-top">
+    <div class="campaign-footer-brand">
+      <img class="campaign-footer-logo-image" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
+      <div class="campaign-footer-socials" aria-label="Campaign social channels">
+        <span aria-label="Facebook" title="Facebook">f</span>
+        <span aria-label="Instagram" title="Instagram">◎</span>
+        <span aria-label="X" title="X">𝕏</span>
+        <span aria-label="TikTok" title="TikTok">♪</span>
+      </div>
+    </div>
+
+    <div class="campaign-footer-links">
+      <div>
+        <h3>Campaign</h3>
+        <a href="about.html">About Ben</a>
+        <a href="plan.html">My Plan</a>
+        <a href="news.html">News</a>
+      </div>
+
+      <div>
+        <h3>Take part</h3>
+        <a href="events.html">Events</a>
+        <a href="tell-ben.html">Tell Ben</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="donate.html">Donate</a>
+        <a href="area.html">Ben in your area</a>
+      </div>
+    </div>
+
+    <div class="campaign-footer-cta">
+      <h3>Back Ben</h3>
+      <p>Help build a campaign that reaches every part of Cheshire & Warrington.</p>
+      <a class="campaign-footer-button" href="volunteer.html">Join the campaign</a>
+    </div>
+  </div>
+
+  <div class="campaign-footer-bottom">
+    <div class="campaign-footer-legal">
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+      <a href="#promoted-by">Promoted by</a>
+    </div>
+
+    <div class="campaign-footer-imprint" id="promoted-by">
+      <span>Promoted by [name] on behalf of Ben Fletcher, both at [campaign address].</span>
+    </div>
+  </div>
+</footer>
+
+
+</div>
+<script src="assets/js/site.js?v=20260821-1212"></script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script id="follow-map-js-v1">
+document.addEventListener("DOMContentLoaded", function(){
+  var mapEl = document.getElementById("follow-campaign-map");
+  if(!mapEl || typeof L === "undefined") return;
+
+  var map = L.map("follow-campaign-map", {
+    scrollWheelZoom:false,
+    zoomControl:true
+  }).setView([53.188, -2.53], 9);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom:19,
+    attribution:"&copy; OpenStreetMap contributors"
+  }).addTo(map);
+
+  var points = [
+    {
+      coords:[53.0996,-2.4415],
+      type:"Local campaign",
+      title:"Ben in Crewe",
+      copy:"Campaign visits, local issues and upcoming activity in Crewe.",
+      link:"journeys/crewe.html",
+      label:"Explore Crewe"
+    },
+    {
+      coords:[53.3900,-2.5970],
+      type:"Business",
+      title:"Warrington business conversations",
+      copy:"Listening to local employers about jobs, investment, skills and infrastructure.",
+      link:"journeys/warrington-business.html",
+      label:"See the business campaign"
+    },
+    {
+      coords:[53.1934,-2.8931],
+      type:"Housing",
+      title:"Homes and opportunity in Chester",
+      copy:"A local conversation about housing, infrastructure and sustainable growth.",
+      link:"journeys/chester-housing.html",
+      label:"Explore Chester"
+    },
+    {
+      coords:[53.2610,-2.5140],
+      type:"Campaign activity",
+      title:"Northwich campaign morning",
+      copy:"Meeting residents, volunteers and local campaigners.",
+      link:"events.html#event-northwich",
+      label:"See events"
+    }
+  ];
+
+  var markerIcon = L.divIcon({
+    className:"",
+    html:'<div style="width:22px;height:22px;border-radius:50%;background:#f54436;border:4px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.28)"></div>',
+    iconSize:[22,22],
+    iconAnchor:[11,11],
+    popupAnchor:[0,-14]
+  });
+
+  points.forEach(function(p){
+    L.marker(p.coords,{icon:markerIcon}).addTo(map).bindPopup(
+      '<p class="map-popup-type">'+p.type+'</p>'+
+      '<p class="map-popup-title">'+p.title+'</p>'+
+      '<p class="map-popup-copy">'+p.copy+'</p>'+
+      '<a class="map-popup-link" href="'+p.link+'">'+p.label+'</a>'
+    );
+  });
+});
+</script>
+
+</body>
+</html>
