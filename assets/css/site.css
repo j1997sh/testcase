@@ -10280,3 +10280,136 @@ button.btn{
     margin:0!important;
   }
 }
+
+
+/* ============================================================
+   GLOBAL MOBILE HEADER — centred logo + hamburger
+   ============================================================ */
+@media(max-width:800px){
+
+  /* Use the same header geometry on every page */
+  .site-header,
+  .site-header-inner,
+  .header-inner,
+  .main-header-inner{
+    box-sizing:border-box!important;
+  }
+
+  .site-header-inner,
+  .header-inner,
+  .main-header-inner{
+    position:relative!important;
+    min-height:104px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:flex-end!important;
+    padding-left:20px!important;
+    padding-right:20px!important;
+  }
+
+  /* Absolutely centre the small logo in the viewport/header */
+  .site-brand,
+  .header-logo,
+  .site-logo,
+  .mobile-header-logo{
+    position:absolute!important;
+    left:50%!important;
+    top:50%!important;
+    transform:translate(-50%,-50%)!important;
+    margin:0!important;
+    z-index:4!important;
+  }
+
+  .site-brand img,
+  .header-logo img,
+  .site-logo img,
+  .mobile-header-logo img{
+    display:block!important;
+    width:86px!important;
+    max-width:86px!important;
+    height:auto!important;
+    margin:0!important;
+  }
+
+  /* Menu trigger sits independently at right */
+  .mobile-menu-toggle,
+  .menu-toggle,
+  .nav-toggle{
+    position:relative!important;
+    z-index:5!important;
+    margin-left:auto!important;
+    width:62px!important;
+    height:58px!important;
+    min-width:62px!important;
+    padding:0!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    border:1px solid rgba(255,255,255,.55)!important;
+    background:rgba(5,24,45,.18)!important;
+    color:#fff!important;
+    font-size:0!important;
+    line-height:0!important;
+  }
+
+  /* Three-line hamburger, no text */
+  .mobile-menu-toggle::before,
+  .menu-toggle::before,
+  .nav-toggle::before{
+    content:""!important;
+    width:26px!important;
+    height:18px!important;
+    display:block!important;
+    background:
+      linear-gradient(#fff,#fff) 0 0/100% 2px no-repeat,
+      linear-gradient(#fff,#fff) 0 50%/100% 2px no-repeat,
+      linear-gradient(#fff,#fff) 0 100%/100% 2px no-repeat!important;
+    transition:transform .18s ease,background .18s ease!important;
+  }
+
+  /* Hide any old Menu/Close text nodes/spans */
+  .mobile-menu-toggle span,
+  .menu-toggle span,
+  .nav-toggle span,
+  .mobile-menu-toggle .menu-label,
+  .menu-toggle .menu-label,
+  .nav-toggle .menu-label{
+    display:none!important;
+  }
+
+  /* When menu is open, turn hamburger into an X */
+  .mobile-menu-toggle[aria-expanded="true"]::before,
+  .menu-toggle[aria-expanded="true"]::before,
+  .nav-toggle[aria-expanded="true"]::before,
+  body.menu-open .mobile-menu-toggle::before,
+  body.menu-open .menu-toggle::before,
+  body.menu-open .nav-toggle::before{
+    width:24px!important;
+    height:24px!important;
+    background:
+      linear-gradient(#fff,#fff) 50% 50%/26px 2px no-repeat,
+      linear-gradient(#fff,#fff) 50% 50%/26px 2px no-repeat!important;
+    transform:rotate(45deg)!important;
+  }
+
+  .mobile-menu-toggle[aria-expanded="true"]::after,
+  .menu-toggle[aria-expanded="true"]::after,
+  .nav-toggle[aria-expanded="true"]::after,
+  body.menu-open .mobile-menu-toggle::after,
+  body.menu-open .menu-toggle::after,
+  body.menu-open .nav-toggle::after{
+    content:""!important;
+    position:absolute!important;
+    width:26px!important;
+    height:2px!important;
+    background:#fff!important;
+    transform:rotate(90deg)!important;
+  }
+
+  /* Prevent legacy rules nudging the centred logo */
+  .site-header .site-brand,
+  .site-header .header-logo,
+  .site-header .site-logo{
+    right:auto!important;
+  }
+}
