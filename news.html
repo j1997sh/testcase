@@ -403,7 +403,7 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
 .news-grid-empty.show{display:block}
 </style>
 
-</head>
+<style id="snag-global-header-fade">body:not(.home-page):not(.local-journey-page) .site-header{background:linear-gradient(100deg,#071a34 0%,#092b50 54%,#0b5d96 100%)!important}</style></head>
 <body class="inner-page">
 <div class="site-shell">
 
@@ -459,7 +459,6 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
         <button class="news-filter" type="button" data-filter="policy">Policy</button>
         <button class="news-filter" type="button" data-filter="local">Local</button>
         <button class="news-filter" type="button" data-filter="media">Media</button>
-        <div class="news-search"><input id="news-search-input" type="search" placeholder="Search updates" aria-label="Search updates"></div>
       </div>
     </section>
 
@@ -638,7 +637,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   });
 
-  search.addEventListener("input", filterNews);
+  search?.addEventListener("input", filterNews);
 
   clear.addEventListener("click", function(){
     activeCategory = "all";
@@ -702,3 +701,11 @@ document.addEventListener("DOMContentLoaded",function(){
 
 </body>
 </html>
+<style id="snag-news-filters">
+.news-filter-strip{background:#fff!important;padding:26px 0!important}
+.news-filter-inner{display:flex!important;justify-content:center!important;align-items:center!important;gap:12px!important;flex-wrap:wrap!important;overflow:visible!important}
+.news-filter-inner button.news-filter{appearance:none!important;border:2px solid #f04436!important;background:transparent!important;color:#f04436!important;padding:11px 20px!important;font:inherit!important;font-weight:900!important;line-height:1!important;cursor:pointer!important;box-shadow:none!important;border-radius:0!important}
+.news-filter-inner button.news-filter:hover,.news-filter-inner button.news-filter.active{background:#f04436!important;color:#fff!important;box-shadow:none!important}
+.news-search{display:none!important}
+@media(max-width:700px){.news-filter-strip{padding:20px 16px!important}.news-filter-inner{gap:9px!important}.news-filter-inner button.news-filter{padding:10px 14px!important;font-size:14px!important}}
+</style>

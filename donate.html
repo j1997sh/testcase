@@ -467,7 +467,7 @@ body:has(.donation-hero) .site-header-inner{
 }
 </style>
 
-</head>
+<style id="snag-global-header-fade">body:not(.home-page):not(.local-journey-page) .site-header{background:linear-gradient(100deg,#071a34 0%,#092b50 54%,#0b5d96 100%)!important}</style></head>
 <body class="inner-page">
 <div class="site-shell">
 
@@ -554,9 +554,9 @@ body:has(.donation-hero) .site-header-inner{
       </div>
 
       <div class="donation-existing-actions">
-        <a href="volunteer.html">Volunteer locally</a>
-        <a href="events.html">Find an event</a>
-        <a href="area.html">See Ben in your area</a>
+        <a class="btn btn-red" href="volunteer.html">Volunteer locally</a>
+        <a class="btn btn-red" href="events.html">Find an event</a>
+        <a class="btn btn-red" href="area.html">See Ben in your area</a>
       </div>
     </div>
   </section>
@@ -630,4 +630,8 @@ document.querySelectorAll('.donation-amounts button').forEach(function(btn){
 </script>
 
 </body>
-</html>
+</html><style id="snag-donate-actions">
+.donation-existing-actions{display:flex!important;gap:12px!important;flex-wrap:wrap!important;align-items:center!important}
+.donation-existing-actions .btn{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:50px!important;padding:0 22px!important;text-decoration:none!important}
+@media(max-width:700px){.donation-existing-actions{display:grid!important;grid-template-columns:1fr!important}.donation-existing-actions .btn{width:100%!important}}
+</style>
