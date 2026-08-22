@@ -10,7 +10,7 @@
   <meta property="og:description" content="Meet Ben and learn about the leadership, experience and local approach he would bring to the Cheshire &amp; Warrington mayoralty.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/ben-home-hero.jpg">
-<link rel="stylesheet" href="assets/css/site.css?v=20260822-header-definitive-v2">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-final-sprint-v1">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -517,7 +517,7 @@ body:has(.follow-hero) .site-header{position:absolute!important;top:0;left:0;rig
       <a href="follow-ben.html" aria-current="page">Follow Ben</a>
     </nav>
 
-    <button class="site-menu-button" type="button" aria-expanded="false">Menu</button>
+    <button class="site-menu-button" type="button" aria-expanded="false"></button>
 
     <div class="site-header-actions">
       <a class="site-volunteer-button" href="volunteer.html">Volunteer</a>
@@ -534,12 +534,12 @@ body:has(.follow-hero) .site-header{position:absolute!important;top:0;left:0;rig
     <div class="container follow-hero-copy">
       <h1>Follow Ben.</h1>
       <p>On the road, online and around Cheshire &amp; Warrington.</p>
-      <div class="follow-social-links">
-        <a href="#" aria-label="Facebook">Facebook</a>
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="X">X</a>
-        <a href="#" aria-label="TikTok">TikTok</a>
-      </div>
+      <div class="follow-social-icons" aria-label="Follow Ben on social media">
+      <a href="https://www.facebook.com/" aria-label="Facebook" title="Facebook">f</a>
+      <a href="https://www.instagram.com/" aria-label="Instagram" title="Instagram">◎</a>
+      <a href="https://x.com/" aria-label="X" title="X">𝕏</a>
+      <a href="https://www.tiktok.com/" aria-label="TikTok" title="TikTok">♪</a>
+    </div>
     </div>
   </section>
 
@@ -597,11 +597,11 @@ body:has(.follow-hero) .site-header{position:absolute!important;top:0;left:0;rig
         <h2>Get updates from Ben.</h2>
         <p>Campaign news, local visits and the things Ben is hearing across Cheshire &amp; Warrington.</p>
       </div>
-      <form class="follow-signup-form" action="#" method="post">
+      <form class="follow-signup-form" action="thanks.html?action=updates" method="get">
         <input type="text" placeholder="First name" aria-label="First name">
         <input type="email" placeholder="Email address" aria-label="Email address">
         <input type="text" placeholder="Postcode" aria-label="Postcode">
-        <button class="btn btn-red" type="submit">Keep me updated</button>
+        <button class="btn btn-red" type="submit" data-thanks="updates">Get updates</button>
       </form>
     </div>
   </section>
@@ -637,14 +637,14 @@ body:has(.follow-hero) .site-header{position:absolute!important;top:0;left:0;rig
           <p><strong>Media enquiries</strong><br><a href="mailto:press@backben.co.uk">press@backben.co.uk</a></p>
         </div>
       </div>
-      <form class="follow-contact-form" action="#" method="post">
+      <form class="follow-contact-form" action="thanks.html?action=updates" method="get">
         <div class="follow-two">
           <input type="text" placeholder="Your name" aria-label="Your name">
           <input type="email" placeholder="Email address" aria-label="Email address">
         </div>
         <input type="text" placeholder="Subject" aria-label="Subject">
         <textarea placeholder="Your message" aria-label="Your message"></textarea>
-        <button class="btn btn-red" type="submit">Send message</button>
+        <button class="btn btn-red" type="submit" data-thanks="contact">Send message</button>
       </form>
     </div>
   </section>
@@ -710,12 +710,12 @@ body:has(.follow-hero) .site-header{position:absolute!important;top:0;left:0;rig
   <div class="campaign-footer-top">
     <div class="campaign-footer-brand">
       <img class="campaign-footer-logo-image" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
-      <div class="campaign-footer-socials" aria-label="Campaign social channels">
-        <span aria-label="Facebook" title="Facebook">f</span>
-        <span aria-label="Instagram" title="Instagram">◎</span>
-        <span aria-label="X" title="X">𝕏</span>
-        <span aria-label="TikTok" title="TikTok">♪</span>
-      </div>
+      <div class="campaign-footer-socials social-icon-row" aria-label="Campaign social channels">
+          <a href="https://www.facebook.com/" aria-label="Facebook" title="Facebook">f</a>
+          <a href="https://www.instagram.com/" aria-label="Instagram" title="Instagram">◎</a>
+          <a href="https://x.com/" aria-label="X" title="X">𝕏</a>
+          <a href="https://www.tiktok.com/" aria-label="TikTok" title="TikTok">♪</a>
+        </div>
     </div>
 
     <div class="campaign-footer-links">
@@ -758,7 +758,7 @@ body:has(.follow-hero) .site-header{position:absolute!important;top:0;left:0;rig
 
 
 </div>
-<script src="assets/js/site.js?v=20260821-1212"></script>
+<script src="assets/js/site.js?v=20260822-final-sprint-v1"></script>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script id="follow-map-js-v1">
