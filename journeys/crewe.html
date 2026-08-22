@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Ben in Crewe | Back Ben for Mayor</title>
-  <link rel="stylesheet" href="../assets/css/site.css?v=20260822-unframed-v1">
+  <link rel="stylesheet" href="../assets/css/site.css?v=20260822-crewe-hub-v2">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -560,6 +560,100 @@ body.local-journey-page .leaflet-popup-close-button{
 }
 </style>
 
+
+
+
+
+
+
+
+<style id="crewe-journey-hub-v2">
+.crewe-journey-section{
+  display:block!important;
+  width:100%;
+  background:#f7f2e8;
+  padding:62px 0 72px;
+}
+.crewe-journey-heading{
+  display:grid!important;
+  grid-template-columns:.85fr 1.15fr;
+  gap:64px;
+  align-items:end;
+  margin-bottom:32px;
+}
+.crewe-journey-heading h2{
+  margin:0;
+  color:#071f3d;
+  font-size:52px;
+  line-height:.96;
+  letter-spacing:-.04em;
+}
+.crewe-journey-heading p{
+  margin:0;
+  max-width:640px;
+  color:#5b6c7d;
+  font-size:17px;
+  line-height:1.55;
+}
+.crewe-journey-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:34px!important;
+  width:100%;
+}
+.crewe-journey-card{
+  display:block!important;
+  min-width:0!important;
+}
+.crewe-journey-image{
+  display:block!important;
+  width:100%!important;
+  aspect-ratio:16/10;
+  min-height:240px;
+  background-size:cover!important;
+  background-position:center!important;
+}
+.journey-issue-image{background-image:url("../assets/images/crewe-hero.jpg")!important}
+.journey-story-image{background-image:url("../assets/images/ben-area.jpg")!important}
+.journey-event-image{background-image:url("../assets/images/ben-home-intro.jpg")!important}
+
+.crewe-journey-copy{padding-top:17px}
+.crewe-journey-type{
+  margin:0 0 7px!important;
+  color:#f54436!important;
+  font-size:13px!important;
+  font-weight:900!important;
+}
+.crewe-journey-copy h3{
+  margin:0 0 10px!important;
+  font-size:28px!important;
+  line-height:1.04!important;
+  letter-spacing:-.03em!important;
+}
+.crewe-journey-copy h3 a{
+  color:#071f3d!important;
+  text-decoration:none!important;
+}
+.crewe-journey-copy > p:not(.crewe-journey-type){
+  margin:0 0 14px!important;
+  color:#596b7c!important;
+  font-size:15.5px!important;
+  line-height:1.52!important;
+}
+.crewe-journey-link{
+  color:#f54436!important;
+  font-weight:900!important;
+  text-decoration:none!important;
+}
+@media(max-width:1000px){
+  .crewe-journey-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:700px){
+  .crewe-journey-heading{grid-template-columns:1fr!important;gap:14px}
+  .crewe-journey-grid{grid-template-columns:1fr!important;gap:38px!important}
+}
+</style>
+
 </head>
 <body class="local-journey-page">
 <div class="site-shell">
@@ -591,6 +685,51 @@ body.local-journey-page .leaflet-popup-close-button{
     <h1>Ben in Crewe.</h1>
     </div>
 </section>
+
+<section class="crewe-journey-section">
+  <div class="container">
+    <div class="crewe-journey-heading">
+      <h2>Explore Crewe.</h2>
+      <p>See the local issues Ben is working on, what he is hearing from people in the town and where you can meet him next.</p>
+    </div>
+
+    <div class="crewe-journey-grid">
+      <article class="crewe-journey-card">
+        <a class="crewe-journey-image journey-issue-image" href="crewe-transport.html"></a>
+        <div class="crewe-journey-copy">
+          <p class="crewe-journey-type">Local issue</p>
+          <h3><a href="crewe-transport.html">Getting Crewe moving</a></h3>
+          <p>Better buses, easier journeys and making more of Crewe’s position at the heart of the rail network.</p>
+          <a class="crewe-journey-link" href="crewe-transport.html">Explore the issue →</a>
+        </div>
+      </article>
+
+      <article class="crewe-journey-card">
+        <a class="crewe-journey-image journey-story-image" href="crewe-story.html"></a>
+        <div class="crewe-journey-copy">
+          <p class="crewe-journey-type">From the campaign</p>
+          <h3><a href="crewe-story.html">What Ben is hearing in Crewe</a></h3>
+          <p>Residents talk about development, infrastructure and what growth should mean for the people already here.</p>
+          <a class="crewe-journey-link" href="crewe-story.html">Read the story →</a>
+        </div>
+      </article>
+
+      <article class="crewe-journey-card">
+        <a class="crewe-journey-image journey-event-image" href="crewe-event.html"></a>
+        <div class="crewe-journey-copy">
+          <p class="crewe-journey-type">Next event</p>
+          <h3><a href="crewe-event.html">Crewe town centre walkabout</a></h3>
+          <p>Meet Ben in Crewe, speak to the campaign and tell him directly what you want the new mayor to focus on.</p>
+          <a class="crewe-journey-link" href="crewe-event.html">See the event →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+
 
 <section class="local-map-section" id="map">
   <div class="container">
