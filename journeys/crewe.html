@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Ben in Crewe | Back Ben for Mayor</title>
-  <link rel="stylesheet" href="../assets/css/site.css?v=20260822-1028-bulletproof">
+  <link rel="stylesheet" href="../assets/css/site.css?v=20260822-1033-crewe-clean">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -371,6 +371,195 @@ body.local-journey-page{background:#f7f2e8;color:#071f3d}
   .local-survey-copy h2,.local-campaigns-heading h2,.local-signup-grid h2{font-size:39px}
 }
 </style>
+
+<style id="crewe-final-cleanup">
+/* HERO: only title, cleaner fade-through header */
+body.local-journey-page .site-header{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  background:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  box-shadow:none!important;
+  z-index:10000!important;
+}
+
+body.local-journey-page .site-header-inner{
+  background:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+body.local-journey-page .local-hero{
+  min-height:500px!important;
+}
+
+body.local-journey-page .local-hero-content{
+  min-height:500px!important;
+  justify-content:flex-end!important;
+  padding-bottom:46px!important;
+}
+
+body.local-journey-page .local-hero h1{
+  max-width:700px!important;
+  margin:0!important;
+  color:#fff!important;
+  font-size:clamp(62px,6vw,84px)!important;
+  line-height:.92!important;
+  letter-spacing:-.055em!important;
+}
+
+body.local-journey-page .local-hero-fade{
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(3,14,29,.97) 0%,
+      rgba(3,14,29,.90) 12%,
+      rgba(3,14,29,.68) 26%,
+      rgba(3,14,29,.30) 42%,
+      rgba(3,14,29,.08) 56%,
+      transparent 67%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(3,14,29,.84) 0%,
+      rgba(3,14,29,.55) 35%,
+      rgba(3,14,29,.14) 68%,
+      transparent 100%
+    )!important;
+}
+
+/* Remove old hero extras even if cached markup survives */
+body.local-journey-page .local-hero-copy,
+body.local-journey-page .local-hero-actions,
+body.local-journey-page .local-hero-priorities{
+  display:none!important;
+}
+
+/* Map spacing */
+body.local-journey-page .local-map-section{
+  padding-top:44px!important;
+}
+
+body.local-journey-page .local-map-section .container > p:not(.local-map-demo-note){
+  display:none!important;
+}
+
+/* Centred filters */
+body.local-journey-page .local-map-toolbar{
+  display:flex!important;
+  justify-content:center!important;
+  align-items:center!important;
+  gap:34px!important;
+  margin:0 auto 24px!important;
+  width:100%!important;
+}
+
+/* Popup: wider, shorter, campaign-card feel */
+body.local-journey-page .leaflet-popup-content-wrapper{
+  width:auto!important;
+  min-width:330px!important;
+  max-width:380px!important;
+  border-radius:0!important;
+  background:#fff!important;
+  box-shadow:0 16px 38px rgba(7,31,61,.22)!important;
+}
+
+body.local-journey-page .leaflet-popup-content{
+  width:auto!important;
+  min-width:0!important;
+  margin:0!important;
+}
+
+body.local-journey-page .crewe-map-popup{
+  width:330px!important;
+  max-width:330px!important;
+  box-sizing:border-box!important;
+  padding:20px 22px 19px!important;
+}
+
+body.local-journey-page .crewe-map-popup-type{
+  margin:0 0 8px!important;
+  color:#f54436!important;
+  font-size:11px!important;
+  line-height:1!important;
+  font-weight:900!important;
+  letter-spacing:.10em!important;
+}
+
+body.local-journey-page .crewe-map-popup h3{
+  margin:0 0 10px!important;
+  color:#071f3d!important;
+  font-size:26px!important;
+  line-height:1.04!important;
+  letter-spacing:-.025em!important;
+  word-break:normal!important;
+  overflow-wrap:normal!important;
+}
+
+body.local-journey-page .crewe-map-popup p{
+  margin:0 0 12px!important;
+  color:#506278!important;
+  font-size:14px!important;
+  line-height:1.48!important;
+  word-break:normal!important;
+  overflow-wrap:normal!important;
+}
+
+body.local-journey-page .crewe-map-popup-meta{
+  color:#8a97a5!important;
+  font-size:12px!important;
+  line-height:1.3!important;
+}
+
+body.local-journey-page .leaflet-popup-close-button{
+  top:8px!important;
+  right:9px!important;
+  width:28px!important;
+  height:28px!important;
+  font-size:24px!important;
+  color:#667482!important;
+}
+
+@media(max-width:700px){
+  body.local-journey-page .local-hero{
+    min-height:430px!important;
+  }
+
+  body.local-journey-page .local-hero-content{
+    min-height:430px!important;
+    padding-bottom:28px!important;
+  }
+
+  body.local-journey-page .local-hero h1{
+    font-size:52px!important;
+  }
+
+  body.local-journey-page .local-map-toolbar{
+    gap:18px!important;
+    flex-wrap:wrap!important;
+  }
+
+  body.local-journey-page .leaflet-popup-content-wrapper{
+    min-width:260px!important;
+    max-width:290px!important;
+  }
+
+  body.local-journey-page .crewe-map-popup{
+    width:270px!important;
+    max-width:270px!important;
+    padding:18px 19px!important;
+  }
+
+  body.local-journey-page .crewe-map-popup h3{
+    font-size:22px!important;
+  }
+}
+</style>
+
 </head>
 <body class="local-journey-page">
 <div class="site-shell">
@@ -401,27 +590,12 @@ body.local-journey-page{background:#f7f2e8;color:#071f3d}
   <div class="local-hero-fade"></div>
   <div class="container local-hero-content">
     <h1>Ben in Crewe.</h1>
-    <p class="local-hero-copy">Local priorities. Local action. A mayor who listens.</p>
-    <div class="local-hero-actions">
-      <a class="btn btn-red" href="#map">Explore the map</a>
-      <a class="local-text-link" href="#local-signup">Get Crewe updates →</a>
     </div>
-
-    <div class="local-hero-priorities">
-      <div class="local-hero-priorities-title">What matters in Crewe</div>
-      <div class="local-hero-priorities-list">
-        <span>Better transport</span>
-        <span>Stronger town centre</span>
-        <span>Growth with infrastructure</span>
-      </div>
-    </div>
-
-  </div>
 </section>
 
 <section class="local-map-section" id="map">
   <div class="container">
-    <p>Campaign visits, local issues and upcoming activity — all in one place.</p>
+    
     </div>
 
     <div class="local-map-toolbar">
@@ -576,7 +750,7 @@ body.local-journey-page{background:#f7f2e8;color:#071f3d}
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="../assets/js/site.js?v=20260822-1028-bulletproof"></script>
+<script src="../assets/js/site.js?v=20260822-1033-crewe-clean"></script>
 <script>
 (function(){
   if (!window.L) return;
