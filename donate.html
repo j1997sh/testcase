@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Donate | Back Ben for Mayor</title>
-<link rel="stylesheet" href="assets/css/site.css?v=20260822-unframed-v1">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-donation-face-v4">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -190,6 +190,277 @@ body:not(.home-page) .site-header{
 }
 </style>
 
+
+<style id="donation-journey-redesign-v1">
+body:has(.donation-hero) .site-header{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  z-index:1000!important;
+  background:linear-gradient(to bottom,rgba(4,20,39,.96) 0%,rgba(4,20,39,.80) 58%,rgba(4,20,39,.34) 82%,rgba(4,20,39,0) 100%)!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+body:has(.donation-hero) .site-header-inner{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+.donation-journey-page{
+  background:#f7f2e8;
+  color:#071f3d;
+}
+
+.donation-hero{
+  position:relative;
+  min-height:500px;
+  overflow:hidden;
+  color:#fff;
+}
+
+.donation-hero-bg{
+  position:absolute;
+  inset:0;
+  background:url("assets/images/ben-home-hero.jpg") center 10%/cover no-repeat;
+}
+
+.donation-hero-fade{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(to bottom,rgba(3,18,36,.62) 0%,rgba(3,18,36,.16) 48%,rgba(3,18,36,.76) 100%),
+    linear-gradient(90deg,rgba(3,18,36,.78) 0%,rgba(3,18,36,.36) 40%,rgba(3,18,36,.04) 76%,transparent 100%);
+}
+
+.donation-hero-inner{
+  position:relative;
+  z-index:2;
+  min-height:500px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding-bottom:46px;
+}
+
+.donation-hero h1{
+  margin:0 0 10px;
+  color:#fff;
+  font-size:clamp(64px,7vw,98px);
+  line-height:.9;
+  letter-spacing:-.055em;
+}
+
+.donation-hero p{
+  margin:0;
+  max-width:720px;
+  color:#e3e9ef;
+  font-size:20px;
+  line-height:1.45;
+}
+
+.donation-main{
+  padding:72px 0 78px;
+}
+
+.donation-main-grid{
+  display:grid;
+  grid-template-columns:.78fr 1.22fr;
+  gap:76px;
+  align-items:start;
+}
+
+.donation-copy{
+  max-width:470px;
+}
+
+.donation-copy h2{
+  margin:0 0 18px;
+  font-size:50px;
+  line-height:.97;
+  letter-spacing:-.04em;
+}
+
+.donation-copy p{
+  margin:0 0 16px;
+  color:#586a7b;
+  font-size:18px;
+  line-height:1.58;
+}
+
+.donation-form{
+  display:grid;
+  gap:16px;
+}
+
+.donation-amounts{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+
+.donation-amounts button{
+  min-height:64px;
+  border:1px solid #b9b1a6;
+  background:#fff;
+  color:#071f3d;
+  font:inherit;
+  font-size:20px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.donation-amounts button:hover,
+.donation-amounts button.is-selected{
+  border-color:#f54436;
+  background:#f54436;
+  color:#fff;
+}
+
+.donation-details{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.donation-details input{
+  height:56px;
+  border:1px solid #c8c0b5;
+  background:#fff;
+  padding:0 14px;
+  font:inherit;
+}
+
+.donation-submit{
+  min-height:64px;
+  font-size:18px;
+}
+
+.donation-alternative{
+  background:#071f3d;
+  color:#fff;
+  padding:62px 0;
+}
+
+.donation-alternative-grid{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:50px;
+  align-items:center;
+}
+
+.donation-alternative h2{
+  margin:0 0 10px;
+  font-size:46px;
+  line-height:.97;
+}
+
+.donation-alternative p{
+  margin:0;
+  max-width:720px;
+  color:#cbd6df;
+  font-size:17px;
+  line-height:1.55;
+}
+
+.donation-existing{
+  background:#fff;
+  padding:68px 0;
+}
+
+.donation-existing-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:start;
+}
+
+.donation-existing-copy h2{
+  margin:0 0 14px;
+  font-size:46px;
+  line-height:.97;
+  letter-spacing:-.035em;
+}
+
+.donation-existing-copy p{
+  margin:0;
+  color:#596b7c;
+  font-size:17px;
+  line-height:1.6;
+}
+
+.donation-existing-actions{
+  display:grid;
+  gap:14px;
+  padding-top:4px;
+}
+
+.donation-existing-actions a{
+  color:#071f3d;
+  font-size:24px;
+  font-weight:900;
+  text-decoration:none;
+}
+
+.donation-existing-actions a:hover{
+  color:#f54436;
+}
+
+
+@media(max-width:900px){
+  .donation-main-grid,
+  .donation-existing-grid,
+
+  .donation-alternative-grid{
+    grid-template-columns:1fr;
+    gap:26px;
+  }
+
+}
+
+@media(max-width:650px){
+  .donation-hero,
+  .donation-hero-inner{
+    min-height:470px;
+  }
+
+  .donation-hero h1{
+    font-size:54px;
+  }
+
+  .donation-hero p{
+    font-size:17px;
+  }
+
+  .donation-amounts{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .donation-details{
+    grid-template-columns:1fr;
+  }
+
+  .donation-copy h2,
+  .donation-alternative h2,
+  .donation-existing-copy h2{
+    font-size:40px;
+  }
+}
+</style>
+
+
+<style id="donation-hero-crop-v2">
+.donation-hero-bg{
+  background-position:center 10% !important;
+}
+@media(max-width:800px){
+  .donation-hero-bg{
+    background-position:center 8% !important;
+  }
+}
+</style>
+
 </head>
 <body class="inner-page">
 <div class="site-shell">
@@ -215,10 +486,77 @@ body:not(.home-page) .site-header{
   </div>
 </header>
 
-<main>
-<section class="inner-hero"><div class="container"><h1>Help the campaign go further.</h1><p>Support local literature, events, digital campaigning and volunteer activity.</p></div></section>
-<section class="section cream"><div class="container split"><div class="copy-block"><h2>Back the campaign</h2><p>Every contribution helps Ben's campaign reach more people across Cheshire and Warrington.</p></div><div class="form-panel"><div class="form-grid"><input placeholder="First name"><input placeholder="Last name"><input placeholder="Email address"><input placeholder="Postcode"><a class="btn btn-red" href="#">Continue</a></div></div></div></section>
+
+<main class="donation-journey-page">
+
+  <section class="donation-hero">
+    <div class="donation-hero-bg"></div>
+    <div class="donation-hero-fade"></div>
+    <div class="container donation-hero-inner">
+      <h1>Back Ben’s campaign.</h1>
+      <p>Your support helps the campaign reach more people across Cheshire & Warrington.</p>
+    </div>
+  </section>
+
+  <section class="donation-main">
+    <div class="container donation-main-grid">
+
+      <div class="donation-copy">
+        <h2>Help us build the campaign.</h2>
+        <p>Donations help fund the practical things a campaign needs to grow — local literature, digital advertising, events and getting Ben out speaking to more people.</p>
+        <p>Choose an amount below. On the live site, this would connect directly to the campaign’s donation processor and CRM.</p>
+      </div>
+
+      <form class="donation-form">
+        <div class="donation-amounts">
+          <button type="button">£10</button>
+          <button type="button">£25</button>
+          <button type="button">£50</button>
+          <button type="button">£100</button>
+          <button type="button">£250</button>
+          <button type="button">Other</button>
+        </div>
+
+        <div class="donation-details">
+          <input type="text" placeholder="First name">
+          <input type="text" placeholder="Last name">
+          <input type="email" placeholder="Email address">
+          <input type="text" placeholder="Postcode">
+        </div>
+
+        <button type="button" class="btn btn-red donation-submit">Donate to the campaign</button>
+      </form>
+
+    </div>
+  </section>
+
+  <section class="donation-alternative">
+    <div class="container donation-alternative-grid">
+      <div>
+        <h2>Can’t donate right now?</h2>
+        <p>That’s fine — there are plenty of other ways to make a difference. Give an hour, join an event, deliver leaflets or help the campaign online.</p>
+      </div>
+      <a class="btn btn-red" href="volunteer.html">Give your time instead →</a>
+    </div>
+  </section>
+
+  <section class="donation-existing">
+    <div class="container donation-existing-grid">
+      <div class="donation-existing-copy">
+        <h2>Already backed Ben?</h2>
+        <p>If you’ve already donated, we don’t need to ask you again. The next most useful thing might be helping locally, coming to an event or sharing the campaign with someone else.</p>
+      </div>
+
+      <div class="donation-existing-actions">
+        <a href="volunteer.html">Volunteer locally →</a>
+        <a href="events.html">Find an event →</a>
+        <a href="area.html">See Ben in your area →</a>
+      </div>
+    </div>
+  </section>
+
 </main>
+
 
 
 <footer class="campaign-footer">
@@ -274,5 +612,17 @@ body:not(.home-page) .site-header{
 
 </div>
 <script src="assets/js/site.js?v=20260821-1212"></script>
+
+<script id="donation-journey-js">
+document.querySelectorAll('.donation-amounts button').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.donation-amounts button').forEach(function(x){
+      x.classList.remove('is-selected');
+    });
+    btn.classList.add('is-selected');
+  });
+});
+</script>
+
 </body>
 </html>
