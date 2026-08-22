@@ -8680,3 +8680,976 @@ body.volunteer-survey-page .volunteer-form-heading h2{
       ) !important;
   }
 }
+
+/* ===== HIDDEN LOCAL JOURNEY ===== */
+.local-journey-page{background:#f7f2e8}
+.local-journey-page .site-header{position:absolute!important;top:0!important;left:0!important;right:0!important;background:transparent!important;z-index:10000!important;border:0!important;box-shadow:none!important}
+.local-journey-page .site-header-inner{background:transparent!important}
+.local-journey-page .site-header::before,.local-journey-page .site-header::after{display:none!important}
+.local-hero{position:relative;min-height:560px;overflow:hidden;background:#06182f}
+.local-hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#123f74 0%,#0f68aa 48%,#06182f 100%)}
+.local-hero-bg:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 55%,rgba(240,68,54,.34),transparent 28%)}
+.local-hero-fade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,15,31,.96),rgba(4,15,31,.62) 18%,rgba(4,15,31,.16) 38%,transparent 58%),linear-gradient(90deg,rgba(4,15,31,.94),rgba(4,15,31,.56) 40%,rgba(4,15,31,.06) 72%,transparent)}
+.local-hero-content{position:relative;z-index:3;min-height:560px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding-bottom:58px}
+.local-eyebrow,.local-section-kicker{margin:0 0 12px;color:#f04436;font-size:13px;font-weight:900;letter-spacing:.14em}
+.local-hero h1{margin:0 0 14px;color:#fff;font-size:76px;line-height:.92;letter-spacing:-.055em}
+.local-hero-copy{max-width:650px;margin:0 0 26px;color:#edf3f7;font-size:22px;line-height:1.35;font-weight:650}
+.local-hero-actions{display:flex;align-items:center;gap:22px}
+.local-text-link{color:#fff;text-decoration:none;font-weight:850}
+.local-map-section{background:#f7f2e8;padding:68px 0 74px}
+.local-section-heading{display:grid;grid-template-columns:1fr .8fr;gap:58px;align-items:end;margin-bottom:26px}
+.local-section-heading h2,.local-hearing-heading h2,.local-feature-copy h2,.local-signup-grid h2{margin:0;color:#071f3d;font-size:52px;line-height:.96;letter-spacing:-.045em}
+.local-section-heading>p{margin:0;color:#506278;font-size:18px;line-height:1.5}
+.local-map-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.local-map-filter{min-height:44px;padding:0 16px;border:1px solid #cbd2da;background:transparent;color:#071f3d;font-weight:850;cursor:pointer}
+.local-map-filter.is-active{background:#071f3d;color:#fff;border-color:#071f3d}
+.local-map-layout{display:grid;grid-template-columns:1.45fr .55fr;min-height:520px;background:#fff;border:1px solid rgba(7,31,61,.14)}
+.local-map-canvas{min-height:520px;width:100%}
+.local-map-story{padding:38px 34px;background:#071f3d;color:#fff;display:flex;flex-direction:column;justify-content:center}
+.local-map-story-tag{margin-bottom:12px;color:#f04436;font-size:12px;font-weight:900;letter-spacing:.13em}
+.local-map-story h3{margin:0 0 16px;color:#fff;font-size:34px;line-height:1;letter-spacing:-.035em}
+.local-map-story p{margin:0 0 18px;color:#d5dee7;line-height:1.55}
+.local-map-story-meta{color:#93a7ba;font-size:13px}.local-map-demo-note{margin:12px 0 0;color:#718094;font-size:12px}
+.local-map-pin-wrap{background:transparent!important;border:0!important}.local-map-pin{display:block;width:22px;height:22px;border:4px solid #fff;border-radius:50%;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.pin-visit{background:#f04436}.pin-issue{background:#0d6fb8}.pin-event{background:#071f3d}
+.local-hearing-section{padding:74px 0;background:#fff}.local-hearing-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:78px;align-items:start}
+.local-hearing-copy p{margin:0 0 24px;color:#40536a;font-size:18px;line-height:1.6}.local-hearing-copy strong{color:#071f3d}
+.local-feature-story{padding:70px 0;background:#f7f2e8}.local-feature-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:66px;align-items:center}
+.local-feature-media{background:#fff;padding:10px 10px 15px;box-shadow:0 13px 28px rgba(15,31,50,.14);transform:rotate(-1deg)}
+.local-feature-placeholder{min-height:350px;display:grid;place-items:center;background:radial-gradient(circle at 30% 45%,rgba(240,68,54,.18),transparent 28%),linear-gradient(135deg,#143d70,#1879bd);color:#fff;font-size:13px;font-weight:900;letter-spacing:.07em}
+.local-feature-copy p{color:#4c5f75;font-size:18px;line-height:1.55}.local-editorial-link{color:#f04436;font-weight:900;text-decoration:none}
+.local-signup-band{position:relative;overflow:hidden;background:#06182f;color:#fff;padding:68px 0 74px}.local-signup-band:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 50%,rgba(240,68,54,.18),transparent 28%)}
+.local-signup-grid{position:relative;z-index:2;display:grid;grid-template-columns:.72fr 1.28fr;gap:68px;align-items:start}.local-signup-grid h2{color:#fff;margin-bottom:14px}.local-signup-grid p{color:#c9d5df;font-size:17px;line-height:1.5}
+.local-signup-form{display:grid;gap:10px}.local-signup-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.local-signup-form input{height:58px;border:0;background:#f7f2e8;color:#071f3d;padding:0 16px;font:inherit}.local-signup-form button{min-height:62px;border:0;background:#f04436;color:#fff;font-size:19px;font-weight:900}
+@media(max-width:900px){.local-section-heading,.local-map-layout,.local-hearing-grid,.local-feature-grid,.local-signup-grid{grid-template-columns:1fr}.local-map-story{min-height:220px}.local-hearing-grid,.local-feature-grid,.local-signup-grid{gap:34px}}
+@media(max-width:700px){.local-hero{min-height:520px}.local-hero-content{min-height:520px;padding:0 22px 34px}.local-hero h1{font-size:52px}.local-hero-copy{font-size:18px}.local-hero-actions{flex-direction:column;align-items:flex-start;gap:14px}.local-map-section,.local-hearing-section,.local-feature-story,.local-signup-band{padding:48px 22px}.local-map-section .container,.local-hearing-section .container,.local-feature-story .container,.local-signup-band .container{width:100%}.local-section-heading h2,.local-hearing-heading h2,.local-feature-copy h2,.local-signup-grid h2{font-size:40px}.local-map-canvas{min-height:420px}.local-feature-media{transform:none}.local-feature-placeholder{min-height:250px}.local-signup-two{grid-template-columns:1fr}}
+
+
+/* =========================================================
+   CREWE LOCAL JOURNEY — REFINED CAMPAIGN DESIGN
+   ========================================================= */
+
+.local-journey-page .local-hero{
+  min-height:520px !important;
+  background:#071f3d !important;
+}
+
+.local-journey-page .local-hero-bg{
+  background:
+    radial-gradient(circle at 18% 56%, rgba(240,68,54,.24), transparent 27%),
+    linear-gradient(125deg,#102e54 0%,#0d4f82 48%,#071f3d 100%) !important;
+}
+
+.local-journey-page .local-hero-fade{
+  background:
+    linear-gradient(to bottom,
+      rgba(4,15,31,.96) 0%,
+      rgba(4,15,31,.74) 18%,
+      rgba(4,15,31,.28) 36%,
+      transparent 58%),
+    linear-gradient(90deg,
+      rgba(4,15,31,.94) 0%,
+      rgba(4,15,31,.60) 38%,
+      rgba(4,15,31,.14) 70%,
+      transparent 100%) !important;
+}
+
+.local-journey-page .local-hero-content{
+  min-height:520px !important;
+  max-width:1180px !important;
+  padding-bottom:50px !important;
+}
+
+.local-journey-page .local-hero h1{
+  max-width:760px !important;
+  font-size:72px !important;
+  line-height:.94 !important;
+  letter-spacing:-.055em !important;
+}
+
+.local-journey-page .local-hero-copy{
+  max-width:690px !important;
+  font-size:20px !important;
+  line-height:1.42 !important;
+}
+
+.local-journey-page .local-hero-actions{
+  margin-top:4px !important;
+}
+
+.local-journey-page .local-map-section{
+  padding:62px 0 70px !important;
+}
+
+.local-journey-page .local-section-heading{
+  max-width:1050px;
+  grid-template-columns:1fr .72fr !important;
+  gap:54px !important;
+  margin-bottom:26px !important;
+}
+
+.local-journey-page .local-section-heading h2,
+.local-journey-page .local-hearing-heading h2,
+.local-journey-page .local-feature-copy h2,
+.local-journey-page .local-signup-grid h2{
+  font-size:50px !important;
+}
+
+.local-map-intro-line{
+  display:flex;
+  gap:28px;
+  flex-wrap:wrap;
+  margin:0 0 18px;
+  padding:0 0 18px;
+  border-bottom:1px solid rgba(7,31,61,.12);
+  color:#55667a;
+  font-size:14px;
+  font-weight:800;
+}
+
+.local-map-intro-line span{
+  position:relative;
+}
+
+.local-map-intro-line span + span::before{
+  content:"";
+  position:absolute;
+  left:-15px;
+  top:50%;
+  width:3px;
+  height:3px;
+  border-radius:50%;
+  background:#f04436;
+  transform:translateY(-50%);
+}
+
+/* Filters should feel like editorial controls, not app buttons */
+.local-map-toolbar{
+  margin-bottom:16px !important;
+}
+
+.local-map-filter{
+  min-height:auto !important;
+  padding:8px 0 !important;
+  margin-right:22px !important;
+  border:0 !important;
+  border-bottom:2px solid transparent !important;
+  background:transparent !important;
+  color:#68798b !important;
+  font-size:14px !important;
+  font-weight:850 !important;
+}
+
+.local-map-filter.is-active{
+  color:#071f3d !important;
+  border-bottom-color:#f04436 !important;
+}
+
+/* Main gem: map becomes an editorial object */
+.local-map-layout{
+  grid-template-columns:1.52fr .48fr !important;
+  min-height:540px !important;
+  border:0 !important;
+  background:#fff !important;
+  box-shadow:0 16px 34px rgba(20,36,54,.13) !important;
+}
+
+.local-map-canvas{
+  min-height:540px !important;
+}
+
+.local-map-story{
+  position:relative;
+  padding:44px 38px !important;
+  background:#071f3d !important;
+}
+
+.local-map-story::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:radial-gradient(circle at 10% 20%,rgba(240,68,54,.12),transparent 28%);
+}
+
+.local-map-story > *{
+  position:relative;
+  z-index:2;
+}
+
+.local-map-story-tag{
+  margin-bottom:10px !important;
+}
+
+.local-map-story h3{
+  font-size:36px !important;
+  line-height:.98 !important;
+}
+
+.local-map-story p{
+  font-size:16px !important;
+}
+
+.local-map-demo-note{
+  margin-top:14px !important;
+}
+
+/* Cream/white editorial rhythm */
+.local-hearing-section{
+  padding:70px 0 !important;
+  background:#fff !important;
+}
+
+.local-hearing-grid{
+  max-width:1080px !important;
+  gap:72px !important;
+}
+
+.local-hearing-copy p{
+  font-size:17px !important;
+}
+
+.local-feature-story{
+  padding:66px 0 !important;
+}
+
+.local-feature-grid{
+  max-width:1080px !important;
+  gap:60px !important;
+}
+
+.local-feature-media{
+  padding:10px 10px 14px !important;
+  box-shadow:0 12px 28px rgba(15,31,50,.13) !important;
+}
+
+.local-feature-placeholder{
+  min-height:330px !important;
+}
+
+.local-feature-copy p{
+  font-size:17px !important;
+}
+
+/* Sign-up matches About/Volunteer */
+.local-signup-band{
+  padding:64px 0 70px !important;
+}
+
+.local-signup-grid{
+  max-width:1100px !important;
+  grid-template-columns:.8fr 1.2fr !important;
+  gap:62px !important;
+}
+
+.local-signup-form input{
+  height:60px !important;
+  background:#f7f2e8 !important;
+}
+
+.local-signup-form button{
+  min-height:64px !important;
+  font-size:18px !important;
+}
+
+/* Hide tiny uppercase visual language on this refined page */
+.local-journey-page .local-section-kicker,
+.local-journey-page .local-eyebrow{
+  display:none !important;
+}
+
+@media(max-width:900px){
+  .local-journey-page .local-section-heading,
+  .local-journey-page .local-map-layout,
+  .local-journey-page .local-hearing-grid,
+  .local-journey-page .local-feature-grid,
+  .local-journey-page .local-signup-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .local-map-story{
+    min-height:220px !important;
+  }
+}
+
+@media(max-width:700px){
+  .local-journey-page .local-hero{
+    min-height:480px !important;
+  }
+
+  .local-journey-page .local-hero-content{
+    min-height:480px !important;
+    padding:0 22px 30px !important;
+  }
+
+  .local-journey-page .local-hero h1{
+    font-size:50px !important;
+  }
+
+  .local-journey-page .local-hero-copy{
+    font-size:17px !important;
+  }
+
+  .local-map-intro-line{
+    gap:20px;
+  }
+
+  .local-map-layout{
+    box-shadow:none !important;
+  }
+
+  .local-map-canvas{
+    min-height:390px !important;
+  }
+
+  .local-map-story{
+    padding:30px 24px !important;
+  }
+
+  .local-journey-page .local-section-heading h2,
+  .local-journey-page .local-hearing-heading h2,
+  .local-journey-page .local-feature-copy h2,
+  .local-journey-page .local-signup-grid h2{
+    font-size:38px !important;
+  }
+}
+
+
+/* =========================================================
+   CREWE — MAP POPUPS + LOCAL SURVEY
+   ========================================================= */
+
+/* Map becomes the feature: no dashboard-style side panel */
+.local-map-layout.local-map-full{
+  display:block !important;
+  grid-template-columns:none !important;
+  min-height:560px !important;
+  background:#fff !important;
+  box-shadow:0 16px 34px rgba(20,36,54,.13) !important;
+}
+
+.local-map-full .local-map-canvas{
+  min-height:560px !important;
+  width:100% !important;
+}
+
+/* Leaflet popups styled like the campaign site */
+.local-journey-page .leaflet-popup-content-wrapper{
+  border-radius:0 !important;
+  background:#fff !important;
+  color:#071f3d !important;
+  box-shadow:0 14px 30px rgba(12,29,48,.20) !important;
+  padding:0 !important;
+}
+
+.local-journey-page .leaflet-popup-content{
+  margin:0 !important;
+  width:auto !important;
+}
+
+.local-journey-page .leaflet-popup-tip{
+  background:#fff !important;
+}
+
+.crewe-map-popup{
+  padding:22px 24px 20px;
+}
+
+.crewe-map-popup-type{
+  margin-bottom:8px;
+  color:#f04436;
+  font-size:11px;
+  line-height:1;
+  font-weight:900;
+  letter-spacing:.10em;
+}
+
+.crewe-map-popup h3{
+  margin:0 0 10px;
+  color:#071f3d;
+  font-size:24px;
+  line-height:1.02;
+  letter-spacing:-.03em;
+}
+
+.crewe-map-popup p{
+  margin:0 0 12px;
+  color:#4a5d73;
+  font-size:14px;
+  line-height:1.48;
+}
+
+.crewe-map-popup-meta{
+  color:#8795a4;
+  font-size:12px;
+}
+
+/* Crewe pulse survey */
+.local-survey-section{
+  padding:72px 0 78px;
+  background:#071f3d;
+  color:#fff;
+}
+
+.local-survey-grid{
+  max-width:1100px;
+  display:grid;
+  grid-template-columns:.72fr 1.28fr;
+  gap:68px;
+  align-items:start;
+}
+
+.local-survey-copy h2{
+  margin:0 0 18px;
+  color:#fff;
+  font-size:50px;
+  line-height:.96;
+  letter-spacing:-.045em;
+}
+
+.local-survey-copy p{
+  margin:0;
+  max-width:420px;
+  color:#cbd6e1;
+  font-size:17px;
+  line-height:1.55;
+}
+
+.local-survey-form{
+  display:grid;
+  gap:12px;
+}
+
+.local-survey-options{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.local-survey-options label{
+  display:flex;
+  align-items:center;
+  min-height:58px;
+  padding:0 16px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.035);
+  color:#fff;
+  cursor:pointer;
+}
+
+.local-survey-options input{
+  margin:0 12px 0 0;
+  accent-color:#f04436;
+}
+
+.local-survey-options span{
+  font-weight:750;
+}
+
+.local-survey-form textarea,
+.local-survey-form input[type="email"],
+.local-survey-form input[type="text"]{
+  width:100%;
+  border:0;
+  border-radius:0;
+  background:#f7f2e8;
+  color:#071f3d;
+  font:inherit;
+}
+
+.local-survey-form textarea{
+  padding:16px;
+  resize:vertical;
+}
+
+.local-survey-two{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.local-survey-two input{
+  height:58px;
+  padding:0 16px;
+}
+
+.local-survey-form button{
+  min-height:64px;
+  border:0;
+  background:#f04436;
+  color:#fff;
+  font-size:18px;
+  font-weight:900;
+}
+
+@media(max-width:900px){
+  .local-survey-grid{
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+}
+
+@media(max-width:700px){
+  .local-map-layout.local-map-full,
+  .local-map-full .local-map-canvas{
+    min-height:410px !important;
+  }
+
+  .local-survey-section{
+    padding:48px 22px 54px;
+  }
+
+  .local-survey-section .container{
+    width:100%;
+  }
+
+  .local-survey-copy h2{
+    font-size:39px;
+  }
+
+  .local-survey-options,
+  .local-survey-two{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* =========================================================
+   CREWE — REAL PHOTO HERO + FADE-THROUGH HEADER
+   ========================================================= */
+
+.local-crewe-page .local-hero,
+.local-journey-page .local-hero{
+  position:relative !important;
+  min-height:520px !important;
+  overflow:hidden !important;
+  background:#071f3d !important;
+}
+
+.local-journey-page .local-hero-photo{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center 48% !important;
+  z-index:0 !important;
+}
+
+/* Remove old generated gradient background layer if still styled */
+.local-journey-page .local-hero-bg{
+  display:none !important;
+}
+
+/* Header genuinely overlays the image */
+.local-journey-page .site-header{
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  width:100% !important;
+  margin:0 !important;
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  z-index:10000 !important;
+}
+
+.local-journey-page .site-header-inner{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+
+/* Strong dark fade at top for nav readability, lighter down the image */
+.local-journey-page .local-hero-fade{
+  position:absolute !important;
+  inset:0 !important;
+  z-index:1 !important;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(4,15,31,.96) 0%,
+      rgba(4,15,31,.84) 14%,
+      rgba(4,15,31,.54) 28%,
+      rgba(4,15,31,.18) 44%,
+      transparent 58%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(4,15,31,.82) 0%,
+      rgba(4,15,31,.50) 34%,
+      rgba(4,15,31,.16) 66%,
+      rgba(4,15,31,.04) 100%
+    ) !important;
+}
+
+.local-journey-page .local-hero-content{
+  position:relative !important;
+  z-index:2 !important;
+}
+
+@media(max-width:700px){
+  .local-journey-page .local-hero{
+    min-height:470px !important;
+  }
+
+  .local-journey-page .local-hero-photo{
+    object-position:center center !important;
+  }
+
+  .local-journey-page .local-hero-fade{
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(4,15,31,.96) 0%,
+        rgba(4,15,31,.80) 18%,
+        rgba(4,15,31,.42) 36%,
+        rgba(4,15,31,.10) 54%,
+        transparent 66%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(4,15,31,.72) 0%,
+        rgba(4,15,31,.35) 58%,
+        rgba(4,15,31,.08) 100%
+      ) !important;
+  }
+}
+
+
+/* =========================================================
+   CREWE — CLICKABLE MAP + CENTRED FILTERS + LOCAL CAMPAIGNS
+   ========================================================= */
+
+.local-journey-page .local-map-section{
+  padding-top:52px !important;
+}
+
+.local-journey-page .local-map-toolbar{
+  justify-content:center !important;
+  align-items:center !important;
+  gap:34px !important;
+  margin:0 auto 24px !important;
+  width:100% !important;
+  text-align:center !important;
+}
+
+.local-journey-page .local-map-filter{
+  margin:0 !important;
+  padding:9px 1px !important;
+  cursor:pointer !important;
+}
+
+/* Make pin hit areas comfortably clickable */
+.local-map-pin-wrap{
+  width:30px !important;
+  height:30px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  cursor:pointer !important;
+  pointer-events:auto !important;
+}
+
+.local-map-pin{
+  width:18px !important;
+  height:18px !important;
+  border:3px solid #fff !important;
+  cursor:pointer !important;
+  pointer-events:auto !important;
+}
+
+/* Make popups unmistakably interactive/editorial */
+.local-journey-page .leaflet-popup{
+  margin-bottom:12px !important;
+}
+
+.local-journey-page .leaflet-popup-content-wrapper{
+  border-radius:0 !important;
+  box-shadow:0 16px 36px rgba(7,31,61,.22) !important;
+}
+
+.crewe-map-popup{
+  padding:20px 22px 18px !important;
+}
+
+.crewe-map-popup h3{
+  margin:0 0 9px !important;
+  font-size:24px !important;
+  line-height:1.02 !important;
+}
+
+/* Three local campaigns */
+.local-campaigns-section{
+  background:#f7f2e8;
+  padding:72px 0 80px;
+}
+
+.local-campaigns-heading{
+  max-width:900px;
+  margin:0 0 36px;
+}
+
+.local-campaigns-heading h2{
+  margin:0 0 13px;
+  color:#071f3d;
+  font-size:50px;
+  line-height:.96;
+  letter-spacing:-.045em;
+}
+
+.local-campaigns-heading p{
+  max-width:720px;
+  margin:0;
+  color:#506278;
+  font-size:17px;
+  line-height:1.55;
+}
+
+.local-campaigns-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:22px;
+}
+
+.local-campaign-card{
+  background:#fff;
+  box-shadow:0 10px 26px rgba(20,36,54,.10);
+}
+
+.local-campaign-image{
+  aspect-ratio:16/10;
+  background-size:cover;
+  background-position:center;
+}
+
+.local-campaign-image-one{
+  background:
+    linear-gradient(rgba(7,31,61,.10),rgba(7,31,61,.10)),
+    url("../images/crewe-hero.jpg") center/cover;
+}
+
+.local-campaign-image-two{
+  background:
+    radial-gradient(circle at 28% 42%,rgba(240,68,54,.20),transparent 28%),
+    linear-gradient(135deg,#0c3964,#1681c0);
+}
+
+.local-campaign-image-three{
+  background:
+    radial-gradient(circle at 70% 28%,rgba(240,68,54,.17),transparent 24%),
+    linear-gradient(135deg,#143453,#0b678f);
+}
+
+.local-campaign-body{
+  padding:24px 24px 26px;
+}
+
+.local-campaign-body h3{
+  margin:0 0 10px;
+  color:#071f3d;
+  font-size:25px;
+  line-height:1.05;
+  letter-spacing:-.025em;
+}
+
+.local-campaign-body p{
+  margin:0 0 18px;
+  color:#506278;
+  font-size:15px;
+  line-height:1.55;
+}
+
+.local-campaign-body a{
+  color:#f04436;
+  text-decoration:none;
+  font-weight:900;
+}
+
+@media(max-width:900px){
+  .local-campaigns-grid{
+    grid-template-columns:1fr;
+  }
+
+  .local-campaign-card{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+  }
+
+  .local-campaign-image{
+    aspect-ratio:auto;
+    min-height:230px;
+  }
+}
+
+@media(max-width:700px){
+  .local-journey-page .local-map-toolbar{
+    gap:18px !important;
+  }
+
+  .local-journey-page .local-map-filter{
+    font-size:13px !important;
+  }
+
+  .local-campaigns-section{
+    padding:48px 22px 54px;
+  }
+
+  .local-campaigns-section .container{
+    width:100%;
+  }
+
+  .local-campaigns-heading h2{
+    font-size:39px;
+  }
+
+  .local-campaign-card{
+    display:block;
+  }
+
+  .local-campaign-image{
+    min-height:0;
+    aspect-ratio:16/10;
+  }
+}
+
+
+/* =========================================================
+   CREWE — HERO PRIORITIES + TRUE FADE HEADER
+   ========================================================= */
+
+/* Header should visually disappear into the hero photograph */
+.local-journey-page .site-header{
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  width:100% !important;
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  z-index:10000 !important;
+}
+
+.local-journey-page .site-header-inner{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+
+/* Give the navigation a dark photographic fade, not a blue bar */
+.local-journey-page .local-hero-fade{
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(3,14,29,.98) 0%,
+      rgba(3,14,29,.90) 11%,
+      rgba(3,14,29,.68) 23%,
+      rgba(3,14,29,.34) 37%,
+      rgba(3,14,29,.10) 50%,
+      transparent 62%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(3,14,29,.86) 0%,
+      rgba(3,14,29,.61) 34%,
+      rgba(3,14,29,.22) 62%,
+      rgba(3,14,29,.03) 100%
+    ) !important;
+}
+
+/* Slightly stronger left-side readability while keeping the photo visible */
+.local-journey-page .local-hero-content{
+  max-width:1180px !important;
+}
+
+.local-journey-page .local-hero h1{
+  margin-bottom:10px !important;
+}
+
+.local-journey-page .local-hero-copy{
+  margin-bottom:22px !important;
+  max-width:560px !important;
+  font-size:19px !important;
+}
+
+/* Integrated local priorities */
+.local-hero-priorities{
+  margin-top:30px;
+  max-width:760px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.35);
+  color:#fff;
+}
+
+.local-hero-priorities-title{
+  margin-bottom:9px;
+  font-size:16px;
+  line-height:1.1;
+  font-weight:900;
+}
+
+.local-hero-priorities-list{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:0;
+  color:#e8eef4;
+  font-size:15px;
+  line-height:1.3;
+  font-weight:750;
+}
+
+.local-hero-priorities-list span{
+  display:inline-flex;
+  align-items:center;
+}
+
+.local-hero-priorities-list span + span::before{
+  content:"";
+  width:4px;
+  height:4px;
+  margin:0 13px;
+  border-radius:50%;
+  background:#f04436;
+}
+
+/* We have moved this content into the hero; kill any old spacing remnants */
+.local-hearing-section{
+  display:none !important;
+}
+
+@media(max-width:700px){
+  .local-journey-page .local-hero-fade{
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(3,14,29,.98) 0%,
+        rgba(3,14,29,.88) 16%,
+        rgba(3,14,29,.58) 34%,
+        rgba(3,14,29,.24) 52%,
+        transparent 69%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(3,14,29,.72) 0%,
+        rgba(3,14,29,.35) 58%,
+        rgba(3,14,29,.08) 100%
+      ) !important;
+  }
+
+  .local-hero-priorities{
+    margin-top:24px;
+    max-width:100%;
+  }
+
+  .local-hero-priorities-list{
+    display:grid;
+    gap:6px;
+  }
+
+  .local-hero-priorities-list span + span::before{
+    display:none;
+  }
+}
