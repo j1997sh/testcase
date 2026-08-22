@@ -10413,3 +10413,95 @@ button.btn{
     right:auto!important;
   }
 }
+
+
+/* ============================================================
+   DEFINITIVE HEADER CLEANUP — no Home nav, universal mobile header
+   ============================================================ */
+
+/* The campaign logo is the Home route. Never show a separate Home nav item. */
+.site-primary-nav a[href="index.html"],
+.site-primary-nav a[href="./index.html"],
+.site-primary-nav a[href="../index.html"],
+.site-primary-nav a[href="/"],
+.site-primary-nav a[data-nav="home"]{
+  display:none!important;
+}
+
+@media(max-width:800px){
+
+  .site-header-inner{
+    position:relative!important;
+    min-height:104px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:flex-end!important;
+    padding:0 20px!important;
+  }
+
+  /* Exact logo selector used by the site */
+  .site-header-logo{
+    position:absolute!important;
+    left:50%!important;
+    top:50%!important;
+    right:auto!important;
+    transform:translate(-50%,-50%)!important;
+    margin:0!important;
+    z-index:20!important;
+  }
+
+  .site-header-logo img{
+    display:block!important;
+    width:86px!important;
+    max-width:86px!important;
+    height:auto!important;
+    margin:0!important;
+  }
+
+  /* Exact mobile menu selector used by the site */
+  .site-menu-button{
+    position:relative!important;
+    z-index:30!important;
+    margin:0 0 0 auto!important;
+    width:62px!important;
+    min-width:62px!important;
+    height:58px!important;
+    padding:0!important;
+    border:1px solid rgba(255,255,255,.55)!important;
+    background:rgba(4,20,39,.18)!important;
+    color:transparent!important;
+    font-size:0!important;
+    line-height:0!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+
+  .site-menu-button::before{
+    content:""!important;
+    display:block!important;
+    width:27px!important;
+    height:20px!important;
+    background:
+      linear-gradient(#fff,#fff) 0 0/100% 2px no-repeat,
+      linear-gradient(#fff,#fff) 0 50%/100% 2px no-repeat,
+      linear-gradient(#fff,#fff) 0 100%/100% 2px no-repeat!important;
+  }
+
+  .site-menu-button[aria-expanded="true"]::before{
+    width:27px!important;
+    height:27px!important;
+    background:
+      linear-gradient(#fff,#fff) 50% 50%/28px 2px no-repeat!important;
+    transform:rotate(45deg)!important;
+  }
+
+  .site-menu-button[aria-expanded="true"]::after{
+    content:""!important;
+    position:absolute!important;
+    width:28px!important;
+    height:2px!important;
+    background:#fff!important;
+    transform:rotate(-45deg)!important;
+  }
+}
