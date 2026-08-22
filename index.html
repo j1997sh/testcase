@@ -10,7 +10,7 @@
   <meta property="og:description" content="Back Ben for Mayor of Cheshire &amp; Warrington. Explore Ben’s plan, local campaign activity, events and ways to get involved.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/ben-home-hero.jpg">
-  <link rel="stylesheet" href="assets/css/site.css?v=20260822-news-home-fix-v5">
+  <link rel="stylesheet" href="assets/css/site.css?v=20260822-global-fade-v7">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -196,7 +196,7 @@ body:not(.home-page) .site-header{
 }
 </style>
 
-<style id="snag-global-header-fade">body:not(.home-page):not(.local-journey-page) .site-header{background:linear-gradient(100deg,#071a34 0%,#092b50 54%,#0b5d96 100%)!important}</style>
+
 <style id="home-alternating-section-fix-v2">
 .home-intro-feature.home-intro-split{
   background:#ffffff!important;
@@ -223,6 +223,36 @@ body:not(.home-page) .site-header{
 .home-area-simple{
   border-top:0!important;
   border-bottom:0!important;
+}
+</style>
+
+
+<style id="ABSOLUTE-FINAL-GLOBAL-HEADER-FADE">
+html body .site-header,
+html body.home-page .site-header,
+html body.local-journey-page .site-header,
+html body:has(main) .site-header{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  z-index:99999!important;
+  background:linear-gradient(
+    to bottom,
+    rgba(4,20,39,.96) 0%,
+    rgba(4,20,39,.78) 45%,
+    rgba(4,20,39,.36) 72%,
+    rgba(4,20,39,0) 100%
+  )!important;
+  border:0!important;
+  box-shadow:none!important;
+  transform:none!important;
+}
+html body .site-header .site-header-inner,
+html body:has(main) .site-header .site-header-inner{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
 }
 </style>
 
