@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Ben in Crewe | Back Ben for Mayor</title>
+  <link rel="stylesheet" href="../assets/css/site.css?v=20260822-1000-crewe-hero-priorities-fade">
+
+<style id="final-header-system">
+*{box-sizing:border-box}
+
+.site-header{
+  width:100%!important;
+  max-width:none!important;
+  z-index:9999!important;
+  overflow:visible!important;
+  border:0!important;
+
+  /* Explicitly neutralise the original legacy `header` rule */
+  left:0!important;
+  right:0!important;
+  top:0!important;
+  transform:none!important;
+  margin:0!important;
+}
+
+body.home-page .site-header{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  background:linear-gradient(to bottom,rgba(4,15,31,.88),rgba(4,15,31,.34),transparent)!important;
+}
+
+body:not(.home-page):not(.local-journey-page) .site-header{
+  position:relative!important;
+  left:0!important;
+  right:0!important;
+  top:0!important;
+  transform:none!important;
+  background:linear-gradient(100deg,#071a34 0%,#0a315e 55%,#0b72bd 100%)!important;
+}
+
+.site-header-inner{
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+  min-height:86px!important;
+  margin:0!important;
+  padding:0 32px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:24px!important;
+}
+
+.site-primary-nav{
+  display:flex!important;
+  position:static!important;
+  flex:0 1 auto!important;
+  min-width:0!important;
+  width:auto!important;
+  height:auto!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:clamp(14px,1.45vw,28px)!important;
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  visibility:visible!important;
+  opacity:1!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+}
+
+.site-primary-nav a{
+  display:inline-block!important;
+  flex:0 0 auto!important;
+  width:auto!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  color:#fff!important;
+  font-size:clamp(12px,.95vw,15px)!important;
+  line-height:1!important;
+  font-weight:800!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+
+.site-header-actions{
+  display:flex!important;
+  flex:0 0 auto!important;
+  align-items:center!important;
+  gap:12px!important;
+  margin:0!important;
+  padding:0!important;
+}
+
+.site-volunteer-button,
+.site-donate-button{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:52px!important;
+  padding:0 clamp(16px,1.55vw,25px)!important;
+  color:#fff!important;
+  font-size:clamp(12px,.95vw,15px)!important;
+  line-height:1!important;
+  font-weight:900!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+}
+
+.site-volunteer-button{
+  border:1px solid rgba(255,255,255,.72)!important;
+  background:rgba(255,255,255,.03)!important;
+}
+
+.site-donate-button{
+  border:1px solid #f04436!important;
+  background:#f04436!important;
+}
+
+.site-menu-button{display:none!important}
+.mobile-menu-actions{display:none!important}
+
+/* Tight desktop: compress rather than shove content offscreen */
+@media (max-width:1100px) and (min-width:801px){
+  .site-header-inner{padding:0 20px!important;gap:14px!important}
+  .site-primary-nav{gap:11px!important}
+  .site-primary-nav a{font-size:11.5px!important}
+  .site-header-actions{gap:8px!important}
+  .site-volunteer-button,.site-donate-button{
+    min-height:46px!important;
+    padding:0 13px!important;
+    font-size:11.5px!important;
+  }
+}
+
+/* One clean mobile breakpoint. */
+@media (max-width:800px){
+  .site-header-inner{
+    min-height:72px!important;
+    padding:10px 16px!important;
+    justify-content:flex-end!important;
+    position:relative!important;
+  }
+
+  .site-menu-button{
+    display:block!important;
+    width:auto!important;
+    min-width:106px!important;
+    height:52px!important;
+    border:1px solid rgba(255,255,255,.68)!important;
+    background:transparent!important;
+    color:#fff!important;
+    font-size:16px!important;
+    font-weight:900!important;
+  }
+
+  .site-header-actions{display:none!important}
+
+  .site-primary-nav{
+    display:none!important;
+    position:absolute!important;
+    top:100%!important;
+    left:0!important;
+    right:0!important;
+    width:100%!important;
+    padding:8px 18px 18px!important;
+    background:#061a31!important;
+    box-shadow:0 18px 35px rgba(0,0,0,.25)!important;
+    white-space:normal!important;
+  }
+
+  .site-primary-nav.open{display:block!important}
+
+  .site-primary-nav a{
+    display:block!important;
+    width:100%!important;
+    padding:15px 6px!important;
+    border-bottom:1px solid rgba(255,255,255,.11)!important;
+    font-size:16px!important;
+  }
+}
+</style>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""></head>
+<body class="local-journey-page">
+<div class="site-shell">
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-header-logo" href="../index.html" aria-label="Back Ben home"><img src="../assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor"></a>
+    <nav class="site-primary-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Ben</a>
+      <a href="../plan.html">My Plan</a>
+      <a href="../experience.html">Experience</a>
+      <a href="../news.html">News</a>
+      <a href="../events.html">Events</a>
+      <a href="../volunteer.html">Get Involved</a>
+    </nav>
+
+    <button class="site-menu-button" type="button" aria-expanded="false">Menu</button>
+
+    <div class="site-header-actions">
+      <a class="site-volunteer-button" href="../volunteer.html">Volunteer</a>
+      <a class="site-donate-button" href="../donate.html">Donate</a>
+    </div>
+  </div>
+</header>
+<main>
+<section class="local-hero">
+  <img class="local-hero-photo" src="../assets/images/crewe-hero.jpg" alt="Crewe town centre">
+  <div class="local-hero-fade"></div>
+  <div class="container local-hero-content">
+    <h1>Ben in Crewe.</h1>
+    <p class="local-hero-copy">Local priorities. Local action. A mayor who listens.</p>
+    <div class="local-hero-actions">
+      <a class="btn btn-red" href="#map">Explore the map</a>
+      <a class="local-text-link" href="#local-signup">Get Crewe updates →</a>
+    </div>
+
+    <div class="local-hero-priorities">
+      <div class="local-hero-priorities-title">What matters in Crewe</div>
+      <div class="local-hero-priorities-list">
+        <span>Better transport</span>
+        <span>Stronger town centre</span>
+        <span>Growth with infrastructure</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="local-map-section" id="map">
+  <div class="container">
+    <p>Campaign visits, local issues and upcoming activity — all in one place.</p>
+    </div>
+
+    <div class="local-map-toolbar">
+      <button class="local-map-filter is-active" data-filter="all">All</button>
+      <button class="local-map-filter" data-filter="visit">Ben's visits</button>
+      <button class="local-map-filter" data-filter="issue">Local issues</button>
+      <button class="local-map-filter" data-filter="event">Events</button>
+    </div>
+
+    <div class="local-map-layout local-map-full"><div id="crewe-map" class="local-map-canvas"></div></div>
+    <p class="local-map-demo-note">Demo content for the pitch — live campaign data can replace these example points.</p>
+  </div>
+</section>
+
+
+<section class="local-survey-section">
+  <div class="container local-survey-grid">
+    <div class="local-survey-copy">
+      <h2>What should Ben prioritise in Crewe?</h2>
+      <p>Tell Ben what matters most to you locally. This is the kind of quick survey someone arriving from a Crewe ad or postcode search could complete in under a minute.</p>
+    </div>
+
+    <form class="local-survey-form">
+      <div class="local-survey-options">
+        <label><input type="checkbox"><span>Transport and roads</span></label>
+        <label><input type="checkbox"><span>Town centre and high street</span></label>
+        <label><input type="checkbox"><span>Housing and development</span></label>
+        <label><input type="checkbox"><span>Jobs and local business</span></label>
+        <label><input type="checkbox"><span>Crime and antisocial behaviour</span></label>
+        <label><input type="checkbox"><span>Local services</span></label>
+      </div>
+
+      <textarea rows="4" placeholder="Anything else you want Ben to know? (optional)"></textarea>
+
+      <div class="local-survey-two">
+        <input type="email" placeholder="Email address">
+        <input type="text" placeholder="Postcode">
+      </div>
+
+      <button type="button">Send my priorities</button>
+    </form>
+  </div>
+</section>
+<section class="local-campaigns-section">
+  <div class="container">
+    <div class="local-campaigns-heading">
+      <h2>Local campaigns in Crewe.</h2>
+      <p>Three examples of how this page can surface live, local campaign activity rather than generic national messaging.</p>
+    </div>
+
+    <div class="local-campaigns-grid">
+      <article class="local-campaign-card">
+        <div class="local-campaign-image local-campaign-image-one"></div>
+        <div class="local-campaign-body">
+          <h3>Backing Crewe town centre</h3>
+          <p>Supporting local businesses, bringing empty units back into use and making the town centre a place people want to spend time in.</p>
+          <a href="#">See the campaign →</a>
+        </div>
+      </article>
+
+      <article class="local-campaign-card">
+        <div class="local-campaign-image local-campaign-image-two"></div>
+        <div class="local-campaign-body">
+          <h3>Better transport for Crewe</h3>
+          <p>Improving local connectivity and making sure major transport investment delivers for the people who live and work here.</p>
+          <a href="#">See the campaign →</a>
+        </div>
+      </article>
+
+      <article class="local-campaign-card">
+        <div class="local-campaign-image local-campaign-image-three"></div>
+        <div class="local-campaign-body">
+          <h3>Growth with infrastructure</h3>
+          <p>New homes and development should come with the roads, schools, GP capacity and services communities need.</p>
+          <a href="#">See the campaign →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="local-signup-band" id="local-signup">
+  <div class="container local-signup-grid">
+    <div>
+      <h2>Keep me updated about Crewe.</h2>
+      <p>Local campaign news, events and opportunities from Ben's campaign.</p>
+    </div>
+    <form class="local-signup-form">
+      <div class="local-signup-two">
+        <input type="text" placeholder="First name">
+        <input type="text" placeholder="Last name">
+      </div>
+      <div class="local-signup-two">
+        <input type="email" placeholder="Email address">
+        <input type="text" placeholder="Postcode">
+      </div>
+      <button type="button">Keep me updated</button>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="campaign-footer">
+  <div class="campaign-footer-top">
+    <div class="campaign-footer-brand">
+      <img class="campaign-footer-logo-image" src="../assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
+
+      <div class="campaign-footer-socials" aria-label="Social media">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="X">𝕏</a>
+        <a href="#" aria-label="TikTok">♪</a>
+      </div>
+    </div>
+
+    <div class="campaign-footer-links">
+      <div>
+        <h3>Campaign</h3>
+        <a href="../about.html">About Ben</a>
+        <a href="../plan.html">My Plan</a>
+        <a href="../experience.html">Experience</a>
+        <a href="../news.html">News</a>
+      </div>
+
+      <div>
+        <h3>Get involved</h3>
+        <a href="../events.html">Events</a>
+        <a href="../volunteer.html">Volunteer</a>
+        <a href="../donate.html">Donate</a>
+        <a href="../area.html">Ben in your area</a>
+      </div>
+    </div>
+
+    <div class="campaign-footer-cta">
+      <h3>Back Ben</h3>
+      <p>Help build a campaign that reaches every part of Cheshire & Warrington.</p>
+      <a class="campaign-footer-button" href="../volunteer.html">Join the campaign</a>
+    </div>
+  </div>
+
+  <div class="campaign-footer-bottom">
+    <div class="campaign-footer-legal">
+      <a href="#">Privacy</a>
+      <a href="#">Contact</a>
+      <a href="#">Promoted by</a>
+    </div>
+
+    <div class="campaign-footer-imprint">
+      <span>Promoted by [name] on behalf of Ben Fletcher, both at [campaign address].</span>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="../assets/js/site.js"></script>
+<script>
+(function(){
+  if (!window.L) return;
+
+  const map = L.map('crewe-map', {
+    scrollWheelZoom: false,
+    zoomControl: true
+  }).setView([53.0996, -2.4410], 13);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  const points = [
+    {
+      type: 'visit',
+      title: 'Crewe town centre visit',
+      label: "Ben's visit",
+      lat: 53.0992,
+      lng: -2.4418,
+      copy: 'Ben met local people and businesses to hear directly about the future of Crewe town centre.',
+      meta: 'Campaign visit · Demo'
+    },
+    {
+      type: 'issue',
+      title: 'Crewe Station & connectivity',
+      label: 'Local issue',
+      lat: 53.0894,
+      lng: -2.4329,
+      copy: 'Making sure transport investment improves everyday journeys and connects people to jobs and opportunity.',
+      meta: 'Transport · Demo'
+    },
+    {
+      type: 'issue',
+      title: 'Housing & local infrastructure',
+      label: 'Local issue',
+      lat: 53.1059,
+      lng: -2.4545,
+      copy: 'Local growth needs to come with roads, schools, GP capacity and the services communities rely on.',
+      meta: 'Housing · Demo'
+    },
+    {
+      type: 'event',
+      title: 'Crewe campaign meet-up',
+      label: 'Upcoming event',
+      lat: 53.1018,
+      lng: -2.4365,
+      copy: 'Meet Ben and the campaign team, hear the latest and tell us what matters most to you.',
+      meta: 'Upcoming · Demo'
+    }
+  ];
+
+  const layers = [];
+
+  function markerIcon(type) {
+    const cls =
+      type === 'visit' ? 'pin-visit' :
+      type === 'event' ? 'pin-event' :
+      'pin-issue';
+
+    return L.divIcon({
+      className: 'local-map-pin-wrap',
+      html: '<span class="local-map-pin ' + cls + '"></span>',
+      iconSize: [28, 28],
+      iconAnchor: [14, 14],
+      popupAnchor: [0, -12]
+    });
+  }
+
+  points.forEach((point) => {
+    const marker = L.marker(
+      [point.lat, point.lng],
+      {
+        icon: markerIcon(point.type),
+        keyboard: true,
+        riseOnHover: true
+      }
+    );
+
+    marker._localType = point.type;
+
+    marker.bindPopup(
+      '<div class="crewe-map-popup">' +
+        '<div class="crewe-map-popup-type">' + point.label.toUpperCase() + '</div>' +
+        '<h3>' + point.title + '</h3>' +
+        '<p>' + point.copy + '</p>' +
+        '<div class="crewe-map-popup-meta">' + point.meta + '</div>' +
+      '</div>',
+      {
+        maxWidth: 320,
+        minWidth: 250,
+        closeButton: true,
+        autoPan: true
+      }
+    );
+
+    marker.addTo(map);
+    layers.push(marker);
+  });
+
+  document.querySelectorAll('.local-map-filter').forEach((button) => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.local-map-filter').forEach((b) => {
+        b.classList.remove('is-active');
+      });
+
+      button.classList.add('is-active');
+      const filter = button.dataset.filter;
+
+      map.closePopup();
+
+      layers.forEach((marker) => {
+        const show = filter === 'all' || marker._localType === filter;
+
+        if (show && !map.hasLayer(marker)) {
+          marker.addTo(map);
+        } else if (!show && map.hasLayer(marker)) {
+          map.removeLayer(marker);
+        }
+      });
+    });
+  });
+
+  setTimeout(() => map.invalidateSize(), 200);
+})();
+</script>
+</body>
+</html>
