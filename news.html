@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>News | Back Ben for Mayor</title>
-<link rel="stylesheet" href="assets/css/site.css?v=20260822-1000-crewe-hero-priorities-fade">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-unframed-v1">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -190,6 +190,22 @@ body:not(.home-page) .site-header{
 }
 </style>
 
+
+<style id="newsroom-redesign">
+.newsroom-page{background:#f7f2e8;color:#071f3d}
+.newsroom-intro{padding:76px 0 56px;background:#f7f2e8}.newsroom-kicker{text-transform:uppercase;letter-spacing:.14em;color:#f54436;font-size:12px;font-weight:900;margin-bottom:16px}
+.newsroom-intro h1{font-size:clamp(62px,7vw,104px);line-height:.88;letter-spacing:-.065em;margin:0;max-width:1100px}
+.newsroom-feature{padding:0 0 58px}.lead-story{display:grid;grid-template-columns:1.45fr .85fr;background:#071f3d;color:white}
+.lead-story-image{min-height:470px;background:linear-gradient(90deg,rgba(7,31,61,.15),rgba(7,31,61,0)),url("assets/images/ben-about-hero.jpg") center/cover}
+.lead-story-copy{padding:56px 48px;display:flex;flex-direction:column;justify-content:center}.newsroom-meta{font-size:12px;text-transform:uppercase;letter-spacing:.11em;color:#f54436;font-weight:900;margin-bottom:12px}
+.lead-story h2{font-size:48px;line-height:.98;letter-spacing:-.04em;margin:0 0 18px}.lead-story p{font-size:18px;line-height:1.5;color:#d1dbe4}.lead-story a,.editorial-body a{color:#f54436;font-weight:900;text-decoration:none}
+.newsroom-tools{padding:22px 0;border-top:1px solid #d8d0c3;border-bottom:1px solid #d8d0c3}.newsroom-search-row{display:flex;gap:28px;align-items:center}.newsroom-search-row input{flex:1;height:54px;border:1px solid #b7afa4;background:white;padding:0 16px;font:inherit}
+.newsroom-tabs{display:flex;gap:18px}.newsroom-tabs button{border:0;background:transparent;padding:8px 0;color:#657589;font-weight:900;cursor:pointer}.newsroom-tabs button.active{color:#071f3d;border-bottom:2px solid #f54436}
+.newsroom-grid-section{padding:54px 0 80px}.editorial-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}.editorial-card{grid-column:span 4;background:#fff;box-shadow:0 10px 24px rgba(20,36,54,.08)}.editorial-card-large{grid-column:span 8}.editorial-image{aspect-ratio:16/10;background-size:cover;background-position:center}.image-crewe{background-image:url("assets/images/crewe-hero.jpg")}.image-home{background-image:url("assets/images/ben-home-hero.jpg")}.image-volunteer{background-image:url("assets/images/ben-volunteer-hero.jpg")}
+.editorial-body{padding:24px}.editorial-body h2{font-size:28px;line-height:1.03;margin:0 0 11px}.editorial-card-large .editorial-body h2{font-size:38px}.editorial-body p{color:#53667a;line-height:1.5}.text-card{min-height:320px;display:flex;align-items:flex-end}.red-card{background:#f54436;color:white}.navy-card{background:#071f3d;color:white}.red-card .newsroom-meta,.red-card a{color:#071f3d}.navy-card .editorial-body p,.red-card .editorial-body p{color:rgba(255,255,255,.8)}
+@media(max-width:800px){.lead-story{grid-template-columns:1fr}.lead-story-image{min-height:320px}.lead-story-copy{padding:34px 26px}.newsroom-search-row{display:block}.newsroom-tabs{margin-top:16px;overflow:auto}.editorial-card,.editorial-card-large{grid-column:1/-1}.newsroom-intro h1{font-size:58px}}
+</style>
+
 </head>
 <body class="inner-page">
 <div class="site-shell">
@@ -216,133 +232,70 @@ body:not(.home-page) .site-header{
   </div>
 </header>
 
-<main>
-<section class="inner-hero news-hero">
-  <div class="container">
-    <h1>From the campaign.</h1>
-    <p>News, policy, media and updates from Ben across Cheshire & Warrington.</p>
-  </div>
-</section>
 
-<section class="news-browser">
-  <div class="container">
-    <div class="news-tools">
-      <label class="news-search">
-        <span>Search</span>
-        <input id="news-search-input" type="search" placeholder="Search news, policy and campaign updates">
-      </label>
+<main class="newsroom-page">
+  <section class="newsroom-intro">
+    <div class="container">
+      <div class="newsroom-kicker">From the campaign</div>
+      <h1>News, ideas and<br>the campaign trail.</h1>
+    </div>
+  </section>
 
-      <div class="news-category-tabs" id="news-category-tabs" aria-label="News categories">
-        <button class="active" type="button" data-category="all">All</button>
-        <button type="button" data-category="campaign">Campaign</button>
-        <button type="button" data-category="policy">Policy</button>
-        <button type="button" data-category="transport">Transport</button>
-        <button type="button" data-category="business">Business</button>
-        <button type="button" data-category="housing">Housing</button>
-        <button type="button" data-category="media">Media</button>
-        <button type="button" data-category="video">Video</button>
+  <section class="newsroom-feature">
+    <div class="container">
+      <article class="lead-story">
+        <div class="lead-story-image" role="img" aria-label="Ben campaigning locally"></div>
+        <div class="lead-story-copy">
+          <div class="newsroom-meta">Featured · Campaign</div>
+          <h2>Ben sets out a practical plan for Cheshire & Warrington</h2>
+          <p>A campaign focused on transport, safer communities, a stronger economy and growth that works for local people.</p>
+          <a href="plan.html">Read the plan →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="newsroom-tools">
+    <div class="container">
+      <div class="newsroom-search-row">
+        <input id="news-search-input" type="search" placeholder="Search the campaign">
+        <div class="newsroom-tabs" id="news-category-tabs">
+          <button class="active" data-category="all">All</button>
+          <button data-category="campaign">Campaign</button>
+          <button data-category="policy">Policy</button>
+          <button data-category="local">Local</button>
+          <button data-category="media">Media</button>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="news-results-line">
-      <span id="news-results-count">8 stories</span>
-      <button id="news-clear" type="button">Clear filters</button>
+  <section class="newsroom-grid-section">
+    <div class="container">
+      <div class="editorial-grid" id="news-grid">
+        <article class="editorial-card editorial-card-large" data-category="local campaign" data-title="On the ground in Crewe">
+          <div class="editorial-image image-crewe"></div>
+          <div class="editorial-body"><div class="newsroom-meta">Crewe · 22 August</div><h2>On the ground in Crewe</h2><p>Listening to local residents about transport, town-centre renewal and growth.</p><a href="journeys/crewe.html">Explore Crewe →</a></div>
+        </article>
+        <article class="editorial-card" data-category="policy transport" data-title="A better connected region">
+          <div class="editorial-image image-home"></div>
+          <div class="editorial-body"><div class="newsroom-meta">Policy · Transport</div><h2>A better-connected region</h2><p>Why transport is at the heart of Ben’s plan for the mayoralty.</p><a href="plan.html">Read more →</a></div>
+        </article>
+        <article class="editorial-card text-card red-card" data-category="media campaign" data-title="Ben on why he is standing">
+          <div class="editorial-body"><div class="newsroom-meta">Video</div><h2>Why I’m standing.</h2><p>Ben on practical leadership, local ambition and what the new mayor can deliver.</p><a href="hear-from-ben.html">Watch →</a></div>
+        </article>
+        <article class="editorial-card" data-category="campaign local" data-title="Join Team Ben">
+          <div class="editorial-image image-volunteer"></div>
+          <div class="editorial-body"><div class="newsroom-meta">Campaign</div><h2>Join Team Ben</h2><p>There’s a role for everyone — from an hour at an event to bringing your professional skills.</p><a href="volunteer.html">Get involved →</a></div>
+        </article>
+        <article class="editorial-card text-card navy-card" data-category="policy business" data-title="Backing local business">
+          <div class="editorial-body"><div class="newsroom-meta">Economy</div><h2>Backing local business.</h2><p>Putting growth, skills and local employers at the centre of the mayoralty.</p><a href="business.html">Read more →</a></div>
+        </article>
+      </div>
     </div>
-
-    <div class="news-grid" id="news-grid">
-
-      <article class="news-card" data-category="transport policy campaign" data-title="Ben sets out plan for better transport across Cheshire and Warrington">
-        <div class="news-card-image">IMAGE PLACEHOLDER</div>
-        <div class="news-card-body">
-          <div class="news-meta">Transport · 20 August 2026</div>
-          <h2><a href="#">Ben sets out plan for better transport across Cheshire & Warrington</a></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus.</p>
-          <a class="news-read" href="#">Read more →</a>
-        </div>
-      </article>
-
-      <article class="news-card" data-category="business policy" data-title="Backing local business and bringing new investment into the region">
-        <div class="news-card-image">IMAGE PLACEHOLDER</div>
-        <div class="news-card-body">
-          <div class="news-meta">Business · 18 August 2026</div>
-          <h2><a href="#">Backing local business and bringing new investment into the region</a></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui.</p>
-          <a class="news-read" href="business.html">Read more →</a>
-        </div>
-      </article>
-
-      <article class="news-card" data-category="campaign" data-title="Ben on the campaign trail in Warrington">
-        <div class="news-card-image">IMAGE PLACEHOLDER</div>
-        <div class="news-card-body">
-          <div class="news-meta">Campaign · 16 August 2026</div>
-          <h2><a href="#">Ben on the campaign trail in Warrington</a></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet.</p>
-          <a class="news-read" href="#">Read more →</a>
-        </div>
-      </article>
-
-      <article class="news-card" data-category="housing policy" data-title="A plan for homes infrastructure and opportunity">
-        <div class="news-card-image">IMAGE PLACEHOLDER</div>
-        <div class="news-card-body">
-          <div class="news-meta">Housing · 14 August 2026</div>
-          <h2><a href="#">A plan for homes, infrastructure and opportunity</a></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum.</p>
-          <a class="news-read" href="journeys/chester-housing.html">Read more →</a>
-        </div>
-      </article>
-
-      <article class="news-card" data-category="video campaign" data-title="Watch why Ben is standing for Mayor">
-        <div class="news-card-image news-card-video">
-          <span>▶</span>
-          VIDEO PLACEHOLDER
-        </div>
-        <div class="news-card-body">
-          <div class="news-meta">Video · 12 August 2026</div>
-          <h2><a href="hear-from-ben.html">Watch: Why Ben is standing for Mayor</a></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a class="news-read" href="hear-from-ben.html">Watch now →</a>
-        </div>
-      </article>
-
-      <article class="news-card" data-category="media" data-title="Ben speaks to local media about growth transport and devolution">
-        <div class="news-card-image">IMAGE PLACEHOLDER</div>
-        <div class="news-card-body">
-          <div class="news-meta">Media · 10 August 2026</div>
-          <h2><a href="#">Ben speaks to local media about growth, transport and devolution</a></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis.</p>
-          <a class="news-read" href="#">Read more →</a>
-        </div>
-      </article>
-
-      <article class="news-card" data-category="policy business" data-title="Skills jobs and opportunity for young people">
-        <div class="news-card-image">IMAGE PLACEHOLDER</div>
-        <div class="news-card-body">
-          <div class="news-meta">Policy · 8 August 2026</div>
-          <h2><a href="#">Skills, jobs and opportunity for young people</a></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare.</p>
-          <a class="news-read" href="plan.html">Read more →</a>
-        </div>
-      </article>
-
-      <article class="news-card" data-category="campaign transport" data-title="Listening to commuters in Crewe">
-        <div class="news-card-image">IMAGE PLACEHOLDER</div>
-        <div class="news-card-body">
-          <div class="news-meta">Campaign · 5 August 2026</div>
-          <h2><a href="journeys/crewe-transport.html">Listening to commuters in Crewe</a></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna.</p>
-          <a class="news-read" href="journeys/crewe-transport.html">Read more →</a>
-        </div>
-      </article>
-
-    </div>
-
-    <div class="news-empty" id="news-empty" hidden>
-      <h2>No stories found</h2>
-      <p>Try another search or clear the category filter.</p>
-    </div>
-  </div>
-</section>
+  </section>
 </main>
+
 
 
 <footer class="campaign-footer">
@@ -455,5 +408,24 @@ document.addEventListener("DOMContentLoaded", function(){
 
 </div>
 <script src="assets/js/site.js?v=20260821-1212"></script>
+
+<script>
+const newsSearch=document.getElementById('news-search-input');
+let newsCat='all';
+function filterNews(){
+  const q=(newsSearch?.value||'').toLowerCase();
+  document.querySelectorAll('#news-grid .editorial-card').forEach(card=>{
+    const okCat=newsCat==='all'||(card.dataset.category||'').includes(newsCat);
+    const okQ=!q||(card.dataset.title||'').toLowerCase().includes(q)||card.innerText.toLowerCase().includes(q);
+    card.style.display=okCat&&okQ?'':'none';
+  });
+}
+newsSearch?.addEventListener('input',filterNews);
+document.querySelectorAll('#news-category-tabs button').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('#news-category-tabs button').forEach(x=>x.classList.remove('active'));
+  btn.classList.add('active'); newsCat=btn.dataset.category; filterNews();
+}));
+</script>
+
 </body>
 </html>

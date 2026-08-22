@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>My Plan | Back Ben for Mayor</title>
-<link rel="stylesheet" href="assets/css/site.css?v=20260822-1000-crewe-hero-priorities-fade">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-plan-no-lines-v3">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -190,6 +190,626 @@ body:not(.home-page) .site-header{
 }
 </style>
 
+
+<style id="manifesto-redesign">
+.manifesto-page{background:#f7f2e8;color:#071f3d}
+.manifesto-cover{background:#071f3d;color:#fff;padding:88px 0 78px;position:relative;overflow:hidden}
+.manifesto-cover:after{content:"";position:absolute;right:-8vw;top:-14vw;width:50vw;height:50vw;border:1px solid rgba(255,255,255,.08);transform:rotate(12deg)}
+.manifesto-cover-inner{width:min(1180px,calc(100% - 64px));margin:auto;position:relative;z-index:2}
+.manifesto-cover-kicker{text-transform:uppercase;letter-spacing:.16em;color:#f54436;font-weight:900;font-size:13px;margin-bottom:24px}
+.manifesto-cover h1{font-size:clamp(64px,7vw,108px);line-height:.89;letter-spacing:-.065em;margin:0 0 26px;max-width:1050px}
+.manifesto-cover p{font-size:22px;line-height:1.4;max-width:700px;color:#d6e0e8;margin:0 0 56px}
+.manifesto-cover-meta{display:flex;gap:28px;font-weight:800;border-top:1px solid rgba(255,255,255,.2);padding-top:18px;color:#b9c7d3}
+.manifesto-contents{background:#fff;padding:26px 0;border-bottom:1px solid #ded7ca;position:sticky;top:0;z-index:50}
+.manifesto-contents-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:18px}
+.manifesto-contents-head span{font-size:28px;font-weight:900}.manifesto-contents-head p{margin:0;color:#6d7c8e}
+.manifesto-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid #d9d1c4}
+.manifesto-tabs button{appearance:none;border:0;border-right:1px solid #d9d1c4;background:#f7f2e8;padding:18px;text-align:left;cursor:pointer;color:#071f3d}
+.manifesto-tabs button:last-child{border-right:0}.manifesto-tabs button b{display:block;color:#f54436;font-size:12px;margin-bottom:6px}.manifesto-tabs button span{font-size:17px;font-weight:900}
+.manifesto-tabs button.active{background:#071f3d;color:#fff}
+.manifesto-reader{padding:74px 0 86px;background:#f7f2e8}
+.manifesto-chapter{display:none;position:relative}.manifesto-chapter.active{display:block}
+.manifesto-page-number{position:absolute;right:0;top:-34px;font-size:150px;font-weight:900;line-height:1;color:rgba(7,31,61,.055)}
+.manifesto-chapter-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;position:relative;z-index:2}
+.manifesto-label{text-transform:uppercase;letter-spacing:.14em;color:#f54436;font-size:12px;font-weight:900;margin-bottom:14px}
+.manifesto-chapter-title h2{font-size:64px;line-height:.92;letter-spacing:-.05em;margin:0 0 22px}.manifesto-chapter-title p{font-size:20px;line-height:1.5;color:#53667a;margin:0}
+.manifesto-pledges{border-top:1px solid #cfc7bb}
+.manifesto-pledges>div{display:grid;grid-template-columns:42px 190px 1fr;gap:16px;border-bottom:1px solid #cfc7bb;padding:25px 0}
+.manifesto-pledges span{color:#f54436;font-size:12px;font-weight:900}.manifesto-pledges h3{font-size:22px;margin:0}.manifesto-pledges p{margin:0;color:#53667a;line-height:1.5}
+.manifesto-pullquote{margin:64px 0 0 30%;border-left:7px solid #f54436;background:#fff;padding:28px 34px;font-size:34px;line-height:1.15;font-weight:900;font-style:normal}
+.manifesto-cta{background:#fff;padding:66px 0}.manifesto-cta-inner{display:grid;grid-template-columns:1fr 1fr auto;gap:34px;align-items:center}.manifesto-cta h2{font-size:44px;line-height:.95;margin:0}.manifesto-cta p{margin:0;color:#53667a;line-height:1.5}
+@media(max-width:800px){
+ .manifesto-cover{padding:62px 0 56px}.manifesto-cover-inner{width:calc(100% - 40px)}.manifesto-cover h1{font-size:58px}.manifesto-cover p{font-size:18px}
+ .manifesto-contents{position:relative}.manifesto-tabs{grid-template-columns:1fr 1fr}.manifesto-tabs button:nth-child(2){border-right:0}.manifesto-tabs button:nth-child(-n+2){border-bottom:1px solid #d9d1c4}
+ .manifesto-chapter-grid{grid-template-columns:1fr;gap:38px}.manifesto-chapter-title h2{font-size:50px}.manifesto-pledges>div{grid-template-columns:34px 1fr}.manifesto-pledges p{grid-column:2}
+ .manifesto-pullquote{margin:42px 0 0;font-size:27px}.manifesto-page-number{font-size:100px}
+ .manifesto-cta-inner{grid-template-columns:1fr}.manifesto-cta h2{font-size:38px}
+}
+</style>
+
+
+<style id="plan-photo-scroll-redesign">
+/* Header fades into the plan hero, matching the strongest pages */
+body:has(.plan-photo-hero) .site-header{
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:1000 !important;
+  background:linear-gradient(
+    to bottom,
+    rgba(4,20,39,.96) 0%,
+    rgba(4,20,39,.86) 58%,
+    rgba(4,20,39,.58) 82%,
+    rgba(4,20,39,0) 100%
+  ) !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+
+body:has(.plan-photo-hero) .site-header-inner{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+
+.plan-photo-hero{
+  position:relative;
+  min-height:610px;
+  overflow:hidden;
+  color:#fff;
+}
+
+.plan-photo-hero-bg{
+  position:absolute;
+  inset:0;
+  background:url("assets/images/ben-plan-hero.jpg") center 38%/cover no-repeat;
+}
+
+.plan-photo-hero-fade{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(3,18,36,.72) 0%,
+      rgba(3,18,36,.34) 28%,
+      rgba(3,18,36,.10) 52%,
+      rgba(3,18,36,.22) 70%,
+      rgba(3,18,36,.75) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(3,18,36,.78) 0%,
+      rgba(3,18,36,.46) 38%,
+      rgba(3,18,36,.08) 72%,
+      transparent 100%
+    );
+}
+
+.plan-photo-hero-inner{
+  position:relative;
+  z-index:2;
+  min-height:610px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding-bottom:54px;
+}
+
+.plan-photo-hero h1{
+  margin:0 0 14px;
+  max-width:900px;
+  font-size:clamp(64px,7vw,100px);
+  line-height:.91;
+  letter-spacing:-.055em;
+  color:#fff;
+}
+
+.plan-photo-hero p{
+  margin:0;
+  max-width:680px;
+  font-size:21px;
+  line-height:1.45;
+  color:#e2e9ef;
+}
+
+.plan-anchor-nav{
+  background:#f7f2e8;
+  border-bottom:1px solid #d8d0c3;
+  position:sticky;
+  top:0;
+  z-index:40;
+}
+
+.plan-anchor-nav .container{
+  display:flex;
+  justify-content:center;
+  gap:34px;
+  padding-top:18px;
+  padding-bottom:18px;
+}
+
+.plan-anchor-nav a{
+  color:#53667a;
+  font-weight:900;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.plan-anchor-nav a:hover{
+  color:#f54436;
+}
+
+.manifesto-reader{
+  padding:0 !important;
+  background:#f7f2e8 !important;
+}
+
+.manifesto-chapter.scroll-chapter{
+  display:block !important;
+  padding:86px 0 92px;
+  border-bottom:1px solid #ddd5c8;
+}
+
+.manifesto-chapter-grid{
+  display:grid !important;
+  grid-template-columns:.82fr 1.18fr !important;
+  gap:88px !important;
+  align-items:start !important;
+}
+
+.manifesto-label{
+  display:none !important;
+}
+
+.manifesto-chapter-title h2{
+  font-size:58px !important;
+  line-height:.96 !important;
+  letter-spacing:-.045em !important;
+  margin:0 0 20px !important;
+}
+
+.manifesto-chapter-title p{
+  max-width:470px;
+  font-size:19px !important;
+  line-height:1.55 !important;
+  color:#53667a !important;
+}
+
+.manifesto-pledges{
+  border-top:0 !important;
+}
+
+.manifesto-pledges>div{
+  grid-template-columns:42px 220px 1fr !important;
+  gap:18px !important;
+  padding:24px 0 !important;
+  border-bottom:1px solid #cbc3b7 !important;
+}
+
+.manifesto-pledges>div:first-child{
+  border-top:1px solid #cbc3b7 !important;
+}
+
+.manifesto-pledges span{
+  color:#f54436 !important;
+  font-size:12px !important;
+  font-weight:900 !important;
+}
+
+.manifesto-pledges h3{
+  font-size:22px !important;
+  margin:0 !important;
+}
+
+.manifesto-pledges p{
+  margin:0 !important;
+  color:#53667a !important;
+  line-height:1.5 !important;
+}
+
+.plan-photo-break{
+  width:100%;
+  min-height:500px;
+  background-size:cover;
+  background-position:center;
+}
+
+.plan-photo-break-one{
+  background-image:url("assets/images/ben-volunteer-hero.jpg");
+}
+
+.plan-photo-break-two{
+  background-image:url("assets/images/ben-about-hero.jpg");
+}
+
+.plan-photo-break-three{
+  background-image:url("assets/images/crewe-hero.jpg");
+}
+
+.manifesto-cta{
+  background:#071f3d !important;
+  color:#fff !important;
+}
+
+.manifesto-cta p{
+  color:#cad6df !important;
+}
+
+@media(max-width:800px){
+  body:has(.plan-photo-hero) .site-header{
+    background:linear-gradient(
+      to bottom,
+      rgba(4,20,39,.94) 0%,
+      rgba(4,20,39,.78) 70%,
+      rgba(4,20,39,0) 100%
+    ) !important;
+  }
+
+  .plan-photo-hero,
+  .plan-photo-hero-inner{
+    min-height:540px;
+  }
+
+  .plan-photo-hero-bg{
+    background-position:center 32%;
+  }
+
+  .plan-photo-hero-inner{
+    padding-bottom:34px;
+  }
+
+  .plan-photo-hero h1{
+    font-size:54px;
+  }
+
+  .plan-photo-hero p{
+    font-size:17px;
+  }
+
+  .plan-anchor-nav{
+    position:relative;
+    overflow:auto;
+  }
+
+  .plan-anchor-nav .container{
+    justify-content:flex-start;
+    gap:24px;
+    overflow-x:auto;
+  }
+
+  .manifesto-chapter.scroll-chapter{
+    padding:58px 0 64px;
+  }
+
+  .manifesto-chapter-grid{
+    grid-template-columns:1fr !important;
+    gap:34px !important;
+  }
+
+  .manifesto-chapter-title h2{
+    font-size:46px !important;
+  }
+
+  .manifesto-pledges>div{
+    grid-template-columns:34px 1fr !important;
+  }
+
+  .manifesto-pledges p{
+    grid-column:2 !important;
+  }
+
+  .plan-photo-break{
+    min-height:300px;
+  }
+}
+</style>
+
+
+<style id="plan-natural-pledges-v1">
+/* =========================================================
+   PLAN — NATURAL EDITORIAL POLICY SECTIONS
+   ========================================================= */
+
+.manifesto-chapter.scroll-chapter{
+  padding:82px 0 88px !important;
+}
+
+.manifesto-chapter-grid{
+  grid-template-columns:minmax(280px,.72fr) minmax(0,1.28fr) !important;
+  gap:94px !important;
+}
+
+.manifesto-chapter-title{
+  padding-top:10px;
+}
+
+.manifesto-chapter-title h2{
+  max-width:430px;
+  margin-bottom:22px !important;
+}
+
+.manifesto-chapter-title p{
+  max-width:410px !important;
+  font-size:19px !important;
+  line-height:1.58 !important;
+}
+
+/* Stop reading like a three-row table */
+.manifesto-pledges{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:34px 42px !important;
+  border:0 !important;
+  align-items:start !important;
+}
+
+.manifesto-pledges > div{
+  display:block !important;
+  border:0 !important;
+  padding:0 !important;
+  min-width:0 !important;
+}
+
+/* Lead commitment */
+.manifesto-pledges > div:first-child{
+  grid-column:1 / -1 !important;
+  padding:0 0 34px !important;
+  margin-bottom:2px !important;
+  border-bottom:1px solid #c9c1b5 !important;
+}
+
+.manifesto-pledges > div:first-child span{
+  display:none !important;
+}
+
+.manifesto-pledges > div:first-child h3{
+  max-width:590px;
+  font-size:34px !important;
+  line-height:1.03 !important;
+  letter-spacing:-.025em !important;
+  margin:0 0 13px !important;
+}
+
+.manifesto-pledges > div:first-child p{
+  max-width:690px !important;
+  font-size:18px !important;
+  line-height:1.55 !important;
+}
+
+/* Supporting commitments */
+.manifesto-pledges > div:not(:first-child){
+  padding-top:2px !important;
+}
+
+.manifesto-pledges > div:not(:first-child) span{
+  display:block !important;
+  width:32px !important;
+  height:3px !important;
+  overflow:hidden !important;
+  text-indent:-999px !important;
+  background:#f54436 !important;
+  margin:0 0 18px !important;
+}
+
+.manifesto-pledges > div:not(:first-child) h3{
+  font-size:25px !important;
+  line-height:1.08 !important;
+  letter-spacing:-.02em !important;
+  margin:0 0 12px !important;
+  max-width:330px;
+}
+
+.manifesto-pledges > div:not(:first-child) p{
+  font-size:16.5px !important;
+  line-height:1.55 !important;
+  color:#53667a !important;
+  max-width:360px !important;
+}
+
+/* Alternate the chapter composition very subtly */
+.manifesto-chapter.scroll-chapter:nth-of-type(even) .manifesto-chapter-grid{
+  grid-template-columns:minmax(0,1.22fr) minmax(280px,.78fr) !important;
+}
+
+.manifesto-chapter.scroll-chapter:nth-of-type(even) .manifesto-chapter-title{
+  grid-column:2;
+  grid-row:1;
+}
+
+.manifesto-chapter.scroll-chapter:nth-of-type(even) .manifesto-pledges{
+  grid-column:1;
+  grid-row:1;
+}
+
+/* Slightly different paper tone between chapters */
+.manifesto-chapter.scroll-chapter:nth-of-type(even){
+  background:#fbf8f1 !important;
+}
+
+@media(max-width:900px){
+  .manifesto-chapter-grid,
+  .manifesto-chapter.scroll-chapter:nth-of-type(even) .manifesto-chapter-grid{
+    grid-template-columns:1fr !important;
+    gap:38px !important;
+  }
+
+  .manifesto-chapter.scroll-chapter:nth-of-type(even) .manifesto-chapter-title,
+  .manifesto-chapter.scroll-chapter:nth-of-type(even) .manifesto-pledges{
+    grid-column:auto !important;
+    grid-row:auto !important;
+  }
+
+  .manifesto-pledges{
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+  }
+
+  .manifesto-pledges > div:first-child{
+    grid-column:auto !important;
+  }
+
+  .manifesto-pledges > div:not(:first-child){
+    padding-top:4px !important;
+  }
+}
+</style>
+
+
+<style id="plan-natural-spacing-v2">
+/* =========================================================
+   PLAN — TIGHTER, CLEANER EDITORIAL POLICY SECTIONS
+   ========================================================= */
+
+.manifesto-chapter.scroll-chapter{
+  padding:58px 0 64px !important;
+}
+
+.manifesto-chapter-grid{
+  grid-template-columns:minmax(280px,.78fr) minmax(0,1.22fr) !important;
+  gap:64px !important;
+  align-items:start !important;
+}
+
+.manifesto-chapter-title{
+  padding-top:0 !important;
+}
+
+.manifesto-chapter-title h2{
+  margin:0 0 14px !important;
+  max-width:430px !important;
+  font-size:56px !important;
+  line-height:.96 !important;
+}
+
+.manifesto-chapter-title p{
+  margin:0 !important;
+  max-width:430px !important;
+  font-size:18px !important;
+  line-height:1.5 !important;
+}
+
+/* Compact commitment area */
+.manifesto-pledges{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:26px 36px !important;
+  border:0 !important;
+  padding:0 !important;
+  margin:0 !important;
+}
+
+.manifesto-pledges > div{
+  display:block !important;
+  border:0 !important;
+  padding:0 !important;
+  margin:0 !important;
+}
+
+/* Main pledge */
+.manifesto-pledges > div:first-child{
+  grid-column:1 / -1 !important;
+  padding:0 0 8px !important;
+  margin:0 !important;
+  border:0 !important;
+}
+
+.manifesto-pledges > div:first-child span{
+  display:none !important;
+}
+
+.manifesto-pledges > div:first-child h3{
+  margin:0 0 8px !important;
+  max-width:560px !important;
+  font-size:31px !important;
+  line-height:1.04 !important;
+}
+
+.manifesto-pledges > div:first-child p{
+  margin:0 !important;
+  max-width:690px !important;
+  font-size:17.5px !important;
+  line-height:1.5 !important;
+}
+
+/* Supporting commitments */
+.manifesto-pledges > div:not(:first-child){
+  padding-top:4px !important;
+}
+
+.manifesto-pledges > div:not(:first-child) span{
+  display:block !important;
+  width:24px !important;
+  height:2px !important;
+  overflow:hidden !important;
+  text-indent:-999px !important;
+  background:#f54436 !important;
+  margin:0 0 12px !important;
+}
+
+.manifesto-pledges > div:not(:first-child) h3{
+  margin:0 0 7px !important;
+  max-width:330px !important;
+  font-size:23px !important;
+  line-height:1.08 !important;
+}
+
+.manifesto-pledges > div:not(:first-child) p{
+  margin:0 !important;
+  max-width:360px !important;
+  font-size:16px !important;
+  line-height:1.48 !important;
+}
+
+/* No report-style separator lines anywhere */
+.manifesto-pledges,
+.manifesto-pledges > div,
+.manifesto-pledges > div:first-child,
+.manifesto-pledges > div:not(:first-child){
+  border-top:0 !important;
+  border-bottom:0 !important;
+}
+
+/* Keep alternating composition but remove excess visual separation */
+.manifesto-chapter.scroll-chapter:nth-of-type(even){
+  background:#fbf8f1 !important;
+}
+
+@media(max-width:900px){
+  .manifesto-chapter.scroll-chapter{
+    padding:46px 0 50px !important;
+  }
+
+  .manifesto-chapter-grid,
+  .manifesto-chapter.scroll-chapter:nth-of-type(even) .manifesto-chapter-grid{
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+  }
+
+  .manifesto-pledges{
+    grid-template-columns:1fr !important;
+    gap:22px !important;
+  }
+
+  .manifesto-pledges > div:first-child{
+    grid-column:auto !important;
+  }
+
+  .manifesto-chapter-title h2{
+    font-size:44px !important;
+  }
+}
+</style>
+
+
+<style id="plan-remove-support-lines-v3">
+/* Remove the small red/orange accent lines from supporting policy points */
+.manifesto-pledges > div:not(:first-child) span{
+  display:none !important;
+}
+</style>
+
 </head>
 <body class="inner-page">
 <div class="site-shell">
@@ -216,227 +836,114 @@ body:not(.home-page) .site-header{
   </div>
 </header>
 
-<main>
 
-<section class="inner-hero plan-hero">
+<main class="manifesto-page">
+  
+<section class="plan-photo-hero">
+  <div class="plan-photo-hero-bg"></div>
+  <div class="plan-photo-hero-fade"></div>
+  <div class="container plan-photo-hero-inner">
+    <h1>Ben’s plan for<br>Cheshire & Warrington.</h1>
+    <p>A practical plan focused on the things a mayor can actually change.</p>
+  </div>
+</section>
+
+
+  
+<nav class="plan-anchor-nav" aria-label="Plan priorities">
   <div class="container">
-    <h1>A practical plan for Cheshire & Warrington.</h1>
-    <p>Four clear priorities focused on the things that shape everyday life: how we travel, how safe we feel, where opportunity comes from and whether our communities can grow.</p>
+    <a href="#transport">Better transport</a>
+    <a href="#safety">Safer communities</a>
+    <a href="#economy">A stronger economy</a>
+    <a href="#homes">Homes & opportunity</a>
   </div>
-</section>
+</nav>
 
-<!-- PRIORITY NAV -->
-<section class="plan-jump">
-  <div class="container plan-jump-grid">
-    <a href="#transport"><span>01</span><strong>Better transport</strong></a>
-    <a href="#safety"><span>02</span><strong>Safer communities</strong></a>
-    <a href="#economy"><span>03</span><strong>A stronger economy</strong></a>
-    <a href="#homes"><span>04</span><strong>Homes & opportunity</strong></a>
-  </div>
-</section>
 
-<!-- TRANSPORT -->
-<section class="plan-priority" id="transport">
-  <div class="container plan-priority-grid">
-    <div class="plan-priority-image">IMAGE PLACEHOLDER</div>
-    <div class="plan-priority-copy">
-      <div class="plan-index">01</div>
-      <h2>Better transport</h2>
-      <p class="plan-intro-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Better buses, stronger connections and less time wasted getting around.</p>
+  <section class="manifesto-reader">
+    <div class="container">
+      <article class="manifesto-chapter scroll-chapter" id="transport">
+        
+        <div class="manifesto-chapter-grid">
+          <div class="manifesto-chapter-title">
+            <div class="manifesto-label">Chapter one</div>
+            <h2>Better transport</h2>
+            <p>Make everyday journeys simpler, faster and more reliable — whether by bus, rail, road or active travel.</p>
+          </div>
+          <div class="manifesto-pledges">
+            <div><span>01</span><h3>Better buses</h3><p>More reliable routes, better connections and services shaped around how people actually travel.</p></div>
+            <div><span>02</span><h3>Fix the bottlenecks</h3><p>Target congestion and road pinch points that cost residents and businesses time every day.</p></div>
+            <div><span>03</span><h3>Back Crewe as a gateway</h3><p>Fight for rail investment that benefits the whole region and links people to jobs and opportunity.</p></div>
+          </div>
+        </div>
+        
+      </article>
+      <div class="plan-photo-break plan-photo-break-one"></div>
 
-      <div class="plan-accordion">
-        <article class="plan-accordion-item">
-          <button class="plan-question" type="button"><span>Buses</span><span>+</span></button>
-          <div class="plan-answer"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p></div>
-        </article>
-        <article class="plan-accordion-item">
-          <button class="plan-question" type="button"><span>Roads & congestion</span><span>+</span></button>
-          <div class="plan-answer"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui.</p></div>
-        </article>
-        <article class="plan-accordion-item">
-          <button class="plan-question" type="button"><span>Rail</span><span>+</span></button>
-          <div class="plan-answer"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum.</p></div>
-        </article>
-        <article class="plan-accordion-item">
-          <button class="plan-question" type="button"><span>Local connections</span><span>+</span></button>
-          <div class="plan-answer"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor.</p></div>
-        </article>
-      </div>
+      <article class="manifesto-chapter scroll-chapter" id="safety">
+        
+        <div class="manifesto-chapter-grid">
+          <div class="manifesto-chapter-title">
+            <div class="manifesto-label">Chapter two</div>
+            <h2>Safer communities</h2>
+            <p>Make neighbourhood safety visible, practical and focused on the problems residents actually experience.</p>
+          </div>
+          <div class="manifesto-pledges">
+            <div><span>01</span><h3>Neighbourhood policing</h3><p>Push for visible, locally accountable policing where communities need it most.</p></div>
+            <div><span>02</span><h3>Tackle antisocial behaviour</h3><p>Coordinate councils, police and local partners around repeat hotspots and persistent problems.</p></div>
+            <div><span>03</span><h3>Safer town centres</h3><p>Support thriving evening economies without accepting crime and disorder as inevitable.</p></div>
+          </div>
+        </div>
+        
+      </article>
+      <div class="plan-photo-break plan-photo-break-two"></div>
 
-      <a class="btn btn-red" href="journeys/crewe-transport.html">See a local transport journey</a>
+      <article class="manifesto-chapter scroll-chapter" id="economy">
+        
+        <div class="manifesto-chapter-grid">
+          <div class="manifesto-chapter-title">
+            <div class="manifesto-label">Chapter three</div>
+            <h2>A stronger economy</h2>
+            <p>Make Cheshire & Warrington the easiest place in the North West to invest, grow and create good jobs.</p>
+          </div>
+          <div class="manifesto-pledges">
+            <div><span>01</span><h3>Back local business</h3><p>Put employers at the heart of the region’s growth, skills and infrastructure decisions.</p></div>
+            <div><span>02</span><h3>Skills for local jobs</h3><p>Bring colleges, employers and public investment together around the jobs the region needs.</p></div>
+            <div><span>03</span><h3>Sell the region</h3><p>Use the mayoralty to attract investment and champion Cheshire & Warrington nationally and internationally.</p></div>
+          </div>
+        </div>
+        
+      </article>
+      <div class="plan-photo-break plan-photo-break-three"></div>
+
+      <article class="manifesto-chapter scroll-chapter" id="homes">
+        
+        <div class="manifesto-chapter-grid">
+          <div class="manifesto-chapter-title">
+            <div class="manifesto-label">Chapter four</div>
+            <h2>Homes & opportunity</h2>
+            <p>Build the homes people need while making sure growth comes with the infrastructure and services to support it.</p>
+          </div>
+          <div class="manifesto-pledges">
+            <div><span>01</span><h3>Brownfield first</h3><p>Prioritise regeneration and previously developed land before losing valued green spaces.</p></div>
+            <div><span>02</span><h3>Infrastructure with growth</h3><p>New homes should come with roads, schools, GP capacity and public transport.</p></div>
+            <div><span>03</span><h3>Revive town centres</h3><p>Bring empty buildings back into use and create places people want to live, work and spend time.</p></div>
+          </div>
+        </div>
+        
+      </article>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SAFETY -->
-<section class="plan-priority plan-priority-reverse" id="safety">
-  <div class="container plan-priority-grid">
-    <div class="plan-priority-copy">
-      <div class="plan-index">02</div>
-      <h2>Safer communities</h2>
-      <p class="plan-intro-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Safer streets, stronger neighbourhoods and visible local leadership.</p>
-
-      <div class="plan-accordion">
-        <article class="plan-accordion-item">
-          <button class="plan-question" type="button"><span>Neighbourhood policing</span><span>+</span></button>
-          <div class="plan-answer"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-        </article>
-        <article class="plan-accordion-item">
-          <button class="plan-question" type="button"><span>Town centres</span><span>+</span></button>
-          <div class="plan-answer"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-        </article>
-        <article class="plan-accordion-item">
-          <button class="plan-question" type="button"><span>Anti-social behaviour</span><span>+</span></button>
-          <div class="plan-answer"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-        </article>
-      </div>
+  <section class="manifesto-cta">
+    <div class="container manifesto-cta-inner">
+      <h2>Have your say on Ben’s plan.</h2>
+      <p>This is a campaign built around listening. Tell us what you would change, add or prioritise.</p>
+      <a href="volunteer.html" class="btn btn-red">Join the conversation</a>
     </div>
-
-    <div class="plan-priority-image">IMAGE PLACEHOLDER</div>
-  </div>
-</section>
-
-<!-- ECONOMY -->
-<section class="plan-priority plan-economy" id="economy">
-  <div class="container plan-priority-grid">
-    <div class="plan-priority-image">IMAGE PLACEHOLDER</div>
-    <div class="plan-priority-copy">
-      <div class="plan-index">03</div>
-      <h2>A stronger economy</h2>
-      <p class="plan-intro-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Back local business, create jobs and connect people to opportunity.</p>
-
-      <div class="plan-accordion">
-        <article class="plan-accordion-item">
-          <button class="plan-question" type="button"><span>Business & investment</span><span>+</span></button>
-          <div class="plan-answer"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-        </article>
-        <article class="plan-accordion-item">
-          <button class="plan-question" type="button"><span>Skills & apprenticeships</span><span>+</span></button>
-          <div class="plan-answer"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-        </article>
-        <article class="plan-accordion-item">
-          <button class="plan-question" type="button"><span>Town centres & high streets</span><span>+</span></button>
-          <div class="plan-answer"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-        </article>
-      </div>
-
-      <a class="btn btn-red" href="business.html">Back Ben for Business</a>
-    </div>
-  </div>
-</section>
-
-<!-- HOMES -->
-<section class="plan-priority plan-priority-reverse" id="homes">
-  <div class="container plan-priority-grid">
-    <div class="plan-priority-copy">
-      <div class="plan-index">04</div>
-      <h2>Homes & opportunity</h2>
-      <p class="plan-intro-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. The right homes in the right places, supported by local infrastructure.</p>
-
-      <div class="plan-accordion">
-        <article class="plan-accordion-item">
-          <button class="plan-question" type="button"><span>Affordable homes</span><span>+</span></button>
-          <div class="plan-answer"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-        </article>
-        <article class="plan-accordion-item">
-          <button class="plan-question" type="button"><span>Infrastructure first</span><span>+</span></button>
-          <div class="plan-answer"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-        </article>
-        <article class="plan-accordion-item">
-          <button class="plan-question" type="button"><span>Regeneration</span><span>+</span></button>
-          <div class="plan-answer"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-        </article>
-      </div>
-
-      <a class="btn btn-red" href="journeys/chester-housing.html">See a local housing journey</a>
-    </div>
-
-    <div class="plan-priority-image">IMAGE PLACEHOLDER</div>
-  </div>
-</section>
-
-<!-- LOCALISE THE PLAN -->
-<section class="plan-local">
-  <div class="container plan-local-grid">
-    <div>
-      <h2>What does the plan mean where you live?</h2>
-      <p>Enter your postcode to show how the campaign could surface the priorities, visits and actions most relevant to your area.</p>
-
-      <div class="plan-postcode">
-        <input type="text" id="plan-postcode" placeholder="Enter your postcode">
-        <button class="btn btn-red" type="button" id="plan-postcode-button">Show my area</button>
-      </div>
-    </div>
-
-    <div class="plan-local-result" id="plan-local-result">
-      <span>Your area</span>
-      <h3>Local priorities will appear here.</h3>
-      <p>For the pitch, try a CW1 postcode to demonstrate a Crewe transport journey.</p>
-    </div>
-  </div>
-</section>
-
-<!-- VIDEO -->
-<section class="plan-video">
-  <div class="container plan-video-grid">
-    <div class="plan-video-placeholder">
-      <button class="about-play" type="button">▶</button>
-      <span>VIDEO PLACEHOLDER</span>
-    </div>
-
-    <div class="plan-video-copy">
-      <h2>Ben explains the plan</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A short campaign video could introduce the four priorities in under 90 seconds.</p>
-      <a class="btn btn-white" href="hear-from-ben.html">Hear from Ben</a>
-    </div>
-  </div>
-</section>
-
-<!-- HAVE YOUR SAY -->
-<section class="plan-survey">
-  <div class="container plan-survey-grid">
-    <div>
-      <h2>Help shape the plan</h2>
-      <p>Which issue matters most to you? This prototype demonstrates how policy interest can become useful campaign data.</p>
-    </div>
-
-    <form class="plan-survey-form">
-      <div class="plan-choice-grid">
-        <label><input type="radio" name="priority"> Better transport</label>
-        <label><input type="radio" name="priority"> Safer communities</label>
-        <label><input type="radio" name="priority"> A stronger economy</label>
-        <label><input type="radio" name="priority"> Homes & opportunity</label>
-      </div>
-
-      <div class="plan-person-grid">
-        <input type="text" placeholder="First name">
-        <input type="text" placeholder="Last name">
-        <input type="email" placeholder="Email address">
-        <input type="text" placeholder="Postcode">
-      </div>
-
-      <textarea placeholder="Anything else you'd like Ben to know?"></textarea>
-      <button class="btn btn-red" type="button">Submit my priorities</button>
-    </form>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="about-final-cta">
-  <div class="container">
-    <div>
-      <h2>Back Ben for Mayor</h2>
-      <p>See the plan, shape the campaign and help turn it into action.</p>
-    </div>
-
-    <div class="about-final-actions">
-      <a class="btn btn-red" href="volunteer.html">Get involved</a>
-      <a class="btn btn-outline" href="donate.html">Donate</a>
-    </div>
-  </div>
-</section>
-
+  </section>
 </main>
+
 
 
 <footer class="campaign-footer">
@@ -536,5 +1043,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
 </div>
 <script src="assets/js/site.js?v=20260821-1212"></script>
+
+
+
 </body>
 </html>

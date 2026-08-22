@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>On the campaign trail | Back Ben for Mayor</title>
-<link rel="stylesheet" href="assets/css/site.css?v=20260822-1000-crewe-hero-priorities-fade">
+<link rel="stylesheet" href="assets/css/site.css?v=20260822-unframed-v1">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -190,6 +190,16 @@ body:not(.home-page) .site-header{
 }
 </style>
 
+
+<style id="events-redesign">
+.events-page-redesign{background:#f7f2e8;color:#071f3d}
+.events-intro{padding:74px 0 54px}.events-kicker{text-transform:uppercase;letter-spacing:.14em;color:#f54436;font-size:12px;font-weight:900;margin-bottom:14px}.events-intro h1{font-size:clamp(64px,7vw,104px);line-height:.9;letter-spacing:-.06em;margin:0 0 18px}.events-intro p{font-size:20px;color:#53667a;max-width:760px;line-height:1.5}
+.featured-event-wrap{padding:0 0 64px}.featured-event{display:grid;grid-template-columns:1.4fr .8fr;background:#071f3d;color:#fff;min-height:470px}.featured-event-photo{background:linear-gradient(90deg,rgba(7,31,61,.1),rgba(7,31,61,0)),url("assets/images/crewe-hero.jpg") center/cover}.featured-event-copy{padding:52px 46px;display:flex;flex-direction:column;justify-content:center}.featured-date{font-weight:900;color:#c8d3dd;margin-bottom:13px}.featured-event-copy h2{font-size:48px;line-height:.98;letter-spacing:-.04em;margin:0 0 16px}.featured-event-copy p{font-size:17px;line-height:1.5;color:#d1dbe4}.featured-event-actions{display:flex;align-items:center;gap:18px;margin-top:18px}.featured-event-actions span{color:#b8c6d2;font-weight:800}
+.events-agenda{padding:60px 0 76px;background:#fff}.agenda-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}.agenda-heading h2{font-size:50px;line-height:.95;margin:0}.agenda-heading p{margin:0;color:#667789}.agenda-list{border-top:1px solid #d8d0c3}.agenda-list article{display:grid;grid-template-columns:110px 1fr auto;gap:28px;align-items:center;padding:27px 0;border-bottom:1px solid #d8d0c3}.agenda-list time{display:flex;align-items:baseline;gap:7px;color:#f54436}.agenda-list time b{font-size:42px;line-height:1}.agenda-list time span{font-size:14px;font-weight:900}.agenda-list h3{font-size:26px;margin:0 0 6px}.agenda-list p{margin:0;color:#6b7b8c}.agenda-list a{font-weight:900;color:#071f3d;text-decoration:none}
+.events-cta{background:#071f3d;color:#fff;padding:64px 0}.events-cta .container{display:grid;grid-template-columns:1fr 1fr auto;align-items:center;gap:30px}.events-cta h2{font-size:44px;line-height:.95;margin:0}.events-cta p{color:#cbd6df;line-height:1.5;margin:0}
+@media(max-width:800px){.featured-event{grid-template-columns:1fr}.featured-event-photo{min-height:300px}.featured-event-copy{padding:34px 26px}.featured-event-copy h2{font-size:40px}.agenda-heading{display:block}.agenda-list article{grid-template-columns:74px 1fr}.agenda-list article>a{grid-column:2}.events-cta .container{grid-template-columns:1fr}.events-intro h1{font-size:58px}}
+</style>
+
 </head>
 <body class="inner-page">
 <div class="site-shell">
@@ -216,10 +226,55 @@ body:not(.home-page) .site-header{
   </div>
 </header>
 
-<main>
-<section class="inner-hero"><div class="container"><h1>Meet Ben. Join the campaign.</h1><p>Public meetings, local visits, business events and campaign sessions.</p></div></section>
-<section class="section cream"><div class="container events-list"><div class="event"><div class="event-date">25 SEP</div><div><h3>Crewe Town Centre Walkabout</h3><p>10:30am · Crewe</p></div><a class="btn btn-navy" href="#">Details</a></div><div class="event"><div class="event-date">28 SEP</div><div><h3>Warrington Business Breakfast</h3><p>8:00am · Warrington</p></div><a class="btn btn-navy" href="#">Details</a></div><div class="event"><div class="event-date">02 OCT</div><div><h3>Chester: Homes, Towns & Opportunity</h3><p>7:00pm · Chester</p></div><a class="btn btn-navy" href="#">Details</a></div><div class="event"><div class="event-date">04 OCT</div><div><h3>Ask Ben: Live Online Q&A</h3><p>6:30pm · Online</p></div><a class="btn btn-navy" href="#">Details</a></div><div class="event"><div class="event-date">12 OCT</div><div><h3>Campaign Action Day: Winsford</h3><p>10:00am · Winsford</p></div><a class="btn btn-navy" href="#">Details</a></div></div></section>
+
+<main class="events-page-redesign">
+  <section class="events-intro">
+    <div class="container">
+      <div class="events-kicker">On the campaign trail</div>
+      <h1>Come and meet Ben.</h1>
+      <p>Public meetings, local visits, business events and campaign action across Cheshire & Warrington.</p>
+    </div>
+  </section>
+
+  <section class="featured-event-wrap">
+    <div class="container">
+      <article class="featured-event">
+        <div class="featured-event-photo"></div>
+        <div class="featured-event-copy">
+          <div class="events-kicker">Next event</div>
+          <div class="featured-date">25 September · 10:30am</div>
+          <h2>Crewe Town Centre Walkabout</h2>
+          <p>Join Ben in Crewe as he meets local businesses and residents and hears what the town needs from its new mayor.</p>
+          <div class="featured-event-actions">
+            <a class="btn btn-red" href="journeys/crewe.html">Event details</a>
+            <span>Crewe town centre</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="events-agenda">
+    <div class="container">
+      <div class="agenda-heading"><h2>Coming up</h2><p>More opportunities to meet Ben and get involved.</p></div>
+      <div class="agenda-list">
+        <article><time><b>28</b><span>SEP</span></time><div><h3>Warrington Business Breakfast</h3><p>8:00am · Warrington</p></div><a href="#">Details →</a></article>
+        <article><time><b>02</b><span>OCT</span></time><div><h3>Chester: Homes, Towns & Opportunity</h3><p>7:00pm · Chester</p></div><a href="#">Details →</a></article>
+        <article><time><b>04</b><span>OCT</span></time><div><h3>Ask Ben: Live Online Q&A</h3><p>6:30pm · Online</p></div><a href="hear-from-ben.html">Details →</a></article>
+        <article><time><b>12</b><span>OCT</span></time><div><h3>Campaign Action Day: Winsford</h3><p>10:00am · Winsford</p></div><a href="volunteer.html">Get involved →</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="events-cta">
+    <div class="container">
+      <h2>Want Ben to visit your area?</h2>
+      <p>Tell the campaign where Ben should go next and what he should hear about when he gets there.</p>
+      <a class="btn btn-red" href="area.html">Tell us where →</a>
+    </div>
+  </section>
 </main>
+
 
 
 <footer class="campaign-footer">
