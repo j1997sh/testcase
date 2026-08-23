@@ -659,17 +659,139 @@ body.local-journey-page .leaflet-popup-close-button{
 
 <link rel="stylesheet" href="../assets/css/mobile-parity.css?v=20260823-canonical-v1">
 
-<style id="mobile-menu-solid-cover-v1">
+
+
+
+<style id="mobile-parity-v4">
 @media (max-width:800px){
+
+  /* Open mobile menu: full-screen navy from the very top */
   .site-primary-nav.open{
-    position:fixed!important; inset:0!important; top:0!important;
-    width:100vw!important; min-height:100vh!important;
-    padding:150px 26px 34px!important; background:#061a31!important;
-    z-index:9998!important; overflow-y:auto!important; box-shadow:none!important;
+    position:fixed!important;
+    inset:0!important;
+    top:0!important;
+    width:100vw!important;
+    min-height:100dvh!important;
+    padding:170px 24px 32px!important;
+    background:#061a31!important;
+    z-index:9998!important;
+    overflow-y:auto!important;
+    box-shadow:none!important;
   }
-  .site-header{z-index:10000!important}
-  .site-menu-button{position:relative!important;z-index:10001!important}
-  .site-primary-nav.open a{font-size:22px!important;padding:18px 6px!important}
+
+  /* Keep header chrome above the overlay */
+  .site-header{
+    position:absolute!important;
+    top:0!important;
+    left:0!important;
+    right:0!important;
+    z-index:10000!important;
+    background:transparent!important;
+  }
+
+  /* Mobile logo always visible and centred */
+  .site-logo{
+    position:absolute!important;
+    left:50%!important;
+    top:22px!important;
+    transform:translateX(-50%)!important;
+    z-index:10002!important;
+    display:block!important;
+    opacity:1!important;
+    visibility:visible!important;
+  }
+  .site-logo img{
+    display:block!important;
+    width:104px!important;
+    max-width:104px!important;
+    height:auto!important;
+    opacity:1!important;
+  }
+
+  /* Hamburger / close button: no box, top-right */
+  .site-menu-button{
+    position:absolute!important;
+    right:24px!important;
+    top:26px!important;
+    width:44px!important;
+    height:44px!important;
+    padding:0!important;
+    border:0!important;
+    outline:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    z-index:10003!important;
+  }
+  .site-menu-button::before,
+  .site-menu-button::after,
+  .site-menu-button span{
+    box-shadow:none!important;
+  }
+
+  /* Navigation links */
+  .site-primary-nav.open>a{
+    display:block!important;
+    width:100%!important;
+    margin:0!important;
+    padding:20px 12px!important;
+    border-bottom:1px solid rgba(255,255,255,.16)!important;
+    font-size:24px!important;
+    line-height:1.15!important;
+    color:#fff!important;
+    text-align:left!important;
+  }
+
+  /* Mobile CTA row */
+  .site-primary-nav.open .nav-actions,
+  .site-primary-nav.open .site-nav-actions,
+  .site-primary-nav.open .mobile-nav-actions{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:16px!important;
+    width:100%!important;
+    margin-top:28px!important;
+  }
+
+  /* Volunteer = cream/navy on mobile */
+  .site-primary-nav.open .site-volunteer-button,
+  .site-primary-nav.open a[href*="volunteer"]{
+    background:#efe6d7!important;
+    color:#071f3d!important;
+    border:1px solid #efe6d7!important;
+  }
+
+  /* Donate = orange/white on mobile */
+  .site-primary-nav.open .site-donate-button,
+  .site-primary-nav.open a[href*="donate"]{
+    background:#f04436!important;
+    color:#fff!important;
+    border:1px solid #f04436!important;
+  }
+
+  .site-primary-nav.open .site-volunteer-button,
+  .site-primary-nav.open .site-donate-button,
+  .site-primary-nav.open .nav-actions a,
+  .site-primary-nav.open .site-nav-actions a,
+  .site-primary-nav.open .mobile-nav-actions a{
+    min-height:64px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    padding:16px 14px!important;
+    font-size:20px!important;
+    font-weight:900!important;
+    text-align:center!important;
+    text-decoration:none!important;
+    border-radius:0!important;
+  }
+
+  /* Prevent hero or page content from visually bleeding through open menu */
+  body.menu-open main,
+  body.menu-open footer,
+  body.menu-open .page-hero,
+  body.menu-open .home-hero{
+    visibility:hidden!important;
+  }
 }
 </style>
 

@@ -29,3 +29,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("submit",function(e){const form=e.target.closest("form[data-thanks]");if(!form)return;e.preventDefault();const prefix=window.location.pathname.indexOf("/journeys/")!==-1?"../":"";const type=form.dataset.thanks||"signup";let area="";const postcode=form.querySelector('input[autocomplete="postal-code"],input[placeholder*="Postcode" i],input[placeholder*="town" i]');if(postcode)area=postcode.value.trim();window.location.href=prefix+"thanks.html?from="+encodeURIComponent(type)+(area?"&area="+encodeURIComponent(area):"");});
+
+
+/* mobile menu body-state parity v4 */
+document.addEventListener('click', function(e){
+  const btn = e.target.closest('.site-menu-button');
+  if (btn) {
+    setTimeout(function(){
+      const nav = document.querySelector('.site-primary-nav');
+      document.body.classList.toggle('menu-open', !!(nav && nav.classList.contains('open')));
+    }, 0);
+  }
+  const navLink = e.target.closest('.site-primary-nav a');
+  if (navLink) {
+    setTimeout(function(){ document.body.classList.remove('menu-open'); }, 0);
+  }
+});

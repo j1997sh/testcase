@@ -196,17 +196,139 @@ body:not(.home-page) .site-header{
 <style id="video-hub-v2">.video-hub-page{background:#f7f2e8;color:#071f3d}.video-hub-hero{position:relative;min-height:590px;overflow:hidden;color:#fff}.video-hub-bg{position:absolute;inset:0;background:url("assets/images/ben-news-hero.jpg") center 44%/cover no-repeat}.video-hub-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,18,36,.85),rgba(3,18,36,.24) 65%,rgba(3,18,36,.06)),linear-gradient(to top,rgba(3,18,36,.72),transparent 58%)}.video-hub-inner{position:relative;z-index:2;min-height:590px;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:54px}.video-hub-hero h1{margin:0 0 12px;color:#fff;font-size:clamp(72px,8vw,116px);line-height:.88;letter-spacing:-.06em}.video-hub-hero p{margin:0;color:#e5ecf2;font-size:21px;font-weight:700}.video-feature{padding:72px 0}.video-feature-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:68px;align-items:center}.video-feature-image{position:relative;min-height:480px;border:0;background:url("assets/images/ben-home-intro.jpg") center/cover no-repeat;cursor:pointer}.video-feature-image:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(3,18,36,.4),transparent 55%)}.video-feature-image span{position:absolute;z-index:2;left:30px;bottom:26px;width:64px;height:64px;display:grid;place-items:center;border-radius:50%;background:#f04436;color:#fff;font-size:23px}.video-feature-copy>p:first-child{color:#f04436;font-weight:900}.video-feature-copy h2{margin:0 0 18px;font-size:54px;line-height:.95;letter-spacing:-.045em}.video-feature-copy p{color:#596b7d;font-size:18px;line-height:1.58}.video-text-link{padding:0;border:0;background:none;color:#f04436;font:inherit;font-weight:900;cursor:pointer}.video-library{padding:70px 0 84px;background:#fff}.video-library-heading{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:30px}.video-library-heading h2{margin:0;font-size:52px;line-height:.96}.video-library-heading p{margin:0;max-width:470px;color:#607183}.video-library-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.video-tile{position:relative;min-height:330px;padding:28px;border:0;text-align:left;display:flex;flex-direction:column;cursor:pointer;overflow:hidden}.video-tile>span{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;background:#f04436;color:#fff;margin-bottom:auto}.video-tile strong{position:relative;z-index:2;font-size:30px;line-height:1.03;letter-spacing:-.035em}.video-tile em{position:relative;z-index:2;margin-top:9px;font-style:normal;font-size:14px;font-weight:800}.video-tile-navy{background:#071f3d;color:#fff}.video-tile-red{background:#f04436;color:#fff}.video-tile-red>span{background:#071f3d}.video-tile-cream{background:#eee5d6;color:#071f3d}.video-tile-image{color:#fff;background-size:cover;background-position:center}.video-tile-image:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(3,18,36,.9),rgba(3,18,36,.08) 72%)}.video-buses{background-image:url("assets/images/ben-plan-hero.jpg")}.video-crewe{background-image:url("assets/images/crewe-hero.jpg")}.video-business{background-image:url("assets/images/ben-events-hero.jpg")}.video-question{padding:62px 0;background:#071f3d;color:#fff}.video-question-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}.video-question h2{margin:0 0 8px;font-size:44px;line-height:.96}.video-question p{margin:0;color:#cbd6df}.video-modal[hidden]{display:none}.video-modal{position:fixed;inset:0;z-index:20000;display:grid;place-items:center;padding:18px}.video-modal-backdrop{position:absolute;inset:0;background:rgba(3,18,36,.88)}.video-modal-card{position:relative;z-index:2;width:min(820px,100%);background:#f7f2e8;padding:26px}.video-modal-close{position:absolute;right:12px;top:8px;z-index:3;border:0;background:transparent;color:#fff;font-size:38px;cursor:pointer}.video-modal-screen{min-height:420px;background:#071f3d;color:#fff;display:grid;place-items:center;text-align:center}.video-modal-screen span{display:block;font-size:55px}.video-modal-card h2{font-size:38px;margin:22px 0 8px}.video-modal-card>p{color:#596b7d}@media(max-width:800px){.video-hub-hero,.video-hub-inner{min-height:620px}.video-hub-inner{padding-top:118px;padding-bottom:44px}.video-hub-hero h1{font-size:54px}.video-feature,.video-library{padding:58px 0 68px}.video-feature-grid{grid-template-columns:1fr;gap:28px}.video-feature-image{min-height:300px}.video-feature-copy h2{font-size:42px}.video-library-heading{display:block}.video-library-heading p{margin-top:10px}.video-library-grid{grid-template-columns:1fr}.video-tile{min-height:270px}.video-question-grid{grid-template-columns:1fr;gap:26px}.video-modal-screen{min-height:240px}}</style>
 <link rel="stylesheet" href="assets/css/mobile-parity.css?v=20260823-canonical-v1">
 
-<style id="mobile-menu-solid-cover-v1">
+
+
+
+<style id="mobile-parity-v4">
 @media (max-width:800px){
+
+  /* Open mobile menu: full-screen navy from the very top */
   .site-primary-nav.open{
-    position:fixed!important; inset:0!important; top:0!important;
-    width:100vw!important; min-height:100vh!important;
-    padding:150px 26px 34px!important; background:#061a31!important;
-    z-index:9998!important; overflow-y:auto!important; box-shadow:none!important;
+    position:fixed!important;
+    inset:0!important;
+    top:0!important;
+    width:100vw!important;
+    min-height:100dvh!important;
+    padding:170px 24px 32px!important;
+    background:#061a31!important;
+    z-index:9998!important;
+    overflow-y:auto!important;
+    box-shadow:none!important;
   }
-  .site-header{z-index:10000!important}
-  .site-menu-button{position:relative!important;z-index:10001!important}
-  .site-primary-nav.open a{font-size:22px!important;padding:18px 6px!important}
+
+  /* Keep header chrome above the overlay */
+  .site-header{
+    position:absolute!important;
+    top:0!important;
+    left:0!important;
+    right:0!important;
+    z-index:10000!important;
+    background:transparent!important;
+  }
+
+  /* Mobile logo always visible and centred */
+  .site-logo{
+    position:absolute!important;
+    left:50%!important;
+    top:22px!important;
+    transform:translateX(-50%)!important;
+    z-index:10002!important;
+    display:block!important;
+    opacity:1!important;
+    visibility:visible!important;
+  }
+  .site-logo img{
+    display:block!important;
+    width:104px!important;
+    max-width:104px!important;
+    height:auto!important;
+    opacity:1!important;
+  }
+
+  /* Hamburger / close button: no box, top-right */
+  .site-menu-button{
+    position:absolute!important;
+    right:24px!important;
+    top:26px!important;
+    width:44px!important;
+    height:44px!important;
+    padding:0!important;
+    border:0!important;
+    outline:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    z-index:10003!important;
+  }
+  .site-menu-button::before,
+  .site-menu-button::after,
+  .site-menu-button span{
+    box-shadow:none!important;
+  }
+
+  /* Navigation links */
+  .site-primary-nav.open>a{
+    display:block!important;
+    width:100%!important;
+    margin:0!important;
+    padding:20px 12px!important;
+    border-bottom:1px solid rgba(255,255,255,.16)!important;
+    font-size:24px!important;
+    line-height:1.15!important;
+    color:#fff!important;
+    text-align:left!important;
+  }
+
+  /* Mobile CTA row */
+  .site-primary-nav.open .nav-actions,
+  .site-primary-nav.open .site-nav-actions,
+  .site-primary-nav.open .mobile-nav-actions{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:16px!important;
+    width:100%!important;
+    margin-top:28px!important;
+  }
+
+  /* Volunteer = cream/navy on mobile */
+  .site-primary-nav.open .site-volunteer-button,
+  .site-primary-nav.open a[href*="volunteer"]{
+    background:#efe6d7!important;
+    color:#071f3d!important;
+    border:1px solid #efe6d7!important;
+  }
+
+  /* Donate = orange/white on mobile */
+  .site-primary-nav.open .site-donate-button,
+  .site-primary-nav.open a[href*="donate"]{
+    background:#f04436!important;
+    color:#fff!important;
+    border:1px solid #f04436!important;
+  }
+
+  .site-primary-nav.open .site-volunteer-button,
+  .site-primary-nav.open .site-donate-button,
+  .site-primary-nav.open .nav-actions a,
+  .site-primary-nav.open .site-nav-actions a,
+  .site-primary-nav.open .mobile-nav-actions a{
+    min-height:64px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    padding:16px 14px!important;
+    font-size:20px!important;
+    font-weight:900!important;
+    text-align:center!important;
+    text-decoration:none!important;
+    border-radius:0!important;
+  }
+
+  /* Prevent hero or page content from visually bleeding through open menu */
+  body.menu-open main,
+  body.menu-open footer,
+  body.menu-open .page-hero,
+  body.menu-open .home-hero{
+    visibility:hidden!important;
+  }
 }
 </style>
 
