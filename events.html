@@ -733,7 +733,6 @@ document.addEventListener("DOMContentLoaded", function () {
     L.marker([p.lat, p.lng], { icon: redIcon })
       .addTo(map)
       .bindPopup(
-        "<b>" + p.type + "</b>" +
         "<h3>" + p.title + "</h3>" +
         "<p>" + p.text + "</p>"
       );

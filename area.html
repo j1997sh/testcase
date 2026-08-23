@@ -222,10 +222,15 @@ body:not(.home-page) .site-header{
   </div>
 </header>
 
-<main>
-<section class="inner-hero"><div class="container"><h1>A regional campaign that feels local.</h1><p>Use your postcode to discover nearby events, visits, local priorities and ways to get involved.</p></div></section>
-<section class="section cream"><div class="container split"><div class="photo-slot">MAP PLACEHOLDER</div><div class="copy-block"><h2>What's happening near you?</h2><div class="postcode"><input placeholder="Enter your postcode" aria-label="Enter your postcode"><a class="btn btn-red" href="journeys/crewe-transport.html">Find my area</a></div></div></div></section>
-</main>
+<main class="area-browser-page">
+<section class="inner-hero"><div class="container"><h1>Find your area.</h1><p>Enter your postcode to see local campaign activity, events and priorities near you.</p></div></section>
+<section class="section cream area-browser"><div class="container">
+<div class="area-postcode-search"><input id="area-postcode-input" placeholder="Enter your postcode" aria-label="Enter your postcode"><button id="area-postcode-submit" class="btn btn-red" type="button">Find my area</button></div>
+<div class="area-visual-grid">
+<a class="area-visual-card" href="journeys/crewe.html"><div class="area-card-map area-map-crewe"></div><div class="area-card-box"><h2>Crewe</h2><p>See local news, priorities and ways to get involved.</p></div></a>
+<a class="area-visual-card" href="journeys/chester-housing.html"><div class="area-card-map area-map-chester"></div><div class="area-card-box"><h2>Chester</h2><p>See local news, priorities and ways to get involved.</p></div></a>
+<a class="area-visual-card" href="journeys/warrington-business.html"><div class="area-card-map area-map-warrington"></div><div class="area-card-box"><h2>Warrington</h2><p>See local news, priorities and ways to get involved.</p></div></a>
+</div></div></section></main>
 
 
 <footer class="campaign-footer">
@@ -280,5 +285,6 @@ body:not(.home-page) .site-header{
 
 </div>
 <script src="assets/js/site.js?v=20260823-canonical-v1"></script>
+<script id="area-postcode-v2">(function(){const i=document.getElementById('area-postcode-input'),b=document.getElementById('area-postcode-submit');function go(){const v=(i?.value||'').trim();if(!v){i?.focus();return;}if(/crewe|^cw1|^cw2/i.test(v))location.href='journeys/crewe.html';else if(/chester|^ch/i.test(v))location.href='journeys/chester-housing.html';else if(/warrington|^wa/i.test(v))location.href='journeys/warrington-business.html';else location.href='area.html?q='+encodeURIComponent(v);}b?.addEventListener('click',go);i?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();go();}});})();</script>
 </body>
 </html>

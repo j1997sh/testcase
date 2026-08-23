@@ -654,7 +654,7 @@ body:has(.follow-hero) .site-header{position:absolute!important;top:0;left:0;rig
           <h2>Ben across Cheshire &amp; Warrington.</h2>
           <p>See where Ben has been, what people are raising and what’s coming up next.</p>
         </div>
-        <a href="area.html">Explore all local activity</a>
+        
       </div>
 
       <div id="follow-campaign-map" class="follow-campaign-map" aria-label="Map of Ben's campaign activity"></div>
@@ -665,14 +665,14 @@ body:has(.follow-hero) .site-header{position:absolute!important;top:0;left:0;rig
     <div class="container">
       <div class="follow-next-heading">
         <h2>Keep the conversation going.</h2>
-        <p>Follow the campaign in the way that suits you.</p>
+        
       </div>
 
       <div class="follow-next-grid">
         <a class="follow-next-card follow-next-tell" href="tell-ben.html">
           <div class="follow-next-image"></div>
           <div class="follow-next-copy">
-            <span>Have your say</span>
+            
             <strong>Tell Ben what matters where you live.</strong>
             <p>Choose your area, your priority and tell Ben what you would change.</p>
           </div>
@@ -681,7 +681,7 @@ body:has(.follow-hero) .site-header{position:absolute!important;top:0;left:0;rig
         <a class="follow-next-card follow-next-volunteer" href="volunteer.html">
           <div class="follow-next-image"></div>
           <div class="follow-next-copy">
-            <span>Join the team</span>
+            
             <strong>Give an hour. Make a difference.</strong>
             <p>Campaign locally, help online, join an event or bring your skills.</p>
           </div>
@@ -690,7 +690,7 @@ body:has(.follow-hero) .site-header{position:absolute!important;top:0;left:0;rig
         <a class="follow-next-card follow-next-events" href="events.html">
           <div class="follow-next-image"></div>
           <div class="follow-next-copy">
-            <span>Meet Ben</span>
+            
             <strong>See what’s happening near you.</strong>
             <p>Find campaign visits, public meetings and upcoming local events.</p>
           </div>
@@ -818,7 +818,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
   points.forEach(function(p){
     L.marker(p.coords,{icon:markerIcon}).addTo(map).bindPopup(
-      '<p class="map-popup-type">'+p.type+'</p>'+
       '<p class="map-popup-title">'+p.title+'</p>'+
       '<p class="map-popup-copy">'+p.copy+'</p>'+
       '<a class="map-popup-link" href="'+p.link+'">'+p.label+'</a>'

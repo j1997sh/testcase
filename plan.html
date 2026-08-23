@@ -1078,8 +1078,8 @@ body:has(.plan-photo-hero) .site-header-inner{
     <div class="plan-photo-hero-bg"></div>
     <div class="plan-photo-hero-fade"></div>
     <div class="container plan-photo-hero-inner">
-      <h1>A practical plan for Cheshire &amp; Warrington.</h1>
-      <p>Four priorities focused on the everyday things a mayor can help improve.</p>
+      <div><h1 id="plan-local-title">A practical plan for Cheshire &amp; Warrington.</h1><p>Four priorities focused on the everyday things a mayor can help improve.</p></div>
+      <div class="plan-hero-postcode"><label for="plan-area-input">See the plan for your area</label><div><input id="plan-area-input" type="text" placeholder="Enter your postcode" aria-label="Enter your postcode"><button id="plan-area-submit" type="button" class="btn btn-red">Go</button></div></div>
     </div>
   </section>
 
@@ -1102,7 +1102,7 @@ body:has(.plan-photo-hero) .site-header-inner{
         <h2>Better transport.</h2>
         <p class="plan-story-lead">Make everyday journeys simpler, faster and more reliable — whether by bus, rail, road or active travel.</p>
         <p>That means better local bus connections, tackling the bottlenecks that waste time every day and making sure major rail investment benefits the whole region.</p>
-        <a class="btn btn-red" href="journeys/crewe-transport.html">See the local campaign</a>
+        <a class="btn btn-red" href="journeys/crewe-transport.html">Read more</a>
       </div>
     </div>
   </section>
@@ -1125,7 +1125,7 @@ body:has(.plan-photo-hero) .site-header-inner{
         <h2>A stronger economy.</h2>
         <p class="plan-story-lead">Back the businesses already creating jobs here — and make it easier for new investment to choose Cheshire &amp; Warrington.</p>
         <p>That means listening directly to employers about skills, infrastructure and barriers to growth, while making sure the region has a confident voice with government and investors.</p>
-        <a class="btn btn-red" href="journeys/warrington-business.html">Hear from business</a>
+        <a class="btn btn-red" href="journeys/warrington-business.html">Read more</a>
       </div>
     </div>
   </section>
@@ -1136,7 +1136,7 @@ body:has(.plan-photo-hero) .site-header-inner{
         <h2>Homes &amp; opportunity.</h2>
         <p class="plan-story-lead">New homes should come with the roads, schools, GP capacity and local services that make growth work for existing communities too.</p>
         <p>The campaign will push for development that makes better use of brownfield land, supports thriving towns and links new housing to real infrastructure and opportunity.</p>
-        <a class="btn btn-red" href="journeys/chester-housing.html">Explore the housing campaign</a>
+        <a class="btn btn-red" href="journeys/chester-housing.html">Read more</a>
       </div>
       <div class="plan-story-image plan-homes-image"></div>
     </div>
@@ -1236,7 +1236,7 @@ document.addEventListener("DOMContentLoaded", function(){
           <span>Crewe</span>
           <h3>Better transport for Crewe</h3>
           <p>Local transport, Crewe Station, buses, congestion and nearby campaign activity.</p>
-          <a class="btn btn-red" href="journeys/crewe-transport.html">View the Crewe journey</a>
+          <a class="btn btn-red" href="journeys/crewe-transport.html">Read more</a>
         `;
       } else {
         result.innerHTML = `
@@ -1256,5 +1256,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
+<script id="plan-localiser-v1">(function(){const i=document.getElementById('plan-area-input'),b=document.getElementById('plan-area-submit'),h=document.getElementById('plan-local-title');function go(){const v=(i?.value||'').trim();if(!v){i?.focus();return;}let a='your area';if(/crewe|^cw1|^cw2/i.test(v))a='Crewe';else if(/chester|^ch/i.test(v))a='Chester';else if(/warrington|^wa/i.test(v))a='Warrington';else if(/northwich|^cw8|^cw9/i.test(v))a='Northwich';else if(/congleton|^cw12/i.test(v))a='Congleton';h.textContent="Ben’s plan for "+a+".";}b?.addEventListener('click',go);i?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();go();}});})();</script>
 </body>
 </html>

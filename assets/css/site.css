@@ -10576,3 +10576,16 @@ button.btn{
     box-shadow:none!important;
   }
 }
+/* 2026-08-23 polish batch */
+.news-filter-inner{justify-content:center!important;gap:12px!important}.news-filter-inner>a{display:inline-flex!important;align-items:center;justify-content:center;background:#f54436!important;color:#fff!important;padding:12px 22px!important;text-decoration:none!important;font-weight:800!important}.news-filter-inner>a:hover,.news-filter-inner>a.active{background:#0a2747!important;color:#fff!important}.news-search{display:none!important}
+.news-card-link,.news-lead-copy>a,.home-stories-heading>a,.map-popup-link,.crewe-subpage main a:not(.btn){display:inline-flex;align-items:center;justify-content:center;background:#f54436;color:#fff!important;padding:11px 16px;text-decoration:none;font-weight:800}
+.plan-photo-hero-inner{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(280px,420px)!important;gap:48px!important;align-items:end!important}.plan-hero-postcode{background:rgba(7,34,61,.78);padding:22px}.plan-hero-postcode label{display:block;color:#fff;font-weight:800;margin-bottom:10px}.plan-hero-postcode>div{display:flex}.plan-hero-postcode input{min-width:0;flex:1;padding:14px;border:0}.plan-hero-postcode .btn{border:0}
+.area-postcode-search{display:flex;max-width:760px;margin:0 auto 46px}.area-postcode-search input{flex:1;min-width:0;padding:18px;border:1px solid #c9c1b4;font:inherit}.area-postcode-search button{border:0}.area-visual-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.area-visual-card{position:relative;display:block;min-height:300px;background:#d9e0d2;text-decoration:none;color:#092847;overflow:hidden}.area-card-map{height:220px;background:url('../images/ben-area.jpg') center/cover no-repeat;filter:saturate(.75)}.area-map-chester{background-position:35% 45%}.area-map-warrington{background-position:70% 50%}.area-card-box{position:absolute;left:18px;right:18px;bottom:18px;background:#fff;padding:18px 20px;box-shadow:0 5px 16px rgba(0,0,0,.15)}.area-card-box h2{margin:0 0 6px;font-size:26px}.area-card-box p{margin:0}
+/* CTA links are buttons; remove arrow glyphs visually where legacy markup remains */
+a.btn,.news-card-link,.news-lead-copy>a,.home-stories-heading>a,.map-popup-link{text-decoration:none}
+@media(max-width:800px){.plan-photo-hero-inner{grid-template-columns:1fr!important}.plan-hero-postcode{margin-top:18px}.area-visual-grid{grid-template-columns:1fr}.area-postcode-search{flex-direction:column}.area-postcode-search button{width:100%}.news-filter-inner{flex-wrap:wrap!important}}
+/* Requested cleanup: remove decorative mini-headings and unify faded photographic headers */
+.map-popup-type,.thanks-next-card>span,.follow-action-card>span,.thanks-kicker{display:none!important}
+.editorial-photo-hero:before,.thanks-hero:before,.events-hero:before,.volunteer-hero:before,.about-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,27,50,.48),rgba(4,27,50,.22) 45%,rgba(4,27,50,.58));pointer-events:none}
+.editorial-photo-hero,.thanks-hero,.events-hero,.volunteer-hero,.about-hero{position:relative}
+.editorial-photo-hero>* ,.thanks-hero>* ,.events-hero>* ,.volunteer-hero>* ,.about-hero>*{position:relative;z-index:1}
