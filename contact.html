@@ -122,10 +122,7 @@ body:not(.home-page) .site-header{
   white-space:nowrap!important;
 }
 
-.site-volunteer-button{
-  border:1px solid rgba(255,255,255,.72)!important;
-  background:rgba(255,255,255,.03)!important;
-}
+.site-volunteer-button{border:1px solid #efe6d7!important;background:#efe6d7!important;color:#071f3d!important;}
 
 .site-donate-button{
   border:1px solid #f04436!important;
@@ -263,6 +260,46 @@ body:not(.home-page) .site-header{
 </style>
 
 <link rel="stylesheet" href="assets/css/mobile-parity.css?v=20260823-canonical-v1">
+
+<style id="mobile-menu-solid-cover-v1">
+@media (max-width:800px){
+  .site-primary-nav.open{
+    position:fixed!important; inset:0!important; top:0!important;
+    width:100vw!important; min-height:100vh!important;
+    padding:150px 26px 34px!important; background:#061a31!important;
+    z-index:9998!important; overflow-y:auto!important; box-shadow:none!important;
+  }
+  .site-header{z-index:10000!important}
+  .site-menu-button{position:relative!important;z-index:10001!important}
+  .site-primary-nav.open a{font-size:22px!important;padding:18px 6px!important}
+}
+</style>
+
+
+<style id="contact-editorial-v2">
+.contact-editorial{background:#f7f2e8;color:#071f3d}
+.contact-editorial-hero{position:relative;min-height:330px;display:flex;align-items:flex-end;overflow:hidden;background:#071f3d}
+.contact-editorial-image{position:absolute;inset:0;background:url('assets/images/ben-about-hero.jpg') center 42%/cover no-repeat}
+.contact-editorial-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,18,37,.90),rgba(4,18,37,.58) 48%,rgba(4,18,37,.16))}
+.contact-editorial-hero-inner{position:relative;z-index:1;padding:74px 0 52px;color:#fff}
+.contact-editorial-hero h1{margin:0 0 10px;font-size:clamp(52px,6vw,82px);line-height:.92;letter-spacing:-.055em}
+.contact-editorial-hero p{margin:0;max-width:660px;font-size:20px;line-height:1.45;font-weight:700}
+.contact-editorial-body{padding:70px 0 84px}.contact-editorial-wrap{max-width:930px}
+.contact-editorial-intro{max-width:680px;margin-bottom:42px}.contact-editorial-intro h2{margin:0 0 12px;font-size:42px;line-height:1;letter-spacing:-.035em}
+.contact-editorial-intro p{margin:0;color:#536679;font-size:18px;line-height:1.55}
+.contact-editorial-form{display:grid;gap:20px}.contact-editorial-two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-editorial-form label>span{display:block;margin:0 0 7px;font-weight:900;font-size:14px}
+.contact-editorial-form input,.contact-editorial-form textarea{width:100%;border:0;border-bottom:2px solid #a9a095;background:transparent;padding:12px 2px;font:inherit;color:#071f3d;outline:none}
+.contact-editorial-form input:focus,.contact-editorial-form textarea:focus{border-color:#f04436}
+.contact-editorial-form textarea{min-height:150px;resize:vertical}
+.contact-editorial-form .contact-consent{display:flex;align-items:flex-start;gap:10px;max-width:680px;color:#536679;font-size:14px;line-height:1.4}
+.contact-editorial-form .contact-consent input{width:auto;margin-top:3px}.contact-editorial-form .contact-consent span{margin:0;font-weight:600}
+.contact-editorial-form button{justify-self:start;margin-top:4px}
+.contact-editorial-direct{display:flex;gap:54px;margin-top:54px;padding-top:28px;border-top:1px solid #d9d0c3}
+.contact-editorial-direct p{margin:0;color:#536679;line-height:1.6}.contact-editorial-direct a{color:#071f3d;font-weight:900;text-decoration:none}
+@media(max-width:800px){.contact-editorial-hero{min-height:270px}.contact-editorial-hero-inner{padding:58px 20px 38px}.contact-editorial-hero h1{font-size:52px}.contact-editorial-hero p{font-size:17px}.contact-editorial-body{padding:52px 0 64px}.contact-editorial-wrap{padding-left:20px;padding-right:20px}.contact-editorial-two{grid-template-columns:1fr}.contact-editorial-intro h2{font-size:36px}.contact-editorial-direct{display:block}.contact-editorial-direct p+p{margin-top:20px}}
+</style>
+
 </head>
 <body class="inner-page about-hero-page about-fade-page">
 <div class="site-shell about-fade-shell">
@@ -290,31 +327,23 @@ body:not(.home-page) .site-header{
 </header>
 
 
-<main class="contact-ben-page">
-  <section class="contact-ben-hero">
-    <div class="container contact-ben-hero-inner">
-      <h1>Contact Ben.</h1>
-      <p>Want Ben to visit? Got something he should know about? Get in touch with the campaign.</p>
-    </div>
-  </section>
-  <section class="contact-ben-body">
-    <div class="container contact-ben-grid">
-      <div class="contact-ben-routes">
-        <h2>Talk to the campaign.</h2>
-        <p>Whether it’s an issue in your area, an invitation for Ben or a question for the team, send us a message.</p>
-        <div class="contact-route"><strong>Campaign enquiries</strong><a href="mailto:hello@backben.co.uk">hello@backben.co.uk</a></div>
-        <div class="contact-route"><strong>Media enquiries</strong><a href="mailto:press@backben.co.uk">press@backben.co.uk</a></div>
-      </div>
-      <form data-thanks="contact" class="contact-ben-form">
-        <div class="contact-ben-two"><input type="text" placeholder="First name" aria-label="First name"><input type="text" placeholder="Last name" aria-label="Last name"></div>
-        <div class="contact-ben-two"><input type="email" placeholder="Email address" aria-label="Email address"><input type="text" placeholder="Postcode" aria-label="Postcode"></div>
-        <input type="text" placeholder="What’s this about?" aria-label="Subject">
-        <textarea placeholder="Your message" aria-label="Your message"></textarea>
-        <button type="submit" class="btn btn-red">Send message</button>
-      </form>
-    </div>
-  </section>
-</main>
+<main class="contact-ben-page contact-editorial">
+<section class="contact-editorial-hero">
+  <div class="contact-editorial-image" aria-hidden="true"></div><div class="contact-editorial-shade"></div>
+  <div class="container contact-editorial-hero-inner"><h1>Contact Ben.</h1><p>Want Ben to visit? Got something he should know about? Get in touch.</p></div>
+</section>
+<section class="contact-editorial-body"><div class="container contact-editorial-wrap">
+  <div class="contact-editorial-intro"><h2>Send Ben a message.</h2><p>Whether it’s something happening where you live, an invitation, or an issue you want the campaign to hear about, use the form below.</p></div>
+  <form data-thanks="contact" class="contact-editorial-form">
+    <div class="contact-editorial-two"><label><span>First name</span><input type="text" aria-label="First name"></label><label><span>Last name</span><input type="text" aria-label="Last name"></label></div>
+    <div class="contact-editorial-two"><label><span>Email address</span><input type="email" aria-label="Email address"></label><label><span>Postcode</span><input type="text" aria-label="Postcode"></label></div>
+    <label><span>What’s this about?</span><input type="text" aria-label="Subject"></label>
+    <label><span>Your message</span><textarea aria-label="Your message"></textarea></label>
+    <label class="contact-consent"><input type="checkbox" name="email_consent"><span>I’m happy to receive campaign updates from Ben by email.</span></label>
+    <button type="submit" class="btn btn-red">Send message</button>
+  </form>
+  <div class="contact-editorial-direct"><p><strong>Campaign enquiries</strong><br><a href="mailto:hello@backben.co.uk">hello@backben.co.uk</a></p><p><strong>Media enquiries</strong><br><a href="mailto:press@backben.co.uk">press@backben.co.uk</a></p></div>
+</div></section></main>
 
 
 

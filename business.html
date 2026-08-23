@@ -122,10 +122,7 @@ body:not(.home-page) .site-header{
   white-space:nowrap!important;
 }
 
-.site-volunteer-button{
-  border:1px solid rgba(255,255,255,.72)!important;
-  background:rgba(255,255,255,.03)!important;
-}
+.site-volunteer-button{border:1px solid #efe6d7!important;background:#efe6d7!important;color:#071f3d!important;}
 
 .site-donate-button{
   border:1px solid #f04436!important;
@@ -197,6 +194,21 @@ body:not(.home-page) .site-header{
 </style>
 
 <link rel="stylesheet" href="assets/css/mobile-parity.css?v=20260823-canonical-v1">
+
+<style id="mobile-menu-solid-cover-v1">
+@media (max-width:800px){
+  .site-primary-nav.open{
+    position:fixed!important; inset:0!important; top:0!important;
+    width:100vw!important; min-height:100vh!important;
+    padding:150px 26px 34px!important; background:#061a31!important;
+    z-index:9998!important; overflow-y:auto!important; box-shadow:none!important;
+  }
+  .site-header{z-index:10000!important}
+  .site-menu-button{position:relative!important;z-index:10001!important}
+  .site-primary-nav.open a{font-size:22px!important;padding:18px 6px!important}
+}
+</style>
+
 </head>
 <body class="inner-page">
 <div class="site-shell">

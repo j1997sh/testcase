@@ -122,10 +122,7 @@ body:not(.home-page) .site-header{
   white-space:nowrap!important;
 }
 
-.site-volunteer-button{
-  border:1px solid rgba(255,255,255,.72)!important;
-  background:rgba(255,255,255,.03)!important;
-}
+.site-volunteer-button{border:1px solid #efe6d7!important;background:#efe6d7!important;color:#071f3d!important;}
 
 .site-donate-button{
   border:1px solid #f04436!important;
@@ -200,6 +197,21 @@ body:not(.home-page) .site-header{
 .thanks-page{background:#f7f2e8;color:#071f3d}.thanks-hero{position:relative;min-height:590px;color:#fff;overflow:hidden}.thanks-hero-image{position:absolute;inset:0;background:url("assets/images/ben-home-intro.jpg") center 42%/cover no-repeat}.thanks-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,18,36,.86),rgba(3,18,36,.28) 67%,rgba(3,18,36,.08)),linear-gradient(to top,rgba(3,18,36,.72),transparent 58%)}.thanks-hero-inner{position:relative;z-index:2;min-height:590px;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:58px}.thanks-kicker{margin:0 0 9px!important;color:#ff4b3d!important;font-size:20px!important;font-weight:900!important}.thanks-hero h1{margin:0 0 14px;max-width:900px;color:#fff;font-size:clamp(70px,8vw,116px);line-height:.88;letter-spacing:-.06em}.thanks-hero-inner>p:last-child{margin:0;max-width:720px;color:#e5ecf2;font-size:21px;line-height:1.45}.thanks-next{padding:72px 0 84px}.thanks-next-intro{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}.thanks-next-intro h2{margin:0;font-size:52px;line-height:.96}.thanks-next-intro p{margin:0;color:#607183}.thanks-next-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.thanks-next-card{min-height:300px;padding:30px;display:flex;flex-direction:column;text-decoration:none;transition:transform .18s ease}.thanks-next-card:hover{transform:translateY(-3px)}.thanks-next-card span{font-size:14px;font-weight:900;margin-bottom:40px}.thanks-next-card strong{font-size:34px;line-height:1.02;letter-spacing:-.035em}.thanks-next-card em{margin-top:auto;padding-top:30px;font-style:normal;font-weight:900}.thanks-card-red{background:#f04436;color:#fff}.thanks-card-cream{background:#eee5d6;color:#071f3d}.thanks-card-navy{background:#071f3d;color:#fff}@media(max-width:800px){.thanks-hero,.thanks-hero-inner{min-height:600px}.thanks-hero-inner{padding-top:118px;padding-bottom:44px}.thanks-hero h1{font-size:54px}.thanks-next{padding:58px 0 68px}.thanks-next-intro{display:block}.thanks-next-intro p{margin-top:8px}.thanks-next-grid{grid-template-columns:1fr}.thanks-next-card{min-height:230px}.thanks-next-card strong{font-size:31px}}
 </style>
 <link rel="stylesheet" href="assets/css/mobile-parity.css?v=20260823-canonical-v1">
+
+<style id="mobile-menu-solid-cover-v1">
+@media (max-width:800px){
+  .site-primary-nav.open{
+    position:fixed!important; inset:0!important; top:0!important;
+    width:100vw!important; min-height:100vh!important;
+    padding:150px 26px 34px!important; background:#061a31!important;
+    z-index:9998!important; overflow-y:auto!important; box-shadow:none!important;
+  }
+  .site-header{z-index:10000!important}
+  .site-menu-button{position:relative!important;z-index:10001!important}
+  .site-primary-nav.open a{font-size:22px!important;padding:18px 6px!important}
+}
+</style>
+
 </head>
 <body class="inner-page"><div class="site-shell"><header class="site-header">
   <div class="site-header-inner">

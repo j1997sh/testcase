@@ -122,10 +122,7 @@ body:not(.home-page) .site-header{
   white-space:nowrap!important;
 }
 
-.site-volunteer-button{
-  border:1px solid rgba(255,255,255,.72)!important;
-  background:rgba(255,255,255,.03)!important;
-}
+.site-volunteer-button{border:1px solid #efe6d7!important;background:#efe6d7!important;color:#071f3d!important;}
 
 .site-donate-button{
   border:1px solid #f04436!important;
@@ -255,6 +252,21 @@ body.volunteer-survey-page .volunteer-hero-content h1{margin:0 0 12px!important;
 body.volunteer-survey-page .volunteer-hero-content p{margin:0!important;color:#fff!important;font-size:24px!important;font-weight:700!important;opacity:1!important;visibility:visible!important}
 @media(max-width:800px){body.volunteer-survey-page .volunteer-hero{min-height:640px!important}body.volunteer-survey-page .volunteer-hero-image{object-position:center center!important}body.volunteer-survey-page .volunteer-hero-content{min-height:640px!important;padding:110px 22px 40px!important}body.volunteer-survey-page .volunteer-hero-content h1{font-size:54px!important}body.volunteer-survey-page .volunteer-hero-content p{font-size:20px!important}}
 </style>
+
+<style id="mobile-menu-solid-cover-v1">
+@media (max-width:800px){
+  .site-primary-nav.open{
+    position:fixed!important; inset:0!important; top:0!important;
+    width:100vw!important; min-height:100vh!important;
+    padding:150px 26px 34px!important; background:#061a31!important;
+    z-index:9998!important; overflow-y:auto!important; box-shadow:none!important;
+  }
+  .site-header{z-index:10000!important}
+  .site-menu-button{position:relative!important;z-index:10001!important}
+  .site-primary-nav.open a{font-size:22px!important;padding:18px 6px!important}
+}
+</style>
+
 </head>
 <body class="inner-page volunteer-survey-page">
 <div class="site-shell">
