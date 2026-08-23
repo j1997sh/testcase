@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Back Ben for Mayor of Cheshire &amp; Warrington</title>
   <meta name="description" content="Back Ben for Mayor of Cheshire &amp; Warrington. Explore Ben’s plan, local campaign activity, events and ways to get involved.">
   <meta name="theme-color" content="#071a34">
@@ -10,7 +10,7 @@
   <meta property="og:description" content="Back Ben for Mayor of Cheshire &amp; Warrington. Explore Ben’s plan, local campaign activity, events and ways to get involved.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/ben-home-hero.jpg">
-  <link rel="stylesheet" href="assets/css/site.css?v=20260822-menu-icon-final-v1">
+  <link rel="stylesheet" href="assets/css/site.css?v=20260823-canonical-v1">
 
 <style id="final-header-system">
 *{box-sizing:border-box}
@@ -196,7 +196,8 @@ body:not(.home-page) .site-header{
 }
 </style>
 
-  <link rel="stylesheet" href="assets/css/mobile-parity.css?v=20260822-mobile-parity-v1">
+<style id="home-stories-v1">.home-stories{padding:72px 0 84px;background:#fff}.home-stories-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:28px}.home-stories-heading h2{margin:0;font-size:52px;line-height:.96;letter-spacing:-.04em}.home-stories-heading a{color:#f04436;font-weight:900;text-decoration:none}.home-stories-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.home-story{min-height:370px;padding:30px;display:flex;flex-direction:column;text-decoration:none}.home-story span{font-size:14px;font-weight:900;margin-bottom:46px}.home-story strong{font-size:35px;line-height:1.01;letter-spacing:-.04em}.home-story p{font-size:16px;line-height:1.5}.home-story em{font-style:normal;font-weight:900;margin-top:auto;padding-top:28px}.home-story-navy{background:#071f3d;color:#fff}.home-story-navy p{color:#cfdae5}.home-story-cream{background:#eee5d6;color:#071f3d}.home-story-cream p{color:#586a7b}.home-story-red{background:#f04436;color:#fff}.home-story-red p{color:#fff}@media(max-width:800px){.home-stories{padding:58px 0 68px}.home-stories-heading{display:block}.home-stories-heading a{display:inline-block;margin-top:10px}.home-stories-grid{grid-template-columns:1fr}.home-story{min-height:280px}.home-story strong{font-size:31px}}</style>
+<link rel="stylesheet" href="assets/css/mobile-parity.css?v=20260823-canonical-v1">
 </head>
 <body class="home-page">
 <div class="site-shell">
@@ -232,14 +233,14 @@ body:not(.home-page) .site-header{
     <div class="home-hero-panel">
       <img class="home-campaign-logo" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor">
 
-      <form class="home-signup-form">
+      <form class="home-signup-form" data-thanks="signup">
         <div class="home-signup-grid">
           <input type="text" placeholder="First name" aria-label="First name" autocomplete="given-name">
           <input type="text" placeholder="Last name" aria-label="Last name" autocomplete="family-name">
           <input type="email" placeholder="Email address" aria-label="Email address" autocomplete="email">
           <input type="text" placeholder="Postcode" aria-label="Postcode" autocomplete="postal-code">
         </div>
-        <button class="btn btn-red home-signup-submit" type="button">Join the campaign</button>
+        <button class="btn btn-red home-signup-submit" type="submit">Join the campaign</button>
       </form>
 
       <div class="ben-social-row" aria-label="Social media">
@@ -280,8 +281,8 @@ body:not(.home-page) .site-header{
       <p>Find out what Ben is doing near you, what local people are raising and what’s happening across Cheshire & Warrington.</p>
 
       <div class="home-area-simple-search">
-        <input type="text" placeholder="Enter your postcode or town" aria-label="Enter your postcode or town">
-        <a class="btn btn-red" href="area.html">Find my area</a>
+        <input id="home-area-input" type="text" placeholder="Enter your postcode or town" aria-label="Enter your postcode or town">
+        <button class="btn btn-red" id="home-area-submit" type="button">Find my area</button>
       </div>
 
       <p class="home-area-simple-note">Search by postcode or town to see local campaign visits, events and issues.</p>
@@ -291,6 +292,12 @@ body:not(.home-page) .site-header{
   </div>
 </section>
 
+
+<section class="home-stories"><div class="container"><div class="home-stories-heading"><h2>From the campaign.</h2><a href="news.html">See all news →</a></div><div class="home-stories-grid">
+<a class="home-story home-story-navy" href="journeys/crewe-story.html"><span>Crewe</span><strong>What Ben is hearing in Crewe.</strong><p>Growth, infrastructure and what local people want from the new mayor.</p><em>Read the story →</em></a>
+<a class="home-story home-story-cream" href="plan.html"><span>Ben’s plan</span><strong>Practical leadership starts with practical priorities.</strong><p>Transport, growth, safer communities and homes backed by infrastructure.</p><em>Read the plan →</em></a>
+<a class="home-story home-story-red" href="events.html"><span>Campaign trail</span><strong>Meet Ben across Cheshire &amp; Warrington.</strong><p>See where Ben is going next — and where the campaign has already been.</p><em>Find an event →</em></a>
+</div></div></section>
 </main>
 
 
@@ -346,6 +353,7 @@ body:not(.home-page) .site-header{
 </footer>
 
 </div>
-<script src="assets/js/site.js?v=20260822-menu-icon-final-v1"></script>
+<script src="assets/js/site.js?v=20260823-canonical-v1"></script>
+<script id="home-journeys-v1">(function(){const b=document.getElementById('home-area-submit'),i=document.getElementById('home-area-input');function go(){const v=(i?.value||'').trim();if(!v){i?.focus();return;}if(/crewe|^cw1|^cw2/i.test(v))location.href='journeys/crewe.html';else if(/chester|^ch/i.test(v))location.href='journeys/chester-housing.html';else if(/warrington|^wa/i.test(v))location.href='journeys/warrington-business.html';else location.href='area.html?q='+encodeURIComponent(v);}b?.addEventListener('click',go);i?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();go();}});})();</script>
 </body>
 </html>

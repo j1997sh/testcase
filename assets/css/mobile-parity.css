@@ -1129,3 +1129,5 @@
     grid-template-columns:1fr 1fr!important;
   }
 }
+
+@media(max-width:800px){.site-menu-button{border:0!important;background:transparent!important;box-shadow:none!important;width:42px!important;height:42px!important}.site-menu-button::before,.site-menu-button::after{border:0!important}.home-stories-grid,.thanks-next-grid,.video-library-grid{grid-template-columns:1fr!important}.video-feature-grid,.video-question-grid{grid-template-columns:1fr!important}.thanks-hero,.thanks-hero-inner,.video-hub-hero,.video-hub-inner{min-height:620px!important}}

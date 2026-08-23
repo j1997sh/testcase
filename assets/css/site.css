@@ -61,7 +61,7 @@ header{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:min(
 .hero-visual{position:relative;display:flex;align-items:flex-end;justify-content:center;padding:104px 22px 72px;min-width:0}
 .portrait{width:min(94%,560px);height:430px;position:relative;background:
   linear-gradient(90deg,rgba(8,39,79,.58),transparent 20%),
-  url("../images/ben-hero.jpg") center 18% / cover no-repeat,
+  url("../images/ben-home-hero.jpg") center 18% / cover no-repeat,
   linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.14)}
 .portrait:after{content:"CANDIDATE IMAGE";position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.42);font-size:17px;font-weight:800;letter-spacing:.06em;pointer-events:none}
 

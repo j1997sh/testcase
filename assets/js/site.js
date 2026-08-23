@@ -8,15 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!nav.querySelector(".site-mobile-actions")) {
       const actions = document.createElement("div");
       actions.className = "site-mobile-actions";
-      const prefix = window.location.pathname.indexOf("/journeys/") !== -1 ? "../" : "";
       actions.innerHTML =
-        '<a href="' + prefix + 'volunteer.html">Volunteer</a>' +
-        '<a href="' + prefix + 'donate.html">Donate</a>';
+        '<a href="volunteer.html">Volunteer</a>' +
+        '<a href="donate.html">Donate</a>';
       nav.appendChild(actions);
     }
 
     button.textContent = "";
-    button.setAttribute("aria-expanded", "false");
     button.setAttribute("aria-label", "Open navigation menu");
 
     button.addEventListener("click", function (e) {
@@ -26,22 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
       button.setAttribute("aria-expanded", open ? "true" : "false");
       button.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
     });
-
-    nav.addEventListener("click", function (e) {
-      if (e.target.closest("a")) {
-        nav.classList.remove("open");
-        button.setAttribute("aria-expanded", "false");
-        button.setAttribute("aria-label", "Open navigation menu");
-      }
-    });
-
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && nav.classList.contains("open")) {
-        nav.classList.remove("open");
-        button.setAttribute("aria-expanded", "false");
-        button.setAttribute("aria-label", "Open navigation menu");
-        button.focus();
-      }
-    });
   });
 });
+
+
+document.addEventListener("submit",function(e){const form=e.target.closest("form[data-thanks]");if(!form)return;e.preventDefault();const prefix=window.location.pathname.indexOf("/journeys/")!==-1?"../":"";const type=form.dataset.thanks||"signup";let area="";const postcode=form.querySelector('input[autocomplete="postal-code"],input[placeholder*="Postcode" i],input[placeholder*="town" i]');if(postcode)area=postcode.value.trim();window.location.href=prefix+"thanks.html?from="+encodeURIComponent(type)+(area?"&area="+encodeURIComponent(area):"");});
