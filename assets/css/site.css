@@ -10589,3 +10589,81 @@ a.btn,.news-card-link,.news-lead-copy>a,.home-stories-heading>a,.map-popup-link{
 .editorial-photo-hero:before,.thanks-hero:before,.events-hero:before,.about-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,27,50,.48),rgba(4,27,50,.22) 45%,rgba(4,27,50,.58));pointer-events:none}
 .editorial-photo-hero,.thanks-hero,.events-hero,.about-hero{position:relative}
 .editorial-photo-hero>* ,.thanks-hero>* ,.events-hero>* ,.about-hero>*{position:relative;z-index:1}
+
+/* ===== Campaign-led reconciliation pass — 2026-08-23 ===== */
+/* Header actions */
+.site-volunteer-button{background:#0b5dac!important;border-color:#0b5dac!important;color:#fff!important}
+.site-volunteer-button:hover{background:#084d91!important;border-color:#084d91!important}
+
+/* Homepage */
+.home-email-consent{display:flex;align-items:flex-start;gap:10px;margin-top:13px;color:#fff;font-size:13px;line-height:1.35;font-weight:650;max-width:520px}
+.home-email-consent input{width:17px;height:17px;min-height:0;margin:1px 0 0;accent-color:#f04436;box-shadow:none!important}
+.home-watch{display:none!important}
+.home-stories{padding-top:54px!important}
+.home-stories-heading{display:none!important}
+.home-page .ben-social-row{gap:13px!important;margin-top:20px!important}
+.home-page .ben-social-row span{font-size:19px!important;font-weight:950!important;opacity:1!important;transform:scale(1.08)}
+
+/* Tighter photographic heroes everywhere except home */
+body:not(.home-page) .about-photo-hero,
+body:not(.home-page) .plan-photo-hero,
+body:not(.home-page) .news-photo-hero,
+body:not(.home-page) .events-photo-hero,
+body:not(.home-page) .follow-hero,
+body:not(.home-page) .tell-ben-hero,
+body:not(.home-page) .volunteer-hero,
+body:not(.home-page) .thanks-hero,
+body:not(.home-page) .editorial-photo-hero{min-height:440px!important;height:440px!important}
+body:not(.home-page) .about-photo-hero-content,
+body:not(.home-page) .plan-photo-hero-inner,
+body:not(.home-page) .news-photo-hero-inner,
+body:not(.home-page) .events-photo-hero-inner,
+body:not(.home-page) .follow-hero-copy,
+body:not(.home-page) .tell-ben-hero-inner,
+body:not(.home-page) .volunteer-hero-content,
+body:not(.home-page) .thanks-hero-inner,
+body:not(.home-page) .editorial-photo-hero-inner{min-height:440px!important;height:440px!important;padding-bottom:38px!important}
+
+/* Tell Ben = flagship interaction */
+.tell-ben-conversation{padding:64px 0 76px!important;background:#f7f2e8!important}
+.tell-ben-shell{max-width:1050px!important}
+.tell-ben-stage{background:#fff;padding:52px 58px!important;box-shadow:0 14px 45px rgba(7,31,61,.07)}
+.tell-step-count{display:flex!important;align-items:center;gap:14px!important;color:#f04436!important;font-weight:900!important;font-size:14px!important}
+.tell-step-count:after{content:"";height:5px;flex:1;max-width:260px;background:linear-gradient(90deg,#f04436 25%,#e8dfd1 25%);display:block}
+.tell-step[data-step="2"] .tell-step-count:after{background:linear-gradient(90deg,#f04436 50%,#e8dfd1 50%)}
+.tell-step[data-step="3"] .tell-step-count:after{background:linear-gradient(90deg,#f04436 75%,#e8dfd1 75%)}
+.tell-step[data-step="4"] .tell-step-count:after{background:#f04436}
+.tell-step h2{font-size:clamp(42px,5vw,68px)!important;line-height:.94!important;letter-spacing:-.045em!important;margin:18px 0 12px!important}
+.tell-step-intro{font-size:19px!important;max-width:680px!important}
+.tell-location-entry{display:grid!important;grid-template-columns:1fr auto!important;gap:0!important;margin-top:30px!important;max-width:800px!important}
+.tell-location-entry input{height:64px!important;padding:0 20px!important;font-size:18px!important;border:2px solid #d9d0c3!important}
+.tell-location-entry .btn{height:64px!important;padding:0 28px!important}
+.tell-choice-list{display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:12px!important;margin-top:30px!important}
+.tell-choice-list button{min-height:74px!important;text-align:left!important;padding:18px 22px!important;background:#f7f2e8!important;border:2px solid transparent!important;color:#071f3d!important;font-size:18px!important;font-weight:900!important}
+.tell-choice-list button:hover,.tell-choice-list button.is-selected{border-color:#f04436!important;background:#fff!important}
+.tell-ben-local-proof{display:none!important}
+
+/* Dedicated contact page */
+.contact-ben-page{background:#f7f2e8;color:#071f3d}
+.contact-ben-hero{background:#071f3d;color:#fff;padding:155px 0 68px}
+.contact-ben-hero-inner{max-width:1100px}
+.contact-ben-hero h1{margin:0 0 14px;color:#fff;font-size:clamp(58px,7vw,92px);line-height:.9;letter-spacing:-.055em}
+.contact-ben-hero p{margin:0;max-width:720px;color:#d8e2eb;font-size:21px;line-height:1.45;font-weight:650}
+.contact-ben-body{padding:72px 0 90px}
+.contact-ben-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px;align-items:start}
+.contact-ben-routes h2{font-size:46px;line-height:.98;letter-spacing:-.04em;margin:0 0 18px}
+.contact-ben-routes>p{color:#607183;font-size:18px;line-height:1.55;margin:0 0 34px}
+.contact-route{border-top:1px solid #d9d0c3;padding:20px 0;display:flex;flex-direction:column;gap:6px}
+.contact-route a{color:#0b5dac;font-weight:850;text-decoration:none}
+.contact-ben-form{background:#fff;padding:34px;display:grid;gap:12px}
+.contact-ben-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.contact-ben-form input,.contact-ben-form textarea{width:100%;border:1px solid #cfc5b6;padding:15px;font:inherit;background:#fff}
+.contact-ben-form textarea{min-height:170px}
+.contact-ben-form .btn{justify-self:start;border:0;padding:0 24px}
+
+@media(max-width:800px){
+ body:not(.home-page) .about-photo-hero,body:not(.home-page) .plan-photo-hero,body:not(.home-page) .news-photo-hero,body:not(.home-page) .events-photo-hero,body:not(.home-page) .follow-hero,body:not(.home-page) .tell-ben-hero,body:not(.home-page) .volunteer-hero,body:not(.home-page) .thanks-hero,body:not(.home-page) .editorial-photo-hero{min-height:410px!important;height:410px!important}
+ body:not(.home-page) .about-photo-hero-content,body:not(.home-page) .plan-photo-hero-inner,body:not(.home-page) .news-photo-hero-inner,body:not(.home-page) .events-photo-hero-inner,body:not(.home-page) .follow-hero-copy,body:not(.home-page) .tell-ben-hero-inner,body:not(.home-page) .volunteer-hero-content,body:not(.home-page) .thanks-hero-inner,body:not(.home-page) .editorial-photo-hero-inner{min-height:410px!important;height:410px!important;padding-bottom:30px!important}
+ .tell-ben-conversation{padding:34px 0 52px!important}.tell-ben-stage{padding:30px 22px!important}.tell-location-entry{grid-template-columns:1fr!important;gap:10px!important}.tell-location-entry .btn{width:100%!important}.tell-choice-list{grid-template-columns:1fr!important}.tell-step h2{font-size:44px!important}
+ .contact-ben-hero{padding:125px 0 48px}.contact-ben-body{padding:48px 0 64px}.contact-ben-grid{grid-template-columns:1fr;gap:38px}.contact-ben-two{grid-template-columns:1fr}.contact-ben-form{padding:22px}
+}

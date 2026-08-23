@@ -272,11 +272,12 @@ body:not(.home-page) .site-header{
     <a class="site-header-logo" href="index.html" aria-label="Back Ben home"><img src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor"></a>
     <nav class="site-primary-nav">
       <a href="about.html">About Ben</a>
-      <a href="plan.html">My Plan</a>
+      <a href="plan.html">Ben’s Plan</a>
       <a href="news.html">News</a>
       <a href="events.html">Events</a>
       <a href="tell-ben.html">Tell Ben</a>
       <a href="follow-ben.html">Follow Ben</a>
+      <a href="contact.html">Contact Ben</a>
     </nav>
 
     <button class="site-menu-button" type="button" aria-expanded="false" aria-label="Open navigation menu"></button>
@@ -289,20 +290,30 @@ body:not(.home-page) .site-header{
 </header>
 
 
-<main class="standard-page">
-  <div class="container standard-page-shell">
-    <h1>Contact the campaign.</h1>
-    <p class="intro">Have a question, want Ben to visit your area, or need to speak to the campaign team? Send us a message.</p>
-
-    <form data-thanks="contact" class="contact-form">
-      <input type="text" placeholder="First name" aria-label="First name" autocomplete="given-name">
-      <input type="text" placeholder="Last name" aria-label="Last name" autocomplete="family-name">
-      <input type="email" placeholder="Email address" aria-label="Email address" autocomplete="email">
-      <input type="text" placeholder="Postcode" aria-label="Postcode" autocomplete="postal-code">
-      <textarea placeholder="Your message" aria-label="Your message"></textarea>
-      <button type="button" class="btn btn-red">Send message</button>
-    </form>
-  </div>
+<main class="contact-ben-page">
+  <section class="contact-ben-hero">
+    <div class="container contact-ben-hero-inner">
+      <h1>Contact Ben.</h1>
+      <p>Want Ben to visit? Got something he should know about? Get in touch with the campaign.</p>
+    </div>
+  </section>
+  <section class="contact-ben-body">
+    <div class="container contact-ben-grid">
+      <div class="contact-ben-routes">
+        <h2>Talk to the campaign.</h2>
+        <p>Whether it’s an issue in your area, an invitation for Ben or a question for the team, send us a message.</p>
+        <div class="contact-route"><strong>Campaign enquiries</strong><a href="mailto:hello@backben.co.uk">hello@backben.co.uk</a></div>
+        <div class="contact-route"><strong>Media enquiries</strong><a href="mailto:press@backben.co.uk">press@backben.co.uk</a></div>
+      </div>
+      <form data-thanks="contact" class="contact-ben-form">
+        <div class="contact-ben-two"><input type="text" placeholder="First name" aria-label="First name"><input type="text" placeholder="Last name" aria-label="Last name"></div>
+        <div class="contact-ben-two"><input type="email" placeholder="Email address" aria-label="Email address"><input type="text" placeholder="Postcode" aria-label="Postcode"></div>
+        <input type="text" placeholder="What’s this about?" aria-label="Subject">
+        <textarea placeholder="Your message" aria-label="Your message"></textarea>
+        <button type="submit" class="btn btn-red">Send message</button>
+      </form>
+    </div>
+  </section>
 </main>
 
 
@@ -323,7 +334,7 @@ body:not(.home-page) .site-header{
       <div>
         <h3>Campaign</h3>
         <a href="about.html">About Ben</a>
-        <a href="plan.html">My Plan</a>
+        <a href="plan.html">Ben’s Plan</a>
         <a href="news.html">News</a>
       </div>
 

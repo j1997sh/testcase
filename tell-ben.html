@@ -453,11 +453,12 @@ body:has(.tell-ben-hero) .site-header-inner{background:transparent!important}
     <a class="site-header-logo" href="index.html" aria-label="Back Ben home"><img src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor"></a>
     <nav class="site-primary-nav">
       <a href="about.html">About Ben</a>
-      <a href="plan.html">My Plan</a>
+      <a href="plan.html">Ben’s Plan</a>
       <a href="news.html">News</a>
       <a href="events.html">Events</a>
       <a href="tell-ben.html" aria-current="page">Tell Ben</a>
       <a href="follow-ben.html">Follow Ben</a>
+      <a href="contact.html">Contact Ben</a>
     </nav>
 
     <button class="site-menu-button" type="button" aria-expanded="false" aria-label="Open navigation menu"></button>
@@ -472,121 +473,6 @@ body:has(.tell-ben-hero) .site-header-inner{background:transparent!important}
 
 
 <main class="tell-ben-page">
-
-  <section class="tell-ben-hero">
-    <div class="tell-ben-hero-bg"></div>
-    <div class="tell-ben-hero-fade"></div>
-    <div class="container tell-ben-hero-inner">
-      <h1>Tell Ben what needs to change.</h1>
-      <p>Start with where you live, then tell the campaign what matters most to you.</p>
-    </div>
-  </section>
-
-  <section class="tell-ben-conversation">
-    <div class="container tell-ben-shell">
-
-      <div class="tell-ben-stage">
-
-        <div class="tell-step is-active" data-step="1">
-          <p class="tell-step-count">1 of 4</p>
-          <h2>Where do you live?</h2>
-          <p class="tell-step-intro">This helps Ben understand what people are raising in different parts of Cheshire &amp; Warrington.</p>
-
-          <div class="tell-location-entry">
-            <input id="tell-location" type="text" placeholder="Town or postcode" autocomplete="postal-code" aria-label="Town or postcode">
-            <button type="button" class="btn btn-red tell-next" data-next="2">Continue</button>
-          </div>
-
-          <div class="tell-location-shortcuts" aria-label="Quick location choices">
-            <button type="button" data-location="Crewe">Crewe</button>
-            <button type="button" data-location="Chester">Chester</button>
-            <button type="button" data-location="Warrington">Warrington</button>
-            <button type="button" data-location="Northwich">Northwich</button>
-            <button type="button" data-location="Congleton">Congleton</button>
-          </div>
-        </div>
-
-        <div class="tell-step" data-step="2">
-          <p class="tell-step-count">2 of 4</p>
-          <h2>What matters most?</h2>
-          <p class="tell-step-intro">Choose the issue you most want the new mayor to focus on.</p>
-
-          <div class="tell-choice-list" id="tell-issues">
-            <button type="button" data-issue="Transport">Transport</button>
-            <button type="button" data-issue="Crime and antisocial behaviour">Crime &amp; antisocial behaviour</button>
-            <button type="button" data-issue="Housing and development">Housing &amp; development</button>
-            <button type="button" data-issue="Jobs and local business">Jobs &amp; local business</button>
-            <button type="button" data-issue="Town centres">Town centres</button>
-            <button type="button" data-issue="Local services">Local services</button>
-          </div>
-
-          <div class="tell-step-actions">
-            <button type="button" class="tell-back" data-back="1">Back</button>
-            <button type="button" class="btn btn-red tell-next" data-next="3">Continue</button>
-          </div>
-        </div>
-
-        <div class="tell-step" data-step="3">
-          <p class="tell-step-count">3 of 4</p>
-          <h2>Tell Ben more.</h2>
-          <p class="tell-step-intro">What would you change, protect or improve where you live?</p>
-
-          <textarea id="tell-message" placeholder="Write your message to Ben..." aria-label="Write your message to Ben"></textarea>
-
-          <div class="tell-step-actions">
-            <button type="button" class="tell-back" data-back="2">Back</button>
-            <button type="button" class="btn btn-red tell-next" data-next="4">Continue</button>
-          </div>
-        </div>
-
-        <div class="tell-step" data-step="4">
-          <p class="tell-step-count">4 of 4</p>
-          <h2>Where should we send updates?</h2>
-          <p class="tell-step-intro">Add your details so the campaign can follow up on what matters in your area.</p>
-
-          <div class="tell-contact-grid">
-            <input id="tell-first-name" type="text" placeholder="First name" autocomplete="given-name" aria-label="First name">
-            <input id="tell-last-name" type="text" placeholder="Last name" autocomplete="family-name" aria-label="Last name">
-            <input id="tell-email" type="email" placeholder="Email address" autocomplete="email" aria-label="Email address">
-            <input id="tell-postcode" type="text" placeholder="Postcode" autocomplete="postal-code" aria-label="Postcode">
-          </div>
-
-          <label class="tell-updates">
-            <input id="tell-updates" type="checkbox">
-            <span>Keep me updated about Ben’s campaign and activity in my area.</span>
-          </label>
-
-          <div class="tell-step-actions">
-            <button type="button" class="tell-back" data-back="3">Back</button>
-            <button type="button" class="btn btn-red" id="tell-submit">Send it to Ben</button>
-          </div>
-        </div>
-
-        <div class="tell-step tell-thanks-step" data-step="5">
-          <p class="tell-step-count">Done</p>
-          <h2>Thanks. Ben’s listening.</h2>
-          <p class="tell-step-intro" id="tell-thanks-copy">Your response has been added to what the campaign is hearing across Cheshire &amp; Warrington.</p>
-
-          <div class="tell-thanks-actions">
-            <a class="btn btn-red" id="tell-local-link" href="area.html">See Ben in your area</a>
-            <a href="events.html">Find the next event</a>
-            <a href="volunteer.html">Help the campaign</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="tell-ben-local-link">
-    <div class="container tell-ben-local-grid">
-      <div>
-        <h2>One region. Different local priorities.</h2>
-        <p>What Ben hears here can shape local campaign activity, local content and the issues he focuses on in different places.</p>
-      </div>
-      <a class="btn btn-red" href="area.html">See Ben in your area</a>
-    </div>
-  </section>
 
 </main>
 
@@ -609,7 +495,7 @@ body:has(.tell-ben-hero) .site-header-inner{background:transparent!important}
       <div>
         <h3>Campaign</h3>
         <a href="about.html">About Ben</a>
-        <a href="plan.html">My Plan</a>
+        <a href="plan.html">Ben’s Plan</a>
         <a href="news.html">News</a>
       </div>
 
