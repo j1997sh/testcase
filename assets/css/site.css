@@ -10586,6 +10586,6 @@ a.btn,.news-card-link,.news-lead-copy>a,.home-stories-heading>a,.map-popup-link{
 @media(max-width:800px){.plan-photo-hero-inner{grid-template-columns:1fr!important}.plan-hero-postcode{margin-top:18px}.area-visual-grid{grid-template-columns:1fr}.area-postcode-search{flex-direction:column}.area-postcode-search button{width:100%}.news-filter-inner{flex-wrap:wrap!important}}
 /* Requested cleanup: remove decorative mini-headings and unify faded photographic headers */
 .map-popup-type,.thanks-next-card>span,.follow-action-card>span,.thanks-kicker{display:none!important}
-.editorial-photo-hero:before,.thanks-hero:before,.events-hero:before,.volunteer-hero:before,.about-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,27,50,.48),rgba(4,27,50,.22) 45%,rgba(4,27,50,.58));pointer-events:none}
-.editorial-photo-hero,.thanks-hero,.events-hero,.volunteer-hero,.about-hero{position:relative}
-.editorial-photo-hero>* ,.thanks-hero>* ,.events-hero>* ,.volunteer-hero>* ,.about-hero>*{position:relative;z-index:1}
+.editorial-photo-hero:before,.thanks-hero:before,.events-hero:before,.about-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,27,50,.48),rgba(4,27,50,.22) 45%,rgba(4,27,50,.58));pointer-events:none}
+.editorial-photo-hero,.thanks-hero,.events-hero,.about-hero{position:relative}
+.editorial-photo-hero>* ,.thanks-hero>* ,.events-hero>* ,.about-hero>*{position:relative;z-index:1}
