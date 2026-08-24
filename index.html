@@ -604,6 +604,27 @@ body:not(.home-page) .site-header{
 }
 </style>
 
+
+<style id="header-hover-exact-v9">
+@media (min-width:801px){
+  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate){
+    text-decoration-line:underline!important;
+    text-decoration-color:transparent!important;
+    text-decoration-thickness:2px!important;
+    text-underline-offset:8px!important;
+    transition:text-decoration-color .15s ease!important;
+  }
+  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate):hover,
+  .site-primary-nav > a[aria-current="page"]{
+    text-decoration-color:#f04436!important;
+  }
+  .site-primary-nav > a::after{display:none!important;content:none!important}
+}
+@media (max-width:800px){
+  .site-primary-nav > a{text-decoration:none!important}
+}
+</style>
+
 </head>
 <body class="home-page">
 <div class="site-shell">
@@ -660,49 +681,6 @@ body:not(.home-page) .site-header{
     </div>
   </div>
 </section>
-
-<button class="mayor-priority-strip-cta" type="button" data-mayor-open>Be the Mayor</button>
-</div>
-<div class="mayor-live-result" data-live-result>Start allocating your 100 points.</div>
-        <div class="mayor-actions"><button class="mayor-next" type="button" data-next disabled>Next</button></div>
-      </section>
-      <section class="mayor-step" data-step="2"><div class="mayor-progress">2 of 3 · Make the trade-off</div>
-        <h2 data-followup-title>If you could fix one thing first?</h2>
-        <p class="lead" data-followup-lead></p>
-        <div class="mayor-choice-grid" data-followup-options></div>
-        <div class="mayor-actions"><button class="mayor-back" type="button" data-back>Back</button><button class="mayor-next" type="button" data-next disabled>Next</button></div>
-      </section>
-      <section class="mayor-step" data-step="3"><div class="mayor-progress">3 of 3 · Tell Ben who you are</div>
-        <h2>Where should Ben listen?</h2>
-        <p class="lead">See how your priorities compare across Cheshire & Warrington.</p>
-        <div class="mayor-details">
-          <div class="mayor-name-row">
-            <label>First name<input type="text" autocomplete="given-name" placeholder="First name" data-first-name></label>
-            <label>Last name<input type="text" autocomplete="family-name" placeholder="Last name" data-last-name></label>
-          </div>
-          <label>Postcode<input type="text" autocomplete="postal-code" placeholder="e.g. CW1 2AB" data-postcode></label>
-          <label>Email address <span style="font-weight:600">(optional)</span><input type="email" autocomplete="email" placeholder="you@example.com" data-email></label>
-          <label class="mayor-consent"><input type="checkbox" data-consent><span>I’m happy to receive campaign updates from Ben by email.</span></label>
-        </div>
-        <div class="mayor-actions"><button class="mayor-back" type="button" data-back>Back</button><button class="mayor-next" type="button" data-finish>See my priorities</button></div>
-      </section>
-      <section class="mayor-step" data-step="4">
-        <div class="mayor-results">
-          <h2>Your mayoral priorities.</h2>
-          <ol class="mayor-ranking" data-ranking></ol>
-          <p class="mayor-result-message" data-result-message></p>
-          <div class="mayor-actions">
-            <a class="mayor-next" href="plan.html">Read Ben’s Plan</a>
-            <a class="mayor-back" href="tell-ben.html">Tell Ben more</a>
-            <a class="mayor-back" href="volunteer.html">Join the campaign</a>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-</div>
-
-
 
 <section class="home-intro-feature home-intro-split home-intro-white">
   <div class="container home-intro-split-grid">

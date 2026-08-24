@@ -1057,6 +1057,27 @@ body.local-journey-page .site-header{
 }
 </style>
 
+
+<style id="header-hover-exact-v9">
+@media (min-width:801px){
+  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate){
+    text-decoration-line:underline!important;
+    text-decoration-color:transparent!important;
+    text-decoration-thickness:2px!important;
+    text-underline-offset:8px!important;
+    transition:text-decoration-color .15s ease!important;
+  }
+  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate):hover,
+  .site-primary-nav > a[aria-current="page"]{
+    text-decoration-color:#f04436!important;
+  }
+  .site-primary-nav > a::after{display:none!important;content:none!important}
+}
+@media (max-width:800px){
+  .site-primary-nav > a{text-decoration:none!important}
+}
+</style>
+
 </head>
 <body class="local-journey-page">
 <div class="site-shell">

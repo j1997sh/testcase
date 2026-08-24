@@ -1542,6 +1542,27 @@ body:has(.plan-photo-hero) .site-header-inner{
 }
 </style>
 
+
+<style id="header-hover-exact-v9">
+@media (min-width:801px){
+  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate){
+    text-decoration-line:underline!important;
+    text-decoration-color:transparent!important;
+    text-decoration-thickness:2px!important;
+    text-underline-offset:8px!important;
+    transition:text-decoration-color .15s ease!important;
+  }
+  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate):hover,
+  .site-primary-nav > a[aria-current="page"]{
+    text-decoration-color:#f04436!important;
+  }
+  .site-primary-nav > a::after{display:none!important;content:none!important}
+}
+@media (max-width:800px){
+  .site-primary-nav > a{text-decoration:none!important}
+}
+</style>
+
 </head>
 <body class="inner-page">
 <div class="site-shell">
@@ -1571,6 +1592,75 @@ body:has(.plan-photo-hero) .site-header-inner{
 
 
 <main class="plan-editorial-page">
+
+  <section class="plan-photo-hero editorial-photo-hero">
+    <div class="plan-photo-hero-bg"></div>
+    <div class="plan-photo-hero-fade"></div>
+    <div class="container plan-photo-hero-inner">
+      <div><h1 id="plan-local-title">A practical plan for Cheshire &amp; Warrington.</h1><p>Four priorities focused on the everyday things a mayor can help improve.</p></div>
+      <div class="plan-hero-postcode"><label for="plan-area-input">See the plan for your area</label><div><input id="plan-area-input" type="text" placeholder="Enter your postcode" aria-label="Enter your postcode"><button id="plan-area-submit" type="button" class="btn btn-red">Go</button></div></div>
+    </div>
+  </section>
+
+  <section class="plan-editorial-intro">
+    <div class="container plan-intro-grid">
+      <div>
+        <h2>A plan built around how people actually live.</h2>
+      </div>
+      <div>
+        <p class="plan-lead">The new mayor should focus on the things that connect the region: transport, safer communities, a stronger economy and homes with the infrastructure people need.</p>
+        <p>This is the campaign’s starting point — practical priorities that can be developed with residents, businesses and communities across Cheshire &amp; Warrington.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="plan-story-row">
+    <div class="container plan-story-grid">
+      <div class="plan-story-image plan-transport-image"></div>
+      <div class="plan-story-copy">
+        <h2>Better transport.</h2>
+        <p class="plan-story-lead">Make everyday journeys simpler, faster and more reliable — whether by bus, rail, road or active travel.</p>
+        <p>That means better local bus connections, tackling the bottlenecks that waste time every day and making sure major rail investment benefits the whole region.</p>
+        <a class="btn btn-red" href="better-transport.html">Read more</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="plan-story-row plan-story-row-alt">
+    <div class="container plan-story-grid">
+      <div class="plan-story-copy">
+        <h2>Safer communities.</h2>
+        <p class="plan-story-lead">Neighbourhood safety should be visible, practical and focused on the problems residents actually experience.</p>
+        <p>The mayor can use the convening power of the office to push for locally accountable policing, coordinate action on antisocial behaviour and support safer town centres.</p>
+        <a class="btn btn-red" href="safer-communities.html">Read more</a>
+      </div>
+      <div class="plan-story-image plan-safety-image"></div>
+    </div>
+  </section>
+
+  <section class="plan-story-row">
+    <div class="container plan-story-grid">
+      <div class="plan-story-image plan-economy-image"></div>
+      <div class="plan-story-copy">
+        <h2>A stronger economy.</h2>
+        <p class="plan-story-lead">Back the businesses already creating jobs here — and make it easier for new investment to choose Cheshire &amp; Warrington.</p>
+        <p>That means listening directly to employers about skills, infrastructure and barriers to growth, while making sure the region has a confident voice with government and investors.</p>
+        <a class="btn btn-red" href="stronger-economy.html">Read more</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="plan-story-row plan-story-row-alt">
+    <div class="container plan-story-grid">
+      <div class="plan-story-copy">
+        <h2>Homes &amp; opportunity.</h2>
+        <p class="plan-story-lead">New homes should come with the roads, schools, GP capacity and local services that make growth work for existing communities too.</p>
+        <p>The campaign will push for development that makes better use of brownfield land, supports thriving towns and links new housing to real infrastructure and opportunity.</p>
+        <a class="btn btn-red" href="homes-opportunity.html">Read more</a>
+      </div>
+      <div class="plan-story-image plan-homes-image"></div>
+    </div>
+  </section>
 
   
 

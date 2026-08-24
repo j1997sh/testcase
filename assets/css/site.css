@@ -11822,37 +11822,61 @@ legend{
   }
 }
 
-/* V8 HOME CTA SPACING */
-.home-editorial-card-copy{min-height:230px!important}
-.home-editorial-card-cta{margin-top:auto!important;align-self:center!important;transform:translateY(6px)}
+/* V9 EXACT REPAIR */
+
+/* Homepage CTA placement */
+.home-editorial-card-copy{
+  min-height:265px!important;
+  padding-bottom:36px!important;
+}
+.home-editorial-card-copy p{margin-bottom:0!important}
+.home-editorial-card-cta{
+  margin-top:auto!important;
+  align-self:center!important;
+  transform:translateY(14px);
+}
 @media(max-width:800px){
-  .home-editorial-card-copy{min-height:0!important}
-  .home-editorial-card-cta{margin-top:22px!important;transform:none}
+  .home-editorial-card-copy{min-height:0!important;padding-bottom:28px!important}
+  .home-editorial-card-cta{margin-top:28px!important;transform:none}
 }
 
-/* V8 HEADER NAV HOVER */
-@media(min-width:801px){
-  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate){
-    position:relative!important;
-  }
-  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate)::after{
-    content:"";position:absolute;left:50%;bottom:4px;width:0;height:2px;background:#f04436;
-    transform:translateX(-50%);transition:width .16s ease;
-  }
-  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate):hover::after,
-  .site-primary-nav > a[aria-current="page"]::after{width:calc(100% - 12px)}
+/* About Ben: Plan-style alternating full-width bands */
+.about-plan-band{padding:76px 0!important;color:#071f3d!important}
+.about-plan-band-cream{background:#f5efe5!important}
+.about-plan-band-white{background:#fff!important}
+.about-plan-lead .about-editorial-lead{max-width:980px!important;margin:0 auto!important}
+.about-plan-lead .about-editorial-lead p{font-size:28px!important;line-height:1.28!important}
+.about-plan-band .about-editorial-row{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:74px!important;
+  align-items:center!important;
+  margin:0!important;
+}
+.about-plan-band .about-editorial-copy{max-width:600px!important}
+.about-plan-band .about-editorial-copy h2{
+  font-size:48px!important;line-height:.98!important;letter-spacing:-.04em!important;margin:0 0 22px!important
+}
+.about-plan-band .about-editorial-copy p{font-size:17px!important;line-height:1.58!important;color:#53667a!important}
+.about-plan-band .about-editorial-copy p strong{color:#071f3d!important}
+.about-plan-band .about-editorial-polaroid{
+  transform:none!important;rotate:none!important;box-shadow:none!important;border:0!important;
+  background:transparent!important;padding:0!important;margin:0!important
+}
+.about-plan-band .about-editorial-photo{
+  min-height:330px!important;width:100%!important;display:flex!important;align-items:center!important;
+  justify-content:center!important;background:#c9d5df!important;color:#fff!important;border:0!important
+}
+.about-plan-band .about-editorial-polaroid span{
+  display:block!important;margin-top:8px!important;color:#7a8795!important;font-size:12px!important;text-align:center!important
+}
+@media(max-width:800px){
+  .about-plan-band{padding:46px 0!important}
+  .about-plan-lead .about-editorial-lead p{font-size:22px!important}
+  .about-plan-band .about-editorial-row{grid-template-columns:1fr!important;gap:28px!important}
+  .about-plan-band .about-editorial-copy h2{font-size:38px!important}
+  .about-plan-band .about-editorial-photo{min-height:240px!important}
 }
 
-/* V8 ABOUT — PLAN STYLE */
-.about-editorial{padding:72px 0!important}
-.about-editorial-cream{background:#f5efe5!important;color:#071f3d!important}
-.about-editorial-white{background:#fff!important;color:#071f3d!important}
-.about-editorial h2,.about-editorial h3{
-  font-size:clamp(38px,4vw,58px)!important;line-height:.98!important;letter-spacing:-.04em!important;margin-bottom:22px!important
-}
-.about-editorial p{max-width:760px;font-size:17px!important;line-height:1.55!important}
-.about-editorial img{width:100%;object-fit:cover}
-@media(max-width:800px){
-  .about-editorial{padding:44px 0!important}
-  .about-editorial h2,.about-editorial h3{font-size:38px!important}
-}
+/* News exact filtering */
+.news-card[hidden],.news-text-feature[hidden]{display:none!important}

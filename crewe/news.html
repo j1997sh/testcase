@@ -802,6 +802,27 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
 }
 </style>
 
+
+<style id="header-hover-exact-v9">
+@media (min-width:801px){
+  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate){
+    text-decoration-line:underline!important;
+    text-decoration-color:transparent!important;
+    text-decoration-thickness:2px!important;
+    text-underline-offset:8px!important;
+    transition:text-decoration-color .15s ease!important;
+  }
+  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate):hover,
+  .site-primary-nav > a[aria-current="page"]{
+    text-decoration-color:#f04436!important;
+  }
+  .site-primary-nav > a::after{display:none!important;content:none!important}
+}
+@media (max-width:800px){
+  .site-primary-nav > a{text-decoration:none!important}
+}
+</style>
+
 </head>
 <body data-campaign-area="crewe" class="inner-page">
 <div class="site-shell">
@@ -812,7 +833,7 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
     <nav class="site-primary-nav">
       <a href="../about.html">About Ben</a>
       <a href="plan.html">Ben’s Plan</a>
-      <a href="news.html">News</a>
+      <a href="news.html" aria-current="page">News</a>
       <a href="events.html">Events</a>
       <a href="tell-ben.html">Tell Ben</a>
       <a href="../follow-ben.html">Follow Ben</a>
@@ -841,16 +862,7 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
     </div>
   </section>
 
-  <section class="news-lead-section">
-    <div class="container news-lead-grid">
-      <div class="news-lead-image"></div>
-      <div class="news-lead-copy">
-        <h2>Ben sets out a practical plan for Cheshire & Warrington</h2>
-        <p>A campaign focused on better transport, safer communities, stronger local growth and homes with the infrastructure people need.</p>
-        <a href="plan.html">Read Ben’s plan</a>
-      </div>
-    </div>
-  </section>
+  
 
   <section class="news-filter-strip">
     <div class="container news-filter-inner">
@@ -897,7 +909,7 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
         </div>
       </article>
 
-      <article class="news-card" data-news-category="local">
+      <article class="news-card" data-news-category="policy">
         <a class="news-card-image story-plan" href="plan.html" aria-label="A practical plan for Cheshire and Warrington"></a>
         <div class="news-card-copy">
           <p class="news-story-date">8 August 2026</p>
@@ -995,81 +1007,41 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
 </footer>
 
 
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-  const cards = Array.from(document.querySelectorAll(".news-card"));
-  const tabs = Array.from(document.querySelectorAll("[data-category]"));
-  const search = document.getElementById("news-search-input");
-  const count = document.getElementById("news-results-count");
-  const clear = document.getElementById("news-clear");
-  const empty = document.getElementById("news-empty");
-  let activeCategory = "all";
 
-  function filterNews(){
-    const query = (search.value || "").trim().toLowerCase();
-    let visible = 0;
-
-    cards.forEach(function(card){
-      const categories = (card.dataset.category || "").toLowerCase().split(/\s+/);
-      const searchable = (
-        (card.dataset.title || "") + " " +
-        card.innerText
-      ).toLowerCase();
-
-      const categoryMatch = activeCategory === "all" || categories.includes(activeCategory);
-      const searchMatch = !query || searchable.includes(query);
-      const show = categoryMatch && searchMatch;
-
-      card.hidden = !show;
-      if(show) visible++;
-    });
-
-    count.textContent = visible + (visible === 1 ? " story" : " stories");
-    empty.hidden = visible !== 0;
-  }
-
-  tabs.forEach(function(tab){
-    tab.addEventListener("click", function(){
-      activeCategory = this.dataset.category;
-      tabs.forEach(t => t.classList.remove("active"));
-      this.classList.add("active");
-      filterNews();
-    });
-  });
-
-  search.addEventListener("input", filterNews);
-
-  clear.addEventListener("click", function(){
-    activeCategory = "all";
-    search.value = "";
-    tabs.forEach(t => t.classList.toggle("active", t.dataset.category === "all"));
-    filterNews();
-    search.focus();
-  });
-
-  filterNews();
-});
-</script>
 
 </div>
 <script src="../assets/js/site.js?v=20260823-canonical-v1"></script>
 
-<script>
-const newsSearch=document.getElementById('news-search-input');
-let newsCat='all';
-function filterNews(){
-  const q=(newsSearch?.value||'').toLowerCase();
-  document.querySelectorAll('#news-grid .editorial-card').forEach(card=>{
-    const okCat=newsCat==='all'||(card.dataset.category||'').includes(newsCat);
-    const okQ=!q||(card.dataset.title||'').toLowerCase().includes(q)||card.innerText.toLowerCase().includes(q);
-    card.style.display=okCat&&okQ?'':'none';
-  });
-}
-newsSearch?.addEventListener('input',filterNews);
-document.querySelectorAll('#news-category-tabs button').forEach(btn=>btn.addEventListener('click',()=>{
-  document.querySelectorAll('#news-category-tabs button').forEach(x=>x.classList.remove('active'));
-  btn.classList.add('active'); newsCat=btn.dataset.category; filterNews();
-}));
+
+
+
+<script id="news-filter-exact-v9">
+(function(){
+  const buttons = Array.from(document.querySelectorAll('.news-filter-btn[data-news-filter]'));
+  const items = Array.from(document.querySelectorAll('[data-news-category]'));
+
+  function apply(filter){
+    buttons.forEach(btn => {
+      const active = (btn.dataset.newsFilter || 'all') === filter;
+      btn.classList.toggle('active', active);
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    items.forEach(item => {
+      const category = item.dataset.newsCategory || '';
+      const hide = filter !== 'all' && category !== filter;
+      item.hidden = hide;
+      item.style.display = hide ? 'none' : '';
+    });
+  }
+
+  buttons.forEach(btn => btn.addEventListener('click', function(e){
+    e.preventDefault();
+    apply(this.dataset.newsFilter || 'all');
+  }));
+
+  apply('all');
+})();
 </script>
 
 </body>
