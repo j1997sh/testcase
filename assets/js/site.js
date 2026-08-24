@@ -45,3 +45,21 @@ document.addEventListener('click', function(e){
     setTimeout(function(){ document.body.classList.remove('menu-open'); }, 0);
   }
 });
+
+
+/* mobile menu refinement v5 */
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".site-header").forEach(function(header){
+    const nav = header.querySelector(".site-primary-nav");
+    const logo = header.querySelector(".site-header-logo img");
+    if (nav && logo && !nav.querySelector(".site-mobile-menu-logo")) {
+      const wrap = document.createElement("a");
+      wrap.className = "site-mobile-menu-logo";
+      wrap.href = "index.html";
+      wrap.setAttribute("aria-label","Back Ben home");
+      const img = logo.cloneNode(true);
+      wrap.appendChild(img);
+      nav.insertBefore(wrap, nav.firstChild);
+    }
+  });
+});
