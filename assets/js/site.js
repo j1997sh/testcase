@@ -189,3 +189,46 @@ document.addEventListener("submit",function(e){const form=e.target.closest("form
   function init(){initNewsFilters();initMayor()}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
+
+/* V4 mobile menu source canonicalizer */
+(function(){
+  function canonicalizeMobileMenu(){
+    var nav=document.querySelector('.site-primary-nav');
+    if(!nav) return;
+
+    var logos=nav.querySelectorAll('.site-mobile-menu-logo');
+    logos.forEach(function(el,i){ if(i>0) el.remove(); });
+
+    var actions=nav.querySelectorAll('.site-mobile-actions');
+    actions.forEach(function(el,i){ if(i>0) el.remove(); });
+
+    var logo=nav.querySelector('.site-mobile-menu-logo');
+    if(!logo){
+      var headerLogo=document.querySelector('.site-header-logo img');
+      if(headerLogo){
+        logo=document.createElement('a');
+        logo.className='site-mobile-menu-logo';
+        logo.href='index.html';
+        var img=document.createElement('img');
+        img.src=headerLogo.getAttribute('src');
+        img.alt=headerLogo.getAttribute('alt')||'Back Ben for Mayor';
+        logo.appendChild(img);
+        nav.insertBefore(logo,nav.firstChild);
+      }
+    }
+
+    var actionsBox=nav.querySelector('.site-mobile-actions');
+    if(!actionsBox){
+      actionsBox=document.createElement('div');
+      actionsBox.className='site-mobile-actions';
+      actionsBox.innerHTML='<a class="mobile-volunteer" href="volunteer.html">Volunteer</a><a class="mobile-donate" href="donate.html">Donate</a>';
+      nav.appendChild(actionsBox);
+    }
+  }
+
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',canonicalizeMobileMenu);
+  }else{
+    canonicalizeMobileMenu();
+  }
+})();
