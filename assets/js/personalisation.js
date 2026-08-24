@@ -1,7 +1,8 @@
 (function () {
   "use strict";
 
-  const STORAGE_KEY = "ben_campaign_context_v1";
+  const STORAGE_KEY = "ben_campaign_context_v2";
+  const SESSION_KEY = "ben_campaign_session_v2";
   const ACQUISITION_KEY = "ben_campaign_acquisition_v1";
 
   const qs = (sel, root=document) => root.querySelector(sel);
@@ -28,9 +29,30 @@
     try { localStorage.setItem(key, JSON.stringify(value)); } catch (_) {}
   }
 
+  function readSessionJSON(key, fallback) {
+    try {
+      const raw = sessionStorage.getItem(key);
+      return raw ? JSON.parse(raw) : fallback;
+    } catch (_) {
+      return fallback;
+    }
+  }
+
+  function writeSessionJSON(key, value) {
+    try { sessionStorage.setItem(key, JSON.stringify(value)); } catch (_) {}
+  }
+
   function getContext() {
-    return readJSON(STORAGE_KEY, {
+    const persistent = readJSON(STORAGE_KEY, {
       area: "regional",
+      issue: "",
+      postcode: "",
+      area_source: "default",
+      preference_explicit: false
+    });
+
+    const session = readSessionJSON(SESSION_KEY, {
+      area: "",
       issue: "",
       source: "",
       campaign: "",
@@ -39,15 +61,57 @@
       utm_campaign: "",
       utm_content: "",
       landing_page: "",
-      postcode: "",
-      area_source: "default"
+      area_source: ""
     });
+
+    return {
+      area: session.area || persistent.area || "regional",
+      issue: session.issue || persistent.issue || "",
+      source: session.source || "",
+      campaign: session.campaign || "",
+      utm_source: session.utm_source || "",
+      utm_medium: session.utm_medium || "",
+      utm_campaign: session.utm_campaign || "",
+      utm_content: session.utm_content || "",
+      landing_page: session.landing_page || "",
+      postcode: persistent.postcode || "",
+      area_source: session.area_source || persistent.area_source || "default",
+      preference_explicit: !!persistent.preference_explicit
+    };
   }
 
-  function saveContext(ctx) {
-    writeJSON(STORAGE_KEY, ctx);
-    window.BEN_CONTEXT = ctx;
-    return ctx;
+  function savePersistentContext(ctx) {
+    const persistent = {
+      area: ctx.area || "regional",
+      issue: ctx.issue || "",
+      postcode: ctx.postcode || "",
+      area_source: ctx.area_source || "manual",
+      preference_explicit: !!ctx.preference_explicit
+    };
+    writeJSON(STORAGE_KEY, persistent);
+  }
+
+  function saveSessionContext(ctx) {
+    const session = {
+      area: ctx.area || "",
+      issue: ctx.issue || "",
+      source: ctx.source || "",
+      campaign: ctx.campaign || "",
+      utm_source: ctx.utm_source || "",
+      utm_medium: ctx.utm_medium || "",
+      utm_campaign: ctx.utm_campaign || "",
+      utm_content: ctx.utm_content || "",
+      landing_page: ctx.landing_page || "",
+      area_source: ctx.area_source || ""
+    };
+    writeSessionJSON(SESSION_KEY, session);
+    window.BEN_CONTEXT = getContext();
+    return window.BEN_CONTEXT;
+  }
+
+  function saveContext(ctx, mode="session") {
+    if (mode === "persistent") savePersistentContext(ctx);
+    return saveSessionContext(ctx);
   }
 
   function analytics(name, detail) {
@@ -78,13 +142,28 @@
   function captureURLContext() {
     const params = new URLSearchParams(location.search);
     const current = getContext();
+    const persistent = readJSON(STORAGE_KEY, {});
     const next = { ...current };
     const acquisition = readJSON(ACQUISITION_KEY, {});
 
     const urlArea = lower(params.get("area"));
     const urlIssue = lower(params.get("issue"));
+    const hasCampaignArea = !!(urlArea && window.BEN_CAMPAIGN_AREAS[urlArea]);
 
-    if (urlArea && window.BEN_CAMPAIGN_AREAS[urlArea]) {
+    // A clean visit to the site root should show the regional version unless
+    // the visitor has explicitly chosen/entered their area previously.
+    const isPlainRoot = (location.pathname.endsWith("/") || location.pathname.endsWith("/index.html")) &&
+                        !urlArea && !urlIssue &&
+                        !params.get("utm_source") && !params.get("utm_campaign");
+
+    if (isPlainRoot && !persistent.preference_explicit) {
+      next.area = "regional";
+      next.issue = "";
+      next.area_source = "default";
+      writeSessionJSON(SESSION_KEY, {});
+    }
+
+    if (hasCampaignArea) {
       next.area = urlArea;
       next.area_source = "url";
       analytics("area_detected_from_url", { area: urlArea });
@@ -116,7 +195,7 @@
       writeJSON(ACQUISITION_KEY, acquisition);
     }
 
-    return saveContext(next);
+    return saveContext(next, "session");
   }
 
   function setArea(area, source="manual", postcode="") {
@@ -125,7 +204,15 @@
     ctx.area = window.BEN_CAMPAIGN_AREAS[key] ? key : "regional";
     ctx.area_source = source;
     if (postcode) ctx.postcode = clean(postcode).toUpperCase();
-    saveContext(ctx);
+
+    const explicit = source === "postcode" || source === "manual";
+    if (explicit) {
+      ctx.preference_explicit = true;
+      saveContext(ctx, "persistent");
+    } else {
+      saveContext(ctx, "session");
+    }
+
     analytics(source === "postcode" ? "postcode_area_established" : "area_selected", { area: ctx.area });
     applyAll();
   }
@@ -178,9 +265,9 @@
       <button type="button" class="ben-change-area">Change area</button>
     `;
 
-    const header = qs(".site-header");
-    if (header) header.insertAdjacentElement("afterend", bar);
-    else document.body.prepend(bar);
+    const footer = qs("footer");
+    if (footer) footer.insertAdjacentElement("beforebegin", bar);
+    else document.body.appendChild(bar);
 
     qs(".ben-change-area", bar)?.addEventListener("click", openAreaSelector);
   }

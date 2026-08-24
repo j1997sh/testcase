@@ -37,3 +37,9 @@ Forms are automatically given:
 - original acquisition fields
 
 These can later be mapped to NationBuilder custom fields/tags rather than rebuilding the front-end.
+
+## Persistence model v2
+- `?area=crewe` / advert-derived area is stored in `sessionStorage` and follows the visitor through that campaign journey.
+- A clean visit to the plain homepage returns to the regional Cheshire & Warrington experience unless the visitor has explicitly chosen an area.
+- Postcode/manual area selection is stored persistently in `localStorage`.
+- Original acquisition attribution remains stored separately.
