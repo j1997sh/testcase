@@ -652,230 +652,130 @@ body.local-journey-page .site-header{
 
 
 
-<style id="mobile-parity-v4">
+
+
+
+
+
+
+<style id="mobile-component-fix-v6">
+/* Mobile menu components exist in markup, hidden on desktop */
+.site-mobile-menu-logo,
+.mobile-menu-actions{display:none!important}
+
 @media (max-width:800px){
 
-  /* Open mobile menu: full-screen navy from the very top */
-  .site-primary-nav.open{
-    position:fixed!important;
-    inset:0!important;
-    top:0!important;
-    width:100vw!important;
-    min-height:100dvh!important;
-    padding:170px 24px 32px!important;
-    background:#061a31!important;
-    z-index:9998!important;
-    overflow-y:auto!important;
-    box-shadow:none!important;
-  }
-
-  /* Keep header chrome above the overlay */
+  /* Header always sits cleanly above internal heroes */
   .site-header{
     position:absolute!important;
     top:0!important;
     left:0!important;
     right:0!important;
-    z-index:10000!important;
+    z-index:10010!important;
     background:transparent!important;
   }
 
-  /* Mobile logo always visible and centred */
-  .site-logo{
+  /* Normal closed mobile header */
+  .site-header-logo{
     position:absolute!important;
     left:50%!important;
     top:22px!important;
     transform:translateX(-50%)!important;
-    z-index:10002!important;
+    z-index:10012!important;
     display:block!important;
     opacity:1!important;
     visibility:visible!important;
   }
-  .site-logo img{
-    display:block!important;
-    width:104px!important;
-    max-width:104px!important;
+  .site-header-logo img{
+    width:96px!important;
     height:auto!important;
-    opacity:1!important;
+    display:block!important;
   }
 
-  /* Hamburger / close button: no box, top-right */
   .site-menu-button{
     position:absolute!important;
-    right:24px!important;
-    top:26px!important;
+    right:22px!important;
+    top:24px!important;
     width:44px!important;
     height:44px!important;
     padding:0!important;
     border:0!important;
-    outline:0!important;
     background:transparent!important;
     box-shadow:none!important;
-    z-index:10003!important;
-  }
-  .site-menu-button::before,
-  .site-menu-button::after,
-  .site-menu-button span{
-    box-shadow:none!important;
+    z-index:10013!important;
   }
 
-  /* Navigation links */
-  .site-primary-nav.open>a{
-    display:block!important;
-    width:100%!important;
-    margin:0!important;
-    padding:20px 12px!important;
-    border-bottom:1px solid rgba(255,255,255,.16)!important;
-    font-size:24px!important;
-    line-height:1.15!important;
-    color:#fff!important;
-    text-align:left!important;
-  }
-
-  /* Mobile CTA row */
-  .site-primary-nav.open .nav-actions,
-  .site-primary-nav.open .site-nav-actions,
-  .site-primary-nav.open .mobile-nav-actions{
-    display:grid!important;
-    grid-template-columns:1fr 1fr!important;
-    gap:16px!important;
-    width:100%!important;
-    margin-top:28px!important;
-  }
-
-  /* Volunteer = cream/navy on mobile */
-  .site-primary-nav.open .site-volunteer-button,
-  .site-primary-nav.open a[href*="volunteer"]{
-    background:#efe6d7!important;
-    color:#071f3d!important;
-    border:1px solid #efe6d7!important;
-  }
-
-  /* Donate = orange/white on mobile */
-  .site-primary-nav.open .site-donate-button,
-  .site-primary-nav.open a[href*="donate"]{
-    background:#f04436!important;
-    color:#fff!important;
-    border:1px solid #f04436!important;
-  }
-
-  .site-primary-nav.open .site-volunteer-button,
-  .site-primary-nav.open .site-donate-button,
-  .site-primary-nav.open .nav-actions a,
-  .site-primary-nav.open .site-nav-actions a,
-  .site-primary-nav.open .mobile-nav-actions a{
-    min-height:64px!important;
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    padding:16px 14px!important;
-    font-size:20px!important;
-    font-weight:900!important;
-    text-align:center!important;
-    text-decoration:none!important;
-    border-radius:0!important;
-  }
-
-  /* Prevent hero or page content from visually bleeding through open menu */
-  body.menu-open main,
-  body.menu-open footer,
-  body.menu-open .page-hero,
-  body.menu-open .home-hero{
-    visibility:hidden!important;
-  }
-}
-</style>
-
-
-<style id="mobile-site-reconciliation-v5">
-/* ---------- Internal hero sizing: desktop ---------- */
-@media (min-width:801px){
-  .about-photo-hero,
-  .news-photo-hero,
-  .events-photo-hero,
-  .plan-photo-hero,
-  .tell-ben-hero,
-  .follow-hero,
-  .volunteer-hero,
-  .donation-hero,
-  .thanks-hero,
-  .contact-editorial-hero,
-  .issue-hero,
-  .video-hub-hero,
-  .inner-hero{
-    min-height:420px!important;
-    height:auto!important;
-  }
-
-  .about-photo-hero-content,
-  .news-photo-hero-inner,
-  .events-photo-hero-inner,
-  .plan-photo-hero-inner,
-  .tell-ben-hero-inner,
-  .follow-hero-copy,
-  .volunteer-hero-content,
-  .donation-hero-inner,
-  .thanks-hero-inner,
-  .contact-editorial-hero-inner,
-  .issue-hero-inner{
-    min-height:420px!important;
-    padding-top:105px!important;
-    padding-bottom:42px!important;
-    box-sizing:border-box!important;
-  }
-
-  /* Policy/editorial pages were especially tall */
-  .issue-hero,.issue-hero-inner{min-height:430px!important}
-}
-
-/* ---------- Mobile header/menu ---------- */
-@media (max-width:800px){
+  /* Full-screen open menu */
   .site-primary-nav.open{
-    padding:28px 24px 34px!important;
+    position:fixed!important;
+    inset:0!important;
+    width:100vw!important;
+    min-height:100dvh!important;
     display:flex!important;
     flex-direction:column!important;
+    align-items:stretch!important;
     justify-content:flex-start!important;
     gap:0!important;
+    padding:28px 24px 36px!important;
+    margin:0!important;
+    background:#061a31!important;
+    z-index:10000!important;
+    overflow-y:auto!important;
+    white-space:normal!important;
   }
 
-  .site-mobile-menu-logo{
+  /* Actual logo inside menu */
+  .site-primary-nav.open .site-mobile-menu-logo{
     display:block!important;
-    width:max-content!important;
-    margin:4px auto 30px!important;
+    align-self:center!important;
+    margin:3px auto 28px!important;
     padding:0!important;
     border:0!important;
-    order:-10!important;
+    background:transparent!important;
+    line-height:1!important;
   }
-  .site-mobile-menu-logo img{
+  .site-primary-nav.open .site-mobile-menu-logo img{
     display:block!important;
     width:118px!important;
+    max-width:118px!important;
     height:auto!important;
   }
 
-  /* Hide the header logo while menu is open because the menu owns its own logo */
+  /* Hide duplicate normal header logo while menu open */
   body.menu-open .site-header-logo{
     opacity:0!important;
     visibility:hidden!important;
   }
 
-  .site-primary-nav.open>a:not(.site-mobile-menu-logo){
-    border:0!important;
-    border-bottom:0!important;
-    padding:13px 10px!important;
+  /* Navigation: no lines, less dead space */
+  .site-primary-nav.open > a:not(.site-mobile-menu-logo){
+    display:block!important;
+    width:100%!important;
+    padding:13px 8px!important;
     margin:0!important;
+    border:0!important;
+    border-top:0!important;
+    border-bottom:0!important;
+    box-shadow:none!important;
+    color:#fff!important;
+    background:transparent!important;
     font-size:22px!important;
     line-height:1.15!important;
+    font-weight:800!important;
+    text-align:left!important;
+    text-decoration:none!important;
   }
 
-  .site-primary-nav.open .site-mobile-actions{
+  /* CTA buttons live inside menu */
+  .site-primary-nav.open .mobile-menu-actions{
     display:grid!important;
     grid-template-columns:1fr 1fr!important;
     gap:14px!important;
     width:100%!important;
     margin-top:24px!important;
   }
-
-  .site-primary-nav.open .site-mobile-actions a{
-    min-height:58px!important;
+  .site-primary-nav.open .mobile-menu-actions a{
+    min-height:60px!important;
     display:flex!important;
     align-items:center!important;
     justify-content:center!important;
@@ -886,93 +786,109 @@ body.local-journey-page .site-header{
     text-align:center!important;
     text-decoration:none!important;
   }
-  .site-primary-nav.open .site-mobile-actions a[href*="volunteer"]{
+  .site-primary-nav.open .mobile-menu-actions .site-volunteer-button{
     background:#efe6d7!important;
     color:#071f3d!important;
   }
-  .site-primary-nav.open .site-mobile-actions a[href*="donate"]{
+  .site-primary-nav.open .mobile-menu-actions .site-donate-button{
     background:#f04436!important;
     color:#fff!important;
   }
 
-  /* ---------- Internal heroes: mobile ---------- */
-  .about-photo-hero,
-  .news-photo-hero,
-  .events-photo-hero,
-  .tell-ben-hero,
-  .follow-hero,
-  .volunteer-hero,
-  .donation-hero,
-  .thanks-hero,
-  .contact-editorial-hero,
-  .issue-hero,
-  .video-hub-hero,
-  .inner-hero{
-    min-height:440px!important;
-    height:auto!important;
-  }
+  /* Don't show desktop CTA block in mobile header */
+  .site-header-actions{display:none!important}
 
+  /* ---------- Ben's Plan: explicit mobile structure ---------- */
   .plan-photo-hero{
-    min-height:550px!important;
+    min-height:0!important;
     height:auto!important;
+    padding:0!important;
   }
-
-  .about-photo-hero-content,
-  .news-photo-hero-inner,
-  .events-photo-hero-inner,
-  .tell-ben-hero-inner,
-  .follow-hero-copy,
-  .volunteer-hero-content,
-  .donation-hero-inner,
-  .thanks-hero-inner,
-  .contact-editorial-hero-inner,
-  .issue-hero-inner{
-    min-height:440px!important;
-    padding-top:118px!important;
-    padding-bottom:34px!important;
-    box-sizing:border-box!important;
-    justify-content:flex-end!important;
-  }
-
   .plan-photo-hero-inner{
-    min-height:550px!important;
-    padding-top:118px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:flex-end!important;
+    align-items:stretch!important;
+    gap:20px!important;
+    min-height:610px!important;
+    padding:132px 28px 34px!important;
+    box-sizing:border-box!important;
+  }
+  .plan-photo-hero-inner > div:first-child{
+    width:100%!important;
+    max-width:none!important;
+  }
+  .plan-photo-hero h1{
+    margin:0 0 14px!important;
+    max-width:560px!important;
+    font-size:clamp(43px,11.6vw,56px)!important;
+    line-height:.94!important;
+    letter-spacing:-.045em!important;
+  }
+  .plan-photo-hero p{
+    margin:0!important;
+    max-width:560px!important;
+    font-size:18px!important;
+    line-height:1.35!important;
+  }
+  .plan-hero-postcode{
+    width:100%!important;
+    max-width:none!important;
+    padding:18px!important;
+    margin:0!important;
+    box-sizing:border-box!important;
+  }
+  .plan-hero-postcode > div{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) 88px!important;
+    gap:0!important;
+  }
+  .plan-hero-postcode input{
+    min-width:0!important;
+    width:100%!important;
+    height:56px!important;
+    box-sizing:border-box!important;
+    font-size:16px!important;
+  }
+  .plan-hero-postcode button{
+    width:88px!important;
+    min-width:88px!important;
+    height:56px!important;
+    min-height:56px!important;
+    margin:0!important;
+  }
+
+  /* Other internal heroes: clear header first, then title */
+  body:not(.home-page) .about-photo-hero-content,
+  body:not(.home-page) .news-photo-hero-inner,
+  body:not(.home-page) .events-photo-hero-inner,
+  body:not(.home-page) .tell-ben-hero-inner,
+  body:not(.home-page) .follow-hero-copy,
+  body:not(.home-page) .volunteer-hero-content,
+  body:not(.home-page) .donation-hero-inner,
+  body:not(.home-page) .thanks-hero-inner,
+  body:not(.home-page) .contact-editorial-hero-inner,
+  body:not(.home-page) .issue-hero-inner{
+    padding-top:128px!important;
     padding-bottom:32px!important;
     box-sizing:border-box!important;
-    justify-content:flex-end!important;
   }
 
-  /* keep text below the mobile header/logo and stop oversized overlaps */
-  .about-photo-hero h1,
-  .news-photo-hero h1,
-  .events-photo-hero h1,
-  .plan-photo-hero h1,
-  .tell-ben-hero h1,
-  .follow-hero h1,
-  .volunteer-hero h1,
-  .donation-hero h1,
-  .thanks-hero h1,
-  .contact-editorial-hero h1,
-  .issue-hero h1,
-  .video-hub-hero h1,
-  .inner-hero h1{
-    font-size:clamp(42px,12vw,58px)!important;
-    line-height:.96!important;
-    max-width:100%!important;
-    margin-top:0!important;
+  body:not(.home-page) .about-photo-hero,
+  body:not(.home-page) .news-photo-hero,
+  body:not(.home-page) .events-photo-hero,
+  body:not(.home-page) .tell-ben-hero,
+  body:not(.home-page) .follow-hero,
+  body:not(.home-page) .volunteer-hero,
+  body:not(.home-page) .donation-hero,
+  body:not(.home-page) .thanks-hero,
+  body:not(.home-page) .contact-editorial-hero,
+  body:not(.home-page) .issue-hero{
+    min-height:430px!important;
+    height:auto!important;
   }
 
-  /* ---------- Site-wide mobile forms / surveys ---------- */
-  form,
-  form[data-thanks],
-  .issue-form,
-  .contact-editorial-form,
-  .plan-hero-postcode,
-  .news-text-feature form{
-    box-sizing:border-box!important;
-    max-width:100%!important;
-  }
-
+  /* mobile forms remain comfortable */
   form[data-thanks] input,
   form[data-thanks] select,
   form[data-thanks] textarea,
@@ -980,116 +896,38 @@ body.local-journey-page .site-header{
   .issue-form select,
   .issue-form textarea,
   .contact-editorial-form input,
-  .contact-editorial-form textarea,
-  .plan-hero-postcode input,
-  .news-text-feature form input{
-    box-sizing:border-box!important;
+  .contact-editorial-form textarea{
     width:100%!important;
     max-width:100%!important;
     min-height:56px!important;
-    font-size:17px!important;
-    padding:15px 16px!important;
-    margin:0!important;
+    box-sizing:border-box!important;
+    padding:15px!important;
+    font-size:16px!important;
   }
-
-  form[data-thanks] textarea,
-  .issue-form textarea,
-  .contact-editorial-form textarea{
-    min-height:130px!important;
-  }
-
   form[data-thanks] button,
   .issue-form button,
-  .contact-editorial-form button,
-  .news-text-feature form button{
+  .contact-editorial-form button{
     width:100%!important;
     min-height:56px!important;
-    justify-content:center!important;
-    text-align:center!important;
-    margin-top:8px!important;
     box-sizing:border-box!important;
   }
+}
 
-  .issue-form,
-  .contact-editorial-form,
-  .news-text-feature form{
-    display:grid!important;
-    grid-template-columns:1fr!important;
-    gap:14px!important;
-    width:100%!important;
-  }
-
-  .issue-form-options{
-    grid-template-columns:1fr!important;
-    gap:10px!important;
-  }
-  .issue-form-options label{
-    min-height:58px!important;
-    padding:14px!important;
-  }
-
-  .contact-editorial-two{
-    grid-template-columns:1fr!important;
-    gap:14px!important;
-  }
-
-  /* News email CTA seen in QA screenshot */
-  .news-text-feature{
-    display:block!important;
-    padding:30px 22px!important;
-    margin-left:0!important;
-    margin-right:0!important;
-    box-sizing:border-box!important;
-    overflow:hidden!important;
-  }
-  .news-text-feature h2{
-    font-size:38px!important;
-    line-height:1!important;
-    margin:0 0 12px!important;
-    overflow-wrap:anywhere!important;
-  }
-  .news-text-feature p{
-    font-size:17px!important;
-    line-height:1.45!important;
-    margin-bottom:22px!important;
-  }
-  .news-text-feature form{
-    padding:0!important;
-  }
-
-  /* plan hero postcode: stack neatly on narrow screens */
-  .plan-hero-postcode{
-    width:100%!important;
-    max-width:100%!important;
-    padding:18px!important;
-    margin-top:20px!important;
-  }
-  .plan-hero-postcode form,
-  .plan-hero-postcode .postcode-form{
-    display:grid!important;
-    grid-template-columns:1fr!important;
-    gap:10px!important;
-  }
-  .plan-hero-postcode button,
-  .plan-hero-postcode .btn{
-    width:100%!important;
-    min-height:56px!important;
-    justify-content:center!important;
-  }
-
-  /* generic form rows that were two-column on desktop */
-  .form-row,
-  .signup-row,
-  .two-col,
-  .two-column,
-  .form-grid,
-  .survey-grid{
-    grid-template-columns:1fr!important;
-  }
-
-  /* breathing room before footer after data-collection blocks */
-  form[data-thanks]{
-    margin-bottom:20px!important;
+@media (min-width:801px){
+  /* tighter internal heroes on desktop, homepage untouched */
+  body:not(.home-page) .about-photo-hero,
+  body:not(.home-page) .news-photo-hero,
+  body:not(.home-page) .events-photo-hero,
+  body:not(.home-page) .plan-photo-hero,
+  body:not(.home-page) .tell-ben-hero,
+  body:not(.home-page) .follow-hero,
+  body:not(.home-page) .volunteer-hero,
+  body:not(.home-page) .donation-hero,
+  body:not(.home-page) .thanks-hero,
+  body:not(.home-page) .contact-editorial-hero,
+  body:not(.home-page) .issue-hero{
+    min-height:390px!important;
+    height:auto!important;
   }
 }
 </style>
@@ -1101,12 +939,15 @@ body.local-journey-page .site-header{
   <div class="site-header-inner">
     <a class="site-header-logo" href="../index.html" aria-label="Back Ben home"><img src="../assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor"></a>
     <nav class="site-primary-nav">
+      <a class="site-mobile-menu-logo" href="index.html" aria-label="Back Ben home"><img src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor"></a>
       <a href="../about.html">About Ben</a>
       <a href="../plan.html">Ben’s Plan</a>
       <a href="../news.html">News</a>
       <a href="../events.html">Events</a>
       <a href="../tell-ben.html">Tell Ben</a>
       <a href="../follow-ben.html">Follow Ben</a>
+    
+      <div class="mobile-menu-actions"><a class="site-volunteer-button" href="volunteer.html">Volunteer</a><a class="site-donate-button" href="donate.html">Donate</a></div>
     </nav>
 
     <button class="site-menu-button" type="button" aria-expanded="false" aria-label="Open navigation menu"></button>
