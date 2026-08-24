@@ -235,14 +235,64 @@
     if (label) el.textContent = label;
   }
 
+
+  function siteRootPath() {
+    const parts = window.location.pathname.split("/").filter(Boolean);
+
+    // GitHub Pages project sites: /testcase/...
+    // Keep the first path segment as the project root.
+    if (window.location.hostname.endsWith("github.io") && parts.length) {
+      return "/" + parts[0] + "/";
+    }
+
+    return "/";
+  }
+
+  function siteHref(path) {
+    if (!path) return path;
+    if (path.startsWith("/") || path.startsWith("http") || path.startsWith("#")) return path;
+    return siteRootPath() + path.replace(/^\.?\//, "");
+  }
+
   function addContextToHref(href) {
-    if (!href || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("http")) return href;
+    if (!href) return href;
+
+    // Leave external, hash, mail and telephone links alone.
+    if (
+      href.startsWith("#") ||
+      href.startsWith("mailto:") ||
+      href.startsWith("tel:") ||
+      href.startsWith("http://") ||
+      href.startsWith("https://") ||
+      href.startsWith("//")
+    ) return href;
+
     try {
-      const url = new URL(href, location.href);
       const ctx = getContext();
-      if (ctx.area && ctx.area !== "regional") url.searchParams.set("area", ctx.area);
-      if (ctx.issue) url.searchParams.set("issue", ctx.issue);
-      return url.pathname.split("/").pop() + (url.search ? url.search : "") + (url.hash || "");
+
+      // Resolve against the actual current page so GitHub Pages project paths
+      // such as /testcase/ and nested /journeys/ pages are preserved.
+      const baseHref =
+        href.startsWith("../") || href.startsWith("./")
+          ? window.location.href
+          : window.location.origin + siteRootPath();
+      const resolved = new URL(href, baseHref);
+
+      if (ctx.area && ctx.area !== "regional") {
+        resolved.searchParams.set("area", ctx.area);
+      } else {
+        resolved.searchParams.delete("area");
+      }
+
+      if (ctx.issue) {
+        resolved.searchParams.set("issue", ctx.issue);
+      } else {
+        resolved.searchParams.delete("issue");
+      }
+
+      // Return a site-local absolute pathname including the GitHub Pages
+      // project prefix, e.g. /testcase/about.html?area=crewe
+      return resolved.pathname + resolved.search + resolved.hash;
     } catch (_) {
       return href;
     }
@@ -672,5 +722,38 @@ window.addEventListener("pageshow", function(){
   document.body.classList.remove("menu-open");
   document.querySelectorAll(".site-primary-nav.open").forEach(function(nav){
     nav.classList.remove("open");
+  });
+});
+
+
+/* GitHub Pages internal routing safeguard v4 */
+document.addEventListener("DOMContentLoaded", function () {
+  const projectRoot = (function(){
+    const parts = window.location.pathname.split("/").filter(Boolean);
+    if (window.location.hostname.endsWith("github.io") && parts.length) {
+      return "/" + parts[0] + "/";
+    }
+    return "/";
+  })();
+
+  const rootPages = new Set([
+    "index.html","about.html","plan.html","news.html","events.html",
+    "tell-ben.html","follow-ben.html","contact.html","volunteer.html",
+    "donate.html","privacy.html","thanks.html","better-transport.html",
+    "safer-communities.html","stronger-economy.html","homes-opportunity.html"
+  ]);
+
+  document.querySelectorAll(".site-header a[href], footer a[href]").forEach(function(a){
+    const raw = a.getAttribute("href");
+    if (!raw || raw.startsWith("#") || raw.startsWith("http") ||
+        raw.startsWith("mailto:") || raw.startsWith("tel:")) return;
+
+    const clean = raw.split("?")[0].split("#")[0].replace(/^(\.\.\/)+/, "").replace(/^\.\//, "");
+    const file = clean.split("/").pop();
+
+    if (rootPages.has(file)) {
+      const existing = new URL(raw, window.location.href);
+      a.setAttribute("href", projectRoot + file + existing.search + existing.hash);
+    }
   });
 });
