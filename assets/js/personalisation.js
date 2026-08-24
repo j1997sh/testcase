@@ -665,3 +665,12 @@
     applyAll();
   }
 })();
+
+
+/* mobile reconciliation v3 safeguard */
+window.addEventListener("pageshow", function(){
+  document.body.classList.remove("menu-open");
+  document.querySelectorAll(".site-primary-nav.open").forEach(function(nav){
+    nav.classList.remove("open");
+  });
+});
