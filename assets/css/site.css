@@ -11426,11 +11426,7 @@ img{max-width:100%}
 .news-filter-btn:hover{transform:translateY(-1px);background:#d93b30!important}
 .news-filter-btn.is-active,.news-filter-btn[aria-pressed="true"]{background:var(--navy)!important}
 
-/* section rhythm */
-main > section:nth-of-type(even):not(.home-hero):not(.plan-photo-hero):not(.about-photo-hero):not(.news-photo-hero):not(.events-photo-hero):not(.tell-ben-hero):not(.follow-hero):not(.volunteer-hero):not(.donation-hero):not(.thanks-hero):not(.contact-editorial-hero):not(.issue-hero):not(.home-intro-white){background-color:#fff}
-main > section:nth-of-type(odd):not(.home-hero):not(.plan-photo-hero):not(.about-photo-hero):not(.news-photo-hero):not(.events-photo-hero):not(.tell-ben-hero):not(.follow-hero):not(.volunteer-hero):not(.donation-hero):not(.thanks-hero):not(.contact-editorial-hero):not(.issue-hero):not(.home-intro-white){background-color:var(--cream)}
-.home-intro-white{background:#fff!important}
-
+/* section rhythm intentionally handled by page-specific styles */
 /* footer */
 footer{padding-top:54px!important;padding-bottom:34px!important}
 footer .footer-grid,footer .footer-inner{align-items:start!important;column-gap:48px!important;row-gap:28px!important}
@@ -11465,4 +11461,363 @@ footer .footer-legal,footer .legal{
   footer{padding-top:42px!important}
   footer .footer-grid,footer .footer-inner{row-gap:24px!important}
   footer .footer-logo img,footer img.footer-logo{width:112px!important}
+}
+
+
+
+/* ============================================================
+   V7 CONTROLLED COLOUR + FORM / SURVEY REPAIR
+   ============================================================ */
+
+/* ---------- COLOUR RESET: page sections own their intended scheme ---------- */
+main > section{
+  color:inherit;
+}
+
+section[style*="background:#071f3d"],
+section[style*="background: #071f3d"],
+section[style*="background:#061a31"],
+section[style*="background: #061a31"],
+.dark-section,
+.navy-section,
+.issue-survey,
+.tell-ben-form-section,
+.volunteer-form-section{
+  color:#fff;
+}
+
+.dark-section h1,.dark-section h2,.dark-section h3,.dark-section p,.dark-section label,
+.navy-section h1,.navy-section h2,.navy-section h3,.navy-section p,.navy-section label,
+.issue-survey h1,.issue-survey h2,.issue-survey h3,.issue-survey p,.issue-survey label,
+.tell-ben-form-section h1,.tell-ben-form-section h2,.tell-ben-form-section h3,.tell-ben-form-section p,.tell-ben-form-section label,
+.volunteer-form-section h1,.volunteer-form-section h2,.volunteer-form-section h3,.volunteer-form-section p,.volunteer-form-section label{
+  color:inherit;
+}
+
+.home-intro-feature.home-intro-split.home-intro-white{
+  background:#fff!important;
+  color:#071f3d!important;
+}
+
+/* ---------- HOMEPAGE EDITORIAL CARDS ---------- */
+.home-editorial-cards{
+  width:100%!important;
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:20px!important;
+}
+.home-editorial-card{
+  display:flex!important;
+  flex-direction:column!important;
+  min-width:0!important;
+  background:#fff!important;
+  color:#071f3d!important;
+}
+.home-editorial-card img{
+  width:100%!important;
+  height:200px!important;
+  object-fit:cover!important;
+}
+.home-editorial-card-copy{
+  display:flex!important;
+  flex-direction:column!important;
+  flex:1!important;
+  align-items:flex-start!important;
+  padding:22px 24px 24px!important;
+}
+.home-editorial-card h3{
+  margin:0 0 10px!important;
+  color:#071f3d!important;
+}
+.home-editorial-card p{
+  margin:0!important;
+  color:#5b6674!important;
+}
+.home-editorial-card-cta{
+  align-self:center!important;
+  margin-top:auto!important;
+  padding-top:0!important;
+}
+
+/* ---------- CONSENT / CHECKBOX / RADIO SYSTEM ---------- */
+form label:has(input[type="checkbox"]),
+form label:has(input[type="radio"]),
+.consent-row,
+.contact-consent,
+.signup-consent,
+.mayor-consent,
+.survey-choice,
+.survey-option,
+.checkbox-row,
+.radio-row{
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:flex-start!important;
+  justify-content:flex-start!important;
+  gap:12px!important;
+  width:100%!important;
+  max-width:100%!important;
+  box-sizing:border-box!important;
+  min-width:0!important;
+  text-align:left!important;
+}
+
+form label:has(input[type="checkbox"]) input,
+form label:has(input[type="radio"]) input,
+.consent-row input,
+.contact-consent input,
+.signup-consent input,
+.mayor-consent input,
+.survey-choice input,
+.survey-option input,
+.checkbox-row input,
+.radio-row input{
+  flex:0 0 20px!important;
+  width:20px!important;
+  height:20px!important;
+  min-width:20px!important;
+  min-height:20px!important;
+  max-width:20px!important;
+  margin:2px 0 0!important;
+  padding:0!important;
+}
+
+form label:has(input[type="checkbox"]) span,
+form label:has(input[type="radio"]) span,
+.consent-row span,
+.contact-consent span,
+.signup-consent span,
+.mayor-consent span,
+.survey-choice span,
+.survey-option span,
+.checkbox-row span,
+.radio-row span{
+  flex:1 1 auto!important;
+  min-width:0!important;
+  max-width:100%!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+}
+
+/* generic checkbox labels that don't use spans */
+form label:has(input[type="checkbox"]),
+form label:has(input[type="radio"]){
+  line-height:1.4!important;
+  font-size:15px!important;
+}
+
+/* ---------- SURVEY CHOICE CARDS ---------- */
+.survey-options,
+.survey-choices,
+.tell-options,
+.issue-options,
+.local-survey-options{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  gap:12px!important;
+  width:100%!important;
+  max-width:100%!important;
+}
+
+.survey-choice,
+.survey-option,
+.tell-option,
+.issue-option,
+.local-survey-option{
+  position:relative!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  min-height:58px!important;
+  box-sizing:border-box!important;
+  padding:16px!important;
+  border:1px solid rgba(255,255,255,.22)!important;
+  background:rgba(255,255,255,.04)!important;
+  color:inherit!important;
+  overflow:hidden!important;
+}
+
+.survey-choice:hover,
+.survey-option:hover,
+.tell-option:hover,
+.issue-option:hover,
+.local-survey-option:hover{
+  background:rgba(255,255,255,.08)!important;
+}
+
+/* Light survey sections get dark text and light borders */
+section:not(.dark-section):not(.navy-section):not(.issue-survey):not(.tell-ben-form-section):not(.volunteer-form-section) .survey-choice,
+section:not(.dark-section):not(.navy-section):not(.issue-survey):not(.tell-ben-form-section):not(.volunteer-form-section) .survey-option{
+  border-color:rgba(7,31,61,.18)!important;
+  background:#fff!important;
+  color:#071f3d!important;
+}
+
+/* ---------- FORM WIDTH / OVERFLOW REPAIR ---------- */
+form,
+fieldset,
+.form-section,
+.survey-form,
+.tell-ben-form,
+.volunteer-form,
+.contact-form{
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  box-sizing:border-box!important;
+}
+
+form *,
+fieldset *{
+  box-sizing:border-box;
+}
+
+form input:not([type="checkbox"]):not([type="radio"]),
+form select,
+form textarea{
+  max-width:100%!important;
+  min-width:0!important;
+}
+
+fieldset{
+  border:0!important;
+  padding:0!important;
+  margin:0 0 24px!important;
+}
+
+legend{
+  width:100%!important;
+  margin:0 0 12px!important;
+  padding:0!important;
+  font-weight:900!important;
+  line-height:1.2!important;
+}
+
+/* ---------- HOMEPAGE HERO CONSENT ---------- */
+.home-hero form label:has(input[type="checkbox"]),
+.home-hero .signup-consent{
+  color:#fff!important;
+  margin-top:14px!important;
+  align-items:flex-start!important;
+}
+
+.home-hero form label:has(input[type="checkbox"]) span,
+.home-hero .signup-consent span{
+  color:#fff!important;
+  font-size:14px!important;
+  line-height:1.4!important;
+}
+
+/* ---------- CREWE / LOCAL SURVEY MOBILE TEXT SAFETY ---------- */
+.local-survey,
+.crewe-survey,
+.tell-ben-survey{
+  overflow:hidden!important;
+}
+
+.local-survey label,
+.crewe-survey label,
+.tell-ben-survey label{
+  max-width:100%!important;
+  min-width:0!important;
+}
+
+.local-survey .survey-choice,
+.crewe-survey .survey-choice,
+.tell-ben-survey .survey-choice{
+  color:inherit!important;
+}
+
+/* ---------- MOBILE ---------- */
+@media(max-width:800px){
+
+  /* Homepage cards: simple stacked editorial cards, no awkward side split */
+  .home-editorial-cards{
+    grid-template-columns:1fr!important;
+    gap:16px!important;
+  }
+
+  .home-editorial-card{
+    display:flex!important;
+    flex-direction:column!important;
+    min-height:0!important;
+  }
+
+  .home-editorial-card img{
+    width:100%!important;
+    height:165px!important;
+    min-height:165px!important;
+    object-fit:cover!important;
+  }
+
+  .home-editorial-card-copy{
+    padding:18px 20px 20px!important;
+    align-items:flex-start!important;
+  }
+
+  .home-editorial-card h3{
+    font-size:25px!important;
+    line-height:1!important;
+  }
+
+  .home-editorial-card p{
+    font-size:15px!important;
+    line-height:1.4!important;
+  }
+
+  .home-editorial-card-cta{
+    align-self:center!important;
+    margin-top:16px!important;
+  }
+
+  /* checkbox / radio mobile */
+  form label:has(input[type="checkbox"]),
+  form label:has(input[type="radio"]),
+  .consent-row,
+  .contact-consent,
+  .signup-consent,
+  .mayor-consent,
+  .survey-choice,
+  .survey-option,
+  .checkbox-row,
+  .radio-row{
+    gap:10px!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    overflow:visible!important;
+  }
+
+  .survey-choice,
+  .survey-option,
+  .tell-option,
+  .issue-option,
+  .local-survey-option{
+    min-height:56px!important;
+    padding:14px!important;
+  }
+
+  form label:has(input[type="checkbox"]),
+  form label:has(input[type="radio"]){
+    font-size:14px!important;
+  }
+
+  /* Prevent any survey copy escaping viewport */
+  .survey-choice *,
+  .survey-option *,
+  .tell-option *,
+  .issue-option *,
+  .local-survey-option *{
+    max-width:100%!important;
+    min-width:0!important;
+    white-space:normal!important;
+    overflow-wrap:anywhere!important;
+  }
+
+  /* Be the Mayor strip */
+  .mayor-priority-strip{
+    padding:18px 20px 24px!important;
+  }
+  .mayor-priority-strip-cta{
+    margin-top:4px!important;
+  }
 }
