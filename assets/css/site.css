@@ -10752,3 +10752,239 @@ body.mayor-modal-open{overflow:hidden}
   .mayor-ranking li{grid-template-columns:38px 1fr}
   .mayor-ranking .points{grid-column:2/3}
 }
+
+
+
+/* PASS V3 — EDITORIAL HOME CARDS, MAYOR EXPERIENCE, MOBILE MENU + PLAN FIX */
+
+.home-editorial-cards{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+  padding:48px 0 64px;
+}
+.home-editorial-card{
+  display:block;
+  background:#fff;
+  color:#071f3d;
+  text-decoration:none;
+}
+.home-editorial-card img{
+  width:100%;
+  aspect-ratio:4/2.15;
+  object-fit:cover;
+  display:block;
+}
+.home-editorial-card-copy{
+  padding:26px 28px 30px;
+}
+.home-editorial-card h3{
+  margin:0 0 12px;
+  font-size:30px;
+  line-height:1.02;
+  letter-spacing:-.035em;
+}
+.home-editorial-card p{
+  margin:0;
+  color:#5b6674;
+  font-size:17px;
+  line-height:1.5;
+}
+
+/* Mayor strip */
+.mayor-priority-strip{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:28px;
+  background:#f04436;
+  color:#fff;
+  padding:22px 24px;
+}
+.mayor-priority-strip-copy{
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+.mayor-priority-strip-cta{
+  min-height:52px;
+  padding:13px 22px;
+  border:0;
+  background:#071f3d;
+  color:#fff;
+  font:inherit;
+  font-size:16px;
+  font-weight:900;
+  cursor:pointer;
+}
+.mayor-priority-strip-cta:hover{background:#102b4a}
+.mayor-priority-strip-cta:focus-visible{
+  outline:3px solid #fff;
+  outline-offset:3px;
+}
+
+/* Takeover visual hierarchy */
+.mayor-modal-body{
+  width:min(1040px,calc(100% - 40px));
+  padding:46px 0 70px;
+}
+.mayor-progress{
+  margin:0 0 20px;
+  font-size:14px;
+  font-weight:900;
+  color:#f04436;
+}
+.mayor-step h2{
+  max-width:900px;
+}
+.mayor-budget-summary{
+  margin-top:10px;
+  padding:20px 0 14px;
+  border-bottom:2px solid #071f3d;
+}
+.mayor-budget-summary strong{
+  color:#071f3d;
+}
+.mayor-priority-row{
+  grid-template-columns:minmax(220px,1fr) minmax(220px,320px) 70px;
+  padding:22px 0;
+}
+.mayor-priority-row label{
+  font-size:27px;
+}
+.mayor-priority-row input[type=range]{
+  height:28px;
+}
+.mayor-live-result{
+  margin-top:28px;
+  padding:22px 24px;
+  border-left:6px solid #f04436;
+  background:#fff;
+}
+.mayor-choice-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  max-width:900px;
+}
+.mayor-choice{
+  min-height:88px;
+  padding:20px 22px;
+  border:2px solid #071f3d;
+  font-size:21px;
+}
+.mayor-details{
+  max-width:780px;
+}
+.mayor-name-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.mayor-details input{
+  border:2px solid rgba(7,31,61,.22);
+}
+.mayor-ranking li{
+  padding:20px 0;
+}
+.mayor-ranking .name{
+  font-size:24px;
+}
+
+/* MOBILE MENU TIGHTENING */
+@media(max-width:800px){
+  .site-primary-nav.open{
+    padding:24px 24px 32px!important;
+  }
+  .site-primary-nav.open .site-mobile-menu-logo{
+    width:100%!important;
+    margin:18px auto 24px!important;
+    display:flex!important;
+    justify-content:center!important;
+  }
+  .site-primary-nav.open .site-mobile-menu-logo img{
+    width:118px!important;
+  }
+  .site-primary-nav.open>a:not(.site-mobile-menu-logo){
+    padding:7px 8px!important;
+    margin:0 0 4px!important;
+    font-size:20px!important;
+    line-height:1.08!important;
+  }
+  .site-primary-nav.open .site-mobile-actions{
+    margin-top:18px!important;
+    gap:12px!important;
+  }
+
+  /* PLAN MOBILE HERO: push content clearly below logo/header */
+  .plan-photo-hero{
+    min-height:760px!important;
+  }
+  .plan-photo-hero-inner{
+    min-height:760px!important;
+    padding:255px 28px 40px!important;
+    justify-content:flex-end!important;
+  }
+  .plan-photo-hero h1{
+    margin-top:0!important;
+    font-size:48px!important;
+    line-height:.94!important;
+  }
+  .plan-photo-hero p{
+    font-size:17px!important;
+    line-height:1.42!important;
+  }
+
+  /* cards */
+  .home-editorial-cards{
+    grid-template-columns:1fr;
+    gap:18px;
+    padding:32px 0 46px;
+  }
+  .home-editorial-card-copy{
+    padding:22px 22px 24px;
+  }
+  .home-editorial-card h3{
+    font-size:28px;
+  }
+
+  /* mayor strip */
+  .mayor-priority-strip{
+    align-items:stretch;
+    gap:12px;
+    padding:18px 20px;
+  }
+  .mayor-priority-strip-copy{
+    display:block;
+    text-align:left;
+  }
+  .mayor-priority-strip-copy strong{
+    display:block;
+    margin-bottom:4px;
+  }
+  .mayor-priority-strip-cta{
+    width:100%;
+    min-height:52px;
+  }
+
+  /* takeover */
+  .mayor-modal-body{
+    margin:0 20px;
+    width:auto;
+  }
+  .mayor-progress{
+    margin-bottom:14px;
+  }
+  .mayor-priority-row{
+    grid-template-columns:1fr 56px;
+    padding:18px 0;
+  }
+  .mayor-priority-row label{
+    font-size:20px;
+  }
+  .mayor-choice-grid{
+    grid-template-columns:1fr;
+  }
+  .mayor-name-row{
+    grid-template-columns:1fr;
+  }
+}

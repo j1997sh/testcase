@@ -577,10 +577,13 @@ body:not(.home-page) .site-header{
   </div>
 </section>
 
-<button class="mayor-priority-strip" type="button" data-mayor-open>
-  <strong>You’re the Mayor. What comes first?</strong>
-  <span>Spend 100 points. Make the choices a mayor has to make.</span>
-</button>
+<div class="mayor-priority-strip">
+  <div class="mayor-priority-strip-copy">
+    <strong>You’re the Mayor. What comes first?</strong>
+    <span>Spend 100 points. Make the choices a mayor has to make.</span>
+  </div>
+  <button class="mayor-priority-strip-cta" type="button" data-mayor-open>Be the Mayor</button>
+</div>
 <div class="mayor-modal" data-mayor-modal data-area="crewe" role="dialog" aria-modal="true" aria-labelledby="mayor-title">
   <div class="mayor-modal-shell">
     <div class="mayor-modal-head">
@@ -588,7 +591,7 @@ body:not(.home-page) .site-header{
       <button class="mayor-modal-close" type="button" data-mayor-close aria-label="Close">×</button>
     </div>
     <div class="mayor-modal-body">
-      <section class="mayor-step is-active" data-step="1">
+      <section class="mayor-step is-active" data-step="1"><div class="mayor-progress">1 of 3 · Set your priorities</div>
         <h2 id="mayor-title">What comes first?</h2>
         <p class="lead">You have 100 points to spend. Put more points behind the things you think the mayor should prioritise most.</p>
         <div class="mayor-budget-summary"><div><strong data-points-left>100</strong><span> points left</span></div><span>You must spend all 100 points to continue.</span></div>
@@ -598,16 +601,20 @@ body:not(.home-page) .site-header{
         <div class="mayor-live-result" data-live-result>Start allocating your 100 points.</div>
         <div class="mayor-actions"><button class="mayor-next" type="button" data-next disabled>Next</button></div>
       </section>
-      <section class="mayor-step" data-step="2">
+      <section class="mayor-step" data-step="2"><div class="mayor-progress">2 of 3 · Make the trade-off</div>
         <h2 data-followup-title>If you could fix one thing first?</h2>
         <p class="lead" data-followup-lead></p>
         <div class="mayor-choice-grid" data-followup-options></div>
         <div class="mayor-actions"><button class="mayor-back" type="button" data-back>Back</button><button class="mayor-next" type="button" data-next disabled>Next</button></div>
       </section>
-      <section class="mayor-step" data-step="3">
+      <section class="mayor-step" data-step="3"><div class="mayor-progress">3 of 3 · Tell Ben who you are</div>
         <h2>Where should Ben listen?</h2>
         <p class="lead">See how your priorities compare with people in Crewe.</p>
         <div class="mayor-details">
+          <div class="mayor-name-row">
+            <label>First name<input type="text" autocomplete="given-name" placeholder="First name" data-first-name></label>
+            <label>Last name<input type="text" autocomplete="family-name" placeholder="Last name" data-last-name></label>
+          </div>
           <label>Postcode<input type="text" autocomplete="postal-code" placeholder="e.g. CW1 2AB" data-postcode></label>
           <label>Email address <span style="font-weight:600">(optional)</span><input type="email" autocomplete="email" placeholder="you@example.com" data-email></label>
           <label class="mayor-consent"><input type="checkbox" data-consent><span>I’m happy to receive campaign updates from Ben by email.</span></label>
@@ -661,11 +668,31 @@ body:not(.home-page) .site-header{
 </section>
 
 
-<section class="home-stories"><div class="container"><div class="home-stories-grid">
-<a class="home-story home-story-navy" href="news.html"><strong>What Ben is hearing in Crewe.</strong><p>Growth, transport, the town centre and what people want from the new mayor.</p><em>Latest news</em></a>
-<a class="home-story home-story-cream" href="plan.html"><strong>Ben’s Plan for Crewe.</strong><p>See what the four mayoral priorities mean for Crewe and the surrounding area.</p><em>Ben’s Plan</em></a>
-<a class="home-story home-story-red" href="events.html"><strong>Meet Ben in Crewe.</strong><p>See local campaign visits and upcoming opportunities to meet Ben.</p><em>Events</em></a>
-</div></div></section>
+<section class="home-stories"><div class="container">
+<div class="home-editorial-cards">
+  <a class="home-editorial-card" href="news.html">
+    <img src="../assets/images/ben-home-intro.jpg" alt="">
+    <div class="home-editorial-card-copy">
+      <h3>What Ben is hearing in Crewe.</h3>
+      <p>Growth, transport and what local people want from the new mayor.</p>
+    </div>
+  </a>
+  <a class="home-editorial-card" href="../volunteer.html">
+    <img src="../assets/images/ben-volunteer-hero.jpg" alt="">
+    <div class="home-editorial-card-copy">
+      <h3>Give an hour. Make a difference.</h3>
+      <p>Campaign locally, help online, join an event or bring your skills.</p>
+    </div>
+  </a>
+  <a class="home-editorial-card" href="events.html">
+    <img src="../assets/images/ben-events-hero.jpg" alt="">
+    <div class="home-editorial-card-copy">
+      <h3>See what’s happening in Crewe.</h3>
+      <p>Find campaign visits, public meetings and upcoming local events.</p>
+    </div>
+  </a>
+</div>
+</section>
 </main>
 
 
