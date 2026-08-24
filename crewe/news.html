@@ -770,11 +770,11 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
 
   <section class="news-filter-strip">
     <div class="container news-filter-inner">
-      <a href="news.html" class="active" aria-current="page">All</a>
-      <a href="news.html?category=campaign">Campaign</a>
-      <a href="news.html?category=policy">Policy</a>
-      <a href="news.html?category=local">Local</a>
-      <a href="news.html?category=media">Media</a>
+      <a href="news.html" class="active news-filter-btn" aria-current="page" data-news-filter="all" aria-pressed="true">All</a>
+      <a href="news.html?category=campaign" class="news-filter-btn" data-news-filter="campaign" aria-pressed="false">Campaign</a>
+      <a href="news.html?category=policy" class="news-filter-btn" data-news-filter="policy" aria-pressed="false">Policy</a>
+      <a href="news.html?category=local" class="news-filter-btn" data-news-filter="local" aria-pressed="false">Local</a>
+      <a href="news.html?category=media" class="news-filter-btn" data-news-filter="media" aria-pressed="false">Media</a>
     </div>
   </section>
 
@@ -783,7 +783,7 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
   <div class="container">
     <div class="news-grid">
 
-      <article class="news-card">
+      <article class="news-card" data-news-category="local">
         <a class="news-card-image story-crewe" href="journeys/crewe.html" aria-label="What Ben is hearing in Crewe"></a>
         <div class="news-card-copy">
           <p class="news-story-date">22 August 2026</p>
@@ -793,7 +793,7 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
         </div>
       </article>
 
-      <article class="news-card">
+      <article class="news-card" data-news-category="local">
         <a class="news-card-image story-volunteer" href="../volunteer.html" aria-label="Building Team Ben across the region"></a>
         <div class="news-card-copy">
           <p class="news-story-date">18 August 2026</p>
@@ -803,7 +803,7 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
         </div>
       </article>
 
-      <article class="news-card">
+      <article class="news-card" data-news-category="campaign">
         <a class="news-card-image story-experience" href="../about.html" aria-label="Why experience matters in a new mayoralty"></a>
         <div class="news-card-copy">
           <p class="news-story-date">12 August 2026</p>
@@ -813,7 +813,7 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
         </div>
       </article>
 
-      <article class="news-card">
+      <article class="news-card" data-news-category="local">
         <a class="news-card-image story-plan" href="plan.html" aria-label="A practical plan for Cheshire and Warrington"></a>
         <div class="news-card-copy">
           <p class="news-story-date">8 August 2026</p>
@@ -823,7 +823,7 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
         </div>
       </article>
 
-      <article class="news-card">
+      <article class="news-card" data-news-category="local">
         <a class="news-card-image story-about" href="../about.html" aria-label="Leadership rooted in Cheshire and Warrington"></a>
         <div class="news-card-copy">
           <p class="news-story-date">2 August 2026</p>
@@ -833,7 +833,7 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
         </div>
       </article>
 
-      <article class="news-card news-card-placeholder">
+      <article class="news-card news-card-placeholder" data-news-category="campaign">
         <div class="news-card-placeholder-inner">
           <p>More campaign news will appear here.</p>
         </div>
@@ -841,7 +841,7 @@ body:has(.news-photo-hero) .site-header-inner{background:transparent!important;b
 
     </div>
 
-    <article class="news-text-feature">
+    <article class="news-text-feature" data-news-category="local">
       <div>
         <h2>Want campaign updates directly?</h2>
         <p>Get the latest from Ben, including local visits, events and campaign announcements.</p>

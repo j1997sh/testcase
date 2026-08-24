@@ -549,7 +549,7 @@ body:not(.home-page) .site-header{
 
 <main>
 
-<section class="home-hero-refined">
+<section class="home-leadership home-hero-refined">
   <div class="home-hero-bg"><img class="home-hero-photo" src="assets/images/ben-home-hero.jpg" alt="Ben"></div>
 
   <div class="container home-hero-content">
@@ -576,6 +576,60 @@ body:not(.home-page) .site-header{
     </div>
   </div>
 </section>
+
+<button class="mayor-priority-strip" type="button" data-mayor-open>
+  <strong>You’re the Mayor. What comes first?</strong>
+  <span>Spend 100 points. Make the choices a mayor has to make.</span>
+</button>
+<div class="mayor-modal" data-mayor-modal data-area="regional" role="dialog" aria-modal="true" aria-labelledby="mayor-title">
+  <div class="mayor-modal-shell">
+    <div class="mayor-modal-head">
+      <strong>You’re the Mayor.</strong>
+      <button class="mayor-modal-close" type="button" data-mayor-close aria-label="Close">×</button>
+    </div>
+    <div class="mayor-modal-body">
+      <section class="mayor-step is-active" data-step="1">
+        <h2 id="mayor-title">What comes first?</h2>
+        <p class="lead">You have 100 points to spend. Put more points behind the things you think the mayor should prioritise most.</p>
+        <div class="mayor-budget-summary"><div><strong data-points-left>100</strong><span> points left</span></div><span>You must spend all 100 points to continue.</span></div>
+        <div class="mayor-priority-list">
+          <div class="mayor-priority-row"><label for="m-transport">Better transport</label><input id="m-transport" type="range" min="0" max="100" value="0" step="1" data-priority="transport"><div class="mayor-priority-value"><span data-value="transport">0</span></div></div><div class="mayor-priority-row"><label for="m-safety">Safer communities</label><input id="m-safety" type="range" min="0" max="100" value="0" step="1" data-priority="safety"><div class="mayor-priority-value"><span data-value="safety">0</span></div></div><div class="mayor-priority-row"><label for="m-housing">Homes & opportunity</label><input id="m-housing" type="range" min="0" max="100" value="0" step="1" data-priority="housing"><div class="mayor-priority-value"><span data-value="housing">0</span></div></div><div class="mayor-priority-row"><label for="m-growth">Jobs & growth</label><input id="m-growth" type="range" min="0" max="100" value="0" step="1" data-priority="growth"><div class="mayor-priority-value"><span data-value="growth">0</span></div></div><div class="mayor-priority-row"><label for="m-services">Town centres & local services</label><input id="m-services" type="range" min="0" max="100" value="0" step="1" data-priority="services"><div class="mayor-priority-value"><span data-value="services">0</span></div></div>
+        </div>
+        <div class="mayor-live-result" data-live-result>Start allocating your 100 points.</div>
+        <div class="mayor-actions"><button class="mayor-next" type="button" data-next disabled>Next</button></div>
+      </section>
+      <section class="mayor-step" data-step="2">
+        <h2 data-followup-title>If you could fix one thing first?</h2>
+        <p class="lead" data-followup-lead></p>
+        <div class="mayor-choice-grid" data-followup-options></div>
+        <div class="mayor-actions"><button class="mayor-back" type="button" data-back>Back</button><button class="mayor-next" type="button" data-next disabled>Next</button></div>
+      </section>
+      <section class="mayor-step" data-step="3">
+        <h2>Where should Ben listen?</h2>
+        <p class="lead">See how your priorities compare across Cheshire & Warrington.</p>
+        <div class="mayor-details">
+          <label>Postcode<input type="text" autocomplete="postal-code" placeholder="e.g. CW1 2AB" data-postcode></label>
+          <label>Email address <span style="font-weight:600">(optional)</span><input type="email" autocomplete="email" placeholder="you@example.com" data-email></label>
+          <label class="mayor-consent"><input type="checkbox" data-consent><span>I’m happy to receive campaign updates from Ben by email.</span></label>
+        </div>
+        <div class="mayor-actions"><button class="mayor-back" type="button" data-back>Back</button><button class="mayor-next" type="button" data-finish>See my priorities</button></div>
+      </section>
+      <section class="mayor-step" data-step="4">
+        <div class="mayor-results">
+          <h2>Your mayoral priorities.</h2>
+          <ol class="mayor-ranking" data-ranking></ol>
+          <p class="mayor-result-message" data-result-message></p>
+          <div class="mayor-actions">
+            <a class="mayor-next" href="plan.html">Read Ben’s Plan</a>
+            <a class="mayor-back" href="tell-ben.html">Tell Ben more</a>
+            <a class="mayor-back" href="volunteer.html">Join the campaign</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
 
 
 <section class="home-intro-feature home-intro-split">
