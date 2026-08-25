@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Donate | Joe Bloggs MP</title>
+<title>Our plan | Joe Bloggs MP</title>
 <link rel="stylesheet" href="assets/css/shared.css?v=32">
 
 <style>
@@ -78,36 +78,42 @@
     <a href="get-help.html" class="header-box help-button">Get help</a>
   </div>
 </div>
-<section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=2000&q=85')">
-  <div class="container"><div><h1>Support Joe’s local campaign</h1><p>Help Joe keep campaigning, communicating and organising across Bloggs Town.</p></div></div>
+<section class="page-hero no-area-personalisation" style="background-image:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=2000&q=85')">
+  <div class="container"><div><h1>Our plan for Bloggs Town</h1><p>A practical plan for Bloggs Town, focused on the issues Joe hears about most from residents across the constituency.</p></div></div>
 </section>
 
+<section class="section navy">
+  <div class="container">
+    <h2>Our plan for Bloggs Town</h2>
+    <p class="lead">Four clear priorities for a stronger, safer and better connected Bloggs Town.</p>
+    <div class="grid-4">
+      <article class="image-card" style="background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=82')"><h3>Better local healthcare</h3><p>Improving access to GPs, dentists and local NHS services.</p><a class="btn white" href="plan/healthcare.html">Read more</a></article>
+      <article class="image-card" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=82')"><h3>Safer streets</h3><p>Backing neighbourhood policing and tackling antisocial behaviour.</p><a class="btn white" href="plan/safer-streets.html">Read more</a></article>
+      <article class="image-card" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=82')"><h3>Fixing our roads</h3><p>Better roads, reliable transport and less congestion.</p><a class="btn white" href="plan/roads.html">Read more</a></article>
+      <article class="image-card" style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=82')"><h3>Backing local business</h3><p>Supporting the high street, local employers and investment.</p><a class="btn white" href="plan/business.html">Read more</a></article>
+    </div>
+  </div>
+</section>
 <section class="section">
   <div class="container two-col">
     <div>
-      <h2>Support Joe’s work in Bloggs Town</h2>
-      <p class="lead">Donations help fund local campaigning, printed materials, digital communications and community outreach.</p>
-      <p>This demo keeps the donation journey simple and separate from Joe’s parliamentary casework. In a live political site, the final wording, compliance fields and payment flow would be configured for the relevant political organisation.</p>
+      <h2>Help shape the next part of the plan</h2>
+      <p class="lead">The plan should keep evolving with the people Joe represents. Tell him what should be the next priority for Bloggs Town.</p>
+      <a class="btn" href="have-your-say.html">Take the survey</a>
     </div>
-    <form>
-      <div class="form-grid">
-        <input placeholder="First name"><input placeholder="Second name">
-        <input class="full" type="email" placeholder="Email address">
-        <input class="full" placeholder="Postcode">
-        <select class="full"><option>Select an amount</option><option>£10</option><option>£25</option><option>£50</option><option>£100</option><option>Other amount</option></select>
-        <button class="btn">Continue to donate</button>
-      </div>
-      <p class="form-note">Demo only — no payment is taken.</p>
-    </form>
+    <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=85')"></div>
   </div>
 </section>
-<section class="section alt">
+
+
+<section class="section" style="padding-top:0">
   <div class="container">
-    <h2>What your support helps fund</h2>
-    <div class="grid-3">
-      <div class="card"><h3>Local campaigning</h3><p>Leaflets, surveys and materials that help Joe communicate with residents across the constituency.</p></div>
-      <div class="card"><h3>Events and outreach</h3><p>Helping run public meetings, local events and opportunities for residents to get involved.</p></div>
-      <div class="card"><h3>Digital communications</h3><p>Keeping local people informed through the website, email and online campaigning.</p></div>
+    <div class="local-recommendation">
+      <div>
+        <h3 data-area-copy="What should Joe prioritise in {area}?">What should Joe prioritise near you?</h3>
+        <p data-area-copy="Tell Joe which issue matters most in {area}.">Tell Joe which issue matters most where you live.</p>
+      </div>
+      <a class="btn" href="have-your-say.html">Tell Joe</a>
     </div>
   </div>
 </section>
@@ -163,14 +169,5 @@
 </script>
 
 <script src="assets/js/personalisation.js?v=32"></script>
-
-<script>
-document.querySelectorAll('form').forEach(function(form){
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    window.location.href='donate-thanks.html';
-  });
-});
-</script>
 </body>
 </html>

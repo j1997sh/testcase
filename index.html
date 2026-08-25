@@ -1,802 +1,1208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Back Ben for Mayor of Cheshire &amp; Warrington</title>
-  <meta name="description" content="Back Ben for Mayor of Cheshire &amp; Warrington. Explore Ben’s plan, local campaign activity, events and ways to get involved.">
-  <meta name="theme-color" content="#071a34">
-  <meta property="og:title" content="Back Ben for Mayor of Cheshire &amp; Warrington">
-  <meta property="og:description" content="Back Ben for Mayor of Cheshire &amp; Warrington. Explore Ben’s plan, local campaign activity, events and ways to get involved.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/images/ben-home-hero.jpg">
-  <link rel="stylesheet" href="assets/css/site.css?v=20260823-canonical-v1">
-
-<style id="final-header-system">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Joe Bloggs MP for Bloggs Town</title>
+<style>
+:root{
+  --navy:#08254a;
+  --red:#0b67c6;
+  --cream:#ffffff;
+  --text:#0b2448;
+  --muted:#657184;
+  --line:#d8d8d8;
+  --white:#ffffff;
+  --max:1280px;
+}
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Proxima Nova","Avenir Next",Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:#fff;
+  line-height:1.45;
+}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
+.container{
+  width:min(var(--max),calc(100% - 64px));
+  margin:0 auto;
+}
 
+/* Header */
 .site-header{
-  width:100%!important;
-  max-width:none!important;
-  z-index:9999!important;
-  overflow:visible!important;
-  border:0!important;
+  position:relative;
+  z-index:20;
+  background:#fff;
+  color:var(--navy);
+  border-bottom:1px solid #e6eaf0;
+}
+.header-inner{
+  height:88px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  min-width:0;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:800;
+  color:var(--navy);
+}
+.logo-mark{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:#0b67c6;
+  color:#fff;
+  display:grid;
+  place-items:center;
+  font-size:14px;
+  font-weight:900;
+}
+.logo-copy{
+  line-height:1.05;
+}
+.logo-copy strong{
+  display:block;
+  font-size:21px;
+  letter-spacing:-.03em;
+}
+.logo-copy span{
+  display:block;
+  font-size:11px;
+  margin-top:5px;
+  color:#5e6a7c;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  font-size:13px;
+  font-weight:700;
+  color:var(--navy);
+}
+.nav a:hover{color:#0b67c6}
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex:0 0 auto;
+  white-space:nowrap;
+}
+.header-box{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:42px;
+  min-height:42px;
+  padding:0 15px;
+  border:1px solid #0b67c6;
+  font-weight:800;
+  line-height:1;
+  white-space:nowrap;
+}
+.header-box.signup{background:#fff;color:#0b67c6}
+.header-box.help-button{background:#0b67c6;color:#fff}
+.menu-button{display:none}
 
-  /* Explicitly neutralise the original legacy `header` rule */
-  left:0!important;
-  right:0!important;
-  top:0!important;
-  transform:none!important;
-  margin:0!important;
+/* Mobile navigation */
+.mobile-nav{
+  display:none;
+  background:#fff;
+  border-bottom:1px solid #e6eaf0;
+}
+.mobile-nav.open{display:block}
+.mobile-nav nav{
+  display:flex;
+  flex-direction:column;
+  padding:8px 20px 4px;
+}
+.mobile-nav nav a{
+  padding:14px 0;
+  border-bottom:1px solid #edf0f4;
+  font-weight:800;
+  color:var(--navy);
+}
+.mobile-nav-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  padding:14px 20px 18px;
+}
+.mobile-nav-actions .header-box{
+  width:100%;
 }
 
-body.home-page .site-header{
-  position:absolute!important;
-  top:0!important;
-  left:0!important;
-  right:0!important;
-  background:linear-gradient(to bottom,rgba(4,15,31,.88),rgba(4,15,31,.34),transparent)!important;
+/* Hero */
+.hero{
+  min-height:610px;
+  position:relative;
+  color:#fff;
+  background:
+    linear-gradient(90deg,rgba(4,23,47,.88) 0%,rgba(7,38,77,.72) 38%,rgba(8,60,112,.24) 67%,rgba(8,60,112,.06) 100%),
+    url("https://images.unsplash.com/photo-1780775119736-fca3cf95cfc8?auto=format&fit=crop&fm=jpg&q=84&w=2200") center 48%/cover no-repeat;
+}
+.hero-inner{
+  min-height:610px;
+  display:flex;
+  align-items:flex-end;
+  padding:82px 0 48px;
+}
+.hero-content{
+  width:min(760px,100%);
+}
+.hero h1{
+  margin:0 0 14px;
+  font-size:clamp(52px,6.2vw,82px);
+  line-height:.94;
+  letter-spacing:-.055em;
+  max-width:760px;
+}
+.hero p{
+  margin:0 0 24px;
+  max-width:610px;
+  font-size:18px;
+  line-height:1.45;
+  color:#f5f7fb;
+}
+.hero-form{
+  display:grid;
+  grid-template-columns:1fr 1fr 1.3fr 1fr auto;
+  gap:8px;
+  width:min(1050px,100%);
+}
+.hero-form input{
+  min-width:0;
+  height:48px;
+  border:0;
+  padding:0 14px;
+  background:#fff;
+  color:var(--text);
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 22px;
+  border:0;
+  background:#0b67c6;
+  color:#fff;
+  font-weight:800;
+  cursor:pointer;
+}
+.btn.light{
+  background:#fff;
+  color:var(--navy);
+}
+.btn.navy{
+  background:var(--navy);
+  color:#fff;
 }
 
-body:not(.home-page) .site-header{
-  position:relative!important;
-  left:0!important;
-  right:0!important;
-  top:0!important;
-  transform:none!important;
-  background:linear-gradient(100deg,#071a34 0%,#0a315e 55%,#0b72bd 100%)!important;
+/* Intro */
+.intro{
+  padding:62px 0;
+  background:#fff;
+}
+.intro-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:52px;
+  align-items:center;
+}
+.intro-image{
+  min-height:350px;
+  background:url("https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1200&q=85") center/cover no-repeat;
+}
+.intro-copy h2,
+.area-copy h2,
+.section-heading h2{
+  margin:0 0 16px;
+  font-size:48px;
+  line-height:1;
+  letter-spacing:-.05em;
+}
+.intro-copy p,
+.area-copy p,
+.card p{
+  color:var(--muted);
+  font-size:17px;
+}
+.intro-copy .btn{margin-top:12px}
+
+/* Area section */
+.area{
+  background:var(--navy);
+  color:#fff;
+  padding:28px 0;
+}
+.area-grid{
+  display:grid;
+  grid-template-columns:minmax(250px,.85fr) minmax(520px,1.4fr);
+  gap:44px;
+  align-items:center;
+}
+.area-copy{
+  display:contents;
+}
+.area-intro{
+  min-width:0;
+}
+.area-copy h2{
+  margin:0 0 6px;
+  font-size:34px;
+  line-height:1;
+  letter-spacing:-.045em;
+  color:#fff;
+}
+.area-copy p{
+  margin:0;
+  font-size:15px;
+  line-height:1.4;
+  color:rgba(255,255,255,.78);
+}
+.area-controls{
+  min-width:0;
+}
+.area-form{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:8px;
+  margin:0;
+  max-width:none;
+}
+.area-form input{
+  width:100%;
+  height:48px;
+  border:1px solid rgba(255,255,255,.42);
+  padding:0 15px;
+  background:#fff;
+  color:var(--text);
+}
+.area-form .btn{
+  background:var(--blue);
+  min-width:150px;
+}
+.area-note{
+  margin-top:7px;
+  font-size:12px;
+  color:rgba(255,255,255,.64);
+}
+.area .local-result{
+  margin-top:10px;
+  padding:12px 14px;
+  background:rgba(255,255,255,.1);
+  border-left:3px solid #fff;
+}
+.area .local-result strong{color:#fff;font-size:16px}
+.area .local-result p{color:rgba(255,255,255,.78);font-size:13px}
+
+/* Three action cards */
+.actions{
+  padding:62px 0 68px;
+  background:#fff;
+}
+.action-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+}
+.card{
+  display:flex;
+  flex-direction:column;
+}
+.card-image{
+  aspect-ratio:1.55/1;
+  background-size:cover;
+  background-position:center;
+}
+.card-body{
+  padding:16px 4px 0;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  flex:1;
+}
+.card h3{
+  margin:0 0 10px;
+  font-size:29px;
+  line-height:1.02;
+  letter-spacing:-.04em;
+}
+.card p{
+  margin:0 0 16px;
+  font-size:16px;
+}
+.card .btn{
+  margin-top:auto;
 }
 
-.site-header-inner{
-  width:100%!important;
-  max-width:none!important;
-  min-width:0!important;
-  min-height:86px!important;
-  margin:0!important;
-  padding:0 32px!important;
-  display:flex!important;
-  align-items:center!important;
-  justify-content:space-between!important;
-  gap:24px!important;
+/* priorities */
+.priorities{
+  background:var(--navy);
+  color:#fff;
+  padding:64px 0 68px;
+}
+.section-heading{
+  display:block;
+  margin-bottom:26px;
+}
+.priority-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+.priority{
+  position:relative;
+  min-height:270px;
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-end;
+  overflow:hidden;
+  color:#fff;
+  background-size:cover;
+  background-position:center;
+}
+.priority::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(5,24,49,.34) 0%,rgba(5,24,49,.78) 58%,rgba(5,24,49,.94) 100%);
+}
+.priority > *{
+  position:relative;
+  z-index:1;
+}
+.priority h3{
+  font-size:28px;
+  line-height:1;
+  margin:0 0 10px;
+  letter-spacing:-.04em;
+  color:#fff;
+}
+.priority p{
+  color:rgba(255,255,255,.88);
+  margin:0 0 18px;
+  font-size:16px;
+}
+.priority .btn{
+  margin-top:0;
+  background:#fff;
+  color:var(--navy);
 }
 
-.site-primary-nav{
-  display:flex!important;
-  position:static!important;
-  flex:0 1 auto!important;
-  min-width:0!important;
-  width:auto!important;
-  height:auto!important;
-  align-items:center!important;
-  justify-content:flex-start!important;
-  gap:clamp(14px,1.45vw,28px)!important;
-  margin:0!important;
-  padding:0!important;
-  background:transparent!important;
-  box-shadow:none!important;
-  visibility:visible!important;
-  opacity:1!important;
-  white-space:nowrap!important;
-  overflow:visible!important;
+/* latest */
+.latest{
+  padding:62px 0;
+  background:#fff;
+}
+.latest-grid{
+  display:grid;
+  grid-template-columns:1.25fr .75fr .75fr;
+  gap:26px;
+}
+.story{
+  border-top:1px solid var(--line);
+  padding-top:16px;
+}
+.story-image{
+  width:100%;
+  aspect-ratio:1.5/1;
+  background-size:cover;
+  background-position:center;
+  margin-bottom:16px;
+}
+.story.featured .story-image{aspect-ratio:1.8/1}
+.story h3{
+  margin:0 0 10px;
+  font-size:28px;
+  line-height:1.04;
+  letter-spacing:-.035em;
+}
+.story p{
+  color:var(--muted);
+  margin:0 0 16px;
+}
+.story .btn{min-height:44px}
+
+/* help */
+.help{
+  background:#fff;
+  padding:62px 0;
+}
+.help-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;
+}
+.help-copy h2{
+  font-size:48px;
+  line-height:1;
+  margin:0 0 16px;
+  letter-spacing:-.05em;
+}
+.help-copy p{
+  color:var(--muted);
+  font-size:17px;
+  max-width:560px;
+}
+.help-links{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.help-link{
+  background:#fff;
+  padding:20px;
+  border:1px solid #ddd5ca;
+  font-weight:800;
+}
+.help-actions{
+  margin-top:16px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
 }
 
-.site-primary-nav a{
-  display:inline-block!important;
-  flex:0 0 auto!important;
-  width:auto!important;
-  min-width:0!important;
-  margin:0!important;
-  padding:0!important;
-  border:0!important;
-  color:#fff!important;
-  font-size:clamp(12px,.95vw,15px)!important;
-  line-height:1!important;
-  font-weight:800!important;
-  text-decoration:none!important;
-  white-space:nowrap!important;
-  visibility:visible!important;
-  opacity:1!important;
+/* compact help */
+.help-compact{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+}
+.help-compact h2{
+  font-size:44px;
+  line-height:1;
+  margin:0 0 10px;
+  letter-spacing:-.045em;
+}
+.help-compact p{
+  margin:0;
+  color:var(--muted);
+  font-size:17px;
+  max-width:700px;
+}
+.help-compact-actions{
+  display:flex;
+  gap:10px;
+  flex:0 0 auto;
 }
 
-.site-header-actions{
-  display:flex!important;
-  flex:0 0 auto!important;
-  align-items:center!important;
-  gap:12px!important;
-  margin:0!important;
-  padding:0!important;
+/* footer */
+footer{
+  background:#06172d;
+  color:#fff;
+  padding:42px 0;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.2fr repeat(3,.8fr);
+  gap:36px;
+}
+footer h4{
+  margin:0 0 10px;
+  font-size:16px;
+}
+footer a{
+  display:block;
+  color:#c8d2df;
+  margin:7px 0;
+  font-size:13px;
+}
+.footer-note{
+  border-top:1px solid rgba(255,255,255,.10);
+  margin-top:28px;
+  padding-top:18px;
+  color:#9fb0c4;
+  font-size:12px;
 }
 
-.site-volunteer-button,
-.site-donate-button{
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  min-height:52px!important;
-  padding:0 clamp(16px,1.55vw,25px)!important;
-  color:#fff!important;
-  font-size:clamp(12px,.95vw,15px)!important;
-  line-height:1!important;
-  font-weight:900!important;
-  text-decoration:none!important;
-  white-space:nowrap!important;
+@media(max-width:1000px){
+  .help-compact{align-items:flex-start}
+
+  .nav{display:none}
+  .header-actions{margin-left:auto}
+  .menu-button{
+    display:block;
+    background:transparent;
+    color:var(--navy);
+    border:1px solid #cfd8e4;
+    padding:10px 12px;
+    font-weight:800;
+  }
+  .hero-form{grid-template-columns:1fr 1fr}
+  .hero-form .btn{grid-column:1/-1}
+  .intro-grid,.area-grid,.help-grid{grid-template-columns:1fr}
+  .priority-grid{grid-template-columns:1fr 1fr}
+  .latest-grid{grid-template-columns:1fr 1fr}
+  .story.featured{grid-column:1/-1}
+}
+@media(max-width:650px){
+  .help-compact{display:block}
+  .help-compact h2{font-size:38px}
+  .help-compact-actions{margin-top:20px;display:grid;grid-template-columns:1fr}
+
+  .container{width:min(var(--max),calc(100% - 28px))}
+  .header-inner{height:74px}
+  .header-actions .signup{display:none}
+  .header-box{height:40px;min-height:40px;padding:0 12px;font-size:13px}
+  .logo-copy strong{font-size:18px}
+  .hero{min-height:720px}
+  .hero-inner{min-height:720px;padding:120px 0 36px;align-items:flex-end}
+  .hero h1{font-size:55px}
+  .hero p{font-size:17px}
+  .hero-form{grid-template-columns:1fr}
+  .hero-form .btn{grid-column:auto}
+  .intro,.actions,.priorities,.latest,.help{padding:52px 0}
+  .intro-grid,.area-grid{gap:28px}
+  .intro-image,.area-image{min-height:300px}
+  .intro-copy h2,.area-copy h2,.section-heading h2,.help-copy h2{font-size:42px}
+  .area-form{grid-template-columns:1fr}
+  .action-grid,.priority-grid,.latest-grid,.help-links,.footer-grid{grid-template-columns:1fr}
+  .story.featured{grid-column:auto}
+  .section-heading{display:block}
+  
 }
 
-.site-volunteer-button{border:1px solid #efe6d7!important;background:#efe6d7!important;color:#071f3d!important;}
+/* Subtle interaction */
+@media (hover:hover) and (pointer:fine){
+  a,
+  button{
+    transition:
+      color .18s ease,
+      background-color .18s ease,
+      border-color .18s ease,
+      opacity .18s ease,
+      transform .18s ease;
+  }
 
-.site-donate-button{
-  border:1px solid #f04436!important;
-  background:#f04436!important;
-}
+  .nav a{
+    position:relative;
+  }
+  .nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-7px;
+    height:2px;
+    background:var(--blue);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform .18s ease;
+  }
+  .nav a:hover::after,
+  .nav a.active::after{
+    transform:scaleX(1);
+  }
 
-.site-menu-button{display:none!important}
-.mobile-menu-actions{display:none!important}
+  .header-box:hover,
+  .btn:hover{
+    transform:translateY(-2px);
+  }
 
-/* Tight desktop: compress rather than shove content offscreen */
-@media (max-width:1100px) and (min-width:801px){
-  .site-header-inner{padding:0 20px!important;gap:14px!important}
-  .site-primary-nav{gap:11px!important}
-  .site-primary-nav a{font-size:11.5px!important}
-  .site-header-actions{gap:8px!important}
-  .site-volunteer-button,.site-donate-button{
-    min-height:46px!important;
-    padding:0 13px!important;
-    font-size:11.5px!important;
+  .header-box.signup:hover{
+    background:#f4f8fd;
+  }
+  .header-box.help-button:hover,
+  .btn:hover{
+    background:#095bb0;
+  }
+  .btn.navy:hover{
+    background:#061c38;
+  }
+  .btn.white:hover{
+    background:#eef5fc;
+    color:var(--navy);
+  }
+
+  .card,
+  .image-card,
+  .list-item{
+    transition:
+      transform .22s ease,
+      box-shadow .22s ease,
+      border-color .22s ease;
+  }
+
+  .card:hover{
+    transform:translateY(-5px);
+  }
+  .card:hover .card-image{
+    transform:scale(1.025);
+  }
+  .card-image{
+    transition:transform .35s ease;
+  }
+
+  .image-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 28px rgba(8,37,74,.13);
+  }
+  .image-card::before{
+    transition:background .25s ease;
+  }
+  .image-card:hover::before{
+    background:linear-gradient(180deg,rgba(5,24,49,.10),rgba(5,24,49,.82));
+  }
+
+  .list-item:hover{
+    transform:translateY(-2px);
+    border-color:#aebdd0;
+    box-shadow:0 6px 18px rgba(8,37,74,.07);
+  }
+
+  .logo:hover .logo-mark{
+    transform:rotate(-4deg) scale(1.04);
+  }
+  .logo-mark{
+    transition:transform .18s ease;
+  }
+
+  footer a:hover{
+    color:#fff;
   }
 }
 
-/* One clean mobile breakpoint. */
-@media (max-width:800px){
-  .site-header-inner{
-    min-height:72px!important;
-    padding:10px 16px!important;
-    justify-content:flex-end!important;
-    position:relative!important;
-  }
-
-  .site-menu-button{
-    display:block!important;
-    width:auto!important;
-    min-width:106px!important;
-    height:52px!important;
-    border:1px solid rgba(255,255,255,.68)!important;
-    background:transparent!important;
-    color:#fff!important;
-    font-size:16px!important;
-    font-weight:900!important;
-  }
-
-  .site-header-actions{display:none!important}
-
-  .site-primary-nav{
-    display:none!important;
-    position:absolute!important;
-    top:100%!important;
-    left:0!important;
-    right:0!important;
-    width:100%!important;
-    padding:8px 18px 18px!important;
-    background:#061a31!important;
-    box-shadow:0 18px 35px rgba(0,0,0,.25)!important;
-    white-space:normal!important;
-  }
-
-  .site-primary-nav.open{display:block!important}
-
-  .site-primary-nav a{
-    display:block!important;
-    width:100%!important;
-    padding:15px 6px!important;
-    border-bottom:1px solid rgba(255,255,255,.11)!important;
-    font-size:16px!important;
+@media (prefers-reduced-motion: reduce){
+  *,
+  *::before,
+  *::after{
+    scroll-behavior:auto !important;
+    transition:none !important;
+    animation:none !important;
   }
 }
+
+
+@media (hover:hover) and (pointer:fine){
+  .priority{
+    transition:transform .22s ease, box-shadow .22s ease;
+  }
+  .priority::before{
+    transition:background .25s ease;
+  }
+  .priority:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 28px rgba(8,37,74,.15);
+  }
+  .priority:hover::before{
+    background:linear-gradient(180deg,rgba(5,24,49,.24) 0%,rgba(5,24,49,.70) 58%,rgba(5,24,49,.90) 100%);
+  }
+  .story{
+    transition:transform .22s ease;
+  }
+  .story:hover{
+    transform:translateY(-4px);
+  }
+  .story-image{
+    transition:transform .35s ease;
+  }
+  .story:hover .story-image{
+    transform:scale(1.02);
+  }
+}
+
+
+/* Area personalisation */
+.area-status{
+  display:none;
+  background:#f4f8fd;
+  border-bottom:1px solid #dce7f3;
+  color:var(--navy);
+}
+.area-status.visible{display:block}
+.area-status-inner{
+  min-height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  font-size:13px;
+}
+.area-status strong{font-weight:800}
+.area-status button{
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:var(--blue);
+  padding:0;
+  font-weight:800;
+  cursor:pointer;
+}
+.local-result{
+  display:none;
+  margin-top:16px;
+  padding:18px 20px;
+  background:#f4f8fd;
+  border-left:4px solid var(--blue);
+}
+.local-result.visible{display:block}
+.local-result strong{
+  display:block;
+  font-size:20px;
+  margin-bottom:3px;
+}
+.local-result p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+.local-content-note{
+  display:none;
+  margin:-10px 0 24px;
+  color:var(--muted);
+  font-size:14px;
+}
+.local-content-note.visible{display:block}
+@media(max-width:650px){
+  .area-status-inner{min-height:48px;font-size:12px}
+}
+
+
+.area-status-actions{display:flex;align-items:center;gap:16px}
+.dismiss-area{width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #b8c7d8!important;color:var(--navy)!important;background:#fff!important;font-size:20px;line-height:1;padding:0!important}
+.dismiss-area:hover{background:#eaf2fb!important}
+
+
+@media(max-width:900px){
+  .area-grid{grid-template-columns:1fr;gap:14px}
+  .area-copy{display:block}
+  .area-controls{margin-top:14px}
+}
+@media(max-width:650px){
+  .area{padding:22px 0}
+  .area-copy h2{font-size:30px}
+  .area-form{grid-template-columns:1fr}
+  .area-form .btn{width:100%}
+}
+
+
+/* Personalised homepage local hub */
+.home-local-hub{
+  display:none;
+  background:#f4f8fd;
+  padding:42px 0;
+}
+.home-local-hub.visible{display:block}
+.home-local-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:24px;
+  margin-bottom:24px;
+}
+.home-local-head h2{
+  margin:0 0 6px;
+  font-size:38px;
+  line-height:1;
+  letter-spacing:-.045em;
+}
+.home-local-head p{margin:0;color:#667085;font-size:16px}
+.home-local-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+.home-local-card{
+  display:flex;
+  flex-direction:column;
+  background:#fff;
+  border:1px solid #dfe5ed;
+  min-width:0;
+}
+.home-local-card-image{
+  width:100%;
+  aspect-ratio:1.55/1;
+  background-size:cover;
+  background-position:center;
+}
+.home-local-card-body{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  padding:18px;
+}
+.home-local-card .eyebrow{
+  margin:0 0 8px;
+  color:#0b67c6;
+  font-size:12px;
+  font-weight:900;
+}
+.home-local-card h3{
+  margin:0 0 8px;
+  color:#08254a;
+  font-size:24px;
+  line-height:1.04;
+  letter-spacing:-.025em;
+}
+.home-local-card p{
+  margin:0 0 18px;
+  color:#667085;
+  font-size:14px;
+  line-height:1.45;
+}
+.home-local-card .btn{
+  margin-top:auto;
+  width:max-content;
+}
+@media(max-width:800px){
+  .home-local-head{display:block}
+  .home-local-head .btn{margin-top:14px}
+  .home-local-grid{grid-template-columns:1fr}
+}
+
 </style>
 
-<style id="home-stories-v1">.home-stories{padding:72px 0 84px;background:#fff}.home-stories-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:28px}.home-stories-heading h2{margin:0;font-size:52px;line-height:.96;letter-spacing:-.04em}.home-stories-heading a{color:#f04436;font-weight:900;text-decoration:none}.home-stories-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.home-story{min-height:370px;padding:30px;display:flex;flex-direction:column;text-decoration:none}.home-story span{font-size:14px;font-weight:900;margin-bottom:46px}.home-story strong{font-size:35px;line-height:1.01;letter-spacing:-.04em}.home-story p{font-size:16px;line-height:1.5}.home-story em{font-style:normal;font-weight:900;margin-top:auto;padding-top:28px}.home-story-navy{background:#071f3d;color:#fff}.home-story-navy p{color:#cfdae5}.home-story-cream{background:#eee5d6;color:#071f3d}.home-story-cream p{color:#586a7b}.home-story-red{background:#f04436;color:#fff}.home-story-red p{color:#fff}@media(max-width:800px){.home-stories{padding:58px 0 68px}.home-stories-heading{display:block}.home-stories-heading a{display:inline-block;margin-top:10px}.home-stories-grid{grid-template-columns:1fr}.home-story{min-height:280px}.home-story strong{font-size:31px}}</style>
-
-<style id="home-stories-polish-v2">
-.home-stories-heading{justify-content:flex-start!important}
-.home-story{padding-top:42px!important}
-.home-story strong{margin-top:0!important}
-.home-story em{display:inline-flex!important;align-self:flex-start!important;background:#f04436!important;color:#fff!important;padding:13px 20px!important;border-radius:0!important;font-style:normal!important;font-weight:900!important;line-height:1!important;text-decoration:none!important}
-.home-story-red em{background:#071f3d!important;color:#fff!important}
-</style>
-<link rel="stylesheet" href="assets/css/mobile-parity.css?v=20260823-canonical-v1">
-
-
-
-
-<style id="mobile-parity-v4">
-@media (max-width:800px){
-
-  /* Open mobile menu: full-screen navy from the very top */
-  .site-primary-nav.open{
-    position:fixed!important;
-    inset:0!important;
-    top:0!important;
-    width:100vw!important;
-    min-height:100dvh!important;
-    padding:170px 24px 32px!important;
-    background:#061a31!important;
-    z-index:9998!important;
-    overflow-y:auto!important;
-    box-shadow:none!important;
-  }
-
-  /* Keep header chrome above the overlay */
-  .site-header{
-    position:absolute!important;
-    top:0!important;
-    left:0!important;
-    right:0!important;
-    z-index:10000!important;
-    background:transparent!important;
-  }
-
-  /* Mobile logo always visible and centred */
-  .site-logo{
-    position:absolute!important;
-    left:50%!important;
-    top:22px!important;
-    transform:translateX(-50%)!important;
-    z-index:10002!important;
-    display:block!important;
-    opacity:1!important;
-    visibility:visible!important;
-  }
-  .site-logo img{
-    display:block!important;
-    width:104px!important;
-    max-width:104px!important;
-    height:auto!important;
-    opacity:1!important;
-  }
-
-  /* Hamburger / close button: no box, top-right */
-  .site-menu-button{
-    position:absolute!important;
-    right:24px!important;
-    top:26px!important;
-    width:44px!important;
-    height:44px!important;
-    padding:0!important;
-    border:0!important;
-    outline:0!important;
-    background:transparent!important;
-    box-shadow:none!important;
-    z-index:10003!important;
-  }
-  .site-menu-button::before,
-  .site-menu-button::after,
-  .site-menu-button span{
-    box-shadow:none!important;
-  }
-
-  /* Navigation links */
-  .site-primary-nav.open>a{
-    display:block!important;
-    width:100%!important;
-    margin:0!important;
-    padding:20px 12px!important;
-    border-bottom:1px solid rgba(255,255,255,.16)!important;
-    font-size:24px!important;
-    line-height:1.15!important;
-    color:#fff!important;
-    text-align:left!important;
-  }
-
-  /* Mobile CTA row */
-  .site-primary-nav.open .nav-actions,
-  .site-primary-nav.open .site-nav-actions,
-  .site-primary-nav.open .mobile-nav-actions{
-    display:grid!important;
-    grid-template-columns:1fr 1fr!important;
-    gap:16px!important;
-    width:100%!important;
-    margin-top:28px!important;
-  }
-
-  /* Volunteer = cream/navy on mobile */
-  .site-primary-nav.open .site-volunteer-button,
-  .site-primary-nav.open a[href*="volunteer"]{
-    background:#efe6d7!important;
-    color:#071f3d!important;
-    border:1px solid #efe6d7!important;
-  }
-
-  /* Donate = orange/white on mobile */
-  .site-primary-nav.open .site-donate-button,
-  .site-primary-nav.open a[href*="donate"]{
-    background:#f04436!important;
-    color:#fff!important;
-    border:1px solid #f04436!important;
-  }
-
-  .site-primary-nav.open .site-volunteer-button,
-  .site-primary-nav.open .site-donate-button,
-  .site-primary-nav.open .nav-actions a,
-  .site-primary-nav.open .site-nav-actions a,
-  .site-primary-nav.open .mobile-nav-actions a{
-    min-height:64px!important;
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    padding:16px 14px!important;
-    font-size:20px!important;
-    font-weight:900!important;
-    text-align:center!important;
-    text-decoration:none!important;
-    border-radius:0!important;
-  }
-
-  /* Prevent hero or page content from visually bleeding through open menu */
-  body.menu-open main,
-  body.menu-open footer,
-  body.menu-open .page-hero,
-  body.menu-open .home-hero{
-    visibility:hidden!important;
-  }
-}
-</style>
-
-
-
-
-
-<style id="mobile-source-fix-v6">
-@media (max-width:800px){
-
-  /* MENU: one logo, one CTA pair, no dividers, no duplicate header actions */
-  body.menu-open .site-header-actions,
-  .site-primary-nav.open ~ .site-header-actions,
-  .site-header-actions{
-    display:none!important;
-  }
-
-  .site-primary-nav.open{
-    position:fixed!important;
-    inset:0!important;
-    width:100vw!important;
-    min-height:100dvh!important;
-    padding:34px 24px 34px!important;
-    background:#061a31!important;
-    z-index:9998!important;
-    display:flex!important;
-    flex-direction:column!important;
-    align-items:stretch!important;
-    overflow-y:auto!important;
-    box-sizing:border-box!important;
-  }
-
-  .site-primary-nav.open .site-mobile-menu-logo{
-    display:block!important;
-    margin:72px 0 44px 8px!important;
-    padding:0!important;
-    border:0!important;
-    width:max-content!important;
-    flex:0 0 auto!important;
-  }
-  .site-primary-nav.open .site-mobile-menu-logo img{
-    width:154px!important;
-    height:auto!important;
-    display:block!important;
-  }
-
-  .site-primary-nav.open>a:not(.site-mobile-menu-logo){
-    display:block!important;
-    padding:12px 8px!important;
-    margin:0 0 10px!important;
-    border:0!important;
-    border-bottom:0!important;
-    box-shadow:none!important;
-    font-size:23px!important;
-    line-height:1.15!important;
-    color:#fff!important;
-  }
-
-  .site-primary-nav.open .site-mobile-actions{
-    display:grid!important;
-    grid-template-columns:1fr 1fr!important;
-    gap:14px!important;
-    margin-top:28px!important;
-    width:100%!important;
-  }
-
-  .site-primary-nav.open .site-mobile-actions a{
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    min-height:62px!important;
-    padding:14px!important;
-    border:0!important;
-    font-size:19px!important;
-    font-weight:900!important;
-    text-decoration:none!important;
-    box-sizing:border-box!important;
-  }
-  .site-primary-nav.open .site-mobile-actions .mobile-volunteer{
-    background:#efe6d7!important;
-    color:#071f3d!important;
-  }
-  .site-primary-nav.open .site-mobile-actions .mobile-donate{
-    background:#f04436!important;
-    color:#fff!important;
-  }
-
-  /* Header logo remains normal when menu closed, hidden only when open */
-  body.menu-open .site-header-logo{
-    opacity:0!important;
-    visibility:hidden!important;
-  }
-
-  /* PLAN: independent mobile composition, patterned after Tell Ben */
-  .plan-photo-hero{
-    min-height:690px!important;
-    height:auto!important;
-    position:relative!important;
-    overflow:hidden!important;
-  }
-
-  .plan-photo-hero-bg{
-    position:absolute!important;
-    inset:0!important;
-    background-position:center 42%!important;
-    background-size:cover!important;
-  }
-
-  .plan-photo-hero-inner{
-    min-height:690px!important;
-    display:flex!important;
-    flex-direction:column!important;
-    justify-content:flex-end!important;
-    align-items:stretch!important;
-    gap:22px!important;
-    padding:190px 28px 38px!important;
-    box-sizing:border-box!important;
-  }
-
-  .plan-photo-hero-inner>div:first-child{
-    width:100%!important;
-    max-width:none!important;
-    margin:0!important;
-  }
-
-  .plan-photo-hero h1{
-    margin:0 0 14px!important;
-    max-width:100%!important;
-    font-size:50px!important;
-    line-height:.94!important;
-    letter-spacing:-.045em!important;
-    overflow-wrap:normal!important;
-  }
-
-  .plan-photo-hero p{
-    margin:0!important;
-    max-width:92%!important;
-    font-size:20px!important;
-    line-height:1.42!important;
-  }
-
-  .plan-hero-postcode{
-    width:100%!important;
-    max-width:none!important;
-    margin:0!important;
-    padding:18px!important;
-    box-sizing:border-box!important;
-    background:rgba(7,31,61,.84)!important;
-  }
-
-  .plan-hero-postcode label{
-    margin-bottom:12px!important;
-    font-size:16px!important;
-  }
-
-  .plan-hero-postcode>div{
-    display:grid!important;
-    grid-template-columns:minmax(0,1fr) 96px!important;
-    gap:0!important;
-  }
-
-  .plan-hero-postcode input,
-  .plan-hero-postcode button{
-    height:58px!important;
-    min-height:58px!important;
-    box-sizing:border-box!important;
-  }
-
-  .plan-hero-postcode input{
-    width:100%!important;
-    padding:0 15px!important;
-    font-size:17px!important;
-  }
-
-  .plan-hero-postcode button{
-    width:96px!important;
-    min-width:96px!important;
-    padding:0!important;
-    font-size:17px!important;
-  }
-}
-</style>
-
-
-<style id="hardcoded-mobile-menu-v5">
-@media (max-width:800px){
-  html body .site-primary-nav.open{
-    position:fixed!important;
-    inset:0!important;
-    z-index:99999!important;
-    width:100vw!important;
-    height:100dvh!important;
-    min-height:100dvh!important;
-    box-sizing:border-box!important;
-    display:flex!important;
-    flex-direction:column!important;
-    align-items:stretch!important;
-    justify-content:flex-start!important;
-    overflow-y:auto!important;
-    padding:18px 24px 24px!important;
-    margin:0!important;
-    gap:0!important;
-    background:#061a31!important;
-  }
-  html body .site-primary-nav.open .site-mobile-menu-logo{
-    order:-10!important;
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    width:100%!important;
-    height:auto!important;
-    margin:4px 0 14px!important;
-    padding:0!important;
-  }
-  html body .site-primary-nav.open .site-mobile-menu-logo img{
-    width:88px!important;
-    max-width:88px!important;
-    height:auto!important;
-    margin:0 auto!important;
-  }
-  html body .site-primary-nav.open > a:not(.site-mobile-menu-logo){
-    display:block!important;
-    width:100%!important;
-    height:auto!important;
-    padding:8px 6px!important;
-    margin:0!important;
-    border:0!important;
-    border-bottom:0!important;
-    box-shadow:none!important;
-    font-size:19px!important;
-    line-height:1.05!important;
-    font-weight:800!important;
-    color:#fff!important;
-    text-decoration:none!important;
-  }
-  html body .site-primary-nav.open .site-mobile-actions{
-    display:grid!important;
-    grid-template-columns:1fr 1fr!important;
-    width:100%!important;
-    gap:10px!important;
-    margin:14px 0 0!important;
-    padding:0!important;
-  }
-  html body .site-primary-nav.open .site-mobile-actions a{
-    min-height:52px!important;
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    padding:10px!important;
-    margin:0!important;
-    border:0!important;
-    font-size:17px!important;
-    font-weight:900!important;
-  }
-  html body .site-primary-nav.open .site-mobile-actions .mobile-volunteer{
-    background:#efe6d7!important;color:#071f3d!important;
-  }
-  html body .site-primary-nav.open .site-mobile-actions .mobile-donate{
-    background:#f04436!important;color:#fff!important;
-  }
-  html body.menu-open .site-header-logo{
-    opacity:0!important;
-    visibility:hidden!important;
-  }
-}
-</style>
-
-
-<style id="header-hover-exact-v9">
-@media (min-width:801px){
-  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate){
-    text-decoration-line:underline!important;
-    text-decoration-color:transparent!important;
-    text-decoration-thickness:2px!important;
-    text-underline-offset:8px!important;
-    transition:text-decoration-color .15s ease!important;
-  }
-  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate):hover,
-  .site-primary-nav > a[aria-current="page"]{
-    text-decoration-color:#f04436!important;
-  }
-  .site-primary-nav > a::after{display:none!important;content:none!important}
-}
-@media (max-width:800px){
-  .site-primary-nav > a{text-decoration:none!important}
+<style>
+/* Mobile menu: kept inline so it works on every page even if cached CSS is stale */
+.mobile-nav{display:none;background:#fff;border-bottom:1px solid #e6eaf0;position:relative;z-index:50}
+.mobile-nav.open{display:block}
+.mobile-nav nav{display:flex;flex-direction:column;padding:8px 20px 4px}
+.mobile-nav nav a{display:block;padding:14px 0;border-bottom:1px solid #edf0f4;font-weight:800;color:#08254a}
+.mobile-nav-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:14px 20px 18px}
+.mobile-nav-actions .header-box{width:100%;height:42px;min-height:42px}
+@media(min-width:1101px){.mobile-nav{display:none!important}}
+@media(max-width:1100px){
+  .site-header .nav{display:none!important}
+  .menu-button{display:block!important}
 }
 </style>
 
 </head>
-<body class="home-page">
-<div class="site-shell">
+<body>
 
 <header class="site-header">
-  <div class="site-header-inner">
-    <a class="site-header-logo" href="index.html" aria-label="Back Ben home"><img src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor"></a>
-    <nav class="site-primary-nav">
-      <a href="about.html">About Ben</a>
-      <a href="plan.html">Ben’s Plan</a>
-      <a href="news.html">News</a>
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">JB</span>
+      <span class="logo-copy"><strong>Joe Bloggs</strong><span>MP for Bloggs Town</span></span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Joe</a>
+      <a href="your-area.html">Your area</a>
+      <a href="our-plan.html">Our plan</a>
+      <a href="campaigns.html">Campaigns</a>
       <a href="events.html">Events</a>
-      <a href="tell-ben.html">Tell Ben</a>
-      <a href="follow-ben.html">Follow Ben</a>
-      <a href="contact.html">Contact Ben</a>
+      <a href="news.html">News</a>
+      <a href="have-your-say.html">Have your say</a>
+      <a href="donate.html">Donate</a>
     </nav>
 
-    <button class="site-menu-button" type="button" aria-expanded="false" aria-label="Open navigation menu"></button>
-
-    <div class="site-header-actions">
-      <a class="site-volunteer-button" href="volunteer.html">Volunteer</a>
-      <a class="site-donate-button" href="donate.html">Donate</a>
+    <div class="header-actions">
+      <a href="sign-up.html" class="header-box signup">Sign up</a>
+      <a href="get-help.html" class="header-box help-button">Get help</a>
     </div>
+
+    <button type="button" class="menu-button" id="menuButton" aria-expanded="false" aria-controls="mobileNav">Menu</button>
   </div>
 </header>
 
+<div class="area-status" id="areaStatus">
+  <div class="container area-status-inner">
+    <div>Showing local content for <strong id="areaStatusName"></strong></div>
+    <div class="area-status-actions">
+      <button type="button" id="changeAreaButton">Change area</button>
+      <button type="button" id="dismissAreaButton" class="dismiss-area" aria-label="Turn off personalisation" title="Turn off personalisation">×</button>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-nav" id="mobileNav">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Joe</a>
+    <a href="your-area.html">Your area</a>
+    <a href="our-plan.html">Our plan</a>
+    <a href="campaigns.html">Campaigns</a>
+    <a href="events.html">Events</a>
+    <a href="news.html">News</a>
+    <a href="have-your-say.html">Have your say</a>
+    <a href="donate.html">Donate</a>
+  </nav>
+  <div class="mobile-nav-actions">
+    <a href="sign-up.html" class="header-box signup">Sign up</a>
+    <a href="get-help.html" class="header-box help-button">Get help</a>
+  </div>
+</div>
 
 <main>
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <h1>Working for Bloggs Town.</h1>
+      <p>Joe Bloggs is your local MP, focused on practical action, strong local representation and getting things done for people across Bloggs Town.</p>
 
-<section class="home-leadership home-hero-refined">
-  <div class="home-hero-bg"><img class="home-hero-photo" src="assets/images/ben-home-hero.jpg" alt="Ben"></div>
-
-  <div class="container home-hero-content">
-    <div class="home-hero-panel">
-      <img class="home-campaign-logo" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor">
-
-      <form class="home-signup-form" data-thanks="signup">
-        <div class="home-signup-grid">
-          <input type="text" placeholder="First name" aria-label="First name" autocomplete="given-name">
-          <input type="text" placeholder="Last name" aria-label="Last name" autocomplete="family-name">
-          <input type="email" placeholder="Email address" aria-label="Email address" autocomplete="email">
-          <input type="text" placeholder="Postcode" aria-label="Postcode" autocomplete="postal-code">
-        </div>
-        <button class="btn btn-red home-signup-submit" type="submit">Join the campaign</button>
-        <label class="home-email-consent"><input type="checkbox" name="email_consent"> <span>I’m happy to receive campaign updates from Ben by email.</span></label>
+      <form class="hero-form" id="heroSignup">
+        <input type="text" placeholder="First name" autocomplete="given-name">
+        <input type="text" placeholder="Second name" autocomplete="family-name">
+        <input type="email" placeholder="Email address" autocomplete="email">
+        <input type="text" id="heroPostcode" placeholder="Postcode" autocomplete="postal-code">
+        <button class="btn" type="submit">Stay in touch</button>
       </form>
+    </div>
+  </div>
+</section>
 
-      <div class="ben-social-row" aria-label="Social media">
-        <span aria-label="Facebook" title="Facebook">f</span>
-        <span aria-label="Instagram" title="Instagram">◎</span>
-        <span aria-label="X" title="X">𝕏</span>
-        <span aria-label="TikTok" title="TikTok">♪</span>
+<section class="area" id="area">
+  <div class="container area-grid">
+    <div class="area-copy">
+      <div class="area-intro">
+        <h2>Joe in your area</h2>
+        <p>See the news, campaigns and events that matter where you live.</p>
+      </div>
+      <div class="area-controls">
+        <div class="area-form">
+          <input id="areaInput" type="text" placeholder="Enter your postcode or town">
+          <button class="btn" id="areaButton" type="button">Find my area</button>
+        </div>
+        <div class="area-note">Demo postcodes: BG1, BG2, BG3 or BG4.</div>
+        <div class="local-result" id="localResult">
+          <strong id="localResultTitle"></strong>
+          <p id="localResultText">We’ll prioritise news, events and campaigns from your part of Bloggs Town.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="home-intro-feature home-intro-split home-intro-white">
-  <div class="container home-intro-split-grid">
-    <div class="home-intro-image">
-      <img src="assets/images/ben-home-intro.jpg" alt="Ben with local campaigners">
-    </div>
 
-    <div class="home-intro-copy">
-      <h2>Practical leadership.<br>Local focus.</h2>
-      <p>Ben is standing to bring practical, local leadership to Cheshire & Warrington — listening to communities, working with local people and focusing on the things the new mayor can actually get done.</p>
-      <a class="btn btn-red" href="about.html">Meet Ben</a>
-    </div>
-  </div>
-</section>
-
-
-<section class="home-area-simple">
-  <div class="container home-area-simple-grid">
-    <div class="home-area-simple-copy">
-      <h2>Ben in your area</h2>
-      <p>Find out what Ben is doing near you, what local people are raising and what’s happening across Cheshire & Warrington.</p>
-
-      <div class="home-area-simple-search">
-        <input id="home-area-input" type="text" placeholder="Enter your postcode or town" aria-label="Enter your postcode or town">
-        <button class="btn btn-red" id="home-area-submit" type="button">Find my area</button>
+<section class="home-local-hub" id="homeLocalHub">
+  <div class="container">
+    <div class="home-local-head">
+      <div>
+        <h2 id="homeLocalTitle">Your area</h2>
+        <p id="homeLocalIntro">One local story, one campaign and the next event near you.</p>
       </div>
-
-      <p class="home-area-simple-note">Search by postcode or town to see local campaign visits, events and issues.</p>
+      <a class="btn navy" id="homeLocalHubLink" href="your-area.html">Open your local hub</a>
     </div>
 
-    <div class="home-area-simple-photo"><img src="assets/images/ben-area.jpg" alt="Ben meeting local campaigners"></div>
+    <div class="home-local-grid">
+      <article class="home-local-card">
+        <div class="home-local-card-image" id="homeLocalNewsImage"></div>
+        <div class="home-local-card-body">
+          <div class="eyebrow">Latest local story</div>
+          <h3 id="homeLocalNewsTitle">Local news</h3>
+          <p id="homeLocalNewsText"></p>
+          <a class="btn navy" href="news.html">Read more</a>
+        </div>
+      </article>
+
+      <article class="home-local-card">
+        <div class="home-local-card-image" id="homeLocalCampaignImage"></div>
+        <div class="home-local-card-body">
+          <div class="eyebrow">Local campaign</div>
+          <h3 id="homeLocalCampaignTitle">Local campaign</h3>
+          <p id="homeLocalCampaignText"></p>
+          <a class="btn navy" id="homeLocalCampaignLink" href="campaigns.html">Back campaign</a>
+        </div>
+      </article>
+
+      <article class="home-local-card">
+        <div class="home-local-card-image" id="homeLocalEventImage"></div>
+        <div class="home-local-card-body">
+          <div class="eyebrow">Next local event</div>
+          <h3 id="homeLocalEventTitle">Local event</h3>
+          <p id="homeLocalEventText"></p>
+          <a class="btn navy" id="homeLocalEventLink" href="events.html">View event</a>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
 
-<section class="home-stories"><div class="container">
-<div class="home-editorial-cards-wrap"><div class="home-editorial-cards">
-  <a class="home-editorial-card" href="tell-ben.html">
-    <img src="assets/images/ben-home-intro.jpg" alt="">
-    <div class="home-editorial-card-copy">
-      <h3>Tell Ben what matters where you live.</h3>
-      <p>Choose your area, your priority and tell Ben what you would change.</p>
-    <span class="home-editorial-card-cta">Tell Ben</span></div>
-  </a>
-  <a class="home-editorial-card" href="volunteer.html">
-    <img src="assets/images/ben-volunteer-hero.jpg" alt="">
-    <div class="home-editorial-card-copy">
-      <h3>Give an hour. Make a difference.</h3>
-      <p>Campaign locally, help online, join an event or bring your skills.</p>
-    <span class="home-editorial-card-cta">Volunteer</span></div>
-  </a>
-  <a class="home-editorial-card" href="events.html">
-    <img src="assets/images/ben-events-hero.jpg" alt="">
-    <div class="home-editorial-card-copy">
-      <h3>See what’s happening near you.</h3>
-      <p>Find campaign visits, public meetings and upcoming local events.</p>
-    <span class="home-editorial-card-cta">Events</span></div>
-  </a>
-</div></div>
+
+<section class="intro" id="about">
+  <div class="container intro-grid">
+    <div class="intro-image"></div>
+    <div class="intro-copy">
+      <h2>About Joe</h2>
+      <p>Joe works across Bloggs Town listening to residents, backing local communities and focusing on the issues that make the biggest difference to everyday life.</p>
+      <a class="btn" href="#">Meet Joe</a>
+    </div>
+  </div>
 </section>
+
+
+
+
+
+<section class="priorities" id="priorities">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Our plan for Bloggs Town</h2></div>
+
+    <div class="priority-grid">
+      <article class="priority" style="background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=82')">
+        <h3>Better local healthcare</h3>
+        <p>Improving access to GPs, dentists and local NHS services.</p>
+        <a class="btn" href="plan/healthcare.html">Read more</a>
+      </article>
+      <article class="priority" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=82')">
+        <h3>Safer streets</h3>
+        <p>Backing neighbourhood policing and tackling antisocial behaviour.</p>
+        <a class="btn" href="plan/safer-streets.html">Read more</a>
+      </article>
+      <article class="priority" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=82')">
+        <h3>Fixing our roads</h3>
+        <p>Pushing for better roads, reliable transport and less congestion.</p>
+        <a class="btn" href="plan/roads.html">Read more</a>
+      </article>
+      <article class="priority" style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=82')">
+        <h3>Backing local business</h3>
+        <p>Supporting the high street, local employers and community investment.</p>
+        <a class="btn" href="plan/business.html">Read more</a>
+      </article>
+    </div>
+    <div class="local-content-note" id="priorityAreaLine" style="margin:18px 0 0;color:#dce7f4"></div>
+  </div>
+</section>
+
+<section class="latest" id="latest">
+  <div class="container">
+    <div class="section-heading">
+      <h2 id="latestHeading">Latest from Joe</h2></div>
+
+    <div class="local-content-note" id="latestLocalNote">Local stories are being shown first.</div>
+    <div class="latest-grid">
+      <article class="story featured" id="localStory">
+        <div class="story-image" id="localStoryImage" style="background-image:url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=85')"></div>
+        <h3 id="localStoryTitle">Joe presses for more GP appointments in Bloggs Town</h3>
+        <p id="localStoryText">Joe met local healthcare leaders to discuss access to appointments and pressure on local practices.</p>
+        <a class="btn navy" id="localStoryButton" href="news.html">Read the story</a>
+      </article>
+      <article class="story">
+        <div class="story-image" style="background-image:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=85')"></div>
+        <h3>Backing Bloggs Town high street</h3>
+        <p>A new push to support independent shops and bring empty units back into use.</p>
+        <a class="btn navy" href="#">Read more</a>
+      </article>
+      <article class="story">
+        <div class="story-image" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85')"></div>
+        <h3>Protecting local services</h3>
+        <p>Joe meets residents to hear concerns about transport and community facilities.</p>
+        <a class="btn navy" href="#">Read more</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="help" id="help">
+  <div class="container">
+    <div class="help-compact">
+      <div>
+        <h2>Need Joe’s help?</h2>
+        <p>If you live in Bloggs Town, Joe and his team may be able to help with an issue involving a government department, public body or local service.</p>
+      </div>
+      <div class="help-compact-actions">
+        <a class="btn" href="get-help.html">Ask Joe for help</a>
+        <a class="btn navy" href="get-help.html#surgeries">Book a surgery</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 </main>
 
-
-
-<footer class="campaign-footer">
-  <div class="campaign-footer-top">
-    <div class="campaign-footer-brand">
-      <img class="campaign-footer-logo-image" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
-      <div class="campaign-footer-socials" aria-label="Campaign social channels">
-        <span aria-label="Facebook" title="Facebook">f</span>
-        <span aria-label="Instagram" title="Instagram">◎</span>
-        <span aria-label="X" title="X">𝕏</span>
-        <span aria-label="TikTok" title="TikTok">♪</span>
-      </div>
-    </div>
-
-    <div class="campaign-footer-links">
+<footer>
+  <div class="container">
+    <div class="footer-grid">
       <div>
-        <h3>Campaign</h3>
-        <a href="about.html">About Ben</a>
-        <a href="plan.html">Ben’s Plan</a>
+        <div class="logo" style="color:#fff">
+          <span class="logo-mark">JB</span>
+          <span class="logo-copy">
+            <strong>Joe Bloggs</strong>
+            <span style="color:#b8c7d8">MP for Bloggs Town</span>
+          </span>
+        </div>
+      </div>
+      <div>
+        <h4>Joe</h4>
+        <a href="about.html">About Joe</a>
+        <a href="our-plan.html">Our plan</a>
         <a href="news.html">News</a>
       </div>
-
       <div>
-        <h3>Take part</h3>
-        <a href="events.html">Events</a>
-        <a href="tell-ben.html">Tell Ben</a>
-        <a href="volunteer.html">Volunteer</a>
-        <a href="donate.html">Donate</a>
-        <a href="area.html">Ben in your area</a>
+        <h4>Bloggs Town</h4>
+        <a href="your-area.html">Your area</a>
+        <a href="#">Local events</a>
+        <a href="have-your-say.html">Residents survey</a><a href="preferences.html">Email preferences</a>
+      </div>
+      <div>
+        <h4>Get help</h4>
+        <a href="get-help.html">Casework</a>
+        <a href="get-help.html#surgeries">Surgeries</a>
+        <a href="donate.html">Donate</a><a href="get-help.html#contact">Contact</a>
       </div>
     </div>
-
-    <div class="campaign-footer-cta">
-      <h3>Back Ben</h3>
-      <p>Help build a campaign that reaches every part of Cheshire & Warrington.</p>
-      <a class="campaign-footer-button" href="volunteer.html">Join the campaign</a>
-    </div>
-  </div>
-
-  <div class="campaign-footer-bottom">
-    <div class="campaign-footer-legal">
-      <a href="privacy.html">Privacy</a>
-      <a href="contact.html">Contact</a>
-      <a href="#promoted-by">Promoted by</a>
-    </div>
-
-    <div class="campaign-footer-imprint" id="promoted-by">
-      <span>Promoted by [name] on behalf of Ben Fletcher, both at [campaign address].</span>
-    </div>
+    <div class="footer-note">Demo website concept. Joe Bloggs and Bloggs Town are fictional.</div>
   </div>
 </footer>
 
-</div>
-<script src="assets/js/site.js?v=20260823-canonical-v1"></script>
-<script id="home-journeys-v1">(function(){const b=document.getElementById('home-area-submit'),i=document.getElementById('home-area-input');function go(){const v=(i?.value||'').trim();if(!v){i?.focus();return;}if(/crewe|^cw1|^cw2/i.test(v))location.href='journeys/crewe.html';else if(/chester|^ch/i.test(v))location.href='journeys/chester-housing.html';else if(/warrington|^wa/i.test(v))location.href='journeys/warrington-business.html';else location.href='area.html?q='+encodeURIComponent(v);}b?.addEventListener('click',go);i?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();go();}});})();</script>
+
+<script>
+const areaButton = document.getElementById('areaButton');
+const areaInput = document.getElementById('areaInput');
+if (areaButton && areaInput) {
+  areaButton.addEventListener('click', () => {
+    const value = areaInput.value.trim();
+    if (!value) return;
+    areaButton.textContent = 'Showing local content';
+  });
+}
+
+</script>
+
+
+<script>
+(function () {
+  function initMobileMenu() {
+    var button = document.getElementById('menuButton');
+    var menu = document.getElementById('mobileNav');
+    if (!button || !menu || button.dataset.menuReady === 'true') return;
+
+    button.dataset.menuReady = 'true';
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      var open = menu.classList.toggle('open');
+      button.setAttribute('aria-expanded', open ? 'true' : 'false');
+      button.textContent = open ? 'Close' : 'Menu';
+    });
+
+    menu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        menu.classList.remove('open');
+        button.setAttribute('aria-expanded', 'false');
+        button.textContent = 'Menu';
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileMenu);
+  } else {
+    initMobileMenu();
+  }
+})();
+</script>
+
+<script src="assets/js/personalisation.js?v=32"></script>
 </body>
 </html>

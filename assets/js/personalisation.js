@@ -1,759 +1,487 @@
-(function () {
-  "use strict";
 
-  const STORAGE_KEY = "ben_campaign_context_v2";
-  const SESSION_KEY = "ben_campaign_session_v2";
-  const ACQUISITION_KEY = "ben_campaign_acquisition_v1";
+(function(){
+  const AREAS = {
+    "town-centre": {
+      name: "Bloggs Town Centre",
+      priority: "high street and town centre",
+      healthPhrase: "in Bloggs Town Centre",
+      roadsPhrase: "around the town centre",
+      crimePhrase: "in the town centre",
+      businessPhrase: "on Bloggs Town high street",
+      servicesPhrase: "in the town centre",
+      storyTitle: "Joe backs a new plan for Bloggs Town high street",
+      storyText: "Joe is working with traders and residents on empty units, access and the future of the town centre.",
+      storyImage: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1200&q=85"
+    },
+    "north-bloggs": {
+      name: "North Bloggs",
+      priority: "healthcare and safer streets",
+      healthPhrase: "in North Bloggs",
+      roadsPhrase: "around North Bloggs",
+      crimePhrase: "in North Bloggs",
+      businessPhrase: "in North Bloggs",
+      servicesPhrase: "across North Bloggs",
+      storyTitle: "Joe presses for more GP appointments in North Bloggs",
+      storyText: "Residents have raised access to appointments as a major concern, and Joe is pressing local health leaders for action.",
+      storyImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85"
+    },
+    "little-bloggs": {
+      name: "Little Bloggs",
+      priority: "roads and local transport",
+      healthPhrase: "in Little Bloggs",
+      roadsPhrase: "around Little Bloggs",
+      crimePhrase: "in Little Bloggs",
+      businessPhrase: "in Little Bloggs",
+      servicesPhrase: "in Little Bloggs",
+      storyTitle: "Joe takes Little Bloggs transport concerns to local leaders",
+      storyText: "Joe has been meeting residents about congestion, road conditions and the reliability of local transport.",
+      storyImage: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85"
+    },
+    "villages": {
+      name: "The Villages",
+      priority: "protecting local services",
+      healthPhrase: "across the villages",
+      roadsPhrase: "across the villages",
+      crimePhrase: "in the villages",
+      businessPhrase: "across the villages",
+      servicesPhrase: "across the villages",
+      storyTitle: "Joe campaigns to protect services in the villages",
+      storyText: "Joe is working with rural communities on transport, local facilities and access to essential services.",
+      storyImage: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=85"
+    }
+  };
 
-  const qs = (sel, root=document) => root.querySelector(sel);
-  const qsa = (sel, root=document) => Array.from(root.querySelectorAll(sel));
 
-  function clean(value) {
-    return (value || "").toString().trim();
-  }
-
-  function lower(value) {
-    return clean(value).toLowerCase();
-  }
-
-  function readJSON(key, fallback) {
-    try {
-      const raw = localStorage.getItem(key);
-      return raw ? JSON.parse(raw) : fallback;
-    } catch (_) {
-      return fallback;
+  function captureSourceContext(){
+    const params = new URLSearchParams(window.location.search);
+    const keys = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","source","issue"];
+    const captured = {};
+    keys.forEach(function(key){
+      const value = params.get(key);
+      if(value) captured[key] = value;
+    });
+    if(Object.keys(captured).length){
+      try{
+        const existing = JSON.parse(sessionStorage.getItem("joeSourceContext") || "{}");
+        sessionStorage.setItem("joeSourceContext", JSON.stringify(Object.assign(existing,captured)));
+      }catch(e){}
     }
   }
 
-  function writeJSON(key, value) {
-    try { localStorage.setItem(key, JSON.stringify(value)); } catch (_) {}
+  function sourceContext(){
+    try{return JSON.parse(sessionStorage.getItem("joeSourceContext") || "{}")}catch(e){return {}}
   }
 
-  function readSessionJSON(key, fallback) {
-    try {
-      const raw = sessionStorage.getItem(key);
-      return raw ? JSON.parse(raw) : fallback;
-    } catch (_) {
-      return fallback;
+  function renderSourceContext(){
+    const ctx = sourceContext();
+    const source = ctx.utm_source || ctx.source;
+    if(!source) return;
+    let bar = document.getElementById("sourceContextBar");
+    if(!bar){
+      bar = document.createElement("div");
+      bar.id = "sourceContextBar";
+      bar.className = "source-context";
+      bar.innerHTML = '<div class="container"></div>';
+      const status = document.getElementById("areaStatus");
+      if(status) status.insertAdjacentElement("afterend",bar);
     }
+    const campaign = ctx.utm_campaign ? " · " + ctx.utm_campaign.replace(/[-_]/g," ") : "";
+    const inner = bar.querySelector(".container");
+    if(inner) inner.textContent = "You arrived from " + source.replace(/[-_]/g," ") + campaign + ".";
+    bar.classList.add("visible");
   }
 
-  function writeSessionJSON(key, value) {
-    try { sessionStorage.setItem(key, JSON.stringify(value)); } catch (_) {}
-  }
-
-  function getContext() {
-    const persistent = readJSON(STORAGE_KEY, {
-      area: "regional",
-      issue: "",
-      postcode: "",
-      area_source: "default",
-      preference_explicit: false
+  function decorateJourneyLinks(){
+    const ctx = sourceContext();
+    const area = storageGet();
+    document.querySelectorAll('a[href]').forEach(function(link){
+      const raw = link.getAttribute("href");
+      if(!raw || raw.startsWith("#") || raw.startsWith("mailto:") || raw.startsWith("tel:") || raw.startsWith("http")) return;
+      if(!/(campaign|event|have-your-say|preferences|your-area)/.test(raw)) return;
+      try{
+        const url = new URL(raw, window.location.href);
+        if(area && !url.searchParams.get("area")) url.searchParams.set("area", area);
+        Object.keys(ctx).forEach(function(key){
+          if(!url.searchParams.get(key)) url.searchParams.set(key, ctx[key]);
+        });
+        link.setAttribute("href", url.pathname.replace(window.location.pathname.replace(/[^/]+$/,""), "") + url.search + url.hash);
+      }catch(e){}
     });
-
-    const session = readSessionJSON(SESSION_KEY, {
-      area: "",
-      issue: "",
-      source: "",
-      campaign: "",
-      utm_source: "",
-      utm_medium: "",
-      utm_campaign: "",
-      utm_content: "",
-      landing_page: "",
-      area_source: ""
-    });
-
-    return {
-      area: session.area || persistent.area || "regional",
-      issue: session.issue || persistent.issue || "",
-      source: session.source || "",
-      campaign: session.campaign || "",
-      utm_source: session.utm_source || "",
-      utm_medium: session.utm_medium || "",
-      utm_campaign: session.utm_campaign || "",
-      utm_content: session.utm_content || "",
-      landing_page: session.landing_page || "",
-      postcode: persistent.postcode || "",
-      area_source: session.area_source || persistent.area_source || "default",
-      preference_explicit: !!persistent.preference_explicit
-    };
   }
 
-  function savePersistentContext(ctx) {
-    const persistent = {
-      area: ctx.area || "regional",
-      issue: ctx.issue || "",
-      postcode: ctx.postcode || "",
-      area_source: ctx.area_source || "manual",
-      preference_explicit: !!ctx.preference_explicit
-    };
-    writeJSON(STORAGE_KEY, persistent);
+  function storageGet(){
+    try { return sessionStorage.getItem("joeArea"); } catch(e) { return null; }
+  }
+  function storageSet(value){
+    try { sessionStorage.setItem("joeArea", value); } catch(e) {}
+  }
+  function storageRemove(){
+    try { sessionStorage.removeItem("joeArea"); } catch(e) {}
   }
 
-  function saveSessionContext(ctx) {
-    const session = {
-      area: ctx.area || "",
-      issue: ctx.issue || "",
-      source: ctx.source || "",
-      campaign: ctx.campaign || "",
-      utm_source: ctx.utm_source || "",
-      utm_medium: ctx.utm_medium || "",
-      utm_campaign: ctx.utm_campaign || "",
-      utm_content: ctx.utm_content || "",
-      landing_page: ctx.landing_page || "",
-      area_source: ctx.area_source || ""
-    };
-    writeSessionJSON(SESSION_KEY, session);
-    window.BEN_CONTEXT = getContext();
-    return window.BEN_CONTEXT;
-  }
+  function resolveArea(value){
+    if(!value) return null;
+    const raw = value.trim().toLowerCase();
+    if(!raw) return null;
 
-  function saveContext(ctx, mode="session") {
-    if (mode === "persistent") savePersistentContext(ctx);
-    return saveSessionContext(ctx);
-  }
+    if(raw.includes("north")) return "north-bloggs";
+    if(raw.includes("little")) return "little-bloggs";
+    if(raw.includes("village")) return "villages";
+    if(raw.includes("centre") || raw.includes("center") || raw.includes("town")) return "town-centre";
 
-  function analytics(name, detail) {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: name,
-      ben_area: (window.BEN_CONTEXT || {}).area || "regional",
-      ben_issue: (window.BEN_CONTEXT || {}).issue || "",
-      ...detail
-    });
-    window.dispatchEvent(new CustomEvent("ben:analytics", { detail: { name, ...detail } }));
-  }
+    const compact = raw.replace(/\s+/g,"").toUpperCase();
+    if(compact.startsWith("BG1")) return "town-centre";
+    if(compact.startsWith("BG2")) return "north-bloggs";
+    if(compact.startsWith("BG3")) return "little-bloggs";
+    if(compact.startsWith("BG4")) return "villages";
 
-  function postcodeToArea(postcode) {
-    const p = clean(postcode).toUpperCase().replace(/\s+/g, "");
-    if (!p) return null;
-    const areas = window.BEN_CAMPAIGN_AREAS || {};
-    for (const [key, area] of Object.entries(areas)) {
-      if (key === "regional") continue;
-      const prefixes = area.postcodePrefixes || [];
-      if (prefixes.some(prefix => p.startsWith(prefix.replace(/\s+/g, "").toUpperCase()))) {
-        return key;
-      }
-    }
     return null;
   }
 
-  function captureURLContext() {
-    const params = new URLSearchParams(location.search);
-    const current = getContext();
-    const persistent = readJSON(STORAGE_KEY, {});
-    const next = { ...current };
-    const acquisition = readJSON(ACQUISITION_KEY, {});
+  function pagePersonalisation(areaKey){
+    const area = AREAS[areaKey];
+    if(!area) return;
 
-    const urlArea = lower(params.get("area"));
-    const urlIssue = lower(params.get("issue"));
-    const hasCampaignArea = !!(urlArea && window.BEN_CAMPAIGN_AREAS[urlArea]);
-
-    // A clean visit to the site root should show the regional version unless
-    // the visitor has explicitly chosen/entered their area previously.
-    const isPlainRoot = (location.pathname.endsWith("/") || location.pathname.endsWith("/index.html")) &&
-                        !urlArea && !urlIssue &&
-                        !params.get("utm_source") && !params.get("utm_campaign");
-
-    if (isPlainRoot && !persistent.preference_explicit) {
-      next.area = "regional";
-      next.issue = "";
-      next.area_source = "default";
-      writeSessionJSON(SESSION_KEY, {});
-    }
-
-    if (hasCampaignArea) {
-      next.area = urlArea;
-      next.area_source = "url";
-      analytics("area_detected_from_url", { area: urlArea });
-    }
-
-    if (urlIssue && window.BEN_ISSUES[urlIssue]) {
-      next.issue = urlIssue;
-    }
-
-    ["utm_source","utm_medium","utm_campaign","utm_content"].forEach(key => {
-      const val = clean(params.get(key));
-      if (val) next[key] = val;
-    });
-
-    next.source = next.utm_source || next.source || clean(params.get("source"));
-    next.campaign = next.utm_campaign || next.campaign || clean(params.get("campaign"));
-    next.landing_page = next.landing_page || location.pathname + location.search;
-
-    if (!acquisition.first_landing_page) {
-      acquisition.first_landing_page = location.pathname + location.search;
-      acquisition.first_utm_source = next.utm_source || "";
-      acquisition.first_utm_medium = next.utm_medium || "";
-      acquisition.first_utm_campaign = next.utm_campaign || "";
-      acquisition.first_utm_content = next.utm_content || "";
-      acquisition.first_area = urlArea || "";
-      acquisition.first_issue = urlIssue || "";
-      acquisition.referrer = document.referrer || "";
-      acquisition.captured_at = new Date().toISOString();
-      writeJSON(ACQUISITION_KEY, acquisition);
-    }
-
-    return saveContext(next, "session");
-  }
-
-  function setArea(area, source="manual", postcode="") {
-    const key = lower(area);
-    const ctx = getContext();
-    ctx.area = window.BEN_CAMPAIGN_AREAS[key] ? key : "regional";
-    ctx.area_source = source;
-    if (postcode) ctx.postcode = clean(postcode).toUpperCase();
-
-    const explicit = source === "postcode" || source === "manual";
-    if (explicit) {
-      ctx.preference_explicit = true;
-      saveContext(ctx, "persistent");
-    } else {
-      saveContext(ctx, "session");
-    }
-
-    analytics(source === "postcode" ? "postcode_area_established" : "area_selected", { area: ctx.area });
-    applyAll();
-  }
-
-  function setIssue(issue) {
-    const ctx = getContext();
-    const key = lower(issue);
-    ctx.issue = window.BEN_ISSUES[key] ? key : "";
-    saveContext(ctx);
-    applyAll();
-  }
-
-  function localiseText(el, value) {
-    if (el && value) el.textContent = value;
-  }
-
-  function localiseLink(el, href, label) {
-    if (!el) return;
-    if (href) el.setAttribute("href", addContextToHref(href));
-    if (label) el.textContent = label;
-  }
-
-
-  function siteRootPath() {
-    const parts = window.location.pathname.split("/").filter(Boolean);
-
-    // GitHub Pages project sites: /testcase/...
-    // Keep the first path segment as the project root.
-    if (window.location.hostname.endsWith("github.io") && parts.length) {
-      return "/" + parts[0] + "/";
-    }
-
-    return "/";
-  }
-
-  function siteHref(path) {
-    if (!path) return path;
-    if (path.startsWith("/") || path.startsWith("http") || path.startsWith("#")) return path;
-    return siteRootPath() + path.replace(/^\.?\//, "");
-  }
-
-  function addContextToHref(href) {
-    if (!href) return href;
-
-    // Leave external, hash, mail and telephone links alone.
-    if (
-      href.startsWith("#") ||
-      href.startsWith("mailto:") ||
-      href.startsWith("tel:") ||
-      href.startsWith("http://") ||
-      href.startsWith("https://") ||
-      href.startsWith("//")
-    ) return href;
-
-    try {
-      const ctx = getContext();
-
-      // Resolve against the actual current page so GitHub Pages project paths
-      // such as /testcase/ and nested /journeys/ pages are preserved.
-      const baseHref =
-        href.startsWith("../") || href.startsWith("./")
-          ? window.location.href
-          : window.location.origin + siteRootPath();
-      const resolved = new URL(href, baseHref);
-
-      if (ctx.area && ctx.area !== "regional") {
-        resolved.searchParams.set("area", ctx.area);
-      } else {
-        resolved.searchParams.delete("area");
+    const pageRules = {
+      "campaigns.html": {
+        heroTitle: "Campaigns for " + area.name,
+        heroText: "Local campaigns Joe is working on with residents in " + area.name + " to get practical change.",
+        sectionTitle: "Campaigns in " + area.name
+      },
+      "events.html": {
+        heroTitle: "Events in " + area.name,
+        heroText: "Meet Joe, join a local event or find what is happening near you in " + area.name + ".",
+        sectionTitle: "Happening in " + area.name
+      },
+      "news.html": {
+        heroTitle: "Latest from " + area.name,
+        heroText: "News, local campaigns and Joe’s latest work affecting " + area.name + ".",
+        sectionTitle: "Latest from " + area.name
+      },
+      "priorities.html": {
+        heroTitle: "Priorities for " + area.name,
+        heroText: "The local issues Joe is focused on in " + area.name + ", shaped by what residents tell him.",
+        sectionTitle: "Joe’s priorities for " + area.name
+      },
+      "your-area.html": {
+        heroTitle: "Joe in " + area.name,
+        heroText: "See what Joe is doing in " + area.name + " and what local residents are raising with him.",
+        sectionTitle: "What Joe is doing in " + area.name
       }
-
-      if (ctx.issue) {
-        resolved.searchParams.set("issue", ctx.issue);
-      } else {
-        resolved.searchParams.delete("issue");
-      }
-
-      // Return a site-local absolute pathname including the GitHub Pages
-      // project prefix, e.g. /testcase/about.html?area=crewe
-      return resolved.pathname + resolved.search + resolved.hash;
-    } catch (_) {
-      return href;
-    }
-  }
-
-  function ensureAreaIndicator() {
-    const ctx = getContext();
-    qsa(".ben-area-indicator").forEach(el => el.remove());
-
-    if (!ctx.area || ctx.area === "regional") return;
-
-    const area = window.BEN_CAMPAIGN_AREAS[ctx.area];
-    if (!area) return;
-
-    const bar = document.createElement("div");
-    bar.className = "ben-area-indicator";
-    bar.setAttribute("role", "status");
-    bar.innerHTML = `
-      <span>Showing campaign updates for <strong>${area.name}</strong></span>
-      <button type="button" class="ben-change-area">Change area</button>
-    `;
-
-    const footer = qs("footer");
-    if (footer) footer.insertAdjacentElement("beforebegin", bar);
-    else document.body.appendChild(bar);
-
-    qs(".ben-change-area", bar)?.addEventListener("click", openAreaSelector);
-  }
-
-  function openAreaSelector() {
-    qs(".ben-area-selector")?.remove();
-
-    const overlay = document.createElement("div");
-    overlay.className = "ben-area-selector";
-    overlay.innerHTML = `
-      <div class="ben-area-selector-panel" role="dialog" aria-modal="true" aria-labelledby="ben-area-title">
-        <button class="ben-area-close" type="button" aria-label="Close area selector">×</button>
-        <h2 id="ben-area-title">Change your local campaign area</h2>
-        <p>Enter your postcode, choose Crewe, or return to the regional campaign.</p>
-        <form class="ben-area-postcode-form">
-          <label for="ben-area-postcode">Postcode</label>
-          <div class="ben-area-postcode-row">
-            <input id="ben-area-postcode" name="postcode" autocomplete="postal-code" placeholder="Enter your postcode">
-            <button type="submit">Use postcode</button>
-          </div>
-        </form>
-        <div class="ben-area-buttons">
-          <button type="button" data-ben-select-area="crewe">Crewe</button>
-          <button type="button" data-ben-select-area="regional">Show all Cheshire & Warrington</button>
-        </div>
-      </div>
-    `;
-    document.body.appendChild(overlay);
-    qs(".ben-area-postcode", overlay)?.focus();
-
-    qs(".ben-area-close", overlay)?.addEventListener("click", () => overlay.remove());
-    overlay.addEventListener("click", e => { if (e.target === overlay) overlay.remove(); });
-    qsa("[data-ben-select-area]", overlay).forEach(btn => {
-      btn.addEventListener("click", () => {
-        setArea(btn.dataset.benSelectArea, "manual");
-        overlay.remove();
-      });
-    });
-    qs(".ben-area-postcode-form", overlay)?.addEventListener("submit", e => {
-      e.preventDefault();
-      const postcode = clean(qs("input[name=postcode]", e.currentTarget)?.value);
-      const area = postcodeToArea(postcode);
-      if (area) {
-        setArea(area, "postcode", postcode);
-        overlay.remove();
-      } else {
-        alert("We can’t match that postcode to a local campaign area yet. The regional campaign will remain selected.");
-      }
-    });
-  }
-
-  function applyHomepage(area, ctx) {
-    if (!document.body.classList.contains("home-page")) return;
-
-    const hero = qs(".home-hero");
-    const heroTitle = qs(".home-hero h1");
-    const heroText = qs(".home-hero p");
-    const heroBg = qs(".home-hero-bg, .home-hero-image, .home-hero");
-
-    if (ctx.area === "crewe") {
-      document.documentElement.dataset.benArea = "crewe";
-      if (hero) hero.classList.add("is-personalised");
-      if (heroBg) heroBg.style.setProperty("--ben-local-hero-image", `url('${area.heroImage}')`);
-      localiseText(heroTitle, area.heroTitle);
-      localiseText(heroText, area.heroSupport);
-
-      const joinBtn = qs(".home-hero .btn-red, .home-join-button");
-      localiseLink(joinBtn, "tell-ben.html", area.primaryCTA);
-
-      const cards = qsa(".home-story-card, .home-campaign-card, .campaign-card");
-      if (cards[0]) {
-        localiseText(qs("h3, h2", cards[0]), area.featuredStoryTitle);
-        localiseText(qs("p", cards[0]), area.featuredStoryCopy);
-        localiseLink(qs("a", cards[0]), area.featuredStoryHref, "Latest news");
-      }
-      if (cards[1]) {
-        localiseText(qs("h3, h2", cards[1]), area.localIssueTitle);
-        localiseText(qs("p", cards[1]), area.localIssueCopy);
-        localiseLink(qs("a", cards[1]), area.localIssueHref, "Ben’s Plan");
-      }
-      if (cards[2]) {
-        localiseText(qs("h3, h2", cards[2]), area.featuredEventTitle);
-        localiseText(qs("p", cards[2]), area.featuredEventCopy);
-        localiseLink(qs("a", cards[2]), area.featuredEventHref, "Events");
-      }
-
-      qsa("[data-ben-tell-prompt], .tell-ben-prompt").forEach(el => localiseText(el, area.tellBenPrompt));
-      analytics("personalised_homepage_viewed", { area: ctx.area, issue: ctx.issue || "" });
-    } else {
-      delete document.documentElement.dataset.benArea;
-      if (hero) hero.classList.remove("is-personalised");
-    }
-  }
-
-  function applyPlan(area, ctx) {
-    if (!location.pathname.endsWith("plan.html")) return;
-    const title = qs(".plan-photo-hero h1");
-    const intro = qs(".plan-photo-hero p");
-    if (ctx.area === "crewe") {
-      localiseText(title, area.planTitle + ".");
-      localiseText(intro, area.planIntro);
-    }
-  }
-
-  function applyPolicyPage(area, ctx) {
-    const issueMap = {
-      "better-transport.html": "transport",
-      "safer-communities.html": "safety",
-      "stronger-economy.html": "economy",
-      "homes-opportunity.html": "housing"
     };
-    const file = location.pathname.split("/").pop();
-    const issue = issueMap[file];
-    if (!issue || ctx.area !== "crewe") return;
 
-    const issueLabel = window.BEN_ISSUES[issue]?.label || "";
-    const title = qs(".issue-hero h1, .inner-hero h1");
-    if (title && !title.textContent.includes("Crewe")) {
-      title.textContent = `${issueLabel} for Crewe.`;
+    const file = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
+    const rule = pageRules[file];
+    if(rule){
+      const heroH1 = document.querySelector(".page-hero h1");
+      const heroP = document.querySelector(".page-hero p");
+      const firstSectionH2 = document.querySelector(".section h2");
+      if(heroH1) heroH1.textContent = rule.heroTitle;
+      if(heroP) heroP.textContent = rule.heroText;
+      if(firstSectionH2) firstSectionH2.textContent = rule.sectionTitle;
     }
 
-    const section = qs(".ben-local-policy-insert") || document.createElement("section");
-    if (!section.classList.contains("ben-local-policy-insert")) {
-      section.className = "ben-local-policy-insert";
-      const main = qs("main");
-      if (main) main.insertBefore(section, main.children[1] || null);
-    }
-
-    const content = {
-      transport: ["What better transport means for Crewe", "Better bus connections, tackling bottlenecks and making the most of Crewe’s position as one of the region’s most important transport gateways."],
-      safety: ["Safer communities in Crewe", "Visible neighbourhood policing, practical action on antisocial behaviour and a town centre where people feel confident spending time."],
-      economy: ["Backing Crewe’s economy", "Supporting local employers, skills, investment and the infrastructure Crewe needs to grow with confidence."],
-      housing: ["Homes and opportunity in Crewe", "New homes should come with roads, schools, GP capacity and a clear plan to strengthen existing communities as well as build new ones."]
-    }[issue];
-
-    section.innerHTML = `
-      <div class="container ben-local-policy-inner">
-        <img src="${area.localPhoto}" alt="Campaign activity in Crewe">
-        <div>
-          <h2>${content[0]}</h2>
-          <p>${content[1]}</p>
-          <a class="btn btn-red" href="${addContextToHref('tell-ben.html?issue=' + issue)}">Tell Ben about ${issue === 'safety' ? 'safety' : issue} in Crewe</a>
-        </div>
-      </div>`;
-  }
-
-  function applyNews(area, ctx) {
-    if (!location.pathname.endsWith("news.html")) return;
-    const stories = qsa("[data-news-area], .news-story");
-    if (!stories.length) return;
-
-    stories.forEach((story, index) => {
-      if (!story.dataset.newsArea) {
-        const text = story.textContent.toLowerCase();
-        story.dataset.newsArea = text.includes("crewe") ? "crewe" : "all";
-        if (text.includes("transport")) story.dataset.newsIssue = "transport";
-      }
+    document.querySelectorAll("[data-area-copy]").forEach(function(el){
+      const template = el.dataset.areaCopy || "";
+      el.textContent = template.replace(/\{area\}/g, area.name);
     });
 
-    if (ctx.area === "regional" && !ctx.issue) return;
-    const parent = stories[0].parentElement;
-    if (!parent) return;
-
-    const scored = stories.map((story, index) => {
-      let score = 0;
-      if (story.dataset.newsArea === ctx.area) score += 100;
-      if (story.dataset.newsArea === "all") score += 30;
-      if (ctx.issue && story.dataset.newsIssue === ctx.issue) score += 50;
-      return { story, score, index };
-    }).sort((a,b) => b.score - a.score || a.index - b.index);
-
-    scored.forEach(item => parent.appendChild(item.story));
-  }
-
-  function applyEvents(area, ctx) {
-    if (!location.pathname.endsWith("events.html")) return;
-    const events = qsa("[data-event-area], .event-card, .event-item, .events-card");
-    if (!events.length) return;
-
-    events.forEach(event => {
-      if (!event.dataset.eventArea) {
-        event.dataset.eventArea = event.textContent.toLowerCase().includes("crewe") ? "crewe" : "all";
-      }
-    });
-
-    if (ctx.area === "regional") return;
-    const parent = events[0].parentElement;
-    if (!parent) return;
-    const scored = events.map((event, index) => ({
-      event,
-      index,
-      score: event.dataset.eventArea === ctx.area ? 100 : event.dataset.eventArea === "all" ? 30 : 0
-    })).sort((a,b) => b.score - a.score || a.index - b.index);
-    scored.forEach(item => parent.appendChild(item.event));
-  }
-
-  function getIssueSubOptions(issue) {
-    return {
-      transport: ["Buses", "Roads", "Rail", "Congestion", "Walking and cycling", "Other"],
-      safety: ["Antisocial behaviour", "Neighbourhood policing", "Town centre safety", "Youth services", "Other"],
-      economy: ["Jobs", "Skills", "Business costs", "Transport and infrastructure", "Investment", "Other"],
-      housing: ["Affordability", "Infrastructure", "Planning", "Brownfield development", "Renting", "Other"],
-      services: ["GP access", "Schools", "Town centre", "Council services", "Other"],
-      other: ["Something else"]
-    }[issue] || ["Something else"];
-  }
-
-  function enhanceTellBen(area, ctx) {
-    if (!location.pathname.endsWith("tell-ben.html")) return;
-
-    const title = qs(".tell-ben-hero h1");
-    if (ctx.area === "crewe" && title) title.textContent = area.tellBenPrompt;
-
-    const postcodeStep = qs("#tell-step-1, .tell-step-1");
-    const postcodeInput = qs('input[name="postcode"], input[placeholder*="postcode" i]');
-    if (ctx.postcode && postcodeInput) postcodeInput.value = ctx.postcode;
-
-    /* If area already known, retain context but don't force a repeated postcode interaction */
-    if (ctx.area === "crewe" && postcodeStep) {
-      const h = qs("h2", postcodeStep);
-      const p = qs("p", postcodeStep);
-      if (h) h.textContent = "What matters most in Crewe?";
-      if (p) p.textContent = "Choose the issue you most want Ben to focus on.";
-    }
-
-    /* Add a compact structured issue layer if the page doesn't already have one */
-    let intelligence = qs(".ben-intelligence-questions");
-    if (!intelligence) {
-      intelligence = document.createElement("section");
-      intelligence.className = "ben-intelligence-questions";
-      intelligence.innerHTML = `
-        <div class="container ben-intelligence-inner">
-          <h2>${ctx.area === "crewe" ? "What needs to change in Crewe?" : "What needs to change where you live?"}</h2>
-          <p>Choose the issue that matters most. We’ll ask one short follow-up.</p>
-          <div class="ben-issue-options" role="group" aria-label="Main issue">
-            <button type="button" data-ben-issue="transport">Transport</button>
-            <button type="button" data-ben-issue="housing">Housing</button>
-            <button type="button" data-ben-issue="safety">Crime and community safety</button>
-            <button type="button" data-ben-issue="economy">Jobs, business and growth</button>
-            <button type="button" data-ben-issue="services">Local services</button>
-            <button type="button" data-ben-issue="other">Something else</button>
-          </div>
-          <div class="ben-subissue-wrap" hidden>
-            <label for="ben-subissue">Tell us a little more</label>
-            <select id="ben-subissue" name="ben_subissue"></select>
-          </div>
-        </div>`;
-      const main = qs("main");
-      if (main) main.insertBefore(intelligence, main.children[1] || null);
-    }
-
-    qsa("[data-ben-issue]", intelligence).forEach(btn => {
-      btn.addEventListener("click", () => {
-        qsa("[data-ben-issue]", intelligence).forEach(b => b.classList.remove("selected"));
-        btn.classList.add("selected");
-        const issue = btn.dataset.benIssue;
-        if (window.BEN_ISSUES[issue]) setIssue(issue);
-        const wrap = qs(".ben-subissue-wrap", intelligence);
-        const select = qs("#ben-subissue", intelligence);
-        select.innerHTML = getIssueSubOptions(issue).map(v => `<option value="${v}">${v}</option>`).join("");
-        wrap.hidden = false;
-        analytics("tell_ben_started", { issue });
-      });
-    });
-  }
-
-  function prepareForms(area, ctx) {
-    const acquisition = readJSON(ACQUISITION_KEY, {});
-    qsa("form").forEach(form => {
-      const hiddenValues = {
-        ben_area: ctx.area || "regional",
-        ben_issue: ctx.issue || "",
-        ben_area_source: ctx.area_source || "",
-        ben_postcode_context: ctx.postcode || "",
-        ben_utm_source: ctx.utm_source || "",
-        ben_utm_medium: ctx.utm_medium || "",
-        ben_utm_campaign: ctx.utm_campaign || "",
-        ben_utm_content: ctx.utm_content || "",
-        ben_landing_page: ctx.landing_page || "",
-        ben_original_utm_source: acquisition.first_utm_source || "",
-        ben_original_utm_campaign: acquisition.first_utm_campaign || "",
-        ben_original_area: acquisition.first_area || "",
-        ben_original_issue: acquisition.first_issue || ""
-      };
-
-      Object.entries(hiddenValues).forEach(([name, value]) => {
-        let input = qs(`input[name="${name}"]`, form);
-        if (!input) {
-          input = document.createElement("input");
-          input.type = "hidden";
-          input.name = name;
-          input.dataset.nationbuilderField = name;
-          form.appendChild(input);
+    document.querySelectorAll("[data-personalised-grid] > *").forEach(function(item){
+      const itemArea = item.dataset.area || "";
+      if(itemArea === areaKey){
+        item.classList.add("is-local");
+        if(!item.querySelector(".local-badge")){
+          const badge = document.createElement("span");
+          badge.className = "local-badge";
+          badge.textContent = "In " + area.name;
+          item.prepend(badge);
         }
-        input.value = value;
-      });
-
-      qsa('input[name="postcode"], input[placeholder*="postcode" i]', form).forEach(input => {
-        if (ctx.postcode && !input.value) input.value = ctx.postcode;
-        input.addEventListener("change", () => {
-          const areaKey = postcodeToArea(input.value);
-          if (areaKey) setArea(areaKey, "postcode", input.value);
-        });
-      });
-
-      if (!form.dataset.benTracked) {
-        form.dataset.benTracked = "1";
-        form.addEventListener("submit", () => {
-          const kind = form.dataset.thanks || form.dataset.formType || "form";
-          analytics(kind === "tell-ben" ? "tell_ben_completed" : "signup_completed", { form: kind });
-        });
+      } else {
+        item.classList.remove("is-local");
       }
     });
   }
 
-  function contextualiseThanks(area, ctx) {
-    if (!location.pathname.endsWith("thanks.html")) return;
 
-    const heroTitle = qs(".thanks-hero h1");
-    const heroText = qs(".thanks-hero p");
-
-    if (ctx.area === "crewe" && ctx.issue) {
-      const label = window.BEN_ISSUES[ctx.issue]?.label || ctx.issue;
-      if (heroTitle) heroTitle.textContent = "Thanks — Ben is listening.";
-      if (heroText) heroText.textContent = `Thanks for telling Ben what matters in Crewe about ${label.toLowerCase()}.`;
-
-      const firstCTA = qs(".thanks-page a.btn, .thanks-page .btn");
-      if (firstCTA) {
-        const planHref = window.BEN_ISSUES[ctx.issue]?.plan || "plan.html";
-        firstCTA.href = addContextToHref(planHref);
-        firstCTA.textContent = `Read Ben’s ${label.toLowerCase()} plan`;
-      }
-    } else if (ctx.area === "crewe") {
-      if (heroText) heroText.textContent = "You’re now part of the campaign for Crewe and the wider Cheshire & Warrington region.";
+  const HOME_LOCAL = {
+    "town-centre":{
+      news:["Joe meets traders on Bloggs Town high street","Businesses raise empty units, parking and the cost of investing in the town centre.","https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=84"],
+      campaign:["Bring empty shops back into use","Practical action on vacant units in Bloggs Town Centre.","campaigns/high-street.html","https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=84"],
+      event:["Bloggs Town business roundtable","Monday 21 September · Bloggs Business Centre","events/business-roundtable.html","https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=84"]
+    },
+    "north-bloggs":{
+      news:["Joe presses for more GP appointments in North Bloggs","Residents say access to appointments remains one of their biggest local concerns.","https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=84"],
+      campaign:["Safer streets in North Bloggs","Back visible neighbourhood policing and stronger action on antisocial behaviour.","campaigns/safer-streets.html","https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=84"],
+      event:["North Bloggs residents meeting","Thursday 15 October · Community Centre","events/north-residents-meeting.html","https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=900&q=84"]
+    },
+    "little-bloggs":{
+      news:["Joe takes Little Bloggs road concerns to local leaders","Potholes, congestion and junction safety top the agenda after resident feedback.","https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=84"],
+      campaign:["Fix Little Bloggs’ roads","Tell Joe where potholes, congestion and unsafe junctions need action first.","campaigns/roads.html","https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=84"],
+      event:["Public meeting on local transport","Thursday 8 October · Community Hall","events/transport-meeting.html","https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=900&q=84"]
+    },
+    "villages":{
+      news:["Protecting community services across the villages","Joe meets residents to discuss transport, local facilities and access to essential services.","https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=84"],
+      campaign:["Protect rural bus links","Support reliable public transport for residents without access to a car.","campaigns/roads.html","https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?auto=format&fit=crop&w=900&q=84"],
+      event:["Village services forum","Wednesday 21 October · Village Hall","events/village-services-forum.html","https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=84"]
     }
-  }
-
-  function bindGlobalPostcodes() {
-    qsa('form').forEach(form => {
-      const postcode = qs('input[name="postcode"], input[placeholder*="postcode" i]', form);
-      if (!postcode || form.dataset.benPostcodeBound) return;
-      form.dataset.benPostcodeBound = "1";
-      form.addEventListener("submit", () => {
-        const area = postcodeToArea(postcode.value);
-        if (area) setArea(area, "postcode", postcode.value);
-      });
-    });
-  }
-
-  function applyContextToLinks() {
-    qsa('a[href]').forEach(a => {
-      const href = a.getAttribute("href");
-      if (!href || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("http")) return;
-      if (a.hasAttribute("data-ben-no-context")) return;
-      a.setAttribute("href", addContextToHref(href));
-    });
-  }
-
-  function applyAll() {
-    const ctx = getContext();
-    const area = window.BEN_CAMPAIGN_AREAS[ctx.area] || window.BEN_CAMPAIGN_AREAS.regional;
-    window.BEN_CONTEXT = ctx;
-
-    ensureAreaIndicator();
-    applyHomepage(area, ctx);
-    applyPlan(area, ctx);
-    applyPolicyPage(area, ctx);
-    applyNews(area, ctx);
-    applyEvents(area, ctx);
-    enhanceTellBen(area, ctx);
-    prepareForms(area, ctx);
-    contextualiseThanks(area, ctx);
-    bindGlobalPostcodes();
-    applyContextToLinks();
-
-    document.documentElement.dataset.benArea = ctx.area || "regional";
-    if (ctx.issue) document.documentElement.dataset.benIssue = ctx.issue;
-    else delete document.documentElement.dataset.benIssue;
-  }
-
-  window.BenPersonalisation = {
-    getContext,
-    setArea,
-    setIssue,
-    postcodeToArea,
-    openAreaSelector,
-    applyAll
   };
 
-  captureURLContext();
+  function renderHomeLocal(areaKey){
+    const wrap = document.getElementById("homeLocalHub");
+    const cfg = HOME_LOCAL[areaKey];
+    const area = AREAS[areaKey];
+    if(!wrap || !cfg || !area) return;
+    wrap.classList.add("visible");
+    document.getElementById("homeLocalTitle").textContent = "Your area: " + area.name;
+    document.getElementById("homeLocalIntro").textContent = "The latest news, campaign and event selected for " + area.name + ".";
+    document.getElementById("homeLocalHubLink").href = "your-area.html?area=" + areaKey;
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", applyAll);
-  } else {
-    applyAll();
+    document.getElementById("homeLocalNewsImage").style.backgroundImage = 'url("' + cfg.news[2] + '")';
+    document.getElementById("homeLocalNewsTitle").textContent = cfg.news[0];
+    document.getElementById("homeLocalNewsText").textContent = cfg.news[1];
+
+    document.getElementById("homeLocalCampaignImage").style.backgroundImage = 'url("' + cfg.campaign[3] + '")';
+    document.getElementById("homeLocalCampaignTitle").textContent = cfg.campaign[0];
+    document.getElementById("homeLocalCampaignText").textContent = cfg.campaign[1];
+    document.getElementById("homeLocalCampaignLink").href = cfg.campaign[2] + "?area=" + areaKey;
+
+    document.getElementById("homeLocalEventImage").style.backgroundImage = 'url("' + cfg.event[3] + '")';
+    document.getElementById("homeLocalEventTitle").textContent = cfg.event[0];
+    document.getElementById("homeLocalEventText").textContent = cfg.event[1];
+    document.getElementById("homeLocalEventLink").href = cfg.event[2] + "?area=" + areaKey;
+  }
+
+  function setArea(areaKey){
+    if(!AREAS[areaKey]) return;
+    storageSet(areaKey);
+    const url = new URL(window.location.href);
+    url.searchParams.set("area", areaKey);
+
+    const file = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
+    if(file === "your-area.html"){
+      window.location.href = url.toString();
+      return;
+    }
+
+    try { history.replaceState({}, "", url); } catch(e) {}
+    applyArea(areaKey);
+  }
+
+  function clearArea(){
+    storageRemove();
+    const url = new URL(window.location.href);
+    url.searchParams.delete("area");
+    try { history.replaceState({}, "", url); } catch(e) {}
+    window.location.reload();
+  }
+
+  function sortAreaGrid(areaKey){
+    document.querySelectorAll("[data-personalised-grid]").forEach(function(grid){
+      const items = Array.from(grid.children);
+      items
+        .sort(function(a,b){
+          const aArea = a.dataset.area || "all";
+          const bArea = b.dataset.area || "all";
+          const aScore = aArea === areaKey ? 0 : (aArea === "all" ? 1 : 2);
+          const bScore = bArea === areaKey ? 0 : (bArea === "all" ? 1 : 2);
+          return aScore - bScore;
+        })
+        .forEach(function(item){ grid.appendChild(item); });
+    });
+
+    const campaignNote = document.getElementById("campaignLocalNote");
+    const eventNote = document.getElementById("eventLocalNote");
+    const newsNote = document.getElementById("newsLocalNote");
+    if(campaignNote) campaignNote.classList.add("visible");
+    if(eventNote) eventNote.classList.add("visible");
+    if(newsNote) newsNote.classList.add("visible");
+  }
+
+  function applyArea(areaKey){
+    const area = AREAS[areaKey];
+    if(!area) return;
+
+    document.documentElement.dataset.area = areaKey;
+
+    const status = document.getElementById("areaStatus");
+    const statusName = document.getElementById("areaStatusName");
+    if(status && statusName){
+      statusName.textContent = area.name;
+      status.classList.add("visible");
+    }
+
+    const localResult = document.getElementById("localResult");
+    const localResultTitle = document.getElementById("localResultTitle");
+    if(localResult && localResultTitle){
+      localResultTitle.textContent = "You’re in " + area.name;
+      localResult.classList.add("visible");
+    }
+
+    const latestHeading = document.getElementById("latestHeading");
+    const latestNote = document.getElementById("latestLocalNote");
+    if(latestHeading) latestHeading.textContent = "Latest from " + area.name;
+    if(latestNote) latestNote.classList.add("visible");
+
+    const storyTitle = document.getElementById("localStoryTitle");
+    const storyText = document.getElementById("localStoryText");
+    const storyImage = document.getElementById("localStoryImage");
+    if(storyTitle) storyTitle.textContent = area.storyTitle;
+    if(storyText) storyText.textContent = area.storyText;
+    if(storyImage) storyImage.style.backgroundImage = "url('" + area.storyImage + "')";
+
+    const priorityAreaLine = document.getElementById("priorityAreaLine");
+    if(priorityAreaLine){
+      priorityAreaLine.textContent = "For " + area.name + ", we’re prioritising local content around " + area.priority + ".";
+      priorityAreaLine.classList.add("visible");
+    }
+
+    sortAreaGrid(areaKey);
+    personaliseContextSurveys(areaKey);
+    pagePersonalisation(areaKey);
+    renderHomeLocal(areaKey);
+  }
+
+  function showInvalid(input){
+    if(!input) return;
+    const old = input.placeholder;
+    input.value = "";
+    input.placeholder = "Try BG1, BG2, BG3 or BG4";
+    input.focus();
+    setTimeout(function(){ input.placeholder = old; }, 2200);
+  }
+
+  function personaliseContextSurveys(areaKey){
+    const area = AREAS[areaKey];
+    if(!area) return;
+
+    document.querySelectorAll("[data-context-survey]").forEach(function(survey){
+      const issue = survey.dataset.issue || "";
+      const heading = survey.querySelector("h3[data-question-base]");
+      if(!heading) return;
+
+      const base = heading.dataset.questionBase || heading.textContent;
+      let suffix = "";
+      if(issue === "health") suffix = area.healthPhrase;
+      else if(issue === "transport") suffix = area.roadsPhrase;
+      else if(issue === "crime") suffix = area.crimePhrase;
+      else if(issue === "business") suffix = area.businessPhrase;
+      else if(issue === "local-services") suffix = area.servicesPhrase;
+
+      if(suffix){
+        heading.textContent = base.replace(/\?$/, "") + " " + suffix + "?";
+      }
+
+      const intro = survey.querySelector(".context-intro");
+      if(intro){
+        intro.innerHTML = "One quick question helps Joe understand what residents in <span class=\"personalised-copy\">" + area.name + "</span> are experiencing.";
+      }
+    });
+  }
+
+  function initContextSurveys(){
+    document.querySelectorAll("[data-context-survey]").forEach(function(survey){
+      const submit = survey.querySelector("[data-submit-context]");
+      const result = survey.querySelector("[data-context-result]");
+      const resultText = survey.querySelector("[data-context-result-text]");
+      if(!submit || !result) return;
+
+      submit.addEventListener("click", function(){
+        const selected = survey.querySelector("input[name='context_answer']:checked");
+        if(!selected){
+          const old = submit.textContent;
+          submit.textContent = "Choose an answer first";
+          setTimeout(function(){ submit.textContent = old; }, 1600);
+          return;
+        }
+
+        const areaKey = document.documentElement.dataset.area || storageGet() || "";
+        const area = AREAS[areaKey];
+        const issue = survey.dataset.issue || "";
+
+        try{
+          sessionStorage.setItem("contextIssue", issue);
+          sessionStorage.setItem("contextAnswer", selected.value);
+          if(areaKey) sessionStorage.setItem("contextArea", areaKey);
+        }catch(e){}
+
+        if(resultText){
+          resultText.textContent = area
+            ? "Joe can now compare this with what other residents in " + area.name + " are saying."
+            : "Joe can now compare this with what other residents are saying.";
+        }
+        result.classList.add("visible");
+        submit.textContent = "Answer saved";
+        submit.disabled = true;
+      });
+    });
+  }
+
+  captureSourceContext();
+  renderSourceContext();
+
+  const params = new URLSearchParams(window.location.search);
+  const queryArea = params.get("area");
+  const initial = AREAS[queryArea] ? queryArea : storageGet();
+  if(initial && AREAS[initial]) applyArea(initial);
+  decorateJourneyLinks();
+  initContextSurveys();
+
+  const areaButton = document.getElementById("areaButton");
+  const areaInput = document.getElementById("areaInput");
+  if(areaButton && areaInput){
+    areaButton.addEventListener("click", function(){
+      const resolved = resolveArea(areaInput.value);
+      if(!resolved) return showInvalid(areaInput);
+      setArea(resolved);
+    });
+    areaInput.addEventListener("keydown", function(e){
+      if(e.key === "Enter"){
+        e.preventDefault();
+        areaButton.click();
+      }
+    });
+  }
+
+  const heroSignup = document.getElementById("heroSignup");
+  const heroPostcode = document.getElementById("heroPostcode");
+  if(heroSignup && heroPostcode){
+    heroSignup.addEventListener("submit", function(e){
+      e.preventDefault();
+      const resolved = resolveArea(heroPostcode.value);
+      if(resolved) setArea(resolved);
+      const button = heroSignup.querySelector("button");
+      if(button){
+        const old = button.textContent;
+        button.textContent = "Thanks";
+        setTimeout(function(){ button.textContent = old; }, 1800);
+      }
+    });
+  }
+
+  const dismissButton = document.getElementById("dismissAreaButton");
+  if(dismissButton){
+    dismissButton.addEventListener("click", function(){
+      storageRemove();
+      try{ sessionStorage.removeItem("lastCampaignArea"); sessionStorage.removeItem("contextArea"); }catch(e){}
+      const url = new URL(window.location.href);
+      url.searchParams.delete("area");
+      window.location.href = url.pathname + (url.search ? url.search : "") + (url.hash || "");
+    });
+  }
+
+  const changeButton = document.getElementById("changeAreaButton");
+  if(changeButton){
+    changeButton.addEventListener("click", function(){
+      if(document.getElementById("areaInput")){
+        storageRemove();
+        document.getElementById("areaStatus")?.classList.remove("visible");
+        const input = document.getElementById("areaInput");
+        input.value = "";
+        input.scrollIntoView({behavior:"smooth", block:"center"});
+        setTimeout(function(){ input.focus(); }, 350);
+      } else {
+        clearArea();
+      }
+    });
   }
 })();
-
-
-/* mobile reconciliation v3 safeguard */
-window.addEventListener("pageshow", function(){
-  document.body.classList.remove("menu-open");
-  document.querySelectorAll(".site-primary-nav.open").forEach(function(nav){
-    nav.classList.remove("open");
-  });
-});
-
-
-/* GitHub Pages internal routing safeguard v4 */
-document.addEventListener("DOMContentLoaded", function () {
-  const projectRoot = (function(){
-    const parts = window.location.pathname.split("/").filter(Boolean);
-    if (window.location.hostname.endsWith("github.io") && parts.length) {
-      return "/" + parts[0] + "/";
-    }
-    return "/";
-  })();
-
-  const rootPages = new Set([
-    "index.html","about.html","plan.html","news.html","events.html",
-    "tell-ben.html","follow-ben.html","contact.html","volunteer.html",
-    "donate.html","privacy.html","thanks.html","better-transport.html",
-    "safer-communities.html","stronger-economy.html","homes-opportunity.html"
-  ]);
-
-  document.querySelectorAll(".site-header a[href], footer a[href]").forEach(function(a){
-    const raw = a.getAttribute("href");
-    if (!raw || raw.startsWith("#") || raw.startsWith("http") ||
-        raw.startsWith("mailto:") || raw.startsWith("tel:")) return;
-
-    const clean = raw.split("?")[0].split("#")[0].replace(/^(\.\.\/)+/, "").replace(/^\.\//, "");
-    const file = clean.split("/").pop();
-
-    if (rootPages.has(file)) {
-      const existing = new URL(raw, window.location.href);
-      a.setAttribute("href", projectRoot + file + existing.search + existing.hash);
-    }
-  });
-});

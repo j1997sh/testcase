@@ -1,805 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>About Ben | Back Ben for Mayor</title>
-  <meta name="description" content="Meet Ben and learn about the leadership, experience and local approach he would bring to the Cheshire &amp; Warrington mayoralty.">
-  <meta name="theme-color" content="#071a34">
-  <meta property="og:title" content="About Ben | Back Ben for Mayor">
-  <meta property="og:description" content="Meet Ben and learn about the leadership, experience and local approach he would bring to the Cheshire &amp; Warrington mayoralty.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/images/ben-home-hero.jpg">
-<link rel="stylesheet" href="assets/css/site.css?v=20260823-canonical-v1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About Joe | Joe Bloggs MP</title>
+<link rel="stylesheet" href="assets/css/shared.css?v=32">
 
-<style id="final-header-system">
-*{box-sizing:border-box}
-
-.site-header{
-  width:100%!important;
-  max-width:none!important;
-  z-index:9999!important;
-  overflow:visible!important;
-  border:0!important;
-
-  /* Explicitly neutralise the original legacy `header` rule */
-  left:0!important;
-  right:0!important;
-  top:0!important;
-  transform:none!important;
-  margin:0!important;
-}
-
-body.home-page .site-header{
-  position:absolute!important;
-  top:0!important;
-  left:0!important;
-  right:0!important;
-  background:linear-gradient(to bottom,rgba(4,15,31,.88),rgba(4,15,31,.34),transparent)!important;
-}
-
-body:not(.home-page) .site-header{
-  position:relative!important;
-  left:0!important;
-  right:0!important;
-  top:0!important;
-  transform:none!important;
-  background:linear-gradient(100deg,#071a34 0%,#0a315e 55%,#0b72bd 100%)!important;
-}
-
-.site-header-inner{
-  width:100%!important;
-  max-width:none!important;
-  min-width:0!important;
-  min-height:86px!important;
-  margin:0!important;
-  padding:0 32px!important;
-  display:flex!important;
-  align-items:center!important;
-  justify-content:space-between!important;
-  gap:24px!important;
-}
-
-.site-primary-nav{
-  display:flex!important;
-  position:static!important;
-  flex:0 1 auto!important;
-  min-width:0!important;
-  width:auto!important;
-  height:auto!important;
-  align-items:center!important;
-  justify-content:flex-start!important;
-  gap:clamp(14px,1.45vw,28px)!important;
-  margin:0!important;
-  padding:0!important;
-  background:transparent!important;
-  box-shadow:none!important;
-  visibility:visible!important;
-  opacity:1!important;
-  white-space:nowrap!important;
-  overflow:visible!important;
-}
-
-.site-primary-nav a{
-  display:inline-block!important;
-  flex:0 0 auto!important;
-  width:auto!important;
-  min-width:0!important;
-  margin:0!important;
-  padding:0!important;
-  border:0!important;
-  color:#fff!important;
-  font-size:clamp(12px,.95vw,15px)!important;
-  line-height:1!important;
-  font-weight:800!important;
-  text-decoration:none!important;
-  white-space:nowrap!important;
-  visibility:visible!important;
-  opacity:1!important;
-}
-
-.site-header-actions{
-  display:flex!important;
-  flex:0 0 auto!important;
-  align-items:center!important;
-  gap:12px!important;
-  margin:0!important;
-  padding:0!important;
-}
-
-.site-volunteer-button,
-.site-donate-button{
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  min-height:52px!important;
-  padding:0 clamp(16px,1.55vw,25px)!important;
-  color:#fff!important;
-  font-size:clamp(12px,.95vw,15px)!important;
-  line-height:1!important;
-  font-weight:900!important;
-  text-decoration:none!important;
-  white-space:nowrap!important;
-}
-
-.site-volunteer-button{border:1px solid #efe6d7!important;background:#efe6d7!important;color:#071f3d!important;}
-
-.site-donate-button{
-  border:1px solid #f04436!important;
-  background:#f04436!important;
-}
-
-.site-menu-button{display:none!important}
-.mobile-menu-actions{display:none!important}
-
-/* Tight desktop: compress rather than shove content offscreen */
-@media (max-width:1100px) and (min-width:801px){
-  .site-header-inner{padding:0 20px!important;gap:14px!important}
-  .site-primary-nav{gap:11px!important}
-  .site-primary-nav a{font-size:11.5px!important}
-  .site-header-actions{gap:8px!important}
-  .site-volunteer-button,.site-donate-button{
-    min-height:46px!important;
-    padding:0 13px!important;
-    font-size:11.5px!important;
-  }
-}
-
-/* One clean mobile breakpoint. */
-@media (max-width:800px){
-  .site-header-inner{
-    min-height:72px!important;
-    padding:10px 16px!important;
-    justify-content:flex-end!important;
-    position:relative!important;
-  }
-
-  .site-menu-button{
-    display:block!important;
-    width:auto!important;
-    min-width:106px!important;
-    height:52px!important;
-    border:1px solid rgba(255,255,255,.68)!important;
-    background:transparent!important;
-    color:#fff!important;
-    font-size:16px!important;
-    font-weight:900!important;
-  }
-
-  .site-header-actions{display:none!important}
-
-  .site-primary-nav{
-    display:none!important;
-    position:absolute!important;
-    top:100%!important;
-    left:0!important;
-    right:0!important;
-    width:100%!important;
-    padding:8px 18px 18px!important;
-    background:#061a31!important;
-    box-shadow:0 18px 35px rgba(0,0,0,.25)!important;
-    white-space:normal!important;
-  }
-
-  .site-primary-nav.open{display:block!important}
-
-  .site-primary-nav a{
-    display:block!important;
-    width:100%!important;
-    padding:15px 6px!important;
-    border-bottom:1px solid rgba(255,255,255,.11)!important;
-    font-size:16px!important;
-  }
-}
-</style>
-
-<link rel="stylesheet" href="assets/css/mobile-parity.css?v=20260823-canonical-v1">
-
-
-
-
-<style id="mobile-parity-v4">
-@media (max-width:800px){
-
-  /* Open mobile menu: full-screen navy from the very top */
-  .site-primary-nav.open{
-    position:fixed!important;
-    inset:0!important;
-    top:0!important;
-    width:100vw!important;
-    min-height:100dvh!important;
-    padding:170px 24px 32px!important;
-    background:#061a31!important;
-    z-index:9998!important;
-    overflow-y:auto!important;
-    box-shadow:none!important;
-  }
-
-  /* Keep header chrome above the overlay */
-  .site-header{
-    position:absolute!important;
-    top:0!important;
-    left:0!important;
-    right:0!important;
-    z-index:10000!important;
-    background:transparent!important;
-  }
-
-  /* Mobile logo always visible and centred */
-  .site-logo{
-    position:absolute!important;
-    left:50%!important;
-    top:22px!important;
-    transform:translateX(-50%)!important;
-    z-index:10002!important;
-    display:block!important;
-    opacity:1!important;
-    visibility:visible!important;
-  }
-  .site-logo img{
-    display:block!important;
-    width:104px!important;
-    max-width:104px!important;
-    height:auto!important;
-    opacity:1!important;
-  }
-
-  /* Hamburger / close button: no box, top-right */
-  .site-menu-button{
-    position:absolute!important;
-    right:24px!important;
-    top:26px!important;
-    width:44px!important;
-    height:44px!important;
-    padding:0!important;
-    border:0!important;
-    outline:0!important;
-    background:transparent!important;
-    box-shadow:none!important;
-    z-index:10003!important;
-  }
-  .site-menu-button::before,
-  .site-menu-button::after,
-  .site-menu-button span{
-    box-shadow:none!important;
-  }
-
-  /* Navigation links */
-  .site-primary-nav.open>a{
-    display:block!important;
-    width:100%!important;
-    margin:0!important;
-    padding:20px 12px!important;
-    border-bottom:1px solid rgba(255,255,255,.16)!important;
-    font-size:24px!important;
-    line-height:1.15!important;
-    color:#fff!important;
-    text-align:left!important;
-  }
-
-  /* Mobile CTA row */
-  .site-primary-nav.open .nav-actions,
-  .site-primary-nav.open .site-nav-actions,
-  .site-primary-nav.open .mobile-nav-actions{
-    display:grid!important;
-    grid-template-columns:1fr 1fr!important;
-    gap:16px!important;
-    width:100%!important;
-    margin-top:28px!important;
-  }
-
-  /* Volunteer = cream/navy on mobile */
-  .site-primary-nav.open .site-volunteer-button,
-  .site-primary-nav.open a[href*="volunteer"]{
-    background:#efe6d7!important;
-    color:#071f3d!important;
-    border:1px solid #efe6d7!important;
-  }
-
-  /* Donate = orange/white on mobile */
-  .site-primary-nav.open .site-donate-button,
-  .site-primary-nav.open a[href*="donate"]{
-    background:#f04436!important;
-    color:#fff!important;
-    border:1px solid #f04436!important;
-  }
-
-  .site-primary-nav.open .site-volunteer-button,
-  .site-primary-nav.open .site-donate-button,
-  .site-primary-nav.open .nav-actions a,
-  .site-primary-nav.open .site-nav-actions a,
-  .site-primary-nav.open .mobile-nav-actions a{
-    min-height:64px!important;
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    padding:16px 14px!important;
-    font-size:20px!important;
-    font-weight:900!important;
-    text-align:center!important;
-    text-decoration:none!important;
-    border-radius:0!important;
-  }
-
-  /* Prevent hero or page content from visually bleeding through open menu */
-  body.menu-open main,
-  body.menu-open footer,
-  body.menu-open .page-hero,
-  body.menu-open .home-hero{
-    visibility:hidden!important;
-  }
-}
-</style>
-
-
-
-
-
-<style id="mobile-source-fix-v6">
-@media (max-width:800px){
-
-  /* MENU: one logo, one CTA pair, no dividers, no duplicate header actions */
-  body.menu-open .site-header-actions,
-  .site-primary-nav.open ~ .site-header-actions,
-  .site-header-actions{
-    display:none!important;
-  }
-
-  .site-primary-nav.open{
-    position:fixed!important;
-    inset:0!important;
-    width:100vw!important;
-    min-height:100dvh!important;
-    padding:34px 24px 34px!important;
-    background:#061a31!important;
-    z-index:9998!important;
-    display:flex!important;
-    flex-direction:column!important;
-    align-items:stretch!important;
-    overflow-y:auto!important;
-    box-sizing:border-box!important;
-  }
-
-  .site-primary-nav.open .site-mobile-menu-logo{
-    display:block!important;
-    margin:72px 0 44px 8px!important;
-    padding:0!important;
-    border:0!important;
-    width:max-content!important;
-    flex:0 0 auto!important;
-  }
-  .site-primary-nav.open .site-mobile-menu-logo img{
-    width:154px!important;
-    height:auto!important;
-    display:block!important;
-  }
-
-  .site-primary-nav.open>a:not(.site-mobile-menu-logo){
-    display:block!important;
-    padding:12px 8px!important;
-    margin:0 0 10px!important;
-    border:0!important;
-    border-bottom:0!important;
-    box-shadow:none!important;
-    font-size:23px!important;
-    line-height:1.15!important;
-    color:#fff!important;
-  }
-
-  .site-primary-nav.open .site-mobile-actions{
-    display:grid!important;
-    grid-template-columns:1fr 1fr!important;
-    gap:14px!important;
-    margin-top:28px!important;
-    width:100%!important;
-  }
-
-  .site-primary-nav.open .site-mobile-actions a{
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    min-height:62px!important;
-    padding:14px!important;
-    border:0!important;
-    font-size:19px!important;
-    font-weight:900!important;
-    text-decoration:none!important;
-    box-sizing:border-box!important;
-  }
-  .site-primary-nav.open .site-mobile-actions .mobile-volunteer{
-    background:#efe6d7!important;
-    color:#071f3d!important;
-  }
-  .site-primary-nav.open .site-mobile-actions .mobile-donate{
-    background:#f04436!important;
-    color:#fff!important;
-  }
-
-  /* Header logo remains normal when menu closed, hidden only when open */
-  body.menu-open .site-header-logo{
-    opacity:0!important;
-    visibility:hidden!important;
-  }
-
-  /* PLAN: independent mobile composition, patterned after Tell Ben */
-  .plan-photo-hero{
-    min-height:690px!important;
-    height:auto!important;
-    position:relative!important;
-    overflow:hidden!important;
-  }
-
-  .plan-photo-hero-bg{
-    position:absolute!important;
-    inset:0!important;
-    background-position:center 42%!important;
-    background-size:cover!important;
-  }
-
-  .plan-photo-hero-inner{
-    min-height:690px!important;
-    display:flex!important;
-    flex-direction:column!important;
-    justify-content:flex-end!important;
-    align-items:stretch!important;
-    gap:22px!important;
-    padding:190px 28px 38px!important;
-    box-sizing:border-box!important;
-  }
-
-  .plan-photo-hero-inner>div:first-child{
-    width:100%!important;
-    max-width:none!important;
-    margin:0!important;
-  }
-
-  .plan-photo-hero h1{
-    margin:0 0 14px!important;
-    max-width:100%!important;
-    font-size:50px!important;
-    line-height:.94!important;
-    letter-spacing:-.045em!important;
-    overflow-wrap:normal!important;
-  }
-
-  .plan-photo-hero p{
-    margin:0!important;
-    max-width:92%!important;
-    font-size:20px!important;
-    line-height:1.42!important;
-  }
-
-  .plan-hero-postcode{
-    width:100%!important;
-    max-width:none!important;
-    margin:0!important;
-    padding:18px!important;
-    box-sizing:border-box!important;
-    background:rgba(7,31,61,.84)!important;
-  }
-
-  .plan-hero-postcode label{
-    margin-bottom:12px!important;
-    font-size:16px!important;
-  }
-
-  .plan-hero-postcode>div{
-    display:grid!important;
-    grid-template-columns:minmax(0,1fr) 96px!important;
-    gap:0!important;
-  }
-
-  .plan-hero-postcode input,
-  .plan-hero-postcode button{
-    height:58px!important;
-    min-height:58px!important;
-    box-sizing:border-box!important;
-  }
-
-  .plan-hero-postcode input{
-    width:100%!important;
-    padding:0 15px!important;
-    font-size:17px!important;
-  }
-
-  .plan-hero-postcode button{
-    width:96px!important;
-    min-width:96px!important;
-    padding:0!important;
-    font-size:17px!important;
-  }
-}
-</style>
-
-
-<style id="hardcoded-mobile-menu-v5">
-@media (max-width:800px){
-  html body .site-primary-nav.open{
-    position:fixed!important;
-    inset:0!important;
-    z-index:99999!important;
-    width:100vw!important;
-    height:100dvh!important;
-    min-height:100dvh!important;
-    box-sizing:border-box!important;
-    display:flex!important;
-    flex-direction:column!important;
-    align-items:stretch!important;
-    justify-content:flex-start!important;
-    overflow-y:auto!important;
-    padding:18px 24px 24px!important;
-    margin:0!important;
-    gap:0!important;
-    background:#061a31!important;
-  }
-  html body .site-primary-nav.open .site-mobile-menu-logo{
-    order:-10!important;
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    width:100%!important;
-    height:auto!important;
-    margin:4px 0 14px!important;
-    padding:0!important;
-  }
-  html body .site-primary-nav.open .site-mobile-menu-logo img{
-    width:88px!important;
-    max-width:88px!important;
-    height:auto!important;
-    margin:0 auto!important;
-  }
-  html body .site-primary-nav.open > a:not(.site-mobile-menu-logo){
-    display:block!important;
-    width:100%!important;
-    height:auto!important;
-    padding:8px 6px!important;
-    margin:0!important;
-    border:0!important;
-    border-bottom:0!important;
-    box-shadow:none!important;
-    font-size:19px!important;
-    line-height:1.05!important;
-    font-weight:800!important;
-    color:#fff!important;
-    text-decoration:none!important;
-  }
-  html body .site-primary-nav.open .site-mobile-actions{
-    display:grid!important;
-    grid-template-columns:1fr 1fr!important;
-    width:100%!important;
-    gap:10px!important;
-    margin:14px 0 0!important;
-    padding:0!important;
-  }
-  html body .site-primary-nav.open .site-mobile-actions a{
-    min-height:52px!important;
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    padding:10px!important;
-    margin:0!important;
-    border:0!important;
-    font-size:17px!important;
-    font-weight:900!important;
-  }
-  html body .site-primary-nav.open .site-mobile-actions .mobile-volunteer{
-    background:#efe6d7!important;color:#071f3d!important;
-  }
-  html body .site-primary-nav.open .site-mobile-actions .mobile-donate{
-    background:#f04436!important;color:#fff!important;
-  }
-  html body.menu-open .site-header-logo{
-    opacity:0!important;
-    visibility:hidden!important;
-  }
-}
-</style>
-
-
-<style id="header-hover-exact-v9">
-@media (min-width:801px){
-  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate){
-    text-decoration-line:underline!important;
-    text-decoration-color:transparent!important;
-    text-decoration-thickness:2px!important;
-    text-underline-offset:8px!important;
-    transition:text-decoration-color .15s ease!important;
-  }
-  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate):hover,
-  .site-primary-nav > a[aria-current="page"]{
-    text-decoration-color:#f04436!important;
-  }
-  .site-primary-nav > a::after{display:none!important;content:none!important}
-}
-@media (max-width:800px){
-  .site-primary-nav > a{text-decoration:none!important}
+<style>
+/* Mobile menu: kept inline so it works on every page even if cached CSS is stale */
+.mobile-nav{display:none;background:#fff;border-bottom:1px solid #e6eaf0;position:relative;z-index:50}
+.mobile-nav.open{display:block}
+.mobile-nav nav{display:flex;flex-direction:column;padding:8px 20px 4px}
+.mobile-nav nav a{display:block;padding:14px 0;border-bottom:1px solid #edf0f4;font-weight:800;color:#08254a}
+.mobile-nav-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:14px 20px 18px}
+.mobile-nav-actions .header-box{width:100%;height:42px;min-height:42px}
+@media(min-width:1101px){.mobile-nav{display:none!important}}
+@media(max-width:1100px){
+  .site-header .nav{display:none!important}
+  .menu-button{display:block!important}
 }
 </style>
 
 </head>
-<body class="inner-page about-hero-page about-fade-page">
-<div class="site-shell about-fade-shell">
-
+<body>
 <header class="site-header">
-  <div class="site-header-inner">
-    <a class="site-header-logo" href="index.html" aria-label="Back Ben home"><img src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor"></a>
-    <nav class="site-primary-nav">
-      <a href="about.html" aria-current="page">About Ben</a>
-      <a href="plan.html">Ben’s Plan</a>
-      <a href="news.html">News</a>
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">JB</span>
+      <span class="logo-copy"><strong>Joe Bloggs</strong><span>MP for Bloggs Town</span></span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Joe</a>
+      <a href="your-area.html">Your area</a>
+      <a href="our-plan.html">Our plan</a>
+      <a href="campaigns.html">Campaigns</a>
       <a href="events.html">Events</a>
-      <a href="tell-ben.html">Tell Ben</a>
-      <a href="follow-ben.html">Follow Ben</a>
-      <a href="contact.html">Contact Ben</a>
+      <a href="news.html">News</a>
+      <a href="have-your-say.html">Have your say</a>
+      <a href="donate.html">Donate</a>
     </nav>
 
-    <button class="site-menu-button" type="button" aria-expanded="false" aria-label="Open navigation menu"></button>
-
-    <div class="site-header-actions">
-      <a class="site-volunteer-button" href="volunteer.html">Volunteer</a>
-      <a class="site-donate-button" href="donate.html">Donate</a>
+    <div class="header-actions">
+      <a href="sign-up.html" class="header-box signup">Sign up</a>
+      <a href="get-help.html" class="header-box help-button">Get help</a>
     </div>
+
+    <button type="button" class="menu-button" id="menuButton" aria-expanded="false" aria-controls="mobileNav">Menu</button>
   </div>
 </header>
 
-<main>
-
-<section class="about-photo-hero">
-  <img class="about-photo-hero-image" src="assets/images/ben-about-hero.jpg" alt="Ben visiting a major local industrial site">
-
-  <div class="about-photo-hero-shade"></div>
-
-  <div class="container about-photo-hero-content">
-    <h1>Leadership rooted in Cheshire & Warrington.</h1>
-    <p>Ben Fletcher is standing for Mayor to bring practical leadership, local focus and a record of delivery to the region.</p>
+<div class="area-status" id="areaStatus">
+  <div class="container area-status-inner">
+    <div>Showing local content for <strong id="areaStatusName"></strong></div>
+    <div class="area-status-actions">
+      <button type="button" id="changeAreaButton">Change area</button>
+      <button type="button" id="dismissAreaButton" class="dismiss-area" aria-label="Turn off personalisation" title="Turn off personalisation">×</button>
+    </div>
   </div>
-</section>
-
-
-<section class="about-plan-band about-plan-band-cream about-plan-lead">
-  <div class="container"><div class="about-editorial-lead">
-      <p><strong>Ben has built his career around leadership, delivery and bringing people together.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-    </div>
-
-    </div>
-</section>
-<section class="about-plan-band about-plan-band-white">
-  <div class="container"><div class="about-editorial-row about-editorial-row-one">
-      <div class="about-editorial-copy">
-        <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong> Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum.</p>
-
-        <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong> Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-      </div>
-
-      <div class="about-editorial-polaroid about-editorial-polaroid-right">
-        <div class="about-editorial-photo">IMAGE PLACEHOLDER</div>
-        <span>Ben growing up / early years</span>
-      </div>
-    </div>
 </div>
+
+<div class="mobile-nav" id="mobileNav">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Joe</a>
+    <a href="your-area.html">Your area</a>
+    <a href="our-plan.html">Our plan</a>
+    <a href="campaigns.html">Campaigns</a>
+    <a href="events.html">Events</a>
+    <a href="news.html">News</a>
+    <a href="have-your-say.html">Have your say</a>
+    <a href="donate.html">Donate</a>
+  </nav>
+  <div class="mobile-nav-actions">
+    <a href="sign-up.html" class="header-box signup">Sign up</a>
+    <a href="get-help.html" class="header-box help-button">Get help</a>
+  </div>
+</div>
+<section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=2000&q=85')">
+  <div class="container"><div><h1>About Joe</h1><p>Joe Bloggs is the Member of Parliament for Bloggs Town, working locally and in Westminster for the people he represents.</p></div></div>
 </section>
-<section class="about-plan-band about-plan-band-cream">
-  <div class="container"><div class="about-editorial-row about-editorial-row-two">
-      <div class="about-editorial-polaroid about-editorial-polaroid-left">
-        <div class="about-editorial-photo">IMAGE PLACEHOLDER</div>
-        <span>Leadership / career image</span>
-      </div>
 
-      <div class="about-editorial-copy">
-        <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong> Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-
-        <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong> Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-      </div>
+<section class="section">
+  <div class="container two-col">
+    <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1200&q=85')"></div>
+    <div>
+      <h2>Practical leadership. Local focus.</h2>
+      <p class="lead">Joe has always believed politics works best when it starts with listening. As MP for Bloggs Town, his job is to make sure local people are heard and local problems are acted on.</p>
+      <p>Joe spends his week between Parliament and the constituency, meeting residents, schools, local businesses, charities and community groups.</p>
+      <a class="btn" href="get-help.html">Contact Joe</a>
     </div>
-
-
-    </div>
+  </div>
 </section>
-<section class="about-plan-band about-plan-band-white">
-  <div class="container"><div class="about-editorial-row about-editorial-row-three">
-      <div class="about-editorial-copy about-editorial-copy-wide">
-        <h2>Why I’m standing</h2>
-
-        <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong> Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-
-        <a class="btn btn-red" href="plan.html">See Ben's plan</a>
-      </div>
-
-      <div class="about-editorial-polaroid about-editorial-polaroid-right about-editorial-polaroid-lower">
-        <div class="about-editorial-photo">IMAGE PLACEHOLDER</div>
-        <span>On the campaign trail</span>
-      </div>
+<section class="section alt">
+  <div class="container">
+    <h2>Joe’s work as your MP</h2>
+    <div class="grid-3">
+      <div class="card"><h3>In Bloggs Town</h3><p>Regular visits, surgeries and meetings with the people and organisations that keep the constituency moving.</p><a class="btn navy" href="your-area.html">See local work</a></div>
+      <div class="card"><h3>In Parliament</h3><p>Representing Bloggs Town in debates, questions and meetings with ministers.</p><a class="btn navy" href="news.html">See updates</a></div>
+      <div class="card"><h3>For residents</h3><p>Helping constituents navigate government departments and public services when things go wrong.</p><a class="btn navy" href="get-help.html">Get help</a></div>
     </div>
-
   </div>
 </section>
 
-
-
-
-<section class="about-question-band">
-  <div class="container about-question-band-grid">
-    <div class="about-question-band-copy">
-      <h2>Ask Ben a question</h2>
-      <p>What would you ask the next Mayor of Cheshire & Warrington?</p>
-      <p class="about-question-band-note">Send Ben your question and tell us where you’re from.</p>
-    </div>
-
-    <form data-thanks="signup" class="about-question-band-form">
-      <input class="about-question-band-question" type="text" placeholder="Your question" aria-label="Your question">
-      <div class="about-question-band-details">
-        <input type="text" placeholder="First name" aria-label="First name" autocomplete="given-name">
-        <input type="email" placeholder="Email address" aria-label="Email address" autocomplete="email">
-        <input type="text" placeholder="Postcode" aria-label="Postcode" autocomplete="postal-code">
-      </div>
-      <button class="about-question-band-submit" type="submit">Ask Ben</button>
-    </form>
-  </div>
-</section>
-
-</main>
-
-
-<footer class="campaign-footer">
-  <div class="campaign-footer-top">
-    <div class="campaign-footer-brand">
-      <img class="campaign-footer-logo-image" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
-      <div class="campaign-footer-socials" aria-label="Campaign social channels">
-        <span aria-label="Facebook" title="Facebook">f</span>
-        <span aria-label="Instagram" title="Instagram">◎</span>
-        <span aria-label="X" title="X">𝕏</span>
-        <span aria-label="TikTok" title="TikTok">♪</span>
-      </div>
-    </div>
-
-    <div class="campaign-footer-links">
+<footer>
+  <div class="container">
+    <div class="footer-grid">
       <div>
-        <h3>Campaign</h3>
-        <a href="about.html">About Ben</a>
-        <a href="plan.html">Ben’s Plan</a>
-        <a href="news.html">News</a>
+        <div class="logo" style="color:#fff">
+          <span class="logo-mark">JB</span>
+          <span class="logo-copy"><strong>Joe Bloggs</strong><span style="color:#b8c7d8">MP for Bloggs Town</span></span>
+        </div>
       </div>
-
-      <div>
-        <h3>Take part</h3>
-        <a href="events.html">Events</a>
-        <a href="tell-ben.html">Tell Ben</a>
-        <a href="volunteer.html">Volunteer</a>
-        <a href="donate.html">Donate</a>
-        <a href="area.html">Ben in your area</a>
-      </div>
+      <div><h4>Joe</h4><a href="about.html">About Joe</a><a href="our-plan.html">Our plan</a><a href="campaigns.html">Campaigns</a><a href="news.html">News</a></div>
+      <div><h4>Bloggs Town</h4><a href="your-area.html">Your area</a><a href="events.html">Events</a><a href="news.html">Local updates</a><a href="have-your-say.html">Residents survey</a><a href="preferences.html">Email preferences</a></div>
+      <div><h4>Get involved</h4><a href="get-help.html">Get help</a><a href="get-help.html#surgeries">Surgeries</a><a href="donate.html">Donate</a><a href="get-help.html#contact">Contact</a></div>
     </div>
-
-    <div class="campaign-footer-cta">
-      <h3>Back Ben</h3>
-      <p>Help build a campaign that reaches every part of Cheshire & Warrington.</p>
-      <a class="campaign-footer-button" href="volunteer.html">Join the campaign</a>
-    </div>
-  </div>
-
-  <div class="campaign-footer-bottom">
-    <div class="campaign-footer-legal">
-      <a href="privacy.html">Privacy</a>
-      <a href="contact.html">Contact</a>
-      <a href="#promoted-by">Promoted by</a>
-    </div>
-
-    <div class="campaign-footer-imprint" id="promoted-by">
-      <span>Promoted by [name] on behalf of Ben Fletcher, both at [campaign address].</span>
-    </div>
+    <div class="footer-note">Demo website concept. Joe Bloggs and Bloggs Town are fictional.</div>
   </div>
 </footer>
 
 
-</div>
-<script src="assets/js/site.js?v=20260823-canonical-v1"></script>
+<script>
+(function () {
+  function initMobileMenu() {
+    var button = document.getElementById('menuButton');
+    var menu = document.getElementById('mobileNav');
+    if (!button || !menu || button.dataset.menuReady === 'true') return;
+
+    button.dataset.menuReady = 'true';
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      var open = menu.classList.toggle('open');
+      button.setAttribute('aria-expanded', open ? 'true' : 'false');
+      button.textContent = open ? 'Close' : 'Menu';
+    });
+
+    menu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        menu.classList.remove('open');
+        button.setAttribute('aria-expanded', 'false');
+        button.textContent = 'Menu';
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileMenu);
+  } else {
+    initMobileMenu();
+  }
+})();
+</script>
+
+<script src="assets/js/personalisation.js?v=32"></script>
 </body>
 </html>

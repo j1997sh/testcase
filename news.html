@@ -1,1048 +1,290 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>News | Back Ben for Mayor</title>
-  <meta name="description" content="Campaign news, local stories, policy updates and media from Ben across Cheshire &amp; Warrington.">
-  <meta name="theme-color" content="#071a34">
-  <meta property="og:title" content="News | Back Ben for Mayor">
-  <meta property="og:description" content="Campaign news, local stories, policy updates and media from Ben across Cheshire &amp; Warrington.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/images/ben-home-hero.jpg">
-<link rel="stylesheet" href="assets/css/site.css?v=20260823-canonical-v1">
-
-<style id="final-header-system">
-*{box-sizing:border-box}
-
-.site-header{
-  width:100%!important;
-  max-width:none!important;
-  z-index:9999!important;
-  overflow:visible!important;
-  border:0!important;
-
-  /* Explicitly neutralise the original legacy `header` rule */
-  left:0!important;
-  right:0!important;
-  top:0!important;
-  transform:none!important;
-  margin:0!important;
-}
-
-body.home-page .site-header{
-  position:absolute!important;
-  top:0!important;
-  left:0!important;
-  right:0!important;
-  background:linear-gradient(to bottom,rgba(4,15,31,.88),rgba(4,15,31,.34),transparent)!important;
-}
-
-body:not(.home-page) .site-header{
-  position:relative!important;
-  left:0!important;
-  right:0!important;
-  top:0!important;
-  transform:none!important;
-  background:linear-gradient(100deg,#071a34 0%,#0a315e 55%,#0b72bd 100%)!important;
-}
-
-.site-header-inner{
-  width:100%!important;
-  max-width:none!important;
-  min-width:0!important;
-  min-height:86px!important;
-  margin:0!important;
-  padding:0 32px!important;
-  display:flex!important;
-  align-items:center!important;
-  justify-content:space-between!important;
-  gap:24px!important;
-}
-
-.site-primary-nav{
-  display:flex!important;
-  position:static!important;
-  flex:0 1 auto!important;
-  min-width:0!important;
-  width:auto!important;
-  height:auto!important;
-  align-items:center!important;
-  justify-content:flex-start!important;
-  gap:clamp(14px,1.45vw,28px)!important;
-  margin:0!important;
-  padding:0!important;
-  background:transparent!important;
-  box-shadow:none!important;
-  visibility:visible!important;
-  opacity:1!important;
-  white-space:nowrap!important;
-  overflow:visible!important;
-}
-
-.site-primary-nav a{
-  display:inline-block!important;
-  flex:0 0 auto!important;
-  width:auto!important;
-  min-width:0!important;
-  margin:0!important;
-  padding:0!important;
-  border:0!important;
-  color:#fff!important;
-  font-size:clamp(12px,.95vw,15px)!important;
-  line-height:1!important;
-  font-weight:800!important;
-  text-decoration:none!important;
-  white-space:nowrap!important;
-  visibility:visible!important;
-  opacity:1!important;
-}
-
-.site-header-actions{
-  display:flex!important;
-  flex:0 0 auto!important;
-  align-items:center!important;
-  gap:12px!important;
-  margin:0!important;
-  padding:0!important;
-}
-
-.site-volunteer-button,
-.site-donate-button{
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  min-height:52px!important;
-  padding:0 clamp(16px,1.55vw,25px)!important;
-  color:#fff!important;
-  font-size:clamp(12px,.95vw,15px)!important;
-  line-height:1!important;
-  font-weight:900!important;
-  text-decoration:none!important;
-  white-space:nowrap!important;
-}
-
-.site-volunteer-button{border:1px solid #efe6d7!important;background:#efe6d7!important;color:#071f3d!important;}
-
-.site-donate-button{
-  border:1px solid #f04436!important;
-  background:#f04436!important;
-}
-
-.site-menu-button{display:none!important}
-.mobile-menu-actions{display:none!important}
-
-/* Tight desktop: compress rather than shove content offscreen */
-@media (max-width:1100px) and (min-width:801px){
-  .site-header-inner{padding:0 20px!important;gap:14px!important}
-  .site-primary-nav{gap:11px!important}
-  .site-primary-nav a{font-size:11.5px!important}
-  .site-header-actions{gap:8px!important}
-  .site-volunteer-button,.site-donate-button{
-    min-height:46px!important;
-    padding:0 13px!important;
-    font-size:11.5px!important;
-  }
-}
-
-/* One clean mobile breakpoint. */
-@media (max-width:800px){
-  .site-header-inner{
-    min-height:72px!important;
-    padding:10px 16px!important;
-    justify-content:flex-end!important;
-    position:relative!important;
-  }
-
-  .site-menu-button{
-    display:block!important;
-    width:auto!important;
-    min-width:106px!important;
-    height:52px!important;
-    border:1px solid rgba(255,255,255,.68)!important;
-    background:transparent!important;
-    color:#fff!important;
-    font-size:16px!important;
-    font-weight:900!important;
-  }
-
-  .site-header-actions{display:none!important}
-
-  .site-primary-nav{
-    display:none!important;
-    position:absolute!important;
-    top:100%!important;
-    left:0!important;
-    right:0!important;
-    width:100%!important;
-    padding:8px 18px 18px!important;
-    background:#061a31!important;
-    box-shadow:0 18px 35px rgba(0,0,0,.25)!important;
-    white-space:normal!important;
-  }
-
-  .site-primary-nav.open{display:block!important}
-
-  .site-primary-nav a{
-    display:block!important;
-    width:100%!important;
-    padding:15px 6px!important;
-    border-bottom:1px solid rgba(255,255,255,.11)!important;
-    font-size:16px!important;
-  }
-}
-</style>
-
-
-
-
-
-<style id="news-editorial-redesign-v2">
-body:has(.news-photo-hero) .site-header{
-  position:absolute!important;top:0!important;left:0!important;right:0!important;z-index:1000!important;
-  background:linear-gradient(to bottom,rgba(4,20,39,.96) 0%,rgba(4,20,39,.80) 58%,rgba(4,20,39,.36) 82%,rgba(4,20,39,0) 100%)!important;
-  border:0!important;box-shadow:none!important;
-}
-body:has(.news-photo-hero) .site-header-inner{background:transparent!important;border:0!important;box-shadow:none!important}
-
-.news-editorial-page{background:#f7f2e8;color:#071f3d}
-.news-photo-hero{position:relative;min-height:520px;overflow:hidden;color:#fff}
-.news-photo-hero-bg{position:absolute;inset:0;background:url("assets/images/ben-news-hero.jpg") center 48%/cover no-repeat}
-.news-photo-hero-fade{position:absolute;inset:0;background:
-  linear-gradient(to bottom,rgba(3,18,36,.62) 0%,rgba(3,18,36,.16) 48%,rgba(3,18,36,.75) 100%),
-  linear-gradient(90deg,rgba(3,18,36,.76) 0%,rgba(3,18,36,.36) 38%,rgba(3,18,36,.03) 76%,transparent 100%)}
-.news-photo-hero-inner{position:relative;z-index:2;min-height:520px;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:46px}
-.news-photo-hero h1{margin:0 0 10px;font-size:clamp(64px,7vw,98px);line-height:.9;letter-spacing:-.055em;color:#fff}
-.news-photo-hero p{margin:0;max-width:700px;color:#e3e9ef;font-size:20px;line-height:1.45}
-
-.news-lead-section{padding:72px 0 64px}
-.news-lead-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:68px;align-items:center}
-.news-lead-image{min-height:470px;background:url("assets/images/ben-plan-hero.jpg") center/cover no-repeat}
-.news-lead-copy{max-width:560px}
-.news-lead-copy h2{margin:0 0 18px;font-size:50px;line-height:.97;letter-spacing:-.04em}
-.news-lead-copy p{margin:0 0 22px;color:#53667a;font-size:18px;line-height:1.6}
-.news-lead-copy a,.news-story-copy a{color:#f54436;font-weight:900;text-decoration:none}
-
-.news-filter-strip{background:#fff;padding:18px 0}
-.news-filter-inner{display:flex;align-items:center;gap:28px}
-.news-filter-inner>a{color:#607184;font-weight:800;text-decoration:none}
-.news-filter-inner>a.active{color:#071f3d}
-.news-search{margin-left:auto}
-.news-search input{height:44px;width:260px;border:1px solid #c8c0b4;background:#f7f2e8;padding:0 14px;font:inherit}
-
-.news-stream{padding:66px 0 84px}
-.news-story-row{display:grid;grid-template-columns:1.02fr .98fr;gap:70px;align-items:center;margin-bottom:82px}
-.news-story-row.reverse .news-story-photo{grid-column:2;grid-row:1}
-.news-story-row.reverse .news-story-copy{grid-column:1;grid-row:1}
-.news-story-photo{min-height:390px;background-size:cover;background-position:center}
-.story-crewe{background-image:url("assets/images/crewe-hero.jpg")}
-.story-volunteer{background-image:url("assets/images/ben-volunteer-hero.jpg")}
-.story-experience{background-image:url("assets/images/ben-experience-hero.jpg")}
-.news-story-copy{max-width:560px}
-.news-story-date{margin:0 0 10px;color:#7a8795;font-size:14px}
-.news-story-copy h2{margin:0 0 14px;font-size:42px;line-height:1;letter-spacing:-.035em}
-.news-story-copy p{margin:0 0 18px;color:#53667a;font-size:17px;line-height:1.58}
-
-.news-text-feature{background:#071f3d;color:#fff;padding:48px 52px;display:grid;grid-template-columns:1fr 1.2fr;gap:50px;align-items:center}
-.news-text-feature h2{margin:0 0 10px;font-size:40px;line-height:.98}
-.news-text-feature p{margin:0;color:#cbd6df;line-height:1.5}
-.news-text-feature form{display:grid;grid-template-columns:1fr 1fr auto;gap:10px}
-.news-text-feature input{height:52px;border:0;padding:0 14px;font:inherit}
-
-@media(max-width:800px){
-  body:has(.news-photo-hero) .site-header{background:linear-gradient(to bottom,rgba(4,20,39,.94) 0%,rgba(4,20,39,.76) 70%,rgba(4,20,39,0) 100%)!important}
-  .news-photo-hero,.news-photo-hero-inner{min-height:480px}
-  .news-photo-hero h1{font-size:54px}
-  .news-photo-hero p{font-size:17px}
-  .news-lead-grid,.news-story-row,.news-text-feature{grid-template-columns:1fr;gap:28px}
-  .news-lead-section{padding:48px 0}
-  .news-lead-image,.news-story-photo{min-height:300px}
-  .news-lead-copy h2{font-size:40px}
-  .news-filter-inner{overflow-x:auto;gap:20px}
-  .news-search{display:none}
-  .news-story-row{margin-bottom:54px}
-  .news-story-row.reverse .news-story-photo,.news-story-row.reverse .news-story-copy{grid-column:auto;grid-row:auto}
-  .news-story-copy h2{font-size:34px}
-  .news-text-feature{padding:34px 26px}
-  .news-text-feature form{grid-template-columns:1fr}
-}
-</style>
-
-
-<style id="news-grid-redesign-v4">
-/* News below the lead story becomes an infinitely extensible 3-column grid */
-.news-grid-section{
-  padding:58px 0 84px !important;
-}
-
-.news-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:48px 34px;
-  align-items:start;
-  margin-bottom:72px;
-}
-
-.news-card{
-  min-width:0;
-}
-
-.news-card-image{
-  display:block;
-  width:100%;
-  aspect-ratio:16/10;
-  min-height:0 !important;
-  background-size:cover;
-  background-position:center;
-  text-decoration:none;
-}
-
-.news-card-copy{
-  padding-top:18px;
-}
-
-.news-card-copy .news-story-date{
-  margin:0 0 8px;
-  color:#748393;
-  font-size:13px;
-}
-
-.news-card-copy h2{
-  margin:0 0 10px;
-  font-size:29px;
-  line-height:1.02;
-  letter-spacing:-.03em;
-}
-
-.news-card-copy h2 a{
-  color:#071f3d;
-  text-decoration:none;
-}
-
-.news-card-copy > p:not(.news-story-date){
-  margin:0 0 14px;
-  color:#53667a;
-  font-size:15.5px;
-  line-height:1.52;
-}
-
-.news-card-link{
-  color:#f54436;
-  font-weight:900;
-  text-decoration:none;
-}
-
-.story-plan{
-  background-image:url("assets/images/ben-plan-hero.jpg");
-}
-
-.story-about{
-  background-image:url("assets/images/ben-about-hero.jpg");
-}
-
-.news-card-placeholder{
-  aspect-ratio:16/14;
-  background:#eee7db;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.news-card-placeholder-inner{
-  padding:36px;
-  max-width:240px;
-}
-
-.news-card-placeholder p{
-  margin:0;
-  color:#83909d;
-  font-size:18px;
-  line-height:1.4;
-  font-weight:700;
-}
-
-/* Remove old alternating-news-row rules from influencing the new grid */
-.news-story-row{
-  display:none !important;
-}
-
-@media(max-width:1000px){
-  .news-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-}
-
-@media(max-width:650px){
-  .news-grid{
-    grid-template-columns:1fr;
-    gap:42px;
-  }
-
-  .news-card-copy h2{
-    font-size:30px;
-  }
-
-  .news-card-placeholder{
-    aspect-ratio:auto;
-    min-height:180px;
-  }
-}
-</style>
-
-
-<style id="news-polish-v2">
-.news-filter-strip{background:transparent!important;padding:22px 0 6px!important}
-.news-filter-inner{justify-content:center!important;gap:12px!important}
-.news-filter-inner>a{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:48px!important;padding:0 22px!important;background:#f54436!important;color:#fff!important;font-weight:900!important;text-decoration:none!important}
-.news-filter-inner>a.active{background:#071f3d!important;color:#fff!important}
-.news-card{border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important}
-.news-card-copy{border:0!important;outline:0!important}
-.news-card-link{display:flex!important;width:max-content!important;max-width:100%!important;margin:18px auto 0!important;background:#f54436!important;color:#fff!important;padding:13px 20px!important;font-weight:900!important;text-decoration:none!important;text-align:center!important}
-@media(max-width:650px){.news-filter-inner{justify-content:flex-start!important;padding-bottom:10px!important}.news-filter-inner>a{flex:0 0 auto!important}}
-</style>
-<link rel="stylesheet" href="assets/css/mobile-parity.css?v=20260823-canonical-v1">
-
-
-
-
-<style id="mobile-parity-v4">
-@media (max-width:800px){
-
-  /* Open mobile menu: full-screen navy from the very top */
-  .site-primary-nav.open{
-    position:fixed!important;
-    inset:0!important;
-    top:0!important;
-    width:100vw!important;
-    min-height:100dvh!important;
-    padding:170px 24px 32px!important;
-    background:#061a31!important;
-    z-index:9998!important;
-    overflow-y:auto!important;
-    box-shadow:none!important;
-  }
-
-  /* Keep header chrome above the overlay */
-  .site-header{
-    position:absolute!important;
-    top:0!important;
-    left:0!important;
-    right:0!important;
-    z-index:10000!important;
-    background:transparent!important;
-  }
-
-  /* Mobile logo always visible and centred */
-  .site-logo{
-    position:absolute!important;
-    left:50%!important;
-    top:22px!important;
-    transform:translateX(-50%)!important;
-    z-index:10002!important;
-    display:block!important;
-    opacity:1!important;
-    visibility:visible!important;
-  }
-  .site-logo img{
-    display:block!important;
-    width:104px!important;
-    max-width:104px!important;
-    height:auto!important;
-    opacity:1!important;
-  }
-
-  /* Hamburger / close button: no box, top-right */
-  .site-menu-button{
-    position:absolute!important;
-    right:24px!important;
-    top:26px!important;
-    width:44px!important;
-    height:44px!important;
-    padding:0!important;
-    border:0!important;
-    outline:0!important;
-    background:transparent!important;
-    box-shadow:none!important;
-    z-index:10003!important;
-  }
-  .site-menu-button::before,
-  .site-menu-button::after,
-  .site-menu-button span{
-    box-shadow:none!important;
-  }
-
-  /* Navigation links */
-  .site-primary-nav.open>a{
-    display:block!important;
-    width:100%!important;
-    margin:0!important;
-    padding:20px 12px!important;
-    border-bottom:1px solid rgba(255,255,255,.16)!important;
-    font-size:24px!important;
-    line-height:1.15!important;
-    color:#fff!important;
-    text-align:left!important;
-  }
-
-  /* Mobile CTA row */
-  .site-primary-nav.open .nav-actions,
-  .site-primary-nav.open .site-nav-actions,
-  .site-primary-nav.open .mobile-nav-actions{
-    display:grid!important;
-    grid-template-columns:1fr 1fr!important;
-    gap:16px!important;
-    width:100%!important;
-    margin-top:28px!important;
-  }
-
-  /* Volunteer = cream/navy on mobile */
-  .site-primary-nav.open .site-volunteer-button,
-  .site-primary-nav.open a[href*="volunteer"]{
-    background:#efe6d7!important;
-    color:#071f3d!important;
-    border:1px solid #efe6d7!important;
-  }
-
-  /* Donate = orange/white on mobile */
-  .site-primary-nav.open .site-donate-button,
-  .site-primary-nav.open a[href*="donate"]{
-    background:#f04436!important;
-    color:#fff!important;
-    border:1px solid #f04436!important;
-  }
-
-  .site-primary-nav.open .site-volunteer-button,
-  .site-primary-nav.open .site-donate-button,
-  .site-primary-nav.open .nav-actions a,
-  .site-primary-nav.open .site-nav-actions a,
-  .site-primary-nav.open .mobile-nav-actions a{
-    min-height:64px!important;
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    padding:16px 14px!important;
-    font-size:20px!important;
-    font-weight:900!important;
-    text-align:center!important;
-    text-decoration:none!important;
-    border-radius:0!important;
-  }
-
-  /* Prevent hero or page content from visually bleeding through open menu */
-  body.menu-open main,
-  body.menu-open footer,
-  body.menu-open .page-hero,
-  body.menu-open .home-hero{
-    visibility:hidden!important;
-  }
-}
-</style>
-
-
-
-
-
-<style id="mobile-source-fix-v6">
-@media (max-width:800px){
-
-  /* MENU: one logo, one CTA pair, no dividers, no duplicate header actions */
-  body.menu-open .site-header-actions,
-  .site-primary-nav.open ~ .site-header-actions,
-  .site-header-actions{
-    display:none!important;
-  }
-
-  .site-primary-nav.open{
-    position:fixed!important;
-    inset:0!important;
-    width:100vw!important;
-    min-height:100dvh!important;
-    padding:34px 24px 34px!important;
-    background:#061a31!important;
-    z-index:9998!important;
-    display:flex!important;
-    flex-direction:column!important;
-    align-items:stretch!important;
-    overflow-y:auto!important;
-    box-sizing:border-box!important;
-  }
-
-  .site-primary-nav.open .site-mobile-menu-logo{
-    display:block!important;
-    margin:72px 0 44px 8px!important;
-    padding:0!important;
-    border:0!important;
-    width:max-content!important;
-    flex:0 0 auto!important;
-  }
-  .site-primary-nav.open .site-mobile-menu-logo img{
-    width:154px!important;
-    height:auto!important;
-    display:block!important;
-  }
-
-  .site-primary-nav.open>a:not(.site-mobile-menu-logo){
-    display:block!important;
-    padding:12px 8px!important;
-    margin:0 0 10px!important;
-    border:0!important;
-    border-bottom:0!important;
-    box-shadow:none!important;
-    font-size:23px!important;
-    line-height:1.15!important;
-    color:#fff!important;
-  }
-
-  .site-primary-nav.open .site-mobile-actions{
-    display:grid!important;
-    grid-template-columns:1fr 1fr!important;
-    gap:14px!important;
-    margin-top:28px!important;
-    width:100%!important;
-  }
-
-  .site-primary-nav.open .site-mobile-actions a{
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    min-height:62px!important;
-    padding:14px!important;
-    border:0!important;
-    font-size:19px!important;
-    font-weight:900!important;
-    text-decoration:none!important;
-    box-sizing:border-box!important;
-  }
-  .site-primary-nav.open .site-mobile-actions .mobile-volunteer{
-    background:#efe6d7!important;
-    color:#071f3d!important;
-  }
-  .site-primary-nav.open .site-mobile-actions .mobile-donate{
-    background:#f04436!important;
-    color:#fff!important;
-  }
-
-  /* Header logo remains normal when menu closed, hidden only when open */
-  body.menu-open .site-header-logo{
-    opacity:0!important;
-    visibility:hidden!important;
-  }
-
-  /* PLAN: independent mobile composition, patterned after Tell Ben */
-  .plan-photo-hero{
-    min-height:690px!important;
-    height:auto!important;
-    position:relative!important;
-    overflow:hidden!important;
-  }
-
-  .plan-photo-hero-bg{
-    position:absolute!important;
-    inset:0!important;
-    background-position:center 42%!important;
-    background-size:cover!important;
-  }
-
-  .plan-photo-hero-inner{
-    min-height:690px!important;
-    display:flex!important;
-    flex-direction:column!important;
-    justify-content:flex-end!important;
-    align-items:stretch!important;
-    gap:22px!important;
-    padding:190px 28px 38px!important;
-    box-sizing:border-box!important;
-  }
-
-  .plan-photo-hero-inner>div:first-child{
-    width:100%!important;
-    max-width:none!important;
-    margin:0!important;
-  }
-
-  .plan-photo-hero h1{
-    margin:0 0 14px!important;
-    max-width:100%!important;
-    font-size:50px!important;
-    line-height:.94!important;
-    letter-spacing:-.045em!important;
-    overflow-wrap:normal!important;
-  }
-
-  .plan-photo-hero p{
-    margin:0!important;
-    max-width:92%!important;
-    font-size:20px!important;
-    line-height:1.42!important;
-  }
-
-  .plan-hero-postcode{
-    width:100%!important;
-    max-width:none!important;
-    margin:0!important;
-    padding:18px!important;
-    box-sizing:border-box!important;
-    background:rgba(7,31,61,.84)!important;
-  }
-
-  .plan-hero-postcode label{
-    margin-bottom:12px!important;
-    font-size:16px!important;
-  }
-
-  .plan-hero-postcode>div{
-    display:grid!important;
-    grid-template-columns:minmax(0,1fr) 96px!important;
-    gap:0!important;
-  }
-
-  .plan-hero-postcode input,
-  .plan-hero-postcode button{
-    height:58px!important;
-    min-height:58px!important;
-    box-sizing:border-box!important;
-  }
-
-  .plan-hero-postcode input{
-    width:100%!important;
-    padding:0 15px!important;
-    font-size:17px!important;
-  }
-
-  .plan-hero-postcode button{
-    width:96px!important;
-    min-width:96px!important;
-    padding:0!important;
-    font-size:17px!important;
-  }
-}
-</style>
-
-
-<style id="hardcoded-mobile-menu-v5">
-@media (max-width:800px){
-  html body .site-primary-nav.open{
-    position:fixed!important;
-    inset:0!important;
-    z-index:99999!important;
-    width:100vw!important;
-    height:100dvh!important;
-    min-height:100dvh!important;
-    box-sizing:border-box!important;
-    display:flex!important;
-    flex-direction:column!important;
-    align-items:stretch!important;
-    justify-content:flex-start!important;
-    overflow-y:auto!important;
-    padding:18px 24px 24px!important;
-    margin:0!important;
-    gap:0!important;
-    background:#061a31!important;
-  }
-  html body .site-primary-nav.open .site-mobile-menu-logo{
-    order:-10!important;
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    width:100%!important;
-    height:auto!important;
-    margin:4px 0 14px!important;
-    padding:0!important;
-  }
-  html body .site-primary-nav.open .site-mobile-menu-logo img{
-    width:88px!important;
-    max-width:88px!important;
-    height:auto!important;
-    margin:0 auto!important;
-  }
-  html body .site-primary-nav.open > a:not(.site-mobile-menu-logo){
-    display:block!important;
-    width:100%!important;
-    height:auto!important;
-    padding:8px 6px!important;
-    margin:0!important;
-    border:0!important;
-    border-bottom:0!important;
-    box-shadow:none!important;
-    font-size:19px!important;
-    line-height:1.05!important;
-    font-weight:800!important;
-    color:#fff!important;
-    text-decoration:none!important;
-  }
-  html body .site-primary-nav.open .site-mobile-actions{
-    display:grid!important;
-    grid-template-columns:1fr 1fr!important;
-    width:100%!important;
-    gap:10px!important;
-    margin:14px 0 0!important;
-    padding:0!important;
-  }
-  html body .site-primary-nav.open .site-mobile-actions a{
-    min-height:52px!important;
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    padding:10px!important;
-    margin:0!important;
-    border:0!important;
-    font-size:17px!important;
-    font-weight:900!important;
-  }
-  html body .site-primary-nav.open .site-mobile-actions .mobile-volunteer{
-    background:#efe6d7!important;color:#071f3d!important;
-  }
-  html body .site-primary-nav.open .site-mobile-actions .mobile-donate{
-    background:#f04436!important;color:#fff!important;
-  }
-  html body.menu-open .site-header-logo{
-    opacity:0!important;
-    visibility:hidden!important;
-  }
-}
-</style>
-
-
-<style id="header-hover-exact-v9">
-@media (min-width:801px){
-  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate){
-    text-decoration-line:underline!important;
-    text-decoration-color:transparent!important;
-    text-decoration-thickness:2px!important;
-    text-underline-offset:8px!important;
-    transition:text-decoration-color .15s ease!important;
-  }
-  .site-primary-nav > a:not(.site-mobile-menu-logo):not(.mobile-volunteer):not(.mobile-donate):hover,
-  .site-primary-nav > a[aria-current="page"]{
-    text-decoration-color:#f04436!important;
-  }
-  .site-primary-nav > a::after{display:none!important;content:none!important}
-}
-@media (max-width:800px){
-  .site-primary-nav > a{text-decoration:none!important}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>News | Joe Bloggs MP</title>
+<link rel="stylesheet" href="assets/css/shared.css?v=32">
+
+<style>
+/* Mobile menu: kept inline so it works on every page even if cached CSS is stale */
+.mobile-nav{display:none;background:#fff;border-bottom:1px solid #e6eaf0;position:relative;z-index:50}
+.mobile-nav.open{display:block}
+.mobile-nav nav{display:flex;flex-direction:column;padding:8px 20px 4px}
+.mobile-nav nav a{display:block;padding:14px 0;border-bottom:1px solid #edf0f4;font-weight:800;color:#08254a}
+.mobile-nav-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:14px 20px 18px}
+.mobile-nav-actions .header-box{width:100%;height:42px;min-height:42px}
+@media(min-width:1101px){.mobile-nav{display:none!important}}
+@media(max-width:1100px){
+  .site-header .nav{display:none!important}
+  .menu-button{display:block!important}
 }
 </style>
 
 </head>
-<body class="inner-page">
-<div class="site-shell">
-
+<body>
 <header class="site-header">
-  <div class="site-header-inner">
-    <a class="site-header-logo" href="index.html" aria-label="Back Ben home"><img src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor"></a>
-    <nav class="site-primary-nav">
-      <a href="about.html">About Ben</a>
-      <a href="plan.html">Ben’s Plan</a>
-      <a href="news.html" aria-current="page">News</a>
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">JB</span>
+      <span class="logo-copy"><strong>Joe Bloggs</strong><span>MP for Bloggs Town</span></span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Joe</a>
+      <a href="your-area.html">Your area</a>
+      <a href="our-plan.html">Our plan</a>
+      <a href="campaigns.html">Campaigns</a>
       <a href="events.html">Events</a>
-      <a href="tell-ben.html">Tell Ben</a>
-      <a href="follow-ben.html">Follow Ben</a>
-      <a href="contact.html">Contact Ben</a>
+      <a href="news.html">News</a>
+      <a href="have-your-say.html">Have your say</a>
+      <a href="donate.html">Donate</a>
     </nav>
 
-    <button class="site-menu-button" type="button" aria-expanded="false" aria-label="Open navigation menu"></button>
-
-    <div class="site-header-actions">
-      <a class="site-volunteer-button" href="volunteer.html">Volunteer</a>
-      <a class="site-donate-button" href="donate.html">Donate</a>
+    <div class="header-actions">
+      <a href="sign-up.html" class="header-box signup">Sign up</a>
+      <a href="get-help.html" class="header-box help-button">Get help</a>
     </div>
+
+    <button type="button" class="menu-button" id="menuButton" aria-expanded="false" aria-controls="mobileNav">Menu</button>
   </div>
 </header>
 
-
-
-<main class="news-editorial-page">
-
-  <section class="news-photo-hero">
-    <div class="news-photo-hero-bg"></div>
-    <div class="news-photo-hero-fade"></div>
-    <div class="container news-photo-hero-inner">
-      <h1>From the campaign.</h1>
-      <p>News, ideas and updates from Ben across Cheshire & Warrington.</p>
+<div class="area-status" id="areaStatus">
+  <div class="container area-status-inner">
+    <div>Showing local content for <strong id="areaStatusName"></strong></div>
+    <div class="area-status-actions">
+      <button type="button" id="changeAreaButton">Change area</button>
+      <button type="button" id="dismissAreaButton" class="dismiss-area" aria-label="Turn off personalisation" title="Turn off personalisation">×</button>
     </div>
-  </section>
+  </div>
+</div>
 
-  
+<div class="mobile-nav" id="mobileNav">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Joe</a>
+    <a href="your-area.html">Your area</a>
+    <a href="our-plan.html">Our plan</a>
+    <a href="campaigns.html">Campaigns</a>
+    <a href="events.html">Events</a>
+    <a href="news.html">News</a>
+    <a href="have-your-say.html">Have your say</a>
+    <a href="donate.html">Donate</a>
+  </nav>
+  <div class="mobile-nav-actions">
+    <a href="sign-up.html" class="header-box signup">Sign up</a>
+    <a href="get-help.html" class="header-box help-button">Get help</a>
+  </div>
+</div>
+<section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=2000&q=85')">
+  <div class="container"><div><h1>Latest from Joe</h1><p>News from around Bloggs Town, local campaigns and Joe’s work in Parliament.</p></div></div>
+</section>
 
-  <section class="news-filter-strip">
-    <div class="container news-filter-inner">
-      <a href="news.html" class="active news-filter-btn" aria-current="page" data-news-filter="all" aria-pressed="true">All</a>
-      <a href="news.html?category=campaign" class="news-filter-btn" data-news-filter="campaign" aria-pressed="false">Campaign</a>
-      <a href="news.html?category=policy" class="news-filter-btn" data-news-filter="policy" aria-pressed="false">Policy</a>
-      <a href="news.html?category=local" class="news-filter-btn" data-news-filter="local" aria-pressed="false">Local</a>
-      <a href="news.html?category=media" class="news-filter-btn" data-news-filter="media" aria-pressed="false">Media</a>
-    </div>
-  </section>
 
-  
-<section class="news-stream news-grid-section">
+<section class="section">
   <div class="container">
-    <div class="news-grid">
-
-      <article class="news-card" data-news-category="local">
-        <a class="news-card-image story-crewe" href="journeys/crewe.html" aria-label="What Crewe needs from its new mayor"></a>
-        <div class="news-card-copy">
-          <p class="news-story-date">22 August 2026</p>
-          <h2><a href="journeys/crewe.html">What Crewe needs from its new mayor</a></h2>
-          <p>Ben has been meeting residents, campaigners and local businesses to hear what would make the biggest difference to the town.</p>
-          <a class="news-card-link" href="journeys/crewe.html">See Ben in Crewe</a>
+    <div id="personalisedNews" style="display:none">
+      <div class="news-section-head">
+        <div>
+          <h2 id="personalisedNewsHeading">Latest near you</h2>
+          <p id="personalisedNewsIntro">Stories from your area.</p>
         </div>
-      </article>
-
-      <article class="news-card" data-news-category="local">
-        <a class="news-card-image story-volunteer" href="volunteer.html" aria-label="Building Team Ben across the region"></a>
-        <div class="news-card-copy">
-          <p class="news-story-date">18 August 2026</p>
-          <h2><a href="volunteer.html">Building Team Ben across the region</a></h2>
-          <p>From local events to leaflet teams and online campaigning, supporters are getting organised across Cheshire & Warrington.</p>
-          <a class="news-card-link" href="volunteer.html">Join the campaign</a>
-        </div>
-      </article>
-
-      <article class="news-card" data-news-category="campaign">
-        <a class="news-card-image story-experience" href="about.html" aria-label="Why experience matters in a new mayoralty"></a>
-        <div class="news-card-copy">
-          <p class="news-story-date">12 August 2026</p>
-          <h2><a href="about.html">Why experience matters in a new mayoralty</a></h2>
-          <p>The first mayor will need to build relationships quickly, make decisions and turn a new office into something that delivers.</p>
-          <a class="news-card-link" href="about.html">Read more</a>
-        </div>
-      </article>
-
-      <article class="news-card" data-news-category="policy">
-        <a class="news-card-image story-plan" href="plan.html" aria-label="A practical plan for Cheshire and Warrington"></a>
-        <div class="news-card-copy">
-          <p class="news-story-date">8 August 2026</p>
-          <h2><a href="plan.html">A practical plan for Cheshire & Warrington</a></h2>
-          <p>Better transport, safer communities, stronger growth and homes backed by the infrastructure local people need.</p>
-          <a class="news-card-link" href="plan.html">Read Ben’s plan</a>
-        </div>
-      </article>
-
-      <article class="news-card" data-news-category="local">
-        <a class="news-card-image story-about" href="about.html" aria-label="Leadership rooted in Cheshire and Warrington"></a>
-        <div class="news-card-copy">
-          <p class="news-story-date">2 August 2026</p>
-          <h2><a href="about.html">Leadership rooted in Cheshire & Warrington</a></h2>
-          <p>Why Ben is standing and the kind of mayoralty he wants to build across the region.</p>
-          <a class="news-card-link" href="about.html">Meet Ben</a>
-        </div>
-      </article>
-
-      <article class="news-card news-card-placeholder" data-news-category="campaign">
-        <div class="news-card-placeholder-inner">
-          <p>More campaign news will appear here.</p>
-        </div>
-      </article>
-
+      </div>
+      <div class="grid-3 news-grid-fixed" id="localNewsGrid"></div>
     </div>
 
-    <article class="news-text-feature" data-news-category="local">
-      <div>
-        <h2>Want campaign updates directly?</h2>
-        <p>Get the latest from Ben, including local visits, events and campaign announcements.</p>
+    <div id="allNews">
+      <div class="news-section-head">
+        <div>
+          <h2 id="allNewsHeading">Latest from Joe</h2>
+          <p id="allNewsIntro">News from across Bloggs Town.</p>
+        </div>
       </div>
-      <form data-thanks="signup">
-        <input type="email" placeholder="Email address" aria-label="Email address" autocomplete="email">
-        <input type="text" placeholder="Postcode" aria-label="Postcode" autocomplete="postal-code">
-        <button type="submit" class="btn btn-red">Keep me updated</button>
-      </form>
+      <div class="grid-3 news-grid-fixed" id="allNewsGrid">
+        <article class="card news-card" data-area="town-centre">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">Bloggs Town Centre</div>
+      <h3>Joe meets traders on Bloggs Town high street</h3>
+      <p>Businesses raise empty units, parking and the cost of investing in the town centre.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
     </article>
+<article class="card news-card" data-area="town-centre">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">Bloggs Town Centre</div>
+      <h3>New push to bring empty town-centre units back into use</h3>
+      <p>Joe is calling for practical action to support a busier, stronger Bloggs Town Centre.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
+    </article>
+<article class="card news-card" data-area="town-centre">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">Bloggs Town Centre</div>
+      <h3>Residents raise late-night antisocial behaviour in the centre</h3>
+      <p>Joe has asked local police and the council to look at repeat problem spots.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
+    </article>
+<article class="card news-card" data-area="town-centre">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">Bloggs Town Centre</div>
+      <h3>Joe backs better evening bus connections into town</h3>
+      <p>Local workers and residents say evening services are too infrequent and unreliable.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
+    </article>
+<article class="card news-card" data-area="north-bloggs">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">North Bloggs</div>
+      <h3>Joe presses for more GP appointments in North Bloggs</h3>
+      <p>Residents say access to appointments remains one of their biggest local concerns.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
+    </article>
+<article class="card news-card" data-area="north-bloggs">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">North Bloggs</div>
+      <h3>North Bloggs walkabout focuses on neighbourhood safety</h3>
+      <p>Joe joins residents to hear concerns about antisocial behaviour and visible policing.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
+    </article>
+<article class="card news-card" data-area="north-bloggs">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">North Bloggs</div>
+      <h3>School crossing concerns raised by North Bloggs parents</h3>
+      <p>Joe is pressing for a review of safety around a busy local school route.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
+    </article>
+<article class="card news-card" data-area="north-bloggs">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">North Bloggs</div>
+      <h3>Community centre funding discussed with local groups</h3>
+      <p>Joe meets volunteers to discuss the future of a well-used North Bloggs facility.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
+    </article>
+<article class="card news-card" data-area="little-bloggs">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">Little Bloggs</div>
+      <h3>Joe takes Little Bloggs road concerns to local leaders</h3>
+      <p>Potholes, congestion and junction safety top the agenda after resident feedback.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
+    </article>
+<article class="card news-card" data-area="little-bloggs">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">Little Bloggs</div>
+      <h3>Bus reliability raised by Little Bloggs commuters</h3>
+      <p>Joe is pressing transport operators on cancellations and poor evening connections.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
+    </article>
+<article class="card news-card" data-area="little-bloggs">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">Little Bloggs</div>
+      <h3>Residents oppose loss of local cashpoint</h3>
+      <p>Joe has asked providers to explain how access to basic banking services will be maintained.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
+    </article>
+<article class="card news-card" data-area="little-bloggs">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">Little Bloggs</div>
+      <h3>Planning concerns raised at Little Bloggs meeting</h3>
+      <p>Residents say development must come with the infrastructure the area needs.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
+    </article>
+<article class="card news-card" data-area="villages">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">The Villages</div>
+      <h3>Protecting community services across the villages</h3>
+      <p>Joe meets residents to discuss transport, local facilities and access to essential services.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
+    </article>
+<article class="card news-card" data-area="villages">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">The Villages</div>
+      <h3>Village road repairs added to Joe’s local action list</h3>
+      <p>Residents have highlighted damaged routes and junctions that need urgent attention.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
+    </article>
+<article class="card news-card" data-area="villages">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">The Villages</div>
+      <h3>Rural bus cuts raised with transport operators</h3>
+      <p>Joe is pressing for better connections for residents without access to a car.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
+    </article>
+<article class="card news-card" data-area="villages">
+      <div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85')"></div>
+      <div class="local-badge news-area-badge">The Villages</div>
+      <h3>Joe backs campaign to protect village post office services</h3>
+      <p>Residents say local access to postal and banking services remains essential.</p>
+      <a class="btn navy" href="news/story.html">Read more</a>
+    </article>
+      </div>
+    </div>
   </div>
 </section>
 
-</main>
 
 
-
-
-<footer class="campaign-footer">
-  <div class="campaign-footer-top">
-    <div class="campaign-footer-brand">
-      <img class="campaign-footer-logo-image" src="assets/images/back-ben-for-mayor-logo.png" alt="Back Ben for Mayor of Cheshire and Warrington">
-      <div class="campaign-footer-socials" aria-label="Campaign social channels">
-        <span aria-label="Facebook" title="Facebook">f</span>
-        <span aria-label="Instagram" title="Instagram">◎</span>
-        <span aria-label="X" title="X">𝕏</span>
-        <span aria-label="TikTok" title="TikTok">♪</span>
-      </div>
-    </div>
-
-    <div class="campaign-footer-links">
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="local-recommendation">
       <div>
-        <h3>Campaign</h3>
-        <a href="about.html">About Ben</a>
-        <a href="plan.html">Ben’s Plan</a>
-        <a href="news.html">News</a>
+        <h3 data-area-copy="Get updates from {area}">Get updates from your area</h3>
+        <p data-area-copy="Sign up for news, campaigns and events specifically relevant to {area}.">Sign up for news, campaigns and events specifically relevant to where you live.</p>
       </div>
-
-      <div>
-        <h3>Take part</h3>
-        <a href="events.html">Events</a>
-        <a href="tell-ben.html">Tell Ben</a>
-        <a href="volunteer.html">Volunteer</a>
-        <a href="donate.html">Donate</a>
-        <a href="area.html">Ben in your area</a>
-      </div>
-    </div>
-
-    <div class="campaign-footer-cta">
-      <h3>Back Ben</h3>
-      <p>Help build a campaign that reaches every part of Cheshire & Warrington.</p>
-      <a class="campaign-footer-button" href="volunteer.html">Join the campaign</a>
+      <a class="btn" href="have-your-say.html">Choose my updates</a>
     </div>
   </div>
+</section>
 
-  <div class="campaign-footer-bottom">
-    <div class="campaign-footer-legal">
-      <a href="privacy.html">Privacy</a>
-      <a href="contact.html">Contact</a>
-      <a href="#promoted-by">Promoted by</a>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="color:#fff">
+          <span class="logo-mark">JB</span>
+          <span class="logo-copy"><strong>Joe Bloggs</strong><span style="color:#b8c7d8">MP for Bloggs Town</span></span>
+        </div>
+      </div>
+      <div><h4>Joe</h4><a href="about.html">About Joe</a><a href="our-plan.html">Our plan</a><a href="campaigns.html">Campaigns</a><a href="news.html">News</a></div>
+      <div><h4>Bloggs Town</h4><a href="your-area.html">Your area</a><a href="events.html">Events</a><a href="news.html">Local updates</a><a href="have-your-say.html">Residents survey</a><a href="preferences.html">Email preferences</a></div>
+      <div><h4>Get involved</h4><a href="get-help.html">Get help</a><a href="get-help.html#surgeries">Surgeries</a><a href="donate.html">Donate</a><a href="get-help.html#contact">Contact</a></div>
     </div>
-
-    <div class="campaign-footer-imprint" id="promoted-by">
-      <span>Promoted by [name] on behalf of Ben Fletcher, both at [campaign address].</span>
-    </div>
+    <div class="footer-note">Demo website concept. Joe Bloggs and Bloggs Town are fictional.</div>
   </div>
 </footer>
 
 
+<script>
+(function () {
+  function initMobileMenu() {
+    var button = document.getElementById('menuButton');
+    var menu = document.getElementById('mobileNav');
+    if (!button || !menu || button.dataset.menuReady === 'true') return;
 
-
-</div>
-<script src="assets/js/site.js?v=20260823-canonical-v1"></script>
-
-
-
-
-<script id="news-filter-exact-v9">
-(function(){
-  const buttons = Array.from(document.querySelectorAll('.news-filter-btn[data-news-filter]'));
-  const items = Array.from(document.querySelectorAll('[data-news-category]'));
-
-  function apply(filter){
-    buttons.forEach(btn => {
-      const active = (btn.dataset.newsFilter || 'all') === filter;
-      btn.classList.toggle('active', active);
-      btn.classList.toggle('is-active', active);
-      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    button.dataset.menuReady = 'true';
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      var open = menu.classList.toggle('open');
+      button.setAttribute('aria-expanded', open ? 'true' : 'false');
+      button.textContent = open ? 'Close' : 'Menu';
     });
-    items.forEach(item => {
-      const category = item.dataset.newsCategory || '';
-      const hide = filter !== 'all' && category !== filter;
-      item.hidden = hide;
-      item.style.display = hide ? 'none' : '';
+
+    menu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        menu.classList.remove('open');
+        button.setAttribute('aria-expanded', 'false');
+        button.textContent = 'Menu';
+      });
     });
   }
 
-  buttons.forEach(btn => btn.addEventListener('click', function(e){
-    e.preventDefault();
-    apply(this.dataset.newsFilter || 'all');
-  }));
-
-  apply('all');
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileMenu);
+  } else {
+    initMobileMenu();
+  }
 })();
 </script>
 
+<script src="assets/js/personalisation.js?v=32"></script>
+<script src="assets/js/news.js?v=31"></script>
 </body>
 </html>
